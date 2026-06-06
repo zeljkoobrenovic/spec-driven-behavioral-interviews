@@ -1,0 +1,56 @@
+{
+  "tests": [
+    {
+      "id": "accountability",
+      "name": "accountability"
+    },
+    {
+      "id": "decision-quality",
+      "name": "decision quality"
+    },
+    {
+      "id": "execution",
+      "name": "execution"
+    },
+    {
+      "id": "influence",
+      "name": "influence"
+    },
+    {
+      "id": "judgment",
+      "name": "judgment"
+    },
+    {
+      "id": "learning",
+      "name": "learning"
+    },
+    {
+      "id": "measurement",
+      "name": "measurement"
+    },
+    {
+      "id": "ownership",
+      "name": "ownership"
+    },
+    {
+      "id": "reflection",
+      "name": "reflection"
+    },
+    {
+      "id": "risk-judgment",
+      "name": "risk judgment"
+    },
+    {
+      "id": "stakeholder-alignment",
+      "name": "stakeholder alignment"
+    },
+    {
+      "id": "technical-judgment",
+      "name": "technical judgment"
+    },
+    {
+      "id": "trade-off-reasoning",
+      "name": "trade-off reasoning"
+    }
+  ]
+}

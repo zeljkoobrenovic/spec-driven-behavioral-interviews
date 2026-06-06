@@ -1,0 +1,339 @@
+{
+  "id": "executive-conflict",
+  "title": "Conflict With Executives or Peers",
+  "description": "Handling disagreement with Sales, Product, Finance, the CEO, or the board without becoming political or passive.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "executive-conflict",
+    "name": "Conflict With Executives or Peers",
+    "family": "Influence and Communication",
+    "definition": "Challenges risky decisions while preserving trust, **business empathy**, and shared goals.",
+    "whyItMatters": "Senior leaders must disagree productively when commitments, architecture, customer trust, or delivery integrity are at risk."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you strongly disagreed with a product, sales, finance, or executive peer.",
+    "variants": [
+      "Describe a situation where you had to challenge the CEO, founder, or board on a technology decision.",
+      "Tell me about a time you had to say no to an important stakeholder."
+    ],
+    "interviewerIntent": [
+      "Can the candidate disagree without turning the conflict personal?",
+      "Do they understand the other function's incentives?",
+      "Can they reframe disagreement around business outcomes?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A VP Engineering disagrees with Sales committing to a custom feature for one large customer.",
+    "context": [
+      "The customer is commercially important.",
+      "The requested feature would distort the product architecture.",
+      "Sales believes engineering is being too rigid."
+    ],
+    "constraints": [
+      "The leader cannot simply block revenue.",
+      "The team is already committed to roadmap work.",
+      "The decision will set precedent for future enterprise deals."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "Sales wanted to commit engineering to a bespoke feature for a large customer, creating architecture and roadmap risk.",
+    "task": "Protect long-term product leverage while respecting the commercial opportunity.",
+    "action": [
+      "Quantified opportunity cost and platform risk.",
+      "Separated the customer's underlying need from the requested implementation.",
+      "Proposed a narrower platform capability that served multiple customers.",
+      "Created an escalation and intake process for future enterprise commitments."
+    ],
+    "result": [
+      "The company kept the customer conversation alive without making an unsustainable commitment.",
+      "Sales gained clearer rules for technical commitments.",
+      "Engineering delivered a reusable capability rather than a one-off feature."
+    ],
+    "reflection": "The conflict improved when the conversation moved from engineering says no to which commitment creates the best company outcome.",
+    "systemChange": [
+      "Deal-review checkpoint for technical commitments.",
+      "Enterprise feature **decision criteria**.",
+      "Shared product, sales, and engineering escalation path."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "custom-enterprise-feature",
+      "title": "Custom Enterprise Feature Commitment",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you strongly disagreed with a product, sales, finance, or executive peer.",
+      "situation": "Sales wanted to commit to a custom feature for a large enterprise customer, creating roadmap and architecture risk.",
+      "strongAnswerSketch": [
+        "Acknowledge the commercial importance of the customer.",
+        "Separate the customer need from the requested implementation.",
+        "Quantify opportunity cost and platform risk.",
+        "Propose a reusable platform capability and create enterprise commitment review."
+      ],
+      "whyItWorks": [
+        "Shows courage without dismissing Sales.",
+        "Offers an alternative instead of only saying no.",
+        "Turns conflict into a repeatable decision mechanism."
+      ],
+      "weakVersion": "I pushed back because the feature was too custom and would distract the team from the roadmap.",
+      "followUpAngles": [
+        "What was Sales right about?",
+        "How did you quantify opportunity cost?",
+        "Did you escalate?"
+      ]
+    },
+    {
+      "id": "founder-architecture-preference",
+      "title": "Founder Architecture Preference",
+      "level": "CTO",
+      "promptVariant": "Describe a situation where you had to challenge the CEO or founder on a technology decision.",
+      "situation": "A founder wanted to rebuild the core platform in a new stack to attract talent, but the timing would delay enterprise commitments and increase migration risk.",
+      "strongAnswerSketch": [
+        "Clarify the founder real goal: talent signal, velocity, and long-term platform leverage.",
+        "Compare rewrite, incremental modernization, and targeted platform extraction.",
+        "Recommend a staged modernization path with visible talent and architecture benefits.",
+        "Create decision checkpoints tied to customer commitments and migration risk."
+      ],
+      "whyItWorks": [
+        "Challenges the CEO while preserving the underlying strategic concern.",
+        "Uses options rather than positional disagreement.",
+        "Connects **technical risk** to company commitments."
+      ],
+      "weakVersion": "I explained that rewrites are risky and convinced the founder it was not the right time.",
+      "followUpAngles": [
+        "What was the founder optimizing for?",
+        "What option did you recommend instead?",
+        "How did you maintain trust?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows courage, **business empathy**, and the ability to reframe disagreement into a better decision.",
+    "moves": [
+      "Acknowledges the other stakeholder's legitimate goal.",
+      "Uses data, opportunity cost, and risk rather than **positional authority**.",
+      "Offers alternatives instead of only blocking.",
+      "Handles escalation transparently.",
+      "Creates a mechanism to prevent repeated ad hoc conflict."
+    ]
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either avoids conflict or wins the argument in a way that damages trust.",
+    "redFlags": [
+      "Frames Sales, Product, or the CEO as unreasonable without showing empathy.",
+      "Says no without offering a viable alternative.",
+      "Escalates as a first move rather than after direct alignment attempts.",
+      "Cannot explain how the relationship or process improved afterward."
+    ]
+  },
+  "followUps": [
+    {
+      "id": "other-side",
+      "question": "What was the other person's strongest argument?",
+      "tests": [
+        "stakeholder alignment",
+        "influence"
+      ]
+    },
+    {
+      "id": "risk",
+      "question": "How did you quantify the risk or opportunity cost?",
+      "tests": [
+        "measurement",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "escalation",
+      "question": "Did you escalate, and how did you keep trust intact?",
+      "tests": [
+        "influence",
+        "accountability"
+      ]
+    },
+    {
+      "id": "process",
+      "question": "What process changed so the same conflict would not repeat?",
+      "tests": [
+        "learning",
+        "accountability"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "courage",
+        "name": "Courage",
+        "strong": "Challenges risky commitments directly and respectfully.",
+        "weak": "Avoids disagreement or waits for someone else to resolve it."
+      },
+      {
+        "id": "business-empathy",
+        "name": "Business Empathy",
+        "strong": "Understands the other function's goal and reframes the **trade-off**.",
+        "weak": "Treats non-engineering pressure as ignorance."
+      },
+      {
+        "id": "conflict-mechanism",
+        "name": "Conflict Mechanism",
+        "strong": "Creates **decision rules** or escalation paths that reduce future conflict.",
+        "weak": "Relies on personal negotiation every time."
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Handles cross-team disagreement with data, clarity, and respectful escalation."
+      },
+      {
+        "level": "Director",
+        "expected": "Aligns peers across functions and turns repeated conflict into decision mechanisms."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Challenges executive peers while protecting company-level priorities and relationships."
+      },
+      {
+        "level": "CTO",
+        "expected": "Advises or challenges the CEO and board with credible **trade-offs** across technology, trust, and business outcomes."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "courage",
+      "business-empathy",
+      "conflict-mechanism"
+    ],
+    "followUpTree": [
+      "other-side",
+      "risk",
+      "escalation",
+      "process"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "Who disagreed, and what was at stake?"
+      },
+      {
+        "field": "task",
+        "label": "What company outcome were you accountable for protecting?"
+      },
+      {
+        "field": "action",
+        "label": "How did you reframe, influence, or escalate?"
+      },
+      {
+        "field": "result",
+        "label": "What changed in the decision and relationship?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about disagreement at senior levels?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What mechanism reduced future conflict?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Pushing back on a launch date that creates customer risk.",
+    "Challenging a founder's preferred architecture decision.",
+    "Negotiating a cost reduction target with Finance."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "crucial-conversations",
+        "group": "Influence and Executive Communication",
+        "title": "Crucial Conversations",
+        "url": "https://cruciallearning.com/crucialconversations_book.aspx",
+        "source": "Crucial Learning",
+        "type": "Book",
+        "why": "Useful for high-stakes disagreement, **executive conflict**, and emotionally loaded conversations.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "good-strategy-bad-strategy",
+        "group": "Strategy and Execution",
+        "title": "Good Strategy Bad Strategy",
+        "url": "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/",
+        "source": "Richard Rumelt / Penguin Random House",
+        "type": "Book",
+        "year": "2011",
+        "why": "Useful for distinguishing real strategic diagnosis and coherent action from vague aspiration.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "high-output-management",
+        "group": "People Leadership and Feedback",
+        "title": "High Output Management",
+        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
+        "source": "Andrew S. Grove / Penguin Random House",
+        "type": "Book",
+        "year": "1983",
+        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "radical-candor",
+        "group": "People Leadership and Feedback",
+        "title": "Radical Candor",
+        "url": "https://www.radicalcandor.com/the-book/",
+        "source": "Kim Scott",
+        "type": "Book",
+        "year": "2017",
+        "why": "Feedback model for balancing direct challenge with care when handling performance and trust issues.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "never-split-difference",
+        "group": "Influence and Executive Communication",
+        "title": "Never Split the Difference",
+        "url": "https://www.harperacademic.com/book/9780062407801/never-split-the-difference/",
+        "source": "Chris Voss and Tahl Raz / HarperCollins",
+        "type": "Book",
+        "year": "2016",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
+        "why": "Relevant here because negotiation techniques help reveal interests and constraints instead of escalating positional conflict."
+      }
+    ]
+  }
+}

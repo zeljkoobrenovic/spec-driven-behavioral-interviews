@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Examples Variants"
+  short_description: "Add examples and prompt variants"
+  default_prompt: "Use $interview-examples-variants to add concrete examples and variants to an interview spec."

@@ -1,0 +1,365 @@
+{
+  "id": "failure-accountability",
+  "title": "Failure and Accountability",
+  "description": "Owning a major outage, migration failure, missed goal, or organizational mistake without blame shifting or performative accountability.",
+  "roleFocus": [
+    "Senior Manager",
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "failure-accountability",
+    "name": "Failure and Accountability",
+    "family": "Execution and Accountability",
+    "definition": "Takes responsibility for failure, communicates clearly, learns deeply, and changes the system that produced the failure.",
+    "whyItMatters": "Senior leaders are judged by how they behave when the organization misses, breaks trust, or causes **customer harm**."
+  },
+  "prompt": {
+    "primary": "Tell me about a major failure you were responsible for.",
+    "variants": [
+      "Describe a time when your organization missed an important goal.",
+      "Tell me about a time a technical decision you owned created **customer impact**."
+    ],
+    "interviewerIntent": [
+      "Does the candidate take real ownership?",
+      "Can they communicate under pressure without hiding or blaming?",
+      "Did the failure lead to meaningful **system change**?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A CTO leads a migration that causes customer-impacting instability.",
+    "context": [
+      "The migration was strategically necessary but under-tested.",
+      "Teams underestimated operational coupling and rollout complexity.",
+      "Customers and executives need clear communication during instability."
+    ],
+    "constraints": [
+      "The incident is visible to customers.",
+      "The leader must support teams without hiding accountability.",
+      "The post-**incident response** must improve reliability, not only produce a report."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A platform migration caused customer-impacting instability after leadership underestimated operational risk.",
+    "task": "Stabilize the system, communicate transparently, and identify what leadership missed.",
+    "action": [
+      "Separated **incident command** from executive and customer communication.",
+      "Named what assumptions were wrong and what decision checkpoints were missing.",
+      "Paused rollout, created recovery criteria, and assigned owners for high-risk areas.",
+      "Led a rigorous review focused on system conditions rather than blame."
+    ],
+    "result": [
+      "Customer communication became more predictable during the incident.",
+      "The migration resumed only after readiness criteria were met.",
+      "Reliability and rollout controls improved over the following quarter."
+    ],
+    "reflection": "The personal miss was treating **executive alignment** as sufficient when operational readiness was not proven.",
+    "systemChange": [
+      "Migration readiness review.",
+      "Progressive rollout policy.",
+      "Customer-impact incident communication protocol.",
+      "**Post-incident** action tracking with executive visibility."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "migration-instability",
+      "title": "Migration-Caused Customer Instability",
+      "level": "CTO",
+      "promptVariant": "Tell me about a major failure you were responsible for.",
+      "situation": "A platform migration created customer-impacting instability because readiness checks were too optimistic and operational coupling was underestimated.",
+      "strongAnswerSketch": [
+        "Name the personal miss: **executive alignment** was treated as readiness when operational proof was missing.",
+        "Separate **incident command** from executive and customer communication.",
+        "Pause rollout and define recovery criteria before continuing.",
+        "Introduce migration readiness reviews and progressive rollout controls."
+      ],
+      "whyItWorks": [
+        "Shows real accountability instead of vague ownership.",
+        "Covers response, communication, and systemic correction.",
+        "Makes the learning concrete through new controls."
+      ],
+      "weakVersion": "The migration had unexpected issues, the team worked around the clock, and afterward we improved testing.",
+      "followUpAngles": [
+        "What did you personally miss?",
+        "What did you tell customers before **root cause** was clear?",
+        "What rollout gate changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/migration-instability.jpg"
+    },
+    {
+      "id": "missed-quarterly-goal",
+      "title": "Missed Quarterly Delivery Goal",
+      "level": "Director",
+      "promptVariant": "Describe a time when your organization missed an important goal.",
+      "situation": "A cross-team initiative missed a quarter because dependency risk was known by managers but never escalated into planning decisions.",
+      "strongAnswerSketch": [
+        "Own the planning miss rather than blaming dependent teams.",
+        "Reconstruct where risk signals were visible and ignored.",
+        "Reset the plan with explicit dependency owners and decision dates.",
+        "Introduce dependency health reviews during quarterly planning."
+      ],
+      "whyItWorks": [
+        "Shows accountability for the system that produced the miss.",
+        "Identifies leadership mechanisms, not only execution gaps.",
+        "Demonstrates learning at director scope."
+      ],
+      "weakVersion": "A dependency team slipped and there was not much we could do, but we adjusted the timeline and communicated the delay.",
+      "followUpAngles": [
+        "When could you have known earlier?",
+        "What escalation mechanism failed?",
+        "How did planning change next quarter?"
+      ],
+      "aiVisual": "assets/generated/example-stories/missed-quarterly-goal.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate owns the failure specifically, describes actions under pressure, measures recovery, and changes the operating system.",
+    "moves": [
+      "Names their own miss early.",
+      "Explains what happened without drowning in technical detail.",
+      "Separates immediate response from long-term correction.",
+      "Shows customer, team, and **executive communication**.",
+      "Connects reflection to durable controls."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either chooses a harmless failure or uses the story to blame teams, executives, vendors, or unclear requirements.",
+    "redFlags": [
+      "The failure is too small for the level being interviewed.",
+      "The candidate says they owned it but mostly describes other people's mistakes.",
+      "There is no customer, business, or team consequence.",
+      "The review produced lessons but no changed controls.",
+      "The candidate cannot explain what they would do differently."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "personal-miss",
+      "question": "What did you personally miss?",
+      "tests": [
+        "accountability",
+        "reflection"
+      ]
+    },
+    {
+      "id": "communication",
+      "question": "How did you communicate with customers, executives, or teams?",
+      "tests": [
+        "stakeholder alignment",
+        "accountability"
+      ]
+    },
+    {
+      "id": "recovery",
+      "question": "How did you measure recovery and prevent recurrence?",
+      "tests": [
+        "measurement",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "differently",
+      "question": "What would you do differently if you could replay the situation?",
+      "tests": [
+        "learning",
+        "reflection"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "ownership",
+        "name": "Ownership",
+        "strong": "Names personal misses and consequences without blame shifting.",
+        "weak": "Describes accountability abstractly while blaming others.",
+        "strongAiVisual": "assets/generated/signals/ownership-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/ownership-weak.jpg"
+      },
+      {
+        "id": "pressure-communication",
+        "name": "Pressure Communication",
+        "strong": "Communicates clearly to customers, executives, and teams during uncertainty.",
+        "weak": "Waits for perfect information or hides behind technical detail.",
+        "strongAiVisual": "assets/generated/signals/pressure-communication-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/pressure-communication-weak.jpg"
+      },
+      {
+        "id": "systemic-learning",
+        "name": "Systemic Learning",
+        "strong": "Changes controls, reviews, ownership, or rollout mechanisms.",
+        "weak": "Stops at individual lessons learned.",
+        "strongAiVisual": "assets/generated/signals/systemic-learning-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/systemic-learning-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Owns team-level failure and improves execution controls."
+      },
+      {
+        "level": "Director",
+        "expected": "Owns cross-team failure and changes coordination, readiness, or accountability mechanisms."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Owns organizational failure in front of executives and customers while changing operating systems."
+      },
+      {
+        "level": "CTO",
+        "expected": "Owns company-level technology trust failures and changes governance, risk posture, and external communication."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "ownership",
+      "pressure-communication",
+      "systemic-learning"
+    ],
+    "followUpTree": [
+      "personal-miss",
+      "communication",
+      "recovery",
+      "differently"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What failed, and why was it significant?"
+      },
+      {
+        "field": "task",
+        "label": "What were you accountable for during and after the failure?"
+      },
+      {
+        "field": "action",
+        "label": "What did you do to respond, communicate, and learn?"
+      },
+      {
+        "field": "result",
+        "label": "What recovered or improved?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you personally miss?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What controls or mechanisms changed afterward?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A quarterly goal is missed because dependencies were poorly managed.",
+    "A security incident exposes weak ownership and escalation paths.",
+    "A reorganization slows delivery and damages team trust."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "sre-postmortem-culture",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows how to turn failure into durable learning without performative blame.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "etsy-blameless-postmortems",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Blameless PostMortems and a Just Culture",
+        "url": "https://www.etsy.com/codeascraft/blameless-postmortems",
+        "source": "Etsy Code as Craft",
+        "type": "Article",
+        "year": "2012",
+        "why": "Classic engineering-culture article for accountability, learning, and avoiding shallow blame.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "google-effective-teams",
+        "group": "Culture and Organizational Design",
+        "title": "The Five Dynamics of an Effective Team",
+        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
+        "source": "Google",
+        "type": "Article",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "manager-tools-basics",
+        "group": "People Leadership and Feedback",
+        "title": "Manager Tools Basics",
+        "url": "https://www.manager-tools.com/manager-tools-basics",
+        "source": "Manager Tools",
+        "type": "Podcast / Guide",
+        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "dare-to-lead",
+        "group": "People Leadership and Feedback",
+        "title": "Dare to Lead",
+        "url": "https://brenebrown.com/book/dare-to-lead/",
+        "source": "Brene Brown",
+        "type": "Book",
+        "year": "2018",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
+        "why": "Relevant here because accountability stories should show courage, ownership, and learning without turning into defensiveness."
+      },
+      {
+        "id": "scapegoats-at-work",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Scapegoats at Work",
+        "url": "https://grounded-architecture.io/scapegoating",
+        "source": "Grounded Architecture",
+        "type": "Article",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops.",
+        "why": "Relevant here because the interviewer needs to distinguish real accountability from blame shifting or scapegoating."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

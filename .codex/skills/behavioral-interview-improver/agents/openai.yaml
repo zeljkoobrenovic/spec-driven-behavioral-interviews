@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behavioral Interview Improver"
+  short_description: "Upgrade existing interview specs"
+  default_prompt: "Use $behavioral-interview-improver to improve an existing behavioral interview spec."

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Behavioral Interview Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="overview-page">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Spec-driven practice</p>
+        <h1>Behavioral Interview Explorer</h1>
+      </div>
+    </header>
+
+    <main class="overview-shell">
+      <section class="control-panel" aria-label="Filters">
+        <label class="field">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Prompt, competency, signal">
+        </label>
+        <label class="field">
+          <span>Role</span>
+          <select id="roleFilter">
+            <option value="">All roles</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Family</span>
+          <select id="familyFilter">
+            <option value="">All families</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="overviewStatus" class="status" aria-live="polite">Loading interviews...</section>
+      <section id="catalog" class="catalog" aria-label="Interview catalog"></section>
+    </main>
+
+    <script src="overview.js"></script>
+  </body>
+</html>

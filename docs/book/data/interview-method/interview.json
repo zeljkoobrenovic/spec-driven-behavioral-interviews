@@ -1,0 +1,363 @@
+{
+  "id": "interview-method",
+  "title": "The Senior Behavioral Interview Method",
+  "description": "A reusable method for structuring senior technology leadership stories with ownership, trade-offs, **measurable outcomes**, reflection, and system change.",
+  "roleFocus": [
+    "Senior Manager",
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "foundational",
+  "competency": {
+    "id": "structured-storytelling",
+    "name": "Structured Leadership Storytelling",
+    "family": "Interview Method",
+    "definition": "Turns real leadership situations into concise, **evidence-based** stories that reveal judgment and operating impact.",
+    "whyItMatters": "Senior interviews test how a leader thinks under pressure, not whether they can recite a polished anecdote."
+  },
+  "prompt": {
+    "primary": "Walk me through a senior leadership story using Situation, Task, Action, Result, Reflection, and **System Change**.",
+    "variants": [
+      "How do you decide which behavioral story to use for a broad prompt?",
+      "How do you keep an answer concise while still showing senior-level depth?"
+    ],
+    "interviewerIntent": [
+      "Can the candidate separate context from personal action?",
+      "Do they show judgment, trade-offs, and **measurable outcomes**?",
+      "Do they demonstrate learning and **durable operating change**?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A candidate prepares a leadership story bank and maps each story to competencies, signals, and follow-up risks.",
+    "context": [
+      "Senior behavioral prompts are often broad and ambiguous.",
+      "The same story can demonstrate different signals depending on framing.",
+      "Interviewers will probe for details that reveal real ownership."
+    ],
+    "constraints": [
+      "Answers must usually land in three to five minutes before follow-ups.",
+      "The candidate must avoid sounding rehearsed or generic.",
+      "The story must expose **trade-offs**, not just successful execution."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "Name the business, organizational, or technical context in one or two sentences.",
+    "task": "State your personal accountability and the decision pressure you had to manage.",
+    "action": [
+      "Explain the mechanisms you introduced.",
+      "Name the stakeholders you aligned or challenged.",
+      "Describe **trade-offs** and alternatives without getting lost in chronology."
+    ],
+    "result": [
+      "Quantify the outcome where possible.",
+      "Describe customer, business, team, or reliability impact.",
+      "Be explicit when the outcome was mixed."
+    ],
+    "reflection": "State what you learned, what you would do differently, and what judgment improved.",
+    "systemChange": [
+      "Show the **operating mechanism** that changed after the event.",
+      "Connect the story to how the organization became more capable."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "outage-story-selection",
+      "title": "Choosing The Right Outage Story",
+      "level": "Director",
+      "promptVariant": "Tell me about a major failure you were responsible for.",
+      "situation": "The candidate has three possible outage stories and chooses the one where they owned **executive communication**, recovery trade-offs, and post-incident operating changes.",
+      "strongAnswerSketch": [
+        "Open with why the outage mattered to customers and the business, not the full technical timeline.",
+        "State the personal accountability: incident structure, executive updates, and recovery criteria.",
+        "Name the **trade-off** between fast rollback and data consistency risk.",
+        "Close with the **durable mechanism**: rollout readiness gates and a post-incident action tracker."
+      ],
+      "whyItWorks": [
+        "Shows story selection discipline instead of reciting the most dramatic incident.",
+        "Separates personal leadership action from team troubleshooting.",
+        "Ends with reflection and **system change**, which is the senior-level signal."
+      ],
+      "weakVersion": "I would describe the outage chronologically, mention that the team worked hard, and end by saying we learned to test more.",
+      "followUpAngles": [
+        "What did you personally miss before the outage?",
+        "What alternatives did you consider during recovery?",
+        "What changed in rollout governance afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/outage-story-selection.jpg"
+    },
+    {
+      "id": "compressing-complex-conflict",
+      "title": "Compressing A Complex Conflict Story",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you strongly disagreed with an executive peer.",
+      "situation": "A broad conflict with Sales, Product, and Finance could become a ten-minute story unless the candidate frames it around one decision and one operating change.",
+      "strongAnswerSketch": [
+        "Name the decision: whether to commit to a bespoke enterprise feature.",
+        "Explain the competing incentives in one sentence per function.",
+        "Describe the mechanism introduced: enterprise commitment review with productized alternatives.",
+        "Report the outcome and what changed in future deal reviews."
+      ],
+      "whyItWorks": [
+        "Avoids drowning the interviewer in organizational history.",
+        "Shows empathy for other functions without surrendering judgment.",
+        "Makes the story probeable through concrete decisions and mechanisms."
+      ],
+      "weakVersion": "I would explain all the politics, say Sales was making unrealistic promises, and emphasize that engineering was right.",
+      "followUpAngles": [
+        "What was Sales right about?",
+        "What did you offer instead of saying no?",
+        "How did the relationship change afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/compressing-complex-conflict.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong senior answer is compact, specific, owned, trade-off-aware, measurable, reflective, and connected to durable **system change**.",
+    "moves": [
+      "Chooses a story with real stakes and real ambiguity.",
+      "Frames the answer around personal leadership actions.",
+      "Uses metrics and consequences rather than adjectives.",
+      "Anticipates follow-ups by naming rejected alternatives and disagreements.",
+      "Ends with reflection and a mechanism that outlived the incident."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A **weak answer** sounds polished but generic: it over-describes context, hides behind the team, avoids trade-offs, and ends at the immediate result.",
+    "redFlags": [
+      "The candidate says we more than I when describing critical decisions.",
+      "The answer has no measurable result or only uses vanity metrics.",
+      "The story has no disagreement, constraint, or hard choice.",
+      "The reflection is a slogan rather than a concrete learning.",
+      "No **operating mechanism** changed afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "ownership",
+      "question": "What exactly did you personally decide or change?",
+      "tests": [
+        "accountability",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "question": "What alternatives did you reject?",
+      "tests": [
+        "trade-off reasoning",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "measurement",
+      "question": "How did you know it worked?",
+      "tests": [
+        "measurement",
+        "accountability"
+      ]
+    },
+    {
+      "id": "learning",
+      "question": "What would you do differently now?",
+      "tests": [
+        "reflection",
+        "learning"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "ownership",
+        "name": "Ownership",
+        "strong": "Names personal decisions, mechanisms, and consequences.",
+        "weak": "Hides behind broad team activity.",
+        "strongAiVisual": "assets/generated/signals/ownership-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/ownership-weak.jpg"
+      },
+      {
+        "id": "trade-offs",
+        "name": "Trade-off Reasoning",
+        "strong": "Explains options, rejected paths, and why the chosen path fit the constraints.",
+        "weak": "Presents the final decision as obvious.",
+        "strongAiVisual": "assets/generated/signals/trade-offs-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/trade-offs-weak.jpg"
+      },
+      {
+        "id": "learning-loop",
+        "name": "Learning Loop",
+        "strong": "Connects reflection to a changed **operating mechanism**.",
+        "weak": "Offers a generic lesson with no **behavior change**.",
+        "strongAiVisual": "assets/generated/signals/learning-loop-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/learning-loop-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Shows ownership across teams with clear action and measurable delivery or people impact."
+      },
+      {
+        "level": "Director",
+        "expected": "Shows cross-functional **trade-offs** and changes how multiple teams operate."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Shows executive judgment, portfolio-level consequences, and durable leadership mechanisms."
+      },
+      {
+        "level": "CTO",
+        "expected": "Shows company-level judgment across technology, **business risk**, culture, and external trust."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "ownership",
+      "trade-offs",
+      "learning-loop"
+    ],
+    "followUpTree": [
+      "ownership",
+      "alternatives",
+      "measurement",
+      "learning"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What context does the interviewer need, and what can you omit?"
+      },
+      {
+        "field": "task",
+        "label": "What were you personally accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "Which mechanisms, decisions, or conversations did you drive?"
+      },
+      {
+        "field": "result",
+        "label": "What changed measurably or observably?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn or revise in your leadership model?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What changed beyond the immediate story?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Choosing the right story for a broad leadership-principle prompt.",
+    "Condensing a complex executive story into a concise interview answer.",
+    "Preparing for follow-ups that test whether ownership was real."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "google-effective-teams",
+        "group": "Culture and Organizational Design",
+        "title": "The Five Dynamics of an Effective Team",
+        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
+        "source": "Google",
+        "type": "Article",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "high-output-management",
+        "group": "People Leadership and Feedback",
+        "title": "High Output Management",
+        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
+        "source": "Andrew S. Grove / Penguin Random House",
+        "type": "Book",
+        "year": "1983",
+        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "manager-tools-basics",
+        "group": "People Leadership and Feedback",
+        "title": "Manager Tools Basics",
+        "url": "https://www.manager-tools.com/manager-tools-basics",
+        "source": "Manager Tools",
+        "type": "Podcast / Guide",
+        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "scaling-people",
+        "group": "Culture and Organizational Design",
+        "title": "Scaling People",
+        "url": "https://press.stripe.com/scaling-people",
+        "source": "Claire Hughes Johnson / Stripe Press",
+        "type": "Book",
+        "year": "2023",
+        "why": "Operator-focused reference for scaling leadership systems, decision making, communication, and company rituals.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "dare-to-lead",
+        "group": "People Leadership and Feedback",
+        "title": "Dare to Lead",
+        "url": "https://brenebrown.com/book/dare-to-lead/",
+        "source": "Brene Brown",
+        "type": "Book",
+        "year": "2018",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
+        "why": "Relevant here because it sharpens the leadership-story standard around courage, responsibility, and developing people rather than reciting achievements."
+      },
+      {
+        "id": "leadership-is-language",
+        "group": "Influence and Executive Communication",
+        "title": "Leadership Is Language",
+        "url": "https://www.penguinrandomhouse.com/books/555238/leadership-is-language-by-l-david-marquet/",
+        "source": "L. David Marquet / Penguin Random House",
+        "type": "Book",
+        "year": "2020",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
+        "why": "Relevant here because behavioral interviews reward candidates who can describe the language and decision moves that changed how a team operated."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

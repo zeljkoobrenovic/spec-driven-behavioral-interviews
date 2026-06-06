@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research External Links"
+  short_description: "Research credible external links"
+  default_prompt: "Use $research-external-links to find and add credible external resources to behavioral interview specs."

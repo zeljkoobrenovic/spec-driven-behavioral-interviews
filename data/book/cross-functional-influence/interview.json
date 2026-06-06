@@ -1,0 +1,350 @@
+{
+  "id": "cross-functional-influence",
+  "title": "Cross-Functional Influence",
+  "description": "Aligning product, design, sales, customer success, finance, and engineering around difficult **trade-offs** without relying on authority.",
+  "roleFocus": [
+    "Senior Manager",
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "cross-functional-influence",
+    "name": "Cross-Functional Influence",
+    "family": "Influence and Communication",
+    "definition": "Shapes decisions across functions by building credibility, framing trade-offs, and creating shared **decision criteria**.",
+    "whyItMatters": "Senior technology leaders rarely succeed through reporting lines alone."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you influenced a major decision without direct authority.",
+    "variants": [
+      "Describe a time you aligned engineering, product, design, sales, and customer success around a difficult **trade-off**.",
+      "Tell me about a time you had to protect quality without being seen as obstructionist."
+    ],
+    "interviewerIntent": [
+      "Can the candidate influence without authority?",
+      "Do they understand stakeholder incentives?",
+      "Can they turn conflict into shared **decision criteria**?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "An engineering leader needs to delay a launch because reliability is not ready, but marketing and sales have committed externally.",
+    "context": [
+      "The launch has executive visibility.",
+      "Engineering sees reliability risk that is not obvious to other teams.",
+      "Sales and marketing fear credibility damage from delay."
+    ],
+    "constraints": [
+      "The leader cannot simply say engineering says no.",
+      "The launch still matters commercially.",
+      "Stakeholders need a path forward, not just a risk warning."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A planned launch had business momentum but meaningful reliability risk.",
+    "task": "Align stakeholders on a safer launch path without undermining business goals.",
+    "action": [
+      "Translated reliability risk into customer and revenue consequences.",
+      "Proposed phased rollout criteria instead of a binary delay.",
+      "Aligned marketing, sales, product, and support on revised messaging and readiness gates.",
+      "Created shared launch-health metrics."
+    ],
+    "result": [
+      "The launch moved to a staged rollout with clearer customer protection.",
+      "Stakeholders had a shared language for readiness.",
+      "The company avoided a broader reliability incident."
+    ],
+    "reflection": "Influence improved when engineering risk was framed as customer success and launch credibility, not internal caution.",
+    "systemChange": [
+      "Launch readiness checklist.",
+      "Cross-functional go/no-go review.",
+      "Shared rollout metrics."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "launch-readiness-delay",
+      "title": "Launch Readiness Delay",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you influenced a major decision without direct authority.",
+      "situation": "Marketing and Sales had committed to a launch date, but reliability testing showed customer-impact risk that engineering could not ignore.",
+      "strongAnswerSketch": [
+        "Translate reliability risk into customer and launch credibility consequences.",
+        "Propose a phased rollout with explicit readiness gates instead of a vague delay.",
+        "Align Product, Sales, Marketing, and Support on customer messaging.",
+        "Create a cross-functional go/no-go review for future launches."
+      ],
+      "whyItWorks": [
+        "Influences through shared risk framing, not authority.",
+        "Offers a path forward instead of obstruction.",
+        "Creates a repeatable launch mechanism."
+      ],
+      "weakVersion": "I told stakeholders engineering was not comfortable launching and escalated the reliability risk to executives.",
+      "followUpAngles": [
+        "What did Sales and Marketing care about?",
+        "What data changed the conversation?",
+        "What became repeatable?"
+      ]
+    },
+    {
+      "id": "infrastructure-cost-alignment",
+      "title": "Infrastructure Cost Alignment",
+      "level": "VP Engineering",
+      "promptVariant": "Describe a time you aligned engineering, product, finance, and customer success around a difficult **trade-off**.",
+      "situation": "Finance needed infrastructure cost reduction, Product wanted roadmap speed, and Customer Success feared reliability regression from aggressive savings work.",
+      "strongAnswerSketch": [
+        "Create a shared view of cost by customer journey and service owner.",
+        "Separate safe efficiency wins from changes that reduce reliability margin.",
+        "Agree on cost, reliability, and roadmap guardrails with Finance and Product.",
+        "Assign service-level cost ownership and monthly review."
+      ],
+      "whyItWorks": [
+        "Shows multi-function empathy.",
+        "Frames the **trade-off** with shared metrics.",
+        "Turns influence into operating ownership."
+      ],
+      "weakVersion": "I asked Finance for more realistic targets and told teams to identify cost savings that would not hurt reliability.",
+      "followUpAngles": [
+        "Where did you accept customer risk?",
+        "What metric did Finance trust?",
+        "How did teams own ongoing cost?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate demonstrates **stakeholder empathy**, credible framing, and decision mechanisms that outlive the individual debate.",
+    "moves": [
+      "Understands each function's legitimate concern.",
+      "Frames **technical risk** in business and customer language.",
+      "Offers a constructive alternative.",
+      "Aligns **decision criteria** before asking for a decision.",
+      "Creates a repeatable cross-functional mechanism."
+    ]
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either relies on authority or presents engineering concerns in a way other functions cannot use.",
+    "redFlags": [
+      "Describes other functions as careless or political.",
+      "Cannot explain the other side's constraints.",
+      "Only escalates upward instead of building alignment.",
+      "Has no **shared mechanism** for future decisions."
+    ]
+  },
+  "followUps": [
+    {
+      "id": "stakeholders",
+      "question": "What did each function care about?",
+      "tests": [
+        "stakeholder alignment",
+        "influence"
+      ]
+    },
+    {
+      "id": "framing",
+      "question": "How did you frame the engineering concern in **business terms**?",
+      "tests": [
+        "judgment",
+        "measurement"
+      ]
+    },
+    {
+      "id": "authority",
+      "question": "What did you do without relying on **positional authority**?",
+      "tests": [
+        "influence",
+        "ownership"
+      ]
+    },
+    {
+      "id": "repeatable",
+      "question": "What became repeatable after this decision?",
+      "tests": [
+        "learning",
+        "execution"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "stakeholder-empathy",
+        "name": "Stakeholder Empathy",
+        "strong": "Accurately represents other functions' goals and constraints.",
+        "weak": "Frames other teams as obstacles."
+      },
+      {
+        "id": "credible-framing",
+        "name": "Credible Framing",
+        "strong": "Connects **technical risk** to customer, business, or operational consequences.",
+        "weak": "Uses technical language that does not help the decision."
+      },
+      {
+        "id": "shared-mechanism",
+        "name": "Shared Mechanism",
+        "strong": "Creates criteria, rituals, or metrics for future alignment.",
+        "weak": "Depends on one-off persuasion."
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Influences adjacent teams with clear evidence and practical alternatives."
+      },
+      {
+        "level": "Director",
+        "expected": "Aligns multiple functions around shared trade-offs and **decision criteria**."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Shapes executive peer decisions through credibility, customer framing, and **operating mechanisms**."
+      },
+      {
+        "level": "CTO",
+        "expected": "Influences company strategy and external commitments without relying only on formal authority."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "stakeholder-empathy",
+      "credible-framing",
+      "shared-mechanism"
+    ],
+    "followUpTree": [
+      "stakeholders",
+      "framing",
+      "authority",
+      "repeatable"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What decision needed influence across functions?"
+      },
+      {
+        "field": "task",
+        "label": "What outcome did you need without direct authority?"
+      },
+      {
+        "field": "action",
+        "label": "How did you frame, align, and propose alternatives?"
+      },
+      {
+        "field": "result",
+        "label": "What decision or behavior changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about influence?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What shared mechanism remained?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Aligning finance and engineering on infrastructure cost reduction.",
+    "Coordinating sales commitments with platform readiness.",
+    "Changing product scope to protect customer trust."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "empowered-product-teams",
+        "group": "Strategy and Execution",
+        "title": "EMPOWERED: Ordinary People, Extraordinary Products",
+        "url": "https://www.svpg.com/books/empowered-ordinary-people-extraordinary-products/",
+        "source": "Silicon Valley Product Group",
+        "type": "Book",
+        "year": "2020",
+        "why": "Useful for cross-functional product-engineering leadership, team empowerment, and product strategy alignment.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "working-backwards",
+        "group": "Strategy and Execution",
+        "title": "Working Backwards",
+        "url": "https://us.macmillan.com/books/9781250267597/workingbackwards/",
+        "source": "Colin Bryar and Bill Carr / Macmillan",
+        "type": "Book",
+        "year": "2021",
+        "why": "Explains Amazon **operating mechanisms** such as narratives, customer-backward planning, and decision discipline.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "google-effective-teams",
+        "group": "Culture and Organizational Design",
+        "title": "The Five Dynamics of an Effective Team",
+        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
+        "source": "Google",
+        "type": "Article",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "crucial-conversations",
+        "group": "Influence and Executive Communication",
+        "title": "Crucial Conversations",
+        "url": "https://cruciallearning.com/crucialconversations_book.aspx",
+        "source": "Crucial Learning",
+        "type": "Book",
+        "why": "Useful for high-stakes disagreement, **executive conflict**, and emotionally loaded conversations.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "shape-up",
+        "group": "Strategy and Execution",
+        "title": "Shape Up",
+        "url": "https://basecamp.com/books",
+        "source": "Basecamp",
+        "type": "Book",
+        "why": "Concrete model for shaping work, betting capacity, and avoiding vague roadmap commitments.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "escaping-build-trap",
+        "group": "Strategy and Execution",
+        "title": "Escaping the Build Trap",
+        "url": "https://www.oreilly.com/library/view/escaping-the-build/9781491973783/",
+        "source": "Melissa Perri / O'Reilly",
+        "type": "Book",
+        "year": "2018",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs.",
+        "why": "Relevant here because **cross-functional influence** often requires moving the conversation from output delivery to outcome and product value."
+      },
+      {
+        "id": "art-business-value",
+        "group": "Strategy and Execution",
+        "title": "The Art of Business Value",
+        "url": "https://www.oreilly.com/library/view/the-art-of/9781457191404/",
+        "source": "Mark Schwartz / O'Reilly",
+        "type": "Book",
+        "year": "2016",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs.",
+        "why": "Relevant here because influence improves when technology work is framed as business value, **risk reduction**, learning, or optionality."
+      }
+    ]
+  }
+}

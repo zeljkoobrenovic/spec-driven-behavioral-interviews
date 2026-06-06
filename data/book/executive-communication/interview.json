@@ -1,0 +1,348 @@
+{
+  "id": "executive-communication",
+  "title": "Executive Communication",
+  "description": "Explaining complex technical reality, uncertainty, risk, and decision options to executives or the board without hiding behind technical detail.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "executive-communication",
+    "name": "Executive Communication",
+    "family": "Influence and Communication",
+    "definition": "Communicates technical complexity in decision-ready language for non-technical or executive audiences.",
+    "whyItMatters": "Senior technology leaders must create confidence without oversimplifying, hiding uncertainty, or distorting **trade-offs**."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you had to explain a complex technical issue to a non-technical executive audience.",
+    "variants": [
+      "Describe a time when you had to communicate uncertainty upward.",
+      "Tell me about a time you had to explain **technical risk** to a board or executive team."
+    ],
+    "interviewerIntent": [
+      "Can the candidate simplify without distorting?",
+      "Do they frame options and consequences clearly?",
+      "Can they communicate uncertainty honestly and usefully?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A VP Engineering explains a platform migration delay to the board using customer risk, financial **trade-offs**, delivery scenarios, and decision options rather than architecture diagrams.",
+    "context": [
+      "A major platform migration is behind plan.",
+      "Executives need to understand risk, not implementation details.",
+      "Product and revenue commitments depend on the migration path."
+    ],
+    "constraints": [
+      "The message must be accurate and concise.",
+      "The leader must communicate uncertainty without sounding evasive.",
+      "Executives need decision options."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A platform migration delay created executive concern about customer commitments and delivery risk.",
+    "task": "Explain the situation in a way that enabled an informed executive decision.",
+    "action": [
+      "Translated technical issues into customer, financial, and delivery consequences.",
+      "Prepared three scenarios with risk, cost, and timing **trade-offs**.",
+      "Separated facts, assumptions, unknowns, and decisions needed.",
+      "Used technical detail only where it changed the decision."
+    ],
+    "result": [
+      "Executives understood the **trade-offs** and chose a staged migration path.",
+      "Customer commitments were reset with clearer risk language.",
+      "Engineering gained support for risk-reduction work."
+    ],
+    "reflection": "The lesson was that **executive communication** should make decisions easier, not prove technical expertise.",
+    "systemChange": [
+      "Executive risk brief template.",
+      "Decision-options format for technical escalations.",
+      "Regular migration risk update cadence."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "board-migration-delay",
+      "title": "Board-Level Migration Delay",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you had to explain a complex technical issue to a non-technical executive audience.",
+      "situation": "A platform migration delay affected customer commitments, and the board needed decision options rather than architecture details.",
+      "strongAnswerSketch": [
+        "Start with the decision the board needs to make.",
+        "Separate facts, assumptions, unknowns, and risk scenarios.",
+        "Translate technical constraints into customer, financial, and delivery consequences.",
+        "Present options with timing, risk, and **trade-offs**."
+      ],
+      "whyItWorks": [
+        "Makes the communication decision-ready.",
+        "Handles uncertainty honestly.",
+        "Keeps technical detail tied to executive choices."
+      ],
+      "weakVersion": "I explained the technical reasons for the delay and showed the board why the migration was more complex than expected.",
+      "followUpAngles": [
+        "What decision did they need to make?",
+        "What uncertainty did you name?",
+        "Which option did you recommend?"
+      ]
+    },
+    {
+      "id": "security-risk-briefing",
+      "title": "Security Risk Briefing",
+      "level": "CTO",
+      "promptVariant": "Describe a time when you had to communicate uncertainty upward.",
+      "situation": "A newly discovered vulnerability might affect enterprise customers, but the exploitability and customer exposure were still being investigated.",
+      "strongAnswerSketch": [
+        "Tell executives what is known, unknown, and being verified.",
+        "Define decision thresholds for customer notification and remediation priority.",
+        "Use scenarios rather than false certainty.",
+        "Set an update cadence and owner for each open question."
+      ],
+      "whyItWorks": [
+        "Communicates uncertainty without sounding chaotic.",
+        "Turns ambiguity into decision thresholds.",
+        "Builds executive confidence through cadence and ownership."
+      ],
+      "weakVersion": "I told executives we were investigating and would provide details once Security had confirmed the full impact.",
+      "followUpAngles": [
+        "What did you avoid saying prematurely?",
+        "What thresholds drove decisions?",
+        "How did you keep executives updated?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows audience awareness, clarity, honest uncertainty, and **decision framing**.",
+    "moves": [
+      "Starts from the executive decision, not the technical narrative.",
+      "Separates knowns, unknowns, risks, and options.",
+      "Uses business and customer consequences.",
+      "Keeps technical detail relevant to the decision.",
+      "Creates a repeatable communication format."
+    ]
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either oversimplifies into false certainty or buries the audience in technical detail.",
+    "redFlags": [
+      "Cannot explain what decision the **audience needed** to make.",
+      "Uses technical detail to avoid accountability.",
+      "Hides uncertainty or presents one path as risk-free.",
+      "Does not adapt communication to audience needs."
+    ]
+  },
+  "followUps": [
+    {
+      "id": "audience",
+      "question": "What did the audience need to decide?",
+      "tests": [
+        "judgment",
+        "stakeholder alignment"
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "question": "How did you communicate what you did not know?",
+      "tests": [
+        "risk judgment",
+        "reflection"
+      ]
+    },
+    {
+      "id": "options",
+      "question": "What options did you present?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ]
+    },
+    {
+      "id": "format",
+      "question": "What changed in how **technical risk** was communicated afterward?",
+      "tests": [
+        "learning",
+        "execution"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "audience-awareness",
+        "name": "Audience Awareness",
+        "strong": "Frames communication around the audience's decision and context.",
+        "weak": "Communicates from the technical team's perspective only."
+      },
+      {
+        "id": "uncertainty-framing",
+        "name": "Uncertainty Framing",
+        "strong": "Separates facts, assumptions, unknowns, and decision options.",
+        "weak": "Hides uncertainty or makes it sound chaotic."
+      },
+      {
+        "id": "decision-ready-clarity",
+        "name": "Decision-Ready Clarity",
+        "strong": "Presents options, **trade-offs**, and consequences clearly.",
+        "weak": "Explains the problem but not the decision."
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Explains team-level **technical risk** clearly to non-technical partners."
+      },
+      {
+        "level": "Director",
+        "expected": "Communicates cross-team risk, options, and **trade-offs** to senior stakeholders."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Frames organizational technology risk for executives in decision-ready terms."
+      },
+      {
+        "level": "CTO",
+        "expected": "Communicates company-level technology strategy and risk to the CEO, board, customers, or external stakeholders."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "audience-awareness",
+      "uncertainty-framing",
+      "decision-ready-clarity"
+    ],
+    "followUpTree": [
+      "audience",
+      "uncertainty",
+      "options",
+      "format"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What complex technical issue needed executive communication?"
+      },
+      {
+        "field": "task",
+        "label": "What decision or understanding did you need to create?"
+      },
+      {
+        "field": "action",
+        "label": "How did you frame facts, uncertainty, options, and trade-offs?"
+      },
+      {
+        "field": "result",
+        "label": "What decision or alignment changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about executive communication?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What communication format or cadence changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Explaining security risk to the board.",
+    "Communicating migration uncertainty to the executive team.",
+    "Briefing customers on a technical reliability investment."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "minto-pyramid-principle",
+        "group": "Influence and Executive Communication",
+        "title": "The Minto Pyramid Principle",
+        "url": "https://www.barbaraminto.com/",
+        "source": "Barbara Minto",
+        "type": "Book / Method",
+        "why": "Classic structured-communication method for executive-ready recommendations and concise reasoning.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "working-backwards",
+        "group": "Strategy and Execution",
+        "title": "Working Backwards",
+        "url": "https://us.macmillan.com/books/9781250267597/workingbackwards/",
+        "source": "Colin Bryar and Bill Carr / Macmillan",
+        "type": "Book",
+        "year": "2021",
+        "why": "Explains Amazon **operating mechanisms** such as narratives, customer-backward planning, and decision discipline.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "scaling-people",
+        "group": "Culture and Organizational Design",
+        "title": "Scaling People",
+        "url": "https://press.stripe.com/scaling-people",
+        "source": "Claire Hughes Johnson / Stripe Press",
+        "type": "Book",
+        "year": "2023",
+        "why": "Operator-focused reference for scaling leadership systems, decision making, communication, and company rituals.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "crucial-conversations",
+        "group": "Influence and Executive Communication",
+        "title": "Crucial Conversations",
+        "url": "https://cruciallearning.com/crucialconversations_book.aspx",
+        "source": "Crucial Learning",
+        "type": "Book",
+        "why": "Useful for high-stakes disagreement, **executive conflict**, and emotionally loaded conversations.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "so-what-strategy",
+        "group": "Influence and Executive Communication",
+        "title": "The So What Strategy",
+        "url": "https://sowhatstrategy.com/",
+        "source": "Davina Stanley and Gerard Castles",
+        "type": "Book",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
+        "why": "Relevant here because **executive communication** must quickly answer why the message matters and what decision is needed."
+      },
+      {
+        "id": "supercommunicators",
+        "group": "Influence and Executive Communication",
+        "title": "Supercommunicators",
+        "url": "https://charlesduhigg.com/supercommunicators/",
+        "source": "Charles Duhigg",
+        "type": "Book",
+        "year": "2024",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
+        "why": "Relevant here because strong communication answers should show listening, connection, clarity, and adaptation to the audience."
+      }
+    ]
+  }
+}

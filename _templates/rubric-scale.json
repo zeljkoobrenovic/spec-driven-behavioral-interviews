@@ -1,0 +1,24 @@
+{
+  "scale": [
+    {
+      "id": "weak",
+      "name": "Weak",
+      "description": "Vague story, unclear personal ownership, little measurement, no reflection."
+    },
+    {
+      "id": "acceptable",
+      "name": "Acceptable",
+      "description": "Clear story and actions, but limited senior-level trade-off reasoning or system change."
+    },
+    {
+      "id": "strong",
+      "name": "Strong",
+      "description": "Concrete ownership, trade-offs, measurable outcome, learning, and durable operating change."
+    },
+    {
+      "id": "exceptional",
+      "name": "Exceptional",
+      "description": "Shows executive judgment, cross-functional influence, second-order consequences, and repeatable leadership mechanisms."
+    }
+  ]
+}

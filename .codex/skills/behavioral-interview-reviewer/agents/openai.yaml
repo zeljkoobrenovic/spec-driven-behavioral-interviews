@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behavioral Interview Reviewer"
+  short_description: "Review interview quality and gaps"
+  default_prompt: "Use $behavioral-interview-reviewer to review whether behavioral interviews are realistic, balanced, and educative."

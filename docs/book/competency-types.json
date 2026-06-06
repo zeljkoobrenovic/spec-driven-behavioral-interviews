@@ -1,0 +1,39 @@
+{
+  "families": [
+    {
+      "id": "interview-method",
+      "name": "Interview Method",
+      "color": "#5f6368"
+    },
+    {
+      "id": "judgment-strategy",
+      "name": "Judgment and Strategy",
+      "color": "#315f9d"
+    },
+    {
+      "id": "execution-accountability",
+      "name": "Execution and Accountability",
+      "color": "#0f6b68"
+    },
+    {
+      "id": "people-leadership",
+      "name": "People Leadership",
+      "color": "#7a4f9a"
+    },
+    {
+      "id": "organizational-scale",
+      "name": "Organizational Scale",
+      "color": "#5b6f35"
+    },
+    {
+      "id": "influence-communication",
+      "name": "Influence and Communication",
+      "color": "#9a6700"
+    },
+    {
+      "id": "risk-ethics-innovation",
+      "name": "Risk, Ethics, and Innovation",
+      "color": "#a63d40"
+    }
+  ]
+}

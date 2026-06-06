@@ -1,0 +1,353 @@
+{
+  "id": "technical-judgment",
+  "title": "Technical Judgment at Executive Scale",
+  "description": "Making or reversing **architecture decisions** with enough technical depth, organizational realism, and business judgment.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "technical-judgment",
+    "name": "Technical Judgment at Executive Scale",
+    "family": "Judgment and Strategy",
+    "definition": "Makes high-quality technical calls by weighing architecture, team maturity, operational burden, and business consequences.",
+    "whyItMatters": "Senior technology leaders do not need to be the deepest specialist, but they must create conditions for sound technical decisions."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you made or reversed a major architecture decision.",
+    "variants": [
+      "Describe a time when your **technical judgment** was challenged by senior engineers.",
+      "Tell me about a time you chose a pragmatic architecture over a fashionable one."
+    ],
+    "interviewerIntent": [
+      "Can the candidate reason about technical **trade-offs** beyond slogans?",
+      "Do they respect expert input without outsourcing judgment?",
+      "Can they connect architecture choices to team and business constraints?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "An engineering director inherits a monolith-versus-microservices debate and chooses a modular monolith before selective extraction.",
+    "context": [
+      "Senior engineers are split between immediate service extraction and stabilizing the existing system.",
+      "The organization has inconsistent deployment discipline.",
+      "Customers care more about reliability and delivery speed than architecture purity."
+    ],
+    "constraints": [
+      "The current monolith slows teams but is still understandable.",
+      "Microservices would increase operational burden.",
+      "The decision must preserve trust with senior engineers on both sides."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "The team was stuck in a polarized architecture debate that was delaying delivery and raising operational risk.",
+    "task": "Choose a technical direction that improved delivery while matching the organization's maturity.",
+    "action": [
+      "Defined evaluation criteria around team ownership, deployment frequency, incident patterns, domain boundaries, and **customer impact**.",
+      "Ran a short technical review with senior engineers from both camps.",
+      "Chose a modular monolith first, with explicit extraction criteria for services.",
+      "Invested in deployment, observability, and ownership standards before extraction."
+    ],
+    "result": [
+      "The debate moved from ideology to **decision criteria**.",
+      "Teams gained clearer boundaries without taking on premature distributed-systems overhead.",
+      "Later service extractions happened where ownership and scaling pressure justified them."
+    ],
+    "reflection": "The lesson was that architecture direction must fit operating capability, not just target-state elegance.",
+    "systemChange": [
+      "Architecture decision record template.",
+      "Service extraction readiness checklist.",
+      "Regular technical **review forum** focused on trade-offs and reversibility."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "modular-monolith-first",
+      "title": "Modular Monolith Before Services",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you chose a pragmatic architecture over a fashionable one.",
+      "situation": "Senior engineers were split between extracting microservices immediately and stabilizing a monolith that was painful but still understandable.",
+      "strongAnswerSketch": [
+        "Define criteria around deployment frequency, **ownership boundaries**, incident history, and team maturity.",
+        "Run a review that surfaces both camps strongest arguments.",
+        "Choose modular boundaries first and service extraction only where ownership and scale justify it.",
+        "Invest in observability and deployment discipline before distributed ownership."
+      ],
+      "whyItWorks": [
+        "Uses technical criteria rather than architecture fashion.",
+        "Respects senior engineers without outsourcing judgment.",
+        "Shows sequencing and reversibility."
+      ],
+      "weakVersion": "I decided microservices were too risky and told the team to clean up the monolith first.",
+      "followUpAngles": [
+        "What would have made microservices the right answer?",
+        "Who disagreed and why?",
+        "How did you know modularization was working?"
+      ],
+      "aiVisual": "assets/generated/example-stories/modular-monolith-first.jpg"
+    },
+    {
+      "id": "build-vs-buy-platform",
+      "title": "Build Versus Buy For A Platform Capability",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you made or reversed a major architecture decision.",
+      "situation": "A team wanted to build an internal workflow engine, but the company needed faster compliance readiness and lacked deep expertise in that domain.",
+      "strongAnswerSketch": [
+        "Compare strategic differentiation, integration cost, vendor risk, compliance needs, and team opportunity cost.",
+        "Choose buy for the commodity workflow layer while building differentiating policy logic internally.",
+        "Create an exit plan around data ownership and integration boundaries.",
+        "Document the decision so future platform investments use the same criteria."
+      ],
+      "whyItWorks": [
+        "Balances technical control with business urgency.",
+        "Avoids false **build-versus-buy** absolutism.",
+        "Creates a reusable decision framework."
+      ],
+      "weakVersion": "I chose the vendor because it was faster and told the team we could always replace it later.",
+      "followUpAngles": [
+        "What vendor lock-in risk did you accept?",
+        "What did you keep in-house?",
+        "How did you make the decision reversible?"
+      ],
+      "aiVisual": "assets/generated/example-stories/build-vs-buy-platform.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows technical reasoning, humility with experts, and pragmatic sequencing.",
+    "moves": [
+      "Frames the technical decision through constraints and outcomes.",
+      "Names the criteria used to evaluate options.",
+      "Shows how dissenting technical input was handled.",
+      "Explains reversibility, sequencing, and operational readiness.",
+      "Leaves behind decision mechanisms, not just a chosen architecture."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either defers completely to specialists or asserts authority without explaining technical **trade-offs**.",
+    "redFlags": [
+      "Uses architecture buzzwords without concrete constraints.",
+      "Cannot explain what would make the decision wrong.",
+      "Frames disagreement with senior engineers as politics rather than signal.",
+      "Ignores operational burden, ownership, or migration risk."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "criteria",
+      "question": "What criteria did you use to make the decision?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ]
+    },
+    {
+      "id": "challenge",
+      "question": "Which senior engineers disagreed, and what did you learn from them?",
+      "tests": [
+        "influence",
+        "learning"
+      ]
+    },
+    {
+      "id": "wrong",
+      "question": "What would have told you the decision was wrong?",
+      "tests": [
+        "measurement",
+        "reflection"
+      ]
+    },
+    {
+      "id": "mechanism",
+      "question": "How did future **architecture decisions** change afterward?",
+      "tests": [
+        "accountability",
+        "learning"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "technical-depth",
+        "name": "Technical Depth",
+        "strong": "Uses concrete architecture, operational, and team constraints.",
+        "weak": "Relies on fashion, authority, or vague platform language.",
+        "strongAiVisual": "assets/generated/signals/technical-depth-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/technical-depth-weak.jpg"
+      },
+      {
+        "id": "expert-collaboration",
+        "name": "Expert Collaboration",
+        "strong": "Engages senior engineers as partners while owning the decision process.",
+        "weak": "Either overrules experts casually or hides behind them.",
+        "strongAiVisual": "assets/generated/signals/expert-collaboration-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/expert-collaboration-weak.jpg"
+      },
+      {
+        "id": "pragmatic-sequencing",
+        "name": "Pragmatic Sequencing",
+        "strong": "Chooses a path that fits current capability and creates options.",
+        "weak": "Jumps directly to an idealized target state.",
+        "strongAiVisual": "assets/generated/signals/pragmatic-sequencing-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/pragmatic-sequencing-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Leads technical **trade-offs** within a domain and uses senior IC input well."
+      },
+      {
+        "level": "Director",
+        "expected": "Coordinates architecture choices across teams with explicit criteria and migration discipline."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Balances architecture, **operating model**, talent, delivery, and business risk across a portfolio."
+      },
+      {
+        "level": "CTO",
+        "expected": "Sets technical direction that creates strategic leverage while managing company-level risk."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "technical-depth",
+      "expert-collaboration",
+      "pragmatic-sequencing"
+    ],
+    "followUpTree": [
+      "criteria",
+      "challenge",
+      "wrong",
+      "mechanism"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What technical decision was contested or high-impact?"
+      },
+      {
+        "field": "task",
+        "label": "What decision process or outcome did you own?"
+      },
+      {
+        "field": "action",
+        "label": "What criteria, experts, and trade-offs shaped the decision?"
+      },
+      {
+        "field": "result",
+        "label": "What improved, and what trade-offs remained?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about technical judgment at your level?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What technical decision mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Reversing an over-ambitious platform migration.",
+    "Choosing build versus buy for a strategic capability.",
+    "Changing cloud, data, or AI architecture under executive pressure."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "crafting-engineering-strategy",
+        "group": "Technical Judgment and Architecture",
+        "title": "Crafting Engineering Strategy",
+        "url": "https://craftingengstrategy.com/",
+        "source": "Will Larson",
+        "type": "Book",
+        "year": "2024",
+        "why": "Focused reference for turning **technical judgment** into strategy, diagnosis, and communicated choices.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "lethain-engineering-strategy",
+        "group": "Technical Judgment and Architecture",
+        "title": "Writing Engineering Strategy",
+        "url": "https://lethain.com/eng-strategies/",
+        "source": "Will Larson",
+        "type": "Article",
+        "why": "Practical guidance for writing technical strategy that explains diagnosis, policies, and coherent actions.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "staff-engineer-book",
+        "group": "Technical Judgment and Architecture",
+        "title": "Staff Engineer",
+        "url": "https://staffeng.com/book/",
+        "source": "Will Larson",
+        "type": "Book / Interviews",
+        "year": "2021",
+        "why": "Useful for senior technical leadership patterns, influence without authority, and technical scope growth.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "thoughtworks-adrs",
+        "group": "Technical Judgment and Architecture",
+        "title": "Lightweight Architecture Decision Records",
+        "url": "https://www.thoughtworks.com/en-us/radar/techniques/lightweight-architecture-decision-records",
+        "source": "Thoughtworks Technology Radar",
+        "type": "Technique",
+        "why": "Concrete mechanism for making technical decisions explicit, reviewable, and durable.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "good-strategy-bad-strategy",
+        "group": "Strategy and Execution",
+        "title": "Good Strategy Bad Strategy",
+        "url": "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/",
+        "source": "Richard Rumelt / Penguin Random House",
+        "type": "Book",
+        "year": "2011",
+        "why": "Useful for distinguishing real strategic diagnosis and coherent action from vague aspiration.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "software-architect-elevator",
+        "group": "Technical Judgment and Architecture",
+        "title": "The Software Architect Elevator",
+        "url": "https://architectelevator.com/book/",
+        "source": "Gregor Hohpe",
+        "type": "Book",
+        "year": "2020",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership.",
+        "why": "Relevant here because executive **technical judgment** requires translating between deep architecture concerns and business-level decisions."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

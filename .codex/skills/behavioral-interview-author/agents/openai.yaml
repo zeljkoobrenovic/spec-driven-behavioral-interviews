@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behavioral Interview Author"
+  short_description: "Create new interview specs"
+  default_prompt: "Use $behavioral-interview-author to create a new behavioral interview spec for this project."

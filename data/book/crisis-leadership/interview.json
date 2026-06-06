@@ -1,0 +1,366 @@
+{
+  "id": "crisis-leadership",
+  "title": "Crisis Leadership",
+  "description": "Leading through outages, security incidents, reputational risk, layoffs, or customer-trust events with calm execution and clear communication.",
+  "roleFocus": [
+    "Senior Manager",
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "crisis-leadership",
+    "name": "Crisis Leadership",
+    "family": "Execution and Accountability",
+    "definition": "Maintains clarity, decision quality, communication, and learning when stakes and uncertainty are high.",
+    "whyItMatters": "Senior leaders are often most visible when systems fail, trust is strained, or the organization is under pressure."
+  },
+  "prompt": {
+    "primary": "Tell me about the most serious production incident you led through.",
+    "variants": [
+      "Describe a time when you had to communicate bad technical news to customers or executives.",
+      "Tell me about a time you led through a security, reputational, or organizational crisis."
+    ],
+    "interviewerIntent": [
+      "Can the candidate stay calm and structured?",
+      "Do they separate **incident command**, stakeholder communication, and recovery?",
+      "Does the crisis lead to rigorous learning rather than blame?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "During a major outage, the CTO separates incident command from **executive communication** and later changes architecture, ownership, and alerting.",
+    "context": [
+      "A critical service outage affects major customers.",
+      "Executives need updates while engineers need focus.",
+      "The **root cause** is unclear during the first hour."
+    ],
+    "constraints": [
+      "Communication must be frequent but not speculative.",
+      "Teams need a clear **command structure**.",
+      "The review must be blameless but rigorous."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A major customer-facing outage created pressure from customers, executives, and internal teams.",
+    "task": "Restore service, communicate clearly, and make sure the organization learned the right lessons.",
+    "action": [
+      "Established an incident commander and kept executives out of the troubleshooting path.",
+      "Created a separate communication channel for customers and executives.",
+      "Tracked decisions, hypotheses, and recovery criteria.",
+      "Led a **post-incident** review that focused on architecture, ownership, monitoring, and escalation."
+    ],
+    "result": [
+      "The team restored service with less coordination noise.",
+      "Stakeholders received predictable updates.",
+      "Follow-up work reduced recurrence risk and improved detection."
+    ],
+    "reflection": "The lesson was that calm crisis leadership is mostly about reducing ambiguity and protecting attention.",
+    "systemChange": [
+      "Incident command model.",
+      "Executive and customer update template.",
+      "**Post-incident** review action tracker.",
+      "Alerting and ownership improvements."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "major-customer-outage",
+      "title": "Major Customer Outage",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about the most serious production incident you led through.",
+      "situation": "A critical service outage affected top customers while engineers were still unsure whether the trigger was deployment, dependency saturation, or data corruption.",
+      "strongAnswerSketch": [
+        "Assign **incident command** and keep troubleshooting channels focused.",
+        "Create a separate executive/customer update rhythm with facts, unknowns, and next update time.",
+        "Make **recovery trade-offs** explicit, including rollback risk and partial restoration.",
+        "Drive **post-incident** ownership, alerting, and architecture follow-ups."
+      ],
+      "whyItWorks": [
+        "Shows **calm structure** under uncertainty.",
+        "Communicates without speculating.",
+        "Connects crisis handling to **operational learning**."
+      ],
+      "weakVersion": "I joined the incident bridge, helped debug, and sent updates whenever we learned something new.",
+      "followUpAngles": [
+        "Who was incident commander?",
+        "What did you communicate before **root cause** was known?",
+        "Which follow-up action mattered most?"
+      ],
+      "aiVisual": "assets/generated/example-stories/major-customer-outage.jpg"
+    },
+    {
+      "id": "security-token-exposure",
+      "title": "Security Token Exposure",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you led through a security or customer-trust crisis.",
+      "situation": "An internal service exposed sensitive tokens in logs, and the team had to rotate credentials, assess **customer impact**, and decide notification scope.",
+      "strongAnswerSketch": [
+        "Set up incident roles across Security, Engineering, Legal, Support, and Communications.",
+        "Prioritize containment and forensic evidence before broad speculation.",
+        "Communicate executive decisions around customer notification and risk posture.",
+        "Change logging standards, secret scanning, and production access reviews."
+      ],
+      "whyItWorks": [
+        "Balances technical containment with trust and legal implications.",
+        "Shows cross-functional crisis leadership.",
+        "Turns the event into better controls."
+      ],
+      "weakVersion": "We fixed the logging bug quickly, rotated tokens, and had Security handle the rest of the process.",
+      "followUpAngles": [
+        "How did you decide customer notification scope?",
+        "What evidence did you need before communicating?",
+        "Which controls changed permanently?"
+      ],
+      "aiVisual": "assets/generated/example-stories/security-token-exposure.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows operational discipline, communication clarity, accountability, and learning under pressure.",
+    "moves": [
+      "Names the stakes and uncertainty.",
+      "Explains the command and communication structure.",
+      "Shows how decisions were made during incomplete information.",
+      "Avoids blame while still being rigorous.",
+      "Connects the crisis to lasting operational improvements."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate describes technical firefighting but misses leadership structure, communication, or learning.",
+    "redFlags": [
+      "Centers the story on heroics rather than coordination.",
+      "Cannot explain who made decisions during the crisis.",
+      "Provides vague or defensive stakeholder communication.",
+      "The postmortem has no concrete follow-through."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "command",
+      "question": "Who was in command, and how were decisions made?",
+      "tests": [
+        "execution",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "updates",
+      "question": "What did you communicate before you knew the **root cause**?",
+      "tests": [
+        "stakeholder alignment",
+        "judgment"
+      ]
+    },
+    {
+      "id": "tradeoffs",
+      "question": "What **trade-offs** did you make during recovery?",
+      "tests": [
+        "trade-off reasoning",
+        "risk judgment"
+      ]
+    },
+    {
+      "id": "learning",
+      "question": "What changed after the incident?",
+      "tests": [
+        "learning",
+        "accountability"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "calm-structure",
+        "name": "Calm Structure",
+        "strong": "Creates roles, decision paths, and update rhythms under pressure.",
+        "weak": "Lets the crisis run through ad hoc activity.",
+        "strongAiVisual": "assets/generated/signals/calm-structure-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/calm-structure-weak.jpg"
+      },
+      {
+        "id": "communication-clarity",
+        "name": "Communication Clarity",
+        "strong": "Communicates uncertainty honestly without speculation.",
+        "weak": "Hides uncertainty or floods stakeholders with noise.",
+        "strongAiVisual": "assets/generated/signals/communication-clarity-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/communication-clarity-weak.jpg"
+      },
+      {
+        "id": "operational-learning",
+        "name": "Operational Learning",
+        "strong": "Turns crisis review into ownership, architecture, or monitoring changes.",
+        "weak": "Treats the review as a report-writing exercise.",
+        "strongAiVisual": "assets/generated/signals/operational-learning-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/operational-learning-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Leads team-level incidents with clear roles and follow-through."
+      },
+      {
+        "level": "Director",
+        "expected": "Coordinates multi-team crises and communicates effectively across functions."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Manages organizational response, **executive communication**, customer impact, and systemic correction."
+      },
+      {
+        "level": "CTO",
+        "expected": "Owns company-level technology trust during crisis and changes risk governance afterward."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "calm-structure",
+      "communication-clarity",
+      "operational-learning"
+    ],
+    "followUpTree": [
+      "command",
+      "updates",
+      "tradeoffs",
+      "learning"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What crisis occurred, and what was at stake?"
+      },
+      {
+        "field": "task",
+        "label": "What response and communication responsibilities did you own?"
+      },
+      {
+        "field": "action",
+        "label": "How did you structure decisions, recovery, and updates?"
+      },
+      {
+        "field": "result",
+        "label": "What recovered, and what impact remained?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about leading under pressure?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What operational mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Leading through a security incident.",
+    "Handling customer trust damage after a data issue.",
+    "Communicating layoffs or a major reorganization with clarity and care."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "sre-managing-incidents",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Managing Incidents",
+        "url": "https://sre.google/sre-book/managing-incidents/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Incident-command and communication reference for high-pressure operational leadership.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "sre-incident-response",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Incident Response",
+        "url": "https://sre.google/workbook/incident-response/",
+        "source": "Google SRE Workbook",
+        "type": "Book chapter",
+        "year": "2018",
+        "why": "Practical roles and response structure for coordinating incidents without chaos.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "atlassian-incident-management",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Incident Management Handbook",
+        "url": "https://www.atlassian.com/incident-management/handbook",
+        "source": "Atlassian",
+        "type": "Handbook",
+        "why": "Operational playbook for incident roles, communication, **post-incident** review, and reliability learning.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "sre-postmortem-culture",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows how to turn failure into durable learning without performative blame.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "turn-ship-around",
+        "group": "People Leadership and Feedback",
+        "title": "Turn the Ship Around!",
+        "url": "https://www.penguinrandomhouse.com/books/314163/turn-the-ship-around-by-l-david-marquet/9781101623695",
+        "source": "L. David Marquet / Penguin Random House",
+        "type": "Book",
+        "year": "2013",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
+        "why": "Relevant here because crisis leadership depends on creating ownership and clarity close to the work instead of centralizing every decision."
+      },
+      {
+        "id": "leadership-is-language",
+        "group": "Influence and Executive Communication",
+        "title": "Leadership Is Language",
+        "url": "https://www.penguinrandomhouse.com/books/555238/leadership-is-language-by-l-david-marquet/",
+        "source": "L. David Marquet / Penguin Random House",
+        "type": "Book",
+        "year": "2020",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
+        "why": "Relevant here because in a crisis the leader's language shapes tempo, safety, escalation, and decision quality."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

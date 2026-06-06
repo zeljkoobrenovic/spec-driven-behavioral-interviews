@@ -1,0 +1,407 @@
+{
+  "id": "scaling-organization",
+  "title": "Scaling An Organization",
+  "description": "Adding structure as engineering grows without burying teams in ceremony or losing ownership.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "organizational-scale",
+    "name": "Scaling An Organization",
+    "family": "Organizational Scale",
+    "definition": "Introduces the right **operating mechanisms** as team size, coordination cost, and ownership complexity increase.",
+    "whyItMatters": "Senior leaders must know what should change as an organization grows and what should stay lightweight."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you scaled an engineering organization significantly.",
+    "variants": [
+      "What broke as your organization grew, and what did you change?",
+      "Tell me about a time you added process without creating bureaucracy.",
+      "Tell me about a time you simplified an organization or operating model as it scaled."
+    ],
+    "interviewerIntent": [
+      "Can the candidate diagnose scale-related failure modes?",
+      "Do they add structure proportionally?",
+      "Can they preserve speed, ownership, and clarity?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A company grows from 40 to 180 engineers and informal coordination stops working.",
+    "context": [
+      "**Architecture decisions** happen inconsistently.",
+      "Managers use different planning and feedback practices.",
+      "Incident reviews and **ownership boundaries** are uneven."
+    ],
+    "constraints": [
+      "The organization values autonomy and fears bureaucracy.",
+      "Coordination problems are already hurting delivery.",
+      "New leaders need common expectations quickly."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "Engineering grew quickly, and informal mechanisms no longer handled ownership, planning, or technical decisions.",
+    "task": "Add enough operating structure to support scale without slowing teams unnecessarily.",
+    "action": [
+      "Mapped repeated failures to missing mechanisms.",
+      "Introduced architecture review for cross-team decisions.",
+      "Created manager training, quarterly planning, incident review discipline, and ownership standards.",
+      "Kept team-local decisions lightweight and explicit."
+    ],
+    "result": [
+      "Planning predictability improved from roughly 55% to 75% of committed cross-team milestones over two quarters.",
+      "Repeat ownership-related incidents dropped by about a third after every critical service had a named owner and escalation path.",
+      "Architecture decision lead time became visible, and low-risk team-local decisions no longer waited for central review."
+    ],
+    "reflection": "The lesson was to add structure at the points of coordination failure, not everywhere.",
+    "systemChange": [
+      "Architecture review forum.",
+      "Quarterly planning rhythm.",
+      "Manager operating expectations.",
+      "Service ownership model."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "forty-to-one-eighty-engineers",
+      "title": "From 40 To 180 Engineers",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you scaled an engineering organization significantly.",
+      "situation": "The company grew from 40 to 180 engineers, and informal **architecture decisions**, planning, and incident ownership stopped scaling.",
+      "strongAnswerSketch": [
+        "Map repeated failures to missing mechanisms instead of adding generic process.",
+        "Introduce architecture review only for cross-team decisions.",
+        "Create manager operating expectations, quarterly planning, incident review discipline, and service ownership.",
+        "Keep team-local decisions decentralized."
+      ],
+      "whyItWorks": [
+        "Shows **scale diagnosis** rather than process enthusiasm.",
+        "Adds structure proportionally.",
+        "Preserves autonomy while fixing coordination failures."
+      ],
+      "weakVersion": "I introduced more planning meetings, architecture reviews, and manager training as the organization grew.",
+      "followUpAngles": [
+        "What broke first?",
+        "Where did you intentionally avoid process?",
+        "How did managers need to change?"
+      ]
+    },
+    {
+      "id": "remote-organization-planning",
+      "title": "Remote Organization Planning Breakdown",
+      "level": "Director",
+      "promptVariant": "What broke as your organization grew, and what did you change?",
+      "situation": "A newly distributed engineering organization kept missing cross-time-zone dependencies because planning remained optimized for hallway conversations.",
+      "strongAnswerSketch": [
+        "Identify which coordination assumptions stopped working remotely.",
+        "Introduce written planning artifacts, dependency owners, and decision deadlines.",
+        "Create async architecture review for low-risk decisions and live review for high-risk ones.",
+        "Measure dependency churn and planning predictability."
+      ],
+      "whyItWorks": [
+        "Connects process change to a specific scaling failure.",
+        "Uses async mechanisms where they fit.",
+        "Measures whether the new **operating model** works."
+      ],
+      "weakVersion": "I added more standups and asked managers to communicate better across time zones.",
+      "followUpAngles": [
+        "Which decisions had to become written?",
+        "How did you prevent documentation theater?",
+        "What metric showed better coordination?"
+      ]
+    },
+    {
+      "id": "simplifying-platform-bottleneck",
+      "title": "Simplifying A Platform Bottleneck",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you simplified an organization or operating model as it scaled.",
+      "situation": "A 220-person engineering organization had created a central platform approval group that reduced architectural risk at first, but later became a bottleneck for routine product-team changes.",
+      "strongAnswerSketch": [
+        "Separate high-risk cross-cutting decisions from routine team-local changes.",
+        "Retire mandatory review for low-risk changes and replace it with self-service guardrails, clear standards, and escalation rules.",
+        "Move platform from gatekeeper to enabling team, with domain teams owning most service decisions.",
+        "Measure decision lead time, blocked engineering days, platform support load, and escaped architecture incidents."
+      ],
+      "whyItWorks": [
+        "Shows that scaling sometimes requires removing structure, not adding it.",
+        "Clarifies **decision rights** while preserving risk controls.",
+        "Connects org design to flow, ownership, and measurable risk."
+      ],
+      "weakVersion": "I told the platform team to approve requests faster and asked product teams to plan their architecture reviews earlier.",
+      "followUpAngles": [
+        "Which decisions stayed centralized?",
+        "How did you keep architectural quality from regressing?",
+        "What metric proved the simplification worked?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows scaling instincts, proportional process, and clarity about ownership and communication complexity.",
+    "moves": [
+      "Names what broke because of scale.",
+      "Adds mechanisms tied to concrete failure modes.",
+      "Removes or simplifies mechanisms that became bottlenecks.",
+      "Explains what stayed decentralized.",
+      "Shows adoption and measurable improvement.",
+      "Reflects on where process could have gone too far."
+    ]
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either celebrates process for its own sake or rejects structure even when coordination failures are obvious.",
+    "redFlags": [
+      "Cannot explain why each mechanism was needed.",
+      "Equates scale with more meetings only.",
+      "Ignores **manager capability** and ownership design.",
+      "Has no feedback loop for whether the process helped."
+    ]
+  },
+  "followUps": [
+    {
+      "id": "what-broke",
+      "question": "What specifically broke as the organization grew?",
+      "tests": [
+        "judgment",
+        "measurement"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Architecture decisions crossed team boundaries, but no one owned the final call; we saw repeated rework, dependency churn, and two incidents where services had unclear ownership.",
+          "Planning was still built around informal relationships, so cross-team commitments slipped even when each individual team believed it was on track."
+        ],
+        "weak": [
+          "We got bigger, so communication became harder and we needed more structure.",
+          "People were confused sometimes, but that is normal when a company grows quickly."
+        ]
+      }
+    },
+    {
+      "id": "too-much-process",
+      "question": "How did you know you were not adding **too much process**?",
+      "tests": [
+        "trade-off reasoning",
+        "reflection"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I scoped reviews only to cross-team or irreversible decisions, tracked decision lead time, and removed the review requirement when teams could use documented guardrails safely.",
+          "I asked teams to name what a mechanism prevented; if no failure mode or decision owner was clear after two cycles, we stopped or simplified it."
+        ],
+        "weak": [
+          "I tried to keep meetings short and told managers not to overdo the process.",
+          "People did not complain much, so I assumed the process level was acceptable."
+        ]
+      }
+    },
+    {
+      "id": "manager-capability",
+      "question": "How did **manager capability** need to change?",
+      "tests": [
+        "execution",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Managers needed to move from local task coordination to dependency management, talent calibration, and explicit trade-off communication across product areas.",
+          "I made planning quality, feedback cadence, incident follow-through, and ownership clarity part of manager expectations, then coached managers who were still operating like tech leads."
+        ],
+        "weak": [
+          "Managers had to communicate more and make sure their teams followed the new planning process.",
+          "I sent managers to training and expected them to apply the material with their teams."
+        ]
+      }
+    },
+    {
+      "id": "ownership",
+      "question": "How did **ownership boundaries** change?",
+      "tests": [
+        "accountability",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We moved from shared ownership by project to named service and domain owners, with explicit decision rights for roadmap trade-offs, incident escalation, and technical standards.",
+          "Platform kept ownership of shared guardrails and high-risk patterns, while product domains owned routine service decisions and were accountable for reliability outcomes."
+        ],
+        "weak": [
+          "We clarified who owned what by documenting the teams responsible for each service.",
+          "Each manager became responsible for making sure their team took ownership of its area."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "scale-diagnosis",
+        "name": "Scale Diagnosis",
+        "strong": "Identifies specific coordination, ownership, and decision failures caused by growth.",
+        "weak": "Uses generic growth language."
+      },
+      {
+        "id": "proportional-structure",
+        "name": "Proportional Structure",
+        "strong": "Adds only the mechanisms needed for the failure mode.",
+        "weak": "Adds broad process without clear payoff."
+      },
+      {
+        "id": "ownership-design",
+        "name": "Ownership Design",
+        "strong": "Clarifies **decision rights** and service or domain ownership.",
+        "weak": "Leaves accountability diffuse."
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Scales practices across a few teams, makes dependencies explicit, and keeps ownership clear without creating avoidable coordination overhead."
+      },
+      {
+        "level": "Director",
+        "expected": "Introduces cross-team mechanisms for planning, architecture, and execution, and shows evidence that team-of-teams delivery, decision speed, or ownership quality improved."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Designs operating cadence, leadership layers, manager expectations, and ownership models for a growing organization, with clear trade-offs about what stays decentralized."
+      },
+      {
+        "level": "CTO",
+        "expected": "Scales technology organization design in line with company strategy, talent model, architecture risk, and long-term flow of value."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "scale-diagnosis",
+      "proportional-structure",
+      "ownership-design"
+    ],
+    "followUpTree": [
+      "what-broke",
+      "too-much-process",
+      "manager-capability",
+      "ownership"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What broke because the organization grew?"
+      },
+      {
+        "field": "task",
+        "label": "What scale outcome were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "What mechanisms did you add, remove, or standardize?"
+      },
+      {
+        "field": "result",
+        "label": "What improved in coordination, delivery, or ownership?"
+      },
+      {
+        "field": "reflection",
+        "label": "Where did you need more or less structure?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What operating model changed permanently?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Growing from a single engineering team to multiple product areas.",
+    "Introducing an architecture forum after repeated cross-team incidents.",
+    "Creating planning rituals for a newly distributed engineering organization.",
+    "Removing a central approval bottleneck after teams have enough guardrails and ownership maturity."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "team-topologies",
+        "group": "Culture and Organizational Design",
+        "title": "Team Topologies",
+        "url": "https://teamtopologies.com/book",
+        "source": "Team Topologies",
+        "type": "Book",
+        "year": "2025",
+        "why": "The current second edition is useful for scaling team boundaries, cognitive load, platform teams, and interaction modes.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "scaling-people",
+        "group": "Culture and Organizational Design",
+        "title": "Scaling People",
+        "url": "https://press.stripe.com/scaling-people",
+        "source": "Claire Hughes Johnson / Stripe Press",
+        "type": "Book",
+        "year": "2023",
+        "why": "Operator-focused reference for scaling leadership systems, decision making, communication, and company rituals.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "an-elegant-puzzle",
+        "group": "Culture and Organizational Design",
+        "title": "An Elegant Puzzle",
+        "url": "https://lethain.com/elegant-puzzle/",
+        "source": "Will Larson",
+        "type": "Book",
+        "year": "2019",
+        "why": "Engineering-management reference for **organizational design**, planning, sizing teams, and senior leadership trade-offs.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "high-output-management",
+        "group": "People Leadership and Feedback",
+        "title": "High Output Management",
+        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
+        "source": "Andrew S. Grove / Penguin Random House",
+        "type": "Book",
+        "year": "1983",
+        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "google-effective-teams",
+        "group": "Culture and Organizational Design",
+        "title": "The Five Dynamics of an Effective Team",
+        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
+        "source": "Google",
+        "type": "Article",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "manager-tools-basics",
+        "group": "People Leadership and Feedback",
+        "title": "Manager Tools Basics",
+        "url": "https://www.manager-tools.com/manager-tools-basics",
+        "source": "Manager Tools",
+        "type": "Podcast / Guide",
+        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      }
+    ]
+  }
+}

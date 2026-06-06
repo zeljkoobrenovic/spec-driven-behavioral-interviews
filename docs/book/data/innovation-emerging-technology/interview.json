@@ -1,0 +1,360 @@
+{
+  "id": "innovation-emerging-technology",
+  "title": "Innovation and Emerging Technology",
+  "description": "Introducing AI, automation, platforms, or **emerging technology** with disciplined experimentation, adoption, risk management, and measurable impact.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "innovation-adoption",
+    "name": "Innovation and Emerging Technology",
+    "family": "Risk, Ethics, and Innovation",
+    "definition": "Evaluates and adopts new technology through evidence, risk controls, behavior change, and **measurable outcomes**.",
+    "whyItMatters": "Senior leaders must separate useful innovation from hype while creating conditions for **responsible adoption**."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you introduced a new technology that changed how your organization worked.",
+    "variants": [
+      "Describe how you evaluated whether AI, automation, or a new platform capability was worth adopting.",
+      "Tell me about a time a technology experiment did not justify broader rollout."
+    ],
+    "interviewerIntent": [
+      "Can the candidate test **emerging technology** with discipline?",
+      "Do they manage security, quality, adoption, and change management?",
+      "Can they measure impact beyond excitement or license usage?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A senior leader introduces AI-assisted development tools with security rules, cycle-time measurement, code-review quality checks, and team training.",
+    "context": [
+      "Engineers are experimenting individually with AI tools.",
+      "Security and legal teams are concerned about data exposure.",
+      "Executives want productivity gains but lack evidence."
+    ],
+    "constraints": [
+      "The organization needs guardrails before broad adoption.",
+      "Impact must be measured without vanity metrics.",
+      "Teams need training and workflow changes, not just licenses."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "The organization had fragmented AI-tool usage with enthusiasm, risk concerns, and unclear productivity impact.",
+    "task": "Evaluate and scale AI-assisted development responsibly if evidence justified it.",
+    "action": [
+      "Defined acceptable-use, security, and code-review policies.",
+      "Ran a pilot with control groups and measured cycle time, review quality, defects, and developer experience.",
+      "Trained teams on effective use cases and prohibited uses.",
+      "Adjusted rollout based on evidence rather than initial enthusiasm."
+    ],
+    "result": [
+      "The organization adopted the tools where impact was measurable.",
+      "Security and quality concerns were addressed through guardrails.",
+      "Teams learned where AI helped and where human review remained critical."
+    ],
+    "reflection": "The lesson was that innovation adoption is an operating change, not a procurement event.",
+    "systemChange": [
+      "**Emerging technology** pilot framework.",
+      "AI usage policy.",
+      "Impact measurement dashboard.",
+      "Training and review standards."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "ai-assisted-development",
+      "title": "AI-Assisted Development Adoption",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you introduced a new technology that changed how your organization worked.",
+      "situation": "Engineers were already experimenting with AI coding tools, executives wanted productivity gains, and Security was concerned about code and data exposure.",
+      "strongAnswerSketch": [
+        "Define the adoption hypothesis and acceptable-use policy.",
+        "Run a pilot measuring cycle time, review quality, defects, and developer experience.",
+        "Train teams on effective and prohibited use cases.",
+        "Scale adoption only where evidence and guardrails support it."
+      ],
+      "whyItWorks": [
+        "Separates innovation from license purchasing.",
+        "Measures impact beyond usage.",
+        "Manages quality and security risks during adoption."
+      ],
+      "weakVersion": "I bought AI coding licenses, encouraged teams to experiment, and tracked adoption to see whether people found value.",
+      "followUpAngles": [
+        "What was your hypothesis?",
+        "What would have stopped rollout?",
+        "How did code review **behavior change**?"
+      ]
+    },
+    {
+      "id": "internal-platform-trial",
+      "title": "Internal Platform Trial",
+      "level": "Director",
+      "promptVariant": "Tell me about a time a technology experiment did not justify broader rollout.",
+      "situation": "A platform team piloted a new deployment abstraction that improved one team experience but made debugging harder for services with unusual runtime needs.",
+      "strongAnswerSketch": [
+        "Define success criteria before the pilot: lead time, failure recovery, support load, and developer satisfaction.",
+        "Measure both happy-path adoption and operational friction.",
+        "Decide not to roll out broadly until debugging and escape-hatch problems are solved.",
+        "Document adoption criteria for the next platform experiment."
+      ],
+      "whyItWorks": [
+        "Shows willingness to stop an exciting technology.",
+        "Measures operational consequences, not only developer enthusiasm.",
+        "Improves future **experimentation discipline**."
+      ],
+      "weakVersion": "The pilot feedback was mixed, so we delayed rollout and gave the platform team more time to improve it.",
+      "followUpAngles": [
+        "What metric changed your mind?",
+        "Who was disappointed by the decision?",
+        "What did the next pilot do differently?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows **experimentation discipline**, adoption strategy, risk management, and measurable impact.",
+    "moves": [
+      "Explains the hypothesis and **decision criteria**.",
+      "Includes risk, security, and quality controls.",
+      "Measures behavior and outcomes, not only adoption.",
+      "Invests in training and workflow integration.",
+      "Scales, changes, or stops based on evidence."
+    ]
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate treats innovation as buying tools or following trends without disciplined evaluation or adoption design.",
+    "redFlags": [
+      "Uses hype language without a testable hypothesis.",
+      "Measures only usage or licenses.",
+      "Ignores security, quality, or **behavior change**.",
+      "Cannot name conditions under which they would stop rollout."
+    ]
+  },
+  "followUps": [
+    {
+      "id": "hypothesis",
+      "question": "What hypothesis were you testing?",
+      "tests": [
+        "decision quality",
+        "measurement"
+      ]
+    },
+    {
+      "id": "risk-controls",
+      "question": "What risks did you control before adoption?",
+      "tests": [
+        "risk judgment",
+        "technical judgment"
+      ]
+    },
+    {
+      "id": "impact",
+      "question": "How did you measure impact beyond usage?",
+      "tests": [
+        "measurement",
+        "accountability"
+      ]
+    },
+    {
+      "id": "adoption",
+      "question": "What changed in how teams actually worked?",
+      "tests": [
+        "execution",
+        "learning"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "experimentation-discipline",
+        "name": "Experimentation Discipline",
+        "strong": "Defines hypotheses, metrics, risks, and rollout criteria.",
+        "weak": "Runs broad adoption based on enthusiasm."
+      },
+      {
+        "id": "risk-aware-adoption",
+        "name": "Risk-Aware Adoption",
+        "strong": "Integrates security, quality, and responsible-use guardrails.",
+        "weak": "Treats risk as a later compliance concern."
+      },
+      {
+        "id": "measurable-impact",
+        "name": "Measurable Impact",
+        "strong": "Measures outcomes and **behavior change**.",
+        "weak": "Confuses usage with impact."
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Pilots technology within a team with clear metrics and guardrails."
+      },
+      {
+        "level": "Director",
+        "expected": "Scales adoption across teams through training, workflow changes, and impact measurement."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Creates an organizational adoption model for **emerging technology** with risk controls and portfolio impact."
+      },
+      {
+        "level": "CTO",
+        "expected": "Sets company-level technology adoption strategy balancing strategic leverage, risk, and operating change."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "experimentation-discipline",
+      "risk-aware-adoption",
+      "measurable-impact"
+    ],
+    "followUpTree": [
+      "hypothesis",
+      "risk-controls",
+      "impact",
+      "adoption"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What new technology or capability was being considered?"
+      },
+      {
+        "field": "task",
+        "label": "What adoption or evaluation decision did you own?"
+      },
+      {
+        "field": "action",
+        "label": "How did you test, control risk, train, and measure?"
+      },
+      {
+        "field": "result",
+        "label": "What evidence justified scaling, changing, or stopping?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about technology adoption?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What adoption framework or guardrail remained?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Introducing internal developer platforms.",
+    "Evaluating AI support tools for customer operations.",
+    "Stopping a technology rollout after pilot evidence disappoints."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "lean-startup",
+        "group": "Innovation and Product Discovery",
+        "title": "The Lean Startup",
+        "url": "https://www.penguinrandomhouse.com/books/210088/the-lean-startup-by-eric-ries/9780307887894/",
+        "source": "Eric Ries / Penguin Random House",
+        "type": "Book",
+        "year": "2011",
+        "why": "Reference for validated learning, experiments, pivots, and disciplined innovation under uncertainty.",
+        "groupDescription": "Resources for experimentation, emerging technology adoption, and product discovery discipline."
+      },
+      {
+        "id": "pair-guidebook",
+        "group": "Responsible Technology and AI",
+        "title": "People + AI Guidebook",
+        "url": "https://pair.withgoogle.com/guidebook-v2/",
+        "source": "Google PAIR",
+        "type": "Guidebook",
+        "why": "Human-centered AI design guide for setting expectations, feedback loops, and user trust.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "google-ai-principles",
+        "group": "Responsible Technology and AI",
+        "title": "Google AI Principles",
+        "url": "https://ai.google/responsibility/principles/",
+        "source": "Google",
+        "type": "Principles",
+        "why": "Useful example of public AI principles and boundaries for **responsible technology** decisions.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "nist-ai-rmf",
+        "group": "Responsible Technology and AI",
+        "title": "AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "source": "NIST",
+        "type": "Framework",
+        "year": "2023",
+        "why": "Authoritative framework for identifying, measuring, managing, and governing AI risk.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "empowered-product-teams",
+        "group": "Strategy and Execution",
+        "title": "EMPOWERED: Ordinary People, Extraordinary Products",
+        "url": "https://www.svpg.com/books/empowered-ordinary-people-extraordinary-products/",
+        "source": "Silicon Valley Product Group",
+        "type": "Book",
+        "year": "2020",
+        "why": "Useful for cross-functional product-engineering leadership, team empowerment, and product strategy alignment.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "shape-up",
+        "group": "Strategy and Execution",
+        "title": "Shape Up",
+        "url": "https://basecamp.com/books",
+        "source": "Basecamp",
+        "type": "Book",
+        "why": "Concrete model for shaping work, betting capacity, and avoiding vague roadmap commitments.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "ai-engineering",
+        "group": "Responsible Technology and AI",
+        "title": "AI Engineering",
+        "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
+        "source": "Chip Huyen / O'Reilly",
+        "type": "Book",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics.",
+        "why": "Relevant here because emerging-technology answers should show production-minded AI adoption, not tool enthusiasm alone."
+      },
+      {
+        "id": "build-what-matters",
+        "group": "Innovation and Product Discovery",
+        "title": "Build What Matters",
+        "url": "https://lioncrest.com/books/build-what-matters-foster-nerlikar/",
+        "source": "Ben Foster and Rajesh Nerlikar / Lioncrest Publishing",
+        "type": "Book",
+        "year": "2020",
+        "groupDescription": "Resources for experimentation, emerging technology adoption, and product discovery discipline.",
+        "why": "Relevant here because innovation stories are stronger when discovery connects to strategy, outcomes, and disciplined product bets."
+      }
+    ]
+  }
+}

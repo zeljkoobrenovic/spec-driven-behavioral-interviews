@@ -1,0 +1,362 @@
+{
+  "id": "technical-debt-modernization",
+  "title": "Technical Debt and Modernization",
+  "description": "Framing **technical debt** as business risk and sequencing modernization without turning it into an engineering-only campaign.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "technical-debt",
+    "name": "Technical Debt and Modernization",
+    "family": "Judgment and Strategy",
+    "definition": "Balances near-term delivery with long-term system health by translating **technical debt** into business consequences.",
+    "whyItMatters": "Senior leaders must avoid both neglect and perfectionism while keeping the business engaged in modernization **trade-offs**."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you convinced the business to invest in **technical debt reduction**.",
+    "variants": [
+      "Describe a time when you chose not to fix **technical debt**.",
+      "Tell me about a **modernization effort** you had to sequence through product work."
+    ],
+    "interviewerIntent": [
+      "Can the candidate frame **technical debt** economically?",
+      "Do they prioritize debt instead of treating all debt equally?",
+      "Can they fund modernization through product and risk outcomes?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A CTO reframes **technical debt** as enterprise onboarding delay, incident frequency, hiring friction, and rising cloud cost.",
+    "context": [
+      "Engineering wants a large cleanup investment.",
+      "Product and sales see debt reduction as slowing feature delivery.",
+      "Customers experience reliability and onboarding pain caused by old platform assumptions."
+    ],
+    "constraints": [
+      "The company cannot pause roadmap delivery.",
+      "Technical debt must be prioritized by **business impact**.",
+      "Modernization must have visible milestones."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A legacy platform was slowing enterprise onboarding, increasing incidents, and raising operating cost.",
+    "task": "Create a **modernization plan** that business leaders would understand and fund.",
+    "action": [
+      "Mapped debt areas to **customer impact**, revenue blockers, incident trends, and cloud spend.",
+      "Prioritized **modernization work** by business risk and product leverage.",
+      "Embedded debt reduction into product initiatives rather than running a separate cleanup campaign.",
+      "Created milestones that showed **risk reduction** and delivery benefits."
+    ],
+    "result": [
+      "Business stakeholders understood which debt mattered and why.",
+      "**Modernization work** received roadmap capacity without hiding its cost.",
+      "Onboarding, reliability, and operational cost improved over time."
+    ],
+    "reflection": "The lesson was that **technical debt** becomes fundable when it is translated into decisions the business already cares about.",
+    "systemChange": [
+      "Debt scoring model tied to **business risk**.",
+      "Quarterly modernization review.",
+      "Product planning template with system-health impact."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "enterprise-onboarding-bottleneck",
+      "title": "Enterprise Onboarding Bottleneck",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you convinced the business to invest in **technical debt reduction**.",
+      "situation": "Legacy tenant provisioning made enterprise onboarding slow and unreliable, but business leaders saw modernization as an engineering cleanup request.",
+      "strongAnswerSketch": [
+        "Translate the debt into delayed revenue, support cost, incident risk, and sales friction.",
+        "Rank **modernization work** by customer onboarding impact.",
+        "Fund the work through enterprise roadmap milestones instead of a separate cleanup program.",
+        "Track onboarding time and incident reduction as business-facing metrics."
+      ],
+      "whyItWorks": [
+        "Frames debt as **business risk** and opportunity cost.",
+        "Prioritizes debt rather than asking for unlimited cleanup capacity.",
+        "Makes modernization measurable to non-engineering stakeholders."
+      ],
+      "weakVersion": "I explained that the provisioning system was old and asked for a quarter to rebuild it properly.",
+      "followUpAngles": [
+        "What debt did you choose not to fix?",
+        "How did you protect feature delivery?",
+        "What metric changed first?"
+      ],
+      "aiVisual": "assets/generated/example-stories/enterprise-onboarding-bottleneck.jpg"
+    },
+    {
+      "id": "cloud-cost-modernization",
+      "title": "Cloud Cost Modernization",
+      "level": "Director",
+      "promptVariant": "Describe a time when you chose not to fix **technical debt**.",
+      "situation": "A data pipeline had several ugly components, but only two generated material cloud cost and reliability risk.",
+      "strongAnswerSketch": [
+        "Separate aesthetic debt from business-impacting debt.",
+        "Fix storage lifecycle and query patterns before attempting a full pipeline rewrite.",
+        "Make cost ownership visible by team and service.",
+        "Defer low-impact cleanup until it naturally aligns with product changes."
+      ],
+      "whyItWorks": [
+        "Shows discipline about what not to fix.",
+        "Connects modernization to cost and reliability outcomes.",
+        "Avoids engineering perfectionism."
+      ],
+      "weakVersion": "I told the business we needed to clean up the whole pipeline because it was slowing the team down.",
+      "followUpAngles": [
+        "What debt did you leave alone?",
+        "How did you measure cost savings?",
+        "Who disagreed with the narrower scope?"
+      ],
+      "aiVisual": "assets/generated/example-stories/cloud-cost-modernization.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate treats debt as a portfolio of risks and options, not as a moral argument for cleanup.",
+    "moves": [
+      "Connects debt to customer, revenue, reliability, cost, or talent consequences.",
+      "Prioritizes debt by impact and urgency.",
+      "Explains trade-offs with **product delivery**.",
+      "Shows sequencing and milestones.",
+      "Changes planning so debt stays visible."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate complains that the business does not value engineering quality but cannot translate debt into outcomes.",
+    "redFlags": [
+      "Treats all **technical debt** as equally urgent.",
+      "Frames modernization as engineering purity.",
+      "Cannot explain what debt they deliberately did not fix.",
+      "Has no adoption or funding mechanism."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "business-case",
+      "question": "How did you make the **business case**?",
+      "tests": [
+        "measurement",
+        "stakeholder alignment"
+      ]
+    },
+    {
+      "id": "prioritization",
+      "question": "Which debt did you choose not to address?",
+      "tests": [
+        "trade-off reasoning",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "funding",
+      "question": "How did you fund the work without freezing **product delivery**?",
+      "tests": [
+        "influence",
+        "execution"
+      ]
+    },
+    {
+      "id": "visibility",
+      "question": "How did **technical debt** stay visible after the project?",
+      "tests": [
+        "learning",
+        "accountability"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "economic-framing",
+        "name": "Economic Framing",
+        "strong": "Translates debt into **business risk**, cost, speed, or customer outcomes.",
+        "weak": "Uses engineering frustration as the main argument.",
+        "strongAiVisual": "assets/generated/signals/economic-framing-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/economic-framing-weak.jpg"
+      },
+      {
+        "id": "debt-prioritization",
+        "name": "Debt Prioritization",
+        "strong": "Ranks debt by impact and chooses what not to fix.",
+        "weak": "Treats cleanup as all-or-nothing.",
+        "strongAiVisual": "assets/generated/signals/debt-prioritization-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/debt-prioritization-weak.jpg"
+      },
+      {
+        "id": "modernization-governance",
+        "name": "Modernization Governance",
+        "strong": "Keeps debt visible in planning and decision-making.",
+        "weak": "Runs a one-time cleanup effort.",
+        "strongAiVisual": "assets/generated/signals/modernization-governance-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/modernization-governance-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Frames team-level debt in delivery and reliability terms."
+      },
+      {
+        "level": "Director",
+        "expected": "Sequences modernization across teams while managing product **trade-offs**."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Builds a portfolio view of **technical risk** and funds modernization through roadmap governance."
+      },
+      {
+        "level": "CTO",
+        "expected": "Connects modernization to company strategy, operating leverage, risk posture, and capital allocation."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "economic-framing",
+      "debt-prioritization",
+      "modernization-governance"
+    ],
+    "followUpTree": [
+      "business-case",
+      "prioritization",
+      "funding",
+      "visibility"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What debt mattered, and what business problem did it create?"
+      },
+      {
+        "field": "task",
+        "label": "What modernization decision or roadmap outcome did you own?"
+      },
+      {
+        "field": "action",
+        "label": "How did you prioritize, fund, and sequence the work?"
+      },
+      {
+        "field": "result",
+        "label": "What customer, cost, reliability, or delivery outcome changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about technical debt framing?"
+      },
+      {
+        "field": "systemChange",
+        "label": "How did debt stay visible in future planning?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Modernizing a monolith while shipping enterprise features.",
+    "Reducing cloud cost by changing architecture and ownership.",
+    "Choosing not to fix low-impact debt during a strategic deadline."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "fowler-technical-debt",
+        "group": "Technical Judgment and Architecture",
+        "title": "Technical Debt",
+        "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+        "source": "Martin Fowler",
+        "type": "Article",
+        "why": "Clear definition of **technical debt** as a trade-off, not a generic label for disliked code.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "fowler-debt-quadrant",
+        "group": "Technical Judgment and Architecture",
+        "title": "Technical Debt Quadrant",
+        "url": "https://martinfowler.com/bliki/TechnicalDebtQuadrant.html",
+        "source": "Martin Fowler",
+        "type": "Article",
+        "why": "Helps separate prudent, reckless, deliberate, and inadvertent debt when evaluating modernization judgment.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "thoughtworks-adrs",
+        "group": "Technical Judgment and Architecture",
+        "title": "Lightweight Architecture Decision Records",
+        "url": "https://www.thoughtworks.com/en-us/radar/techniques/lightweight-architecture-decision-records",
+        "source": "Thoughtworks Technology Radar",
+        "type": "Technique",
+        "why": "Concrete mechanism for making technical decisions explicit, reviewable, and durable.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "accelerate",
+        "group": "Culture and Organizational Design",
+        "title": "Accelerate",
+        "url": "https://itrevolution.com/product/accelerate/",
+        "source": "Nicole Forsgren, Jez Humble, Gene Kim / IT Revolution",
+        "type": "Book",
+        "year": "2018",
+        "why": "**Evidence-based** link between delivery performance, culture, technical practices, and organizational outcomes.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "lethain-engineering-strategy",
+        "group": "Technical Judgment and Architecture",
+        "title": "Writing Engineering Strategy",
+        "url": "https://lethain.com/eng-strategies/",
+        "source": "Will Larson",
+        "type": "Article",
+        "why": "Practical guidance for writing technical strategy that explains diagnosis, policies, and coherent actions.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "team-topologies",
+        "group": "Culture and Organizational Design",
+        "title": "Team Topologies",
+        "url": "https://teamtopologies.com/book",
+        "source": "Team Topologies",
+        "type": "Book",
+        "year": "2019",
+        "why": "Useful for scaling team boundaries, cognitive load, platform teams, and interaction modes.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "enterprise-architecture-as-strategy",
+        "group": "Technical Judgment and Architecture",
+        "title": "Enterprise Architecture as Strategy",
+        "url": "https://store.hbr.org/product/enterprise-architecture-as-strategy-creating-a-foundation-for-business-execution/8398",
+        "source": "Jeanne W. Ross, Peter Weill, and David C. Robertson / Harvard Business Review Press",
+        "type": "Book",
+        "year": "2006",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership.",
+        "why": "Relevant here because technical-debt answers become stronger when they connect architecture foundations to business execution."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

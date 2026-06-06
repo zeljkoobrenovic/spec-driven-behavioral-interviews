@@ -1,0 +1,427 @@
+{
+  "id": "leading-through-ambiguity",
+  "title": "Leading Through Ambiguity",
+  "description": "Turning vague executive intent into **measurable direction** without waiting for perfect information.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "ambiguity",
+    "name": "Leading Through Ambiguity",
+    "family": "Judgment and Strategy",
+    "definition": "Creates clarity, **decision criteria**, and operating rhythm when goals, ownership, or data are incomplete.",
+    "whyItMatters": "Senior leaders are hired to **turn uncertainty into aligned execution** without pretending the uncertainty is gone."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you had to lead a major technical or organizational initiative when **the goal was ambiguous**.",
+    "variants": [
+      "Describe a time when you had **incomplete data** but still had to make a high-impact decision.",
+      "Tell me about a time you had to **create clarity** for a team or executive group."
+    ],
+    "interviewerIntent": [
+      "Can the candidate **structure ambiguity** instead of waiting for perfect direction?",
+      "Do they **align stakeholders** before driving execution?",
+      "Do they turn vague intent into measurable outcomes and **operating mechanisms**?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A VP Engineering inherits a vague **board-level mandate** to improve platform reliability.",
+    "context": [
+      "Reliability concerns are real but poorly measured.",
+      "Executives disagree on whether the problem is architecture, process, staffing, or product pressure.",
+      "Product teams fear reliability work will delay roadmap commitments."
+    ],
+    "constraints": [
+      "The first 90 days will shape **executive trust**.",
+      "No clean baseline exists for **customer-impacting incidents**.",
+      "The leader must improve reliability without freezing **product delivery**."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "The organization had visible reliability pain but no **shared definition** of the problem.",
+    "task": "Create a measurable reliability strategy that executives, product leaders, and engineering teams could use for planning.",
+    "action": [
+      "Segmented incidents by **customer impact**, revenue risk, and service area.",
+      "Introduced **service-level objectives** for the most critical customer journeys.",
+      "Aligned product and engineering on reliability budgets and **explicit trade-offs**.",
+      "Built a 90-day roadmap that separated urgent **risk reduction** from deeper platform modernization."
+    ],
+    "result": [
+      "Executive debate moved from anecdotes to **measurable risk** after the team created an incident taxonomy covering most customer-impacting events.",
+      "Critical journey SLO coverage moved from zero to eight journeys, with named service owners and escalation paths for each.",
+      "**Customer-impacting incidents** dropped by about 30%, and repeat incidents dropped by about 40% over the next planning cycle."
+    ],
+    "reflection": "The key lesson was to define the **decision system** before choosing technical fixes.",
+    "systemChange": [
+      "**Recurring reliability review** with product and engineering leaders.",
+      "**Ownership model** for critical services.",
+      "**Incident taxonomy** and customer-impact dashboard."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "platform-reliability-mandate",
+      "title": "Vague Platform Reliability Mandate",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you led a major initiative when the goal was ambiguous.",
+      "situation": "The board asked engineering to improve reliability, but executives, product leaders, and teams did not agree on what reliability meant or how much **roadmap capacity** it deserved.",
+      "strongAnswerSketch": [
+        "Separate **customer-impacting incidents** from internal operational noise.",
+        "Define **service-level objectives** for the most important customer journeys.",
+        "Align Product and Engineering on reliability budgets and **explicit roadmap trade-offs**.",
+        "Create a 90-day roadmap plus a **recurring reliability review** and ownership model."
+      ],
+      "whyItWorks": [
+        "Names the ambiguity instead of pretending it was a normal execution problem.",
+        "Shows **stakeholder alignment** through decision criteria and metrics.",
+        "Leaves behind an **operating mechanism**, not just a project plan."
+      ],
+      "weakVersion": "I told the organization reliability was now a priority, asked teams to identify fixes, and tracked progress weekly.",
+      "followUpAngles": [
+        "Who disagreed with the reliability budget?",
+        "What data did you wish you had?",
+        "How did you know **customer impact** improved?"
+      ],
+      "aiVisual": "assets/generated/example-stories/platform-reliability-mandate.jpg"
+    },
+    {
+      "id": "unclear-ai-strategy",
+      "title": "Unclear AI Strategy Request",
+      "level": "CTO",
+      "promptVariant": "Describe a time when you had incomplete data but still had to make a high-impact decision.",
+      "situation": "The CEO and board wanted an AI strategy before the company had agreed on customer value, risk appetite, data readiness, or **build-versus-buy** principles.",
+      "strongAnswerSketch": [
+        "Frame **AI strategy** around customer workflows and business leverage rather than tool adoption.",
+        "Map opportunities by value, **data readiness**, trust risk, and time to learn.",
+        "Select two pilots with explicit stop conditions and **security/privacy guardrails**.",
+        "Create an AI **review forum** that joins Product, Legal, Security, Data, and Engineering."
+      ],
+      "whyItWorks": [
+        "Turns a vague executive ask into **decision criteria**.",
+        "Balances ambition with **risk management**.",
+        "Uses pilots to learn while preventing uncontrolled adoption."
+      ],
+      "weakVersion": "I formed an AI task force, asked teams to brainstorm use cases, and bought licenses so people could experiment.",
+      "followUpAngles": [
+        "What opportunities did you reject?",
+        "What would have made you stop a pilot?",
+        "How did you explain uncertainty to the board?"
+      ],
+      "aiVisual": "assets/generated/example-stories/unclear-ai-strategy.jpg"
+    },
+    {
+      "id": "delivery-predictability-mandate",
+      "title": "Delivery Predictability Without A Shared Problem",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you had to create clarity for a team or executive group.",
+      "situation": "A new executive team wanted engineering to improve **delivery predictability**, but Sales, Product, and Engineering disagreed on whether the real issue was estimation, scope churn, dependencies, or unclear strategy.",
+      "strongAnswerSketch": [
+        "Separate schedule misses caused by scope churn, dependency surprises, and engineering execution.",
+        "Create a shared taxonomy and baseline from the last two quarters instead of debating anecdotes.",
+        "Align Product, Sales, and Engineering on planning entry criteria, change-control rules, and decision owners for trade-offs.",
+        "Run two planning cycles with leading indicators for dependency age, scope changes, and confidence drift."
+      ],
+      "whyItWorks": [
+        "Turns a vague **delivery predictability** mandate into diagnosis and decision rules.",
+        "Shows cross-functional alignment without blaming Product, Sales, or Engineering.",
+        "Creates a repeatable operating model instead of just adding status reporting."
+      ],
+      "weakVersion": "I asked teams to estimate better, added status reporting, and told Product to reduce scope changes.",
+      "followUpAngles": [
+        "Which failure mode was most politically sensitive?",
+        "What did you ask Sales or Product to change?",
+        "How did you know predictability improved without hiding risk?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate names the uncertainty, creates structure, aligns stakeholders, acts with incomplete data, measures outcome, and changes how the organization operates.",
+    "moves": [
+      "Starts with business and customer context rather than internal engineering frustration.",
+      "States what was unknown and why waiting for perfect data was not acceptable.",
+      "Explains the **decision criteria** and who had to be aligned.",
+      "Describes **personal actions**, not just what the team eventually did.",
+      "Shows measurable results, reflection, and **durable operating change**."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate stays vague, says they created alignment, but cannot explain trade-offs, personal actions, **measurable impact**, or what changed after the immediate project.",
+    "redFlags": [
+      "Uses generic phrases such as aligned stakeholders without naming **concrete mechanisms**.",
+      "Focuses only on technical fixes and ignores **executive ambiguity**.",
+      "Blames other functions for the lack of clarity.",
+      "Cannot explain what alternatives were rejected.",
+      "Has no result, reflection, or **system change**."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "alternatives",
+      "question": "What alternatives did you reject?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I rejected a full platform rewrite because it would have consumed the roadmap before we had a customer-impact baseline; instead I limited the first phase to the top three customer journeys.",
+          "I rejected a company-wide AI rollout because we had no agreed customer value or risk model; instead I chose two pilots with stop conditions, data-readiness checks, and security review."
+        ],
+        "weak": [
+          "We looked at a few options and picked the one that seemed most practical at the time.",
+          "AI was obviously important, so I let teams experiment and planned to tighten governance once we learned more."
+        ]
+      }
+    },
+    {
+      "id": "disagreement",
+      "question": "Who disagreed with you, and how did you handle it?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Product leaders pushed back on capacity loss, so I brought **incident impact** by journey and agreed on which launches could absorb risk versus which services needed investment first.",
+          "Sales wanted firm delivery dates, Product wanted more flexibility, and Engineering wanted better discovery; I separated commitment rules from estimation quality and made each function own the part of ambiguity it created."
+        ],
+        "weak": [
+          "Some people disagreed, so I explained why reliability mattered until everyone understood the priority.",
+          "The executives disagreed, so I asked the CEO to choose a direction and then told the teams to align behind it."
+        ]
+      }
+    },
+    {
+      "id": "metrics",
+      "question": "How did you know the situation improved?",
+      "tests": [
+        "measurement",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I tracked **customer-impacting incidents** on the critical journeys, time to detect, time to recover, and the percentage of services with named owners and current SLOs.",
+          "For the delivery-predictability case, I tracked commitment accuracy, scope-change rate after planning, dependency age, and whether confidence changes were surfaced before the last two weeks of the cycle."
+        ],
+        "weak": [
+          "The organization felt calmer, and fewer people were complaining about reliability in planning meetings.",
+          "We had fewer incidents, although I did not have a clean baseline or a consistent way to compare them."
+        ]
+      }
+    },
+    {
+      "id": "regret",
+      "question": "What would you do differently now?",
+      "tests": [
+        "reflection",
+        "learning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I would involve Support and Sales earlier because they had the clearest view of **customer pain**, and we initially over-weighted internal engineering symptoms.",
+          "For the AI strategy work, I would define the board narrative earlier around learning velocity, risk boundaries, and customer workflow value instead of letting the conversation drift toward tool adoption."
+        ],
+        "weak": [
+          "I would probably push harder so teams moved faster and debated less.",
+          "Nothing major; the plan worked, and I think the remaining issues were mostly execution details."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "sense-making",
+        "name": "Sense-making",
+        "strong": "Separates symptoms from **root problems** and creates a shared frame for decisions.",
+        "weak": "Repeats the ambiguity without structuring it.",
+        "strongAiVisual": "assets/generated/signals/sense-making-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/sense-making-weak.jpg"
+      },
+      {
+        "id": "stakeholder-alignment",
+        "name": "Stakeholder Alignment",
+        "strong": "Builds **decision criteria** with peers and executives before driving execution.",
+        "weak": "Treats alignment as persuasion after the decision.",
+        "strongAiVisual": "assets/generated/signals/stakeholder-alignment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/stakeholder-alignment-weak.jpg"
+      },
+      {
+        "id": "operating-change",
+        "name": "Operating Change",
+        "strong": "Leaves behind dashboards, rituals, ownership, or **decision rules**.",
+        "weak": "Solves the immediate problem only.",
+        "strongAiVisual": "assets/generated/signals/operating-change-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/operating-change-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Creates clarity for multiple teams and escalates unresolved strategic ambiguity with **concrete options**."
+      },
+      {
+        "level": "Director",
+        "expected": "Creates **cross-functional alignment** and changes planning or operating mechanisms."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Converts **executive ambiguity** into strategy, metrics, accountability, and portfolio trade-offs."
+      },
+      {
+        "level": "CTO",
+        "expected": "Connects ambiguity resolution to business risk, board-level narrative, **organizational design**, and long-term technology direction."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "sense-making",
+      "stakeholder-alignment",
+      "operating-change"
+    ],
+    "followUpTree": [
+      "alternatives",
+      "disagreement",
+      "metrics",
+      "regret"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What was unclear, high-stakes, or contested?"
+      },
+      {
+        "field": "task",
+        "label": "What were you personally accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "What mechanisms did you introduce?"
+      },
+      {
+        "field": "result",
+        "label": "What changed measurably?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What changed beyond the immediate story?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A new executive team asks engineering to improve **delivery predictability** without defining the business problem.",
+    "A platform migration becomes politically charged because each product area sees a different risk.",
+    "A board asks for an AI strategy before the company has agreed on customer value, risk, or **operating model**."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "good-strategy-bad-strategy",
+        "group": "Strategy and Execution",
+        "title": "Good Strategy Bad Strategy",
+        "url": "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/",
+        "source": "Richard Rumelt / Penguin Random House",
+        "type": "Book",
+        "year": "2011",
+        "why": "Useful for distinguishing real strategic diagnosis and coherent action from vague aspiration.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "lethain-engineering-strategy",
+        "group": "Technical Judgment and Architecture",
+        "title": "Writing Engineering Strategy",
+        "url": "https://lethain.com/eng-strategies/",
+        "source": "Will Larson",
+        "type": "Article",
+        "why": "Practical guidance for writing technical strategy that explains diagnosis, policies, and coherent actions.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "google-effective-teams",
+        "group": "Culture and Organizational Design",
+        "title": "The Five Dynamics of an Effective Team",
+        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
+        "source": "Google",
+        "type": "Article",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "scaling-people",
+        "group": "Culture and Organizational Design",
+        "title": "Scaling People",
+        "url": "https://press.stripe.com/scaling-people",
+        "source": "Claire Hughes Johnson / Stripe Press",
+        "type": "Book",
+        "year": "2023",
+        "why": "Operator-focused reference for scaling leadership systems, decision making, communication, and company rituals.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "google-ai-principles",
+        "group": "Responsible Technology and AI",
+        "title": "Google AI Principles",
+        "url": "https://ai.google/principles/",
+        "source": "Google",
+        "type": "Principles",
+        "why": "Useful example of public AI principles and boundaries for **responsible technology** decisions.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "leadership-is-language",
+        "group": "Influence and Executive Communication",
+        "title": "Leadership Is Language",
+        "url": "https://www.penguinrandomhouse.com/books/555238/leadership-is-language-by-l-david-marquet/",
+        "source": "L. David Marquet / Penguin Random House",
+        "type": "Book",
+        "year": "2020",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
+        "why": "Relevant here because the candidate must show how they changed conversations so people could decide under uncertainty."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

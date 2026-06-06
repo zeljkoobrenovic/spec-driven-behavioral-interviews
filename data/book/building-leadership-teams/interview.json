@@ -1,0 +1,376 @@
+{
+  "id": "building-leadership-teams",
+  "title": "Building Leadership Teams",
+  "description": "Building, upgrading, and calibrating engineering **leadership teams** without treating leadership as a generic management layer.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "leadership-team-building",
+    "name": "Building Leadership Teams",
+    "family": "People Leadership",
+    "definition": "Assesses **leadership capability**, defines expectations, grows internal talent, and hires for missing strengths.",
+    "whyItMatters": "At senior levels, impact depends on the leaders a person builds, not only the teams they directly manage."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you built or rebuilt an engineering **leadership team**.",
+    "variants": [
+      "Describe a time you promoted someone into leadership who was not the obvious choice.",
+      "Tell me about a time you had to upgrade **leadership capability** across multiple teams."
+    ],
+    "interviewerIntent": [
+      "Can the candidate diagnose **leadership gaps** accurately?",
+      "Do they balance **internal development** with external hiring?",
+      "Can they define expectations without creating a clone army?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A VP Engineering joins a company with strong senior ICs but weak **middle management**.",
+    "context": [
+      "Teams have capable engineers but inconsistent **management quality**.",
+      "Planning, feedback, and execution discipline vary widely by team.",
+      "Some informal leaders are trusted but have never been calibrated against **role expectations**."
+    ],
+    "constraints": [
+      "The organization cannot replace the entire management layer.",
+      "**Internal candidates** need a fair chance to grow.",
+      "The business needs better execution quickly."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "The engineering organization had strong technical talent but an uneven leadership layer that limited scale.",
+    "task": "Create a stronger **leadership team** while preserving trust and retaining high-potential internal leaders.",
+    "action": [
+      "Defined clear **leadership expectations** for managers and directors.",
+      "Assessed current leaders against delivery, talent, communication, and operating judgment.",
+      "Coached two internal managers into broader roles and hired externally for a missing scaling capability.",
+      "Introduced **calibration rituals** for feedback, performance, and succession planning."
+    ],
+    "result": [
+      "**Leadership expectations** became explicit rather than personality-based.",
+      "Internal leaders had clearer **development paths**.",
+      "Execution and people decisions became more consistent across teams."
+    ],
+    "reflection": "The key lesson was that **leadership-team building** requires a portfolio view of capability, not isolated hiring decisions.",
+    "systemChange": [
+      "**Leadership expectations** document.",
+      "Manager calibration rhythm.",
+      "**Succession plan** for critical leadership roles.",
+      "Hiring scorecard tied to missing **leadership capabilities**."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "weak-middle-management-layer",
+      "title": "Weak Middle Management Layer",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you built or rebuilt an engineering **leadership team**.",
+      "situation": "The organization had strong engineers and several trusted informal leaders, but managers varied widely in planning, feedback, and execution discipline.",
+      "strongAnswerSketch": [
+        "Define explicit **leadership expectations** across delivery, talent, communication, and operating judgment.",
+        "Assess existing leaders using evidence instead of reputation.",
+        "Coach two internal managers while hiring externally for a missing scaling capability.",
+        "Introduce calibration and **succession planning** rituals."
+      ],
+      "whyItWorks": [
+        "Shows a portfolio view of **leadership capability**.",
+        "Balances **internal development** with external hiring.",
+        "Makes expectations consistent across the organization."
+      ],
+      "weakVersion": "I raised the bar for managers, replaced a few weak leaders, and hired stronger people from larger companies.",
+      "followUpAngles": [
+        "How did you assess existing leaders fairly?",
+        "What capability was missing externally?",
+        "How did calibration change?"
+      ],
+      "aiVisual": "assets/generated/example-stories/weak-middle-management-layer.jpg"
+    },
+    {
+      "id": "non-obvious-promotion",
+      "title": "Non-Obvious Leadership Promotion",
+      "level": "Director",
+      "promptVariant": "Describe a time you promoted someone into leadership who was not the obvious choice.",
+      "situation": "A quiet senior engineer had strong systems thinking and trust across teams but was not the most visible candidate for a **manager-of-managers** role.",
+      "strongAnswerSketch": [
+        "Define the actual role need: cross-team clarity and calm execution, not charisma.",
+        "Test readiness through temporary scope and coaching.",
+        "Create support around feedback, delegation, and stakeholder communication.",
+        "Use calibration to explain the **promotion criteria** transparently."
+      ],
+      "whyItWorks": [
+        "Shows **talent judgment** beyond obvious signals.",
+        "Reduces promotion risk through staged scope.",
+        "Protects **fairness and transparency**."
+      ],
+      "weakVersion": "I trusted my gut that the person had potential and promoted them because people respected them.",
+      "followUpAngles": [
+        "What made them ready?",
+        "What risks did you mitigate?",
+        "How did peers react?"
+      ],
+      "aiVisual": "assets/generated/example-stories/non-obvious-promotion.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows talent judgment, coaching, fair assessment, and the ability to build a complementary **leadership team**.",
+    "moves": [
+      "Describes the **leadership gaps** in behavioral terms.",
+      "Explains how expectations were defined and communicated.",
+      "Balances development, scope changes, hiring, and succession.",
+      "Shows how decisions were made fairly and humanely.",
+      "Connects leadership-team changes to organizational outcomes."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate talks about raising the bar without showing specific expectations, development mechanisms, or fair decision-making.",
+    "redFlags": [
+      "Uses vague talent language without evidence.",
+      "Equates leadership quality with loyalty or style similarity.",
+      "Only hires externally and ignores **internal development**.",
+      "Cannot describe what changed in calibration, succession, or feedback."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "assessment",
+      "question": "How did you assess the existing **leadership team**?",
+      "tests": [
+        "judgment",
+        "measurement"
+      ]
+    },
+    {
+      "id": "internal-vs-external",
+      "question": "How did you decide when to develop internally versus hire externally?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ]
+    },
+    {
+      "id": "fairness",
+      "question": "How did you make the process feel fair to existing leaders?",
+      "tests": [
+        "stakeholder alignment",
+        "accountability"
+      ]
+    },
+    {
+      "id": "mechanism",
+      "question": "What mechanism made leadership quality more consistent afterward?",
+      "tests": [
+        "learning",
+        "execution"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "talent-judgment",
+        "name": "Talent Judgment",
+        "strong": "Uses evidence-based expectations to assess **leadership capability**.",
+        "weak": "Uses vague impressions or style preferences.",
+        "strongAiVisual": "assets/generated/signals/talent-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/talent-judgment-weak.jpg"
+      },
+      {
+        "id": "development-range",
+        "name": "Development Range",
+        "strong": "Combines coaching, scope design, hiring, and succession.",
+        "weak": "Treats **leadership gaps** as only hiring problems.",
+        "strongAiVisual": "assets/generated/signals/development-range-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/development-range-weak.jpg"
+      },
+      {
+        "id": "calibration",
+        "name": "Calibration",
+        "strong": "Creates rituals that make **leadership expectations** consistent.",
+        "weak": "Leaves expectations implicit and uneven.",
+        "strongAiVisual": "assets/generated/signals/calibration-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/calibration-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Develops managers or leads within a focused area and gives clear expectations."
+      },
+      {
+        "level": "Director",
+        "expected": "Builds a leadership bench across multiple teams and calibrates expectations."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Designs a complementary **leadership team** and succession plan for the organization."
+      },
+      {
+        "level": "CTO",
+        "expected": "Builds executive-level technical **leadership capability** aligned to company strategy and culture."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "talent-judgment",
+      "development-range",
+      "calibration"
+    ],
+    "followUpTree": [
+      "assessment",
+      "internal-vs-external",
+      "fairness",
+      "mechanism"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What leadership capability was missing or uneven?"
+      },
+      {
+        "field": "task",
+        "label": "What leadership-team outcome were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "How did you assess, develop, hire, or recalibrate leaders?"
+      },
+      {
+        "field": "result",
+        "label": "What changed in leadership quality or organizational execution?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about leadership-team design?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What calibration or succession mechanism remained?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Rebuilding a **leadership team** after rapid growth.",
+    "Promoting a strong IC into management with support and guardrails.",
+    "Hiring externally for a **leadership capability** the organization lacks."
+  ],
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg",
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "managers-path",
+        "group": "People Leadership and Feedback",
+        "title": "The Manager's Path",
+        "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/",
+        "source": "Camille Fournier / O'Reilly",
+        "type": "Book",
+        "year": "2017",
+        "why": "Maps engineering leadership responsibilities from mentorship through senior organizational leadership.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "scaling-people",
+        "group": "Culture and Organizational Design",
+        "title": "Scaling People",
+        "url": "https://press.stripe.com/scaling-people",
+        "source": "Claire Hughes Johnson / Stripe Press",
+        "type": "Book",
+        "year": "2023",
+        "why": "Operator-focused reference for scaling leadership systems, decision making, communication, and company rituals.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "high-output-management",
+        "group": "People Leadership and Feedback",
+        "title": "High Output Management",
+        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
+        "source": "Andrew S. Grove / Penguin Random House",
+        "type": "Book",
+        "year": "1983",
+        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "google-effective-teams",
+        "group": "Culture and Organizational Design",
+        "title": "The Five Dynamics of an Effective Team",
+        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
+        "source": "Google",
+        "type": "Article",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "manager-tools-basics",
+        "group": "People Leadership and Feedback",
+        "title": "Manager Tools Basics",
+        "url": "https://www.manager-tools.com/manager-tools-basics",
+        "source": "Manager Tools",
+        "type": "Podcast / Guide",
+        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "staff-engineer-book",
+        "group": "Technical Judgment and Architecture",
+        "title": "Staff Engineer",
+        "url": "https://staffeng.com/book/",
+        "source": "Will Larson",
+        "type": "Book / Interviews",
+        "year": "2021",
+        "why": "Useful for senior technical leadership patterns, influence without authority, and technical scope growth.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "five-dysfunctions-team",
+        "group": "People Leadership and Feedback",
+        "title": "The Five Dysfunctions of a Team",
+        "url": "https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/",
+        "source": "Patrick Lencioni / The Table Group",
+        "type": "Book",
+        "year": "2002",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
+        "why": "Relevant here because leadership-team stories should expose trust, conflict, commitment, accountability, and results as a system."
+      },
+      {
+        "id": "making-of-manager",
+        "group": "People Leadership and Feedback",
+        "title": "The Making of a Manager",
+        "url": "https://www.juliezhuo.com/book/manager.html",
+        "source": "Julie Zhuo",
+        "type": "Book",
+        "year": "2019",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
+        "why": "Relevant here because the interview tests practical manager development, coaching, and expectation-setting rather than abstract talent philosophy."
+      }
+    ]
+  }
+}

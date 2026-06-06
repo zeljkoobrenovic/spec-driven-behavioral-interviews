@@ -1,0 +1,376 @@
+{
+  "id": "strategy-vs-execution",
+  "title": "Strategy Versus Execution",
+  "description": "Translating changing business strategy into engineering priorities, **operating mechanisms**, and explicit stop-doing decisions.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "strategy-execution",
+    "name": "Strategy Versus Execution",
+    "family": "Judgment and Strategy",
+    "definition": "Connects technology plans to business strategy and adjusts execution when the business context changes.",
+    "whyItMatters": "Senior leaders must do more than describe strategy; they must convert it into priorities, mechanisms, and **trade-offs**."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you translated business strategy into a technology roadmap.",
+    "variants": [
+      "Give me an example of when you changed engineering priorities because the business context changed.",
+      "Tell me about a time you stopped important engineering work because it no longer matched company strategy."
+    ],
+    "interviewerIntent": [
+      "Does the candidate understand commercial context?",
+      "Can they stop or defer work, not just add work?",
+      "Do they connect roadmap changes to measurable business outcomes?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A CTO at a B2B SaaS company realizes enterprise deals are blocked by security, integration, and deployment gaps.",
+    "context": [
+      "Several platform projects are technically interesting but not unlocking revenue.",
+      "Sales is losing enterprise deals because of auditability and identity gaps.",
+      "Engineering teams distrust roadmap shifts that look like sales interruptions."
+    ],
+    "constraints": [
+      "Enterprise revenue is a company-level priority.",
+      "Teams need a credible reason to pause internal platform work.",
+      "Security and integration work must become productized capability, not custom work."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "The company strategy shifted toward enterprise expansion, but the engineering roadmap still reflected earlier self-serve priorities.",
+    "task": "Reframe engineering priorities so the roadmap supported enterprise revenue without becoming a custom-feature queue.",
+    "action": [
+      "Mapped lost and delayed deals to missing platform capabilities.",
+      "Paused lower-leverage internal projects and explained the opportunity cost.",
+      "Created a roadmap around auditability, identity integration, deployment controls, and customer administration.",
+      "Defined **decision rules** for future enterprise commitments."
+    ],
+    "result": [
+      "Enterprise blockers became a product roadmap rather than scattered escalations.",
+      "Sales and product had clearer rules for what engineering would support.",
+      "The company improved enterprise readiness while preserving platform coherence."
+    ],
+    "reflection": "The hard part was not choosing enterprise work; it was making the stop-doing decisions explicit enough that teams trusted the change.",
+    "systemChange": [
+      "Roadmap review tied to business segment strategy.",
+      "Enterprise commitment intake process.",
+      "Quarterly measurement of revenue blockers and platform capabilities."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "enterprise-readiness-roadmap",
+      "title": "Enterprise Readiness Roadmap",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you translated business strategy into a technology roadmap.",
+      "situation": "A SaaS company shifted from self-serve growth to enterprise expansion, but enterprise deals were blocked by auditability, identity integration, and deployment controls.",
+      "strongAnswerSketch": [
+        "Map lost deals and delayed opportunities to missing platform capabilities.",
+        "Pause lower-leverage internal platform work and explain the opportunity cost.",
+        "Define a roadmap around reusable enterprise capabilities rather than custom features.",
+        "Create intake rules for future enterprise commitments."
+      ],
+      "whyItWorks": [
+        "Connects engineering priorities to business strategy.",
+        "Shows the courage to stop work, not only add work.",
+        "Protects platform coherence while responding to revenue pressure."
+      ],
+      "weakVersion": "I asked teams to support enterprise requests faster and added security work to the roadmap.",
+      "followUpAngles": [
+        "Which projects did you stop?",
+        "How did you prevent custom work from taking over?",
+        "What business metric improved?"
+      ],
+      "aiVisual": "assets/generated/example-stories/enterprise-readiness-roadmap.jpg"
+    },
+    {
+      "id": "profitability-pivot",
+      "title": "Growth To Profitability Pivot",
+      "level": "VP Engineering",
+      "promptVariant": "Give me an example of when you changed engineering priorities because the business context changed.",
+      "situation": "The company moved from growth at all costs to profitability, and engineering had to reduce infrastructure cost while preserving customer-facing roadmap commitments.",
+      "strongAnswerSketch": [
+        "Translate the financial target into service-level cost ownership and product **trade-offs**.",
+        "Rank cost opportunities by customer risk, engineering effort, and recurring savings.",
+        "Pair platform efficiency work with product milestones instead of running an isolated cost program.",
+        "Introduce monthly cost reviews owned by service teams."
+      ],
+      "whyItWorks": [
+        "Shows commercial understanding beyond feature delivery.",
+        "Makes cost reduction an **operating model** change.",
+        "Balances short-term financial needs with customer reliability."
+      ],
+      "weakVersion": "I told teams to reduce cloud spend by 20 percent and asked platform engineering to find savings.",
+      "followUpAngles": [
+        "What customer risk did you refuse to take?",
+        "How did teams own their costs?",
+        "What did you stop funding?"
+      ],
+      "aiVisual": "assets/generated/example-stories/profitability-pivot.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows business understanding, prioritization discipline, and the ability to turn strategy into operating decisions.",
+    "moves": [
+      "Explains the business shift and why the old roadmap no longer fit.",
+      "Names what was stopped, delayed, or reduced.",
+      "Connects engineering work to revenue, risk, customer trust, or market position.",
+      "Protects product/platform coherence while responding to commercial pressure.",
+      "Shows how roadmap **governance changed**."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate talks strategy abstractly but cannot show how it changed execution, **trade-offs**, or operating cadence.",
+    "redFlags": [
+      "No clear business outcome is tied to the roadmap.",
+      "Everything becomes a priority, so no **trade-off** is visible.",
+      "Sales, product, or finance are described as distractions rather than stakeholders.",
+      "The answer presents a one-time reprioritization with no governance change."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "stopped-work",
+      "question": "What work did you stop or defer, and how did you explain it?",
+      "tests": [
+        "trade-off reasoning",
+        "stakeholder alignment"
+      ]
+    },
+    {
+      "id": "business-metrics",
+      "question": "Which business metrics told you the roadmap needed to change?",
+      "tests": [
+        "measurement",
+        "decision quality"
+      ]
+    },
+    {
+      "id": "resistance",
+      "question": "Who resisted the change, and what did you do?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ]
+    },
+    {
+      "id": "afterward",
+      "question": "What changed in your **planning process** afterward?",
+      "tests": [
+        "accountability",
+        "learning"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "commercial-judgment",
+        "name": "Commercial Judgment",
+        "strong": "Connects technology choices to business strategy and customer segments.",
+        "weak": "Treats the roadmap as an internal engineering artifact.",
+        "strongAiVisual": "assets/generated/signals/commercial-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/commercial-judgment-weak.jpg"
+      },
+      {
+        "id": "prioritization",
+        "name": "Prioritization",
+        "strong": "Makes explicit stop-doing decisions with rationale.",
+        "weak": "Adds strategic work without removing anything.",
+        "strongAiVisual": "assets/generated/signals/prioritization-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/prioritization-weak.jpg"
+      },
+      {
+        "id": "operating-governance",
+        "name": "Operating Governance",
+        "strong": "Changes planning, intake, or review mechanisms so strategy keeps shaping execution.",
+        "weak": "Relies on a one-time roadmap reset.",
+        "strongAiVisual": "assets/generated/signals/operating-governance-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/operating-governance-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Connects team priorities to business goals and escalates **trade-offs** clearly."
+      },
+      {
+        "level": "Director",
+        "expected": "Rebalances priorities across multiple teams and aligns product or go-to-market partners."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Converts company strategy into portfolio choices, operating cadence, and executive **trade-offs**."
+      },
+      {
+        "level": "CTO",
+        "expected": "Shapes technology strategy around company positioning, risk, capital allocation, and long-term leverage."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "commercial-judgment",
+      "prioritization",
+      "operating-governance"
+    ],
+    "followUpTree": [
+      "stopped-work",
+      "business-metrics",
+      "resistance",
+      "afterward"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What changed in the business context?"
+      },
+      {
+        "field": "task",
+        "label": "What roadmap or operating decision were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "What did you stop, start, or reframe?"
+      },
+      {
+        "field": "result",
+        "label": "Which business or execution outcomes changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about strategy-to-execution translation?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What planning or governance mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A consumer product pivots to enterprise customers.",
+    "A cost-reduction strategy requires platform and architecture **trade-offs**.",
+    "A company shifts from growth at all costs to durable profitability."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "good-strategy-bad-strategy",
+        "group": "Strategy and Execution",
+        "title": "Good Strategy Bad Strategy",
+        "url": "https://www.penguinrandomhouse.com/books/208668/good-strategy-bad-strategy-by-richard-rumelt/",
+        "source": "Richard Rumelt / Penguin Random House",
+        "type": "Book",
+        "year": "2011",
+        "why": "Useful for distinguishing real strategic diagnosis and coherent action from vague aspiration.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "measure-what-matters",
+        "group": "Strategy and Execution",
+        "title": "Measure What Matters",
+        "url": "https://www.whatmatters.com/the-book",
+        "source": "John Doerr / What Matters",
+        "type": "Book",
+        "year": "2018",
+        "why": "Practical OKR reference for translating strategy into measurable commitments and learning loops.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "shape-up",
+        "group": "Strategy and Execution",
+        "title": "Shape Up",
+        "url": "https://basecamp.com/books",
+        "source": "Basecamp",
+        "type": "Book",
+        "why": "Concrete model for shaping work, betting capacity, and avoiding vague roadmap commitments.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "empowered-product-teams",
+        "group": "Strategy and Execution",
+        "title": "EMPOWERED: Ordinary People, Extraordinary Products",
+        "url": "https://www.svpg.com/books/empowered-ordinary-people-extraordinary-products/",
+        "source": "Silicon Valley Product Group",
+        "type": "Book",
+        "year": "2020",
+        "why": "Useful for cross-functional product-engineering leadership, team empowerment, and product strategy alignment.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "working-backwards",
+        "group": "Strategy and Execution",
+        "title": "Working Backwards",
+        "url": "https://us.macmillan.com/books/9781250267597/workingbackwards/",
+        "source": "Colin Bryar and Bill Carr / Macmillan",
+        "type": "Book",
+        "year": "2021",
+        "why": "Explains Amazon **operating mechanisms** such as narratives, customer-backward planning, and decision discipline.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "high-output-management",
+        "group": "People Leadership and Feedback",
+        "title": "High Output Management",
+        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
+        "source": "Andrew S. Grove / Penguin Random House",
+        "type": "Book",
+        "year": "1983",
+        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "effective-executive",
+        "group": "People Leadership and Feedback",
+        "title": "The Effective Executive",
+        "url": "https://www.harperacademic.com/book/9780062678065/the-effective-executive",
+        "source": "Peter F. Drucker / Harper Business",
+        "type": "Book",
+        "year": "1967",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
+        "why": "Relevant here because the interview tests whether leaders focus scarce attention on the few decisions that change outcomes."
+      },
+      {
+        "id": "how-big-things-get-done",
+        "group": "Strategy and Execution",
+        "title": "How Big Things Get Done",
+        "url": "https://www.panmacmillan.com/authors/bent-flyvbjerg/how-big-things-get-done/9781035018956",
+        "source": "Bent Flyvbjerg and Dan Gardner / Pan Macmillan",
+        "type": "Book",
+        "year": "2023",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs.",
+        "why": "Relevant here because execution stories become stronger when they explain forecasting, risk, sequencing, and stakeholder coordination."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

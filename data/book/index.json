@@ -1,0 +1,126 @@
+{
+  "groups": [
+    {
+      "id": "method",
+      "name": "Interview Method",
+      "datasets": [
+        {
+          "id": "interview-method",
+          "name": "Behavioral Interview Method",
+          "path": "data/interview-method/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "judgment-strategy",
+      "name": "Judgment and Strategy",
+      "datasets": [
+        {
+          "id": "leading-through-ambiguity",
+          "name": "Leading Through Ambiguity",
+          "path": "data/leading-through-ambiguity/interview.json"
+        },
+        {
+          "id": "strategy-vs-execution",
+          "name": "Strategy vs. Execution",
+          "path": "data/strategy-vs-execution/interview.json"
+        },
+        {
+          "id": "technical-judgment",
+          "name": "Technical Judgment at Executive Scale",
+          "path": "data/technical-judgment/interview.json"
+        },
+        {
+          "id": "technical-debt-modernization",
+          "name": "Technical Debt and Modernization",
+          "path": "data/technical-debt-modernization/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "execution-accountability",
+      "name": "Execution and Accountability",
+      "datasets": [
+        {
+          "id": "failure-accountability",
+          "name": "Failure and Accountability",
+          "path": "data/failure-accountability/interview.json"
+        },
+        {
+          "id": "crisis-leadership",
+          "name": "Crisis Leadership",
+          "path": "data/crisis-leadership/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "people-leadership",
+      "name": "People Leadership",
+      "datasets": [
+        {
+          "id": "building-leadership-teams",
+          "name": "Building Leadership Teams",
+          "path": "data/building-leadership-teams/interview.json"
+        },
+        {
+          "id": "handling-underperformance",
+          "name": "Handling Underperformance",
+          "path": "data/handling-underperformance/interview.json"
+        },
+        {
+          "id": "culture-change",
+          "name": "Culture Change",
+          "path": "data/culture-change/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "organizational-scale",
+      "name": "Organizational Scale",
+      "datasets": [
+        {
+          "id": "scaling-organization",
+          "name": "Scaling An Organization",
+          "path": "data/scaling-organization/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "influence-communication",
+      "name": "Influence and Communication",
+      "datasets": [
+        {
+          "id": "executive-conflict",
+          "name": "Conflict With Executives or Peers",
+          "path": "data/executive-conflict/interview.json"
+        },
+        {
+          "id": "cross-functional-influence",
+          "name": "Cross-Functional Influence",
+          "path": "data/cross-functional-influence/interview.json"
+        },
+        {
+          "id": "executive-communication",
+          "name": "Executive Communication",
+          "path": "data/executive-communication/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "risk-ethics-innovation",
+      "name": "Risk, Ethics, and Innovation",
+      "datasets": [
+        {
+          "id": "ethics-responsible-technology",
+          "name": "Ethics and Responsible Technology",
+          "path": "data/ethics-responsible-technology/interview.json"
+        },
+        {
+          "id": "innovation-emerging-technology",
+          "name": "Innovation and Emerging Technology",
+          "path": "data/innovation-emerging-technology/interview.json"
+        }
+      ]
+    }
+  ]
+}

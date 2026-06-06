@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Visual Assets"
+  short_description: "Plan and generate interview visuals"
+  default_prompt: "Use $interview-visual-assets to add useful visual assets to behavioral interview specs."

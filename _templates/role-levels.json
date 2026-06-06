@@ -1,0 +1,24 @@
+{
+  "levels": [
+    {
+      "id": "senior-manager",
+      "name": "Senior Manager",
+      "description": "Owns outcomes across one or more teams and develops managers or senior ICs."
+    },
+    {
+      "id": "director",
+      "name": "Director",
+      "description": "Owns cross-team execution, leadership calibration, and functional alignment."
+    },
+    {
+      "id": "vp-engineering",
+      "name": "VP Engineering",
+      "description": "Owns organizational execution, portfolio trade-offs, leadership systems, and executive alignment."
+    },
+    {
+      "id": "cto",
+      "name": "CTO",
+      "description": "Owns company-level technology strategy, trust, risk, executive communication, and long-term leverage."
+    }
+  ]
+}

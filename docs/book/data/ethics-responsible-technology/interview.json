@@ -1,0 +1,350 @@
+{
+  "id": "ethics-responsible-technology",
+  "title": "Ethics and Responsible Technology",
+  "description": "Changing, stopping, or reshaping technically possible work because of privacy, security, customer trust, fairness, or regulatory risk.",
+  "roleFocus": [
+    "Director",
+    "VP Engineering",
+    "CTO"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "responsible-technology",
+    "name": "Ethics and Responsible Technology",
+    "family": "Risk, Ethics, and Innovation",
+    "definition": "Uses **moral courage**, risk judgment, and practical alternatives when technology decisions affect trust, safety, privacy, or fairness.",
+    "whyItMatters": "Senior technology leaders are accountable for more than what can be built; they are accountable for what should be built."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you stopped or changed a project because of ethical, privacy, security, or customer-trust concerns.",
+    "variants": [
+      "Describe a time when a technically possible solution was not the right thing to build.",
+      "Tell me about a time you had to balance product ambition with responsible data use."
+    ],
+    "interviewerIntent": [
+      "Does the candidate recognize trust and ethical risk early?",
+      "Can they propose alternatives rather than only block?",
+      "Do they understand governance, consent, data minimization, and accountability?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A product team wants to use customer data for personalization, and the CTO requires privacy review, data minimization, consent clarity, and measurable customer benefit.",
+    "context": [
+      "The product idea is commercially attractive.",
+      "The proposed implementation uses sensitive customer behavior data.",
+      "Legal and security input has not yet been built into the design."
+    ],
+    "constraints": [
+      "The leader should not become a reflexive blocker.",
+      "Customer trust and compliance risk matter.",
+      "The team needs a path to responsible experimentation."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A product initiative proposed using customer data in a way that created privacy and trust concerns.",
+    "task": "Protect customers and company trust while preserving a responsible path to **customer value**.",
+    "action": [
+      "Paused the launch until privacy, security, and legal review were included.",
+      "Separated the customer benefit from the most invasive implementation.",
+      "Required data minimization, consent clarity, retention limits, and abuse-case review.",
+      "Defined experiment criteria that measured **customer value** and risk controls."
+    ],
+    "result": [
+      "The project moved forward with narrower data use and clearer safeguards.",
+      "The product team gained a repeatable responsible-technology review path.",
+      "Customer **trust risk** was reduced before launch."
+    ],
+    "reflection": "The lesson was that **responsible technology** works best when it creates safer alternatives, not only late-stage objections.",
+    "systemChange": [
+      "Privacy and security review checkpoint.",
+      "Data minimization checklist.",
+      "Responsible experimentation criteria.",
+      "Decision log for high-trust-risk features."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "personalization-data-minimization",
+      "title": "Personalization With Data Minimization",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you stopped or changed a project because of privacy or customer-trust concerns.",
+      "situation": "A product team wanted to use detailed behavioral data for personalization before consent, retention, and customer benefit were clearly defined.",
+      "strongAnswerSketch": [
+        "Pause the launch until privacy, security, legal, and product review are included.",
+        "Separate the customer benefit from the most invasive implementation.",
+        "Require data minimization, consent clarity, retention limits, and abuse-case review.",
+        "Approve a narrower experiment with measurable customer benefit and risk controls."
+      ],
+      "whyItWorks": [
+        "Shows **moral courage** without becoming a blocker.",
+        "Proposes a responsible alternative.",
+        "Creates governance for future high-trust-risk decisions."
+      ],
+      "weakVersion": "I asked Legal to review the plan and told Product we should be careful with customer data.",
+      "followUpAngles": [
+        "What **customer harm** were you preventing?",
+        "What data did you remove from scope?",
+        "What governance changed?"
+      ]
+    },
+    {
+      "id": "ai-fairness-review",
+      "title": "AI Fairness Review",
+      "level": "VP Engineering",
+      "promptVariant": "Describe a time when a technically possible solution was not the right thing to build.",
+      "situation": "A ranking model improved aggregate conversion but created worse outcomes for a smaller customer segment and lacked explainability for support teams.",
+      "strongAnswerSketch": [
+        "Name the risk: aggregate metrics hid segment-level harm.",
+        "Require segment analysis, explainability, and human override paths before launch.",
+        "Work with Product to define acceptable **trade-offs** and customer communication.",
+        "Create responsible AI launch criteria."
+      ],
+      "whyItWorks": [
+        "Looks beyond top-line business metrics.",
+        "Balances fairness, explainability, and product goals.",
+        "Turns a one-off concern into launch criteria."
+      ],
+      "weakVersion": "I delayed the model because we were not confident enough in the fairness implications.",
+      "followUpAngles": [
+        "Which segment was harmed?",
+        "What **trade-off** did Product accept?",
+        "What became part of future model reviews?"
+      ]
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "The candidate shows **moral courage**, practical risk judgment, and ability to guide teams toward safer alternatives.",
+    "moves": [
+      "Names the ethical or **trust risk** concretely.",
+      "Explains who was consulted and what governance was needed.",
+      "Proposes a safer alternative.",
+      "Balances **customer value** with risk controls.",
+      "Creates a repeatable review mechanism."
+    ]
+  },
+  "weakAnswerPattern": {
+    "summary": "The candidate either ignores the risk, delegates responsibility entirely, or blocks without helping the team find a responsible path.",
+    "redFlags": [
+      "Treats ethics as legal's problem only.",
+      "Cannot explain the **customer harm** or trust risk.",
+      "Only says no and offers no alternative.",
+      "Has no mechanism for future **responsible technology** decisions."
+    ]
+  },
+  "followUps": [
+    {
+      "id": "risk",
+      "question": "What specific **customer harm** or trust risk were you concerned about?",
+      "tests": [
+        "risk judgment",
+        "judgment"
+      ]
+    },
+    {
+      "id": "stakeholders",
+      "question": "Who did you involve in the decision?",
+      "tests": [
+        "stakeholder alignment",
+        "accountability"
+      ]
+    },
+    {
+      "id": "alternative",
+      "question": "What alternative did you propose?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ]
+    },
+    {
+      "id": "governance",
+      "question": "What **governance changed** afterward?",
+      "tests": [
+        "learning",
+        "execution"
+      ]
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "trust-risk",
+        "name": "Trust Risk Judgment",
+        "strong": "Identifies concrete customer, privacy, security, or fairness risk.",
+        "weak": "Uses vague concern without actionable risk framing."
+      },
+      {
+        "id": "moral-courage",
+        "name": "Moral Courage",
+        "strong": "Challenges unsafe work even when it has business momentum.",
+        "weak": "Lets momentum override customer trust concerns."
+      },
+      {
+        "id": "responsible-alternatives",
+        "name": "Responsible Alternatives",
+        "strong": "Finds safer ways to pursue **customer value**.",
+        "weak": "Only blocks or rubber-stamps."
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Manager",
+        "expected": "Escalates trust risks and applies team-level safeguards."
+      },
+      {
+        "level": "Director",
+        "expected": "Coordinates product, legal, security, and engineering decisions for responsible implementation."
+      },
+      {
+        "level": "VP Engineering",
+        "expected": "Creates governance for high-risk product and data decisions across the organization."
+      },
+      {
+        "level": "CTO",
+        "expected": "Owns company-level technology trust, ethics posture, and executive decision quality."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "trust-risk",
+      "moral-courage",
+      "responsible-alternatives"
+    ],
+    "followUpTree": [
+      "risk",
+      "stakeholders",
+      "alternative",
+      "governance"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What technically possible work created ethical or trust risk?"
+      },
+      {
+        "field": "task",
+        "label": "What customer or company responsibility did you own?"
+      },
+      {
+        "field": "action",
+        "label": "How did you assess risk, involve stakeholders, and propose alternatives?"
+      },
+      {
+        "field": "result",
+        "label": "What changed in the product, decision, or risk posture?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about responsible technology leadership?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What governance or review mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Changing an AI feature because of fairness or explainability concerns.",
+    "Rejecting excessive data collection for personalization.",
+    "Delaying launch until security and privacy controls are ready."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "govuk-structured-interviews",
+        "group": "Interviewing and Calibration",
+        "title": "Use Fair and Structured Interview Techniques",
+        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
+        "source": "GOV.UK",
+        "type": "Guide",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "nist-ai-rmf",
+        "group": "Responsible Technology and AI",
+        "title": "AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "source": "NIST",
+        "type": "Framework",
+        "year": "2023",
+        "why": "Authoritative framework for identifying, measuring, managing, and governing AI risk.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "microsoft-responsible-ai",
+        "group": "Responsible Technology and AI",
+        "title": "Responsible AI Principles and Approach",
+        "url": "https://www.microsoft.com/en-us/ai/principles-and-approach",
+        "source": "Microsoft",
+        "type": "Framework",
+        "why": "Practical responsible-AI principles and governance approach from a large technology operator.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "google-ai-principles",
+        "group": "Responsible Technology and AI",
+        "title": "Google AI Principles",
+        "url": "https://ai.google/responsibility/principles/",
+        "source": "Google",
+        "type": "Principles",
+        "why": "Useful example of public AI principles and boundaries for **responsible technology** decisions.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "datasheets-for-datasets",
+        "group": "Responsible Technology and AI",
+        "title": "Datasheets for Datasets",
+        "url": "https://www.microsoft.com/en-us/research/publication/datasheets-for-datasets/",
+        "source": "Microsoft Research",
+        "type": "Paper",
+        "year": "2018",
+        "why": "Concrete documentation pattern for dataset provenance, limitations, and ethical use.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "pair-guidebook",
+        "group": "Responsible Technology and AI",
+        "title": "People + AI Guidebook",
+        "url": "https://pair.withgoogle.com/guidebook-v2/",
+        "source": "Google PAIR",
+        "type": "Guidebook",
+        "why": "Human-centered AI design guide for setting expectations, feedback loops, and user trust.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "nudge",
+        "group": "Responsible Technology and AI",
+        "title": "Nudge",
+        "url": "https://www.randomhousebooks.com/books/690485/",
+        "source": "Richard H. Thaler and Cass R. Sunstein / Random House",
+        "type": "Book",
+        "year": "2021",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics.",
+        "why": "Relevant here because responsible-technology answers should account for how product choices shape user behavior without removing agency."
+      },
+      {
+        "id": "thinking-fast-and-slow",
+        "group": "Responsible Technology and AI",
+        "title": "Thinking, Fast and Slow",
+        "url": "https://us.macmillan.com/books/9780374533557/thinkingfastandslow/",
+        "source": "Daniel Kahneman / Farrar, Straus and Giroux",
+        "type": "Book",
+        "year": "2011",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics.",
+        "why": "Relevant here because ethical technology decisions often require recognizing bias, overconfidence, and flawed judgment under uncertainty."
+      }
+    ]
+  }
+}
