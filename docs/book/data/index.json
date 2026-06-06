@@ -1,17 +1,6 @@
 {
   "groups": [
     {
-      "id": "method",
-      "name": "Interview Method",
-      "datasets": [
-        {
-          "id": "interview-method",
-          "name": "Behavioral Interview Method",
-          "path": "data/interview-method/interview.json"
-        }
-      ]
-    },
-    {
       "id": "judgment-strategy",
       "name": "Judgment and Strategy",
       "datasets": [
@@ -119,6 +108,17 @@
           "id": "innovation-emerging-technology",
           "name": "Innovation and Emerging Technology",
           "path": "data/innovation-emerging-technology/interview.json"
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "name": "Interview Method",
+      "datasets": [
+        {
+          "id": "interview-method",
+          "name": "Behavioral Interview Method",
+          "path": "data/interview-method/interview.json"
         }
       ]
     }

@@ -1,8 +1,9 @@
 {
   "id": "innovation-emerging-technology",
   "title": "Innovation and Emerging Technology",
-  "description": "Introducing AI, automation, platforms, or **emerging technology** with disciplined experimentation, adoption, risk management, and measurable impact.",
+  "description": "Introducing AI, automation, platforms, or other **emerging technology** through disciplined experimentation, adoption design, risk management, and measurable impact.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,54 +13,65 @@
     "id": "innovation-adoption",
     "name": "Innovation and Emerging Technology",
     "family": "Risk, Ethics, and Innovation",
-    "definition": "Evaluates and adopts new technology through evidence, risk controls, behavior change, and **measurable outcomes**.",
-    "whyItMatters": "Senior leaders must separate useful innovation from hype while creating conditions for **responsible adoption**."
+    "definition": "Evaluates, pilots, and adopts new technology through evidence, risk controls, behavior change, and **measurable outcomes**.",
+    "whyItMatters": "Senior leaders must separate useful innovation from hype and create the operating conditions for **responsible adoption**."
   },
   "prompt": {
-    "primary": "Tell me about a time you introduced a new technology that changed how your organization worked.",
+    "primary": "Tell me about a time you introduced a new technology that changed how work got done in your organization.",
     "variants": [
       "Describe how you evaluated whether AI, automation, or a new platform capability was worth adopting.",
-      "Tell me about a time a technology experiment did not justify broader rollout."
+      "Tell me about a time a technology experiment did not justify scaling.",
+      "Describe how you decided whether to build, buy, partner, or wait on an emerging capability.",
+      "Tell me about a time you introduced AI or automation outside engineering workflows."
     ],
     "interviewerIntent": [
-      "Can the candidate test **emerging technology** with discipline?",
-      "Do they manage security, quality, adoption, and change management?",
-      "Can they measure impact beyond excitement or license usage?"
+      "Can the candidate test **emerging technology** through hypotheses, evidence, and stage gates?",
+      "Do they integrate security, quality, adoption, and change-management concerns early?",
+      "Can they measure workflow and business impact beyond excitement or license usage?",
+      "Can they connect technology bets to strategy, opportunity cost, and portfolio choices?"
     ]
   },
   "scenario": {
-    "signatureExample": "A senior leader introduces AI-assisted development tools with security rules, cycle-time measurement, code-review quality checks, and team training.",
+    "signatureExample": "A CTO creates a build/buy/wait portfolio for AI and automation, funding only bets with clear workflow ownership, risk controls, and measurable customer or operating impact.",
     "context": [
-      "Engineers are experimenting individually with AI tools.",
-      "Security and legal teams are concerned about data exposure.",
-      "Executives want productivity gains but lack evidence."
+      "Teams are running disconnected experiments with AI, automation, and platform tools.",
+      "Executives expect productivity and growth gains, but board pressure and vendor demos are shaping the conversation.",
+      "Security, legal, product, support, and engineering leaders disagree on what can be adopted safely.",
+      "Some ideas create business value outside engineering workflows, while others are expensive theater."
     ],
     "constraints": [
-      "The organization needs guardrails before broad adoption.",
-      "Impact must be measured without vanity metrics.",
-      "Teams need training and workflow changes, not just licenses."
+      "The organization needs guardrails and decision rights before broad adoption.",
+      "Impact must be measured through workflow and business outcomes, not vanity metrics.",
+      "Teams need training, workflow changes, and review behavior, not just licenses.",
+      "The leader must decide what to scale, narrow, stop, or defer based on evidence.",
+      "Portfolio choices must account for strategic differentiation, data readiness, risk, and opportunity cost."
     ]
   },
   "storyAnatomy": {
-    "situation": "The organization had fragmented AI-tool usage with enthusiasm, risk concerns, and unclear productivity impact.",
-    "task": "Evaluate and scale AI-assisted development responsibly if evidence justified it.",
+    "situation": "The organization had fragmented AI, automation, and platform experiments with real enthusiasm but unclear ownership, risk posture, and business impact.",
+    "task": "Create an adoption model that could scale valuable **emerging technology** bets, stop weak ones, and make strategic trade-offs explicit.",
     "action": [
-      "Defined acceptable-use, security, and code-review policies.",
-      "Ran a pilot with control groups and measured cycle time, review quality, defects, and developer experience.",
-      "Trained teams on effective use cases and prohibited uses.",
-      "Adjusted rollout based on evidence rather than initial enthusiasm."
+      "Mapped opportunities by strategic differentiation, workflow ownership, data readiness, risk, and build/buy/wait posture.",
+      "Defined acceptable-use, security, legal, quality, and human-approval policies for each pilot class.",
+      "Ran pilots with comparison groups and measured customer impact, cycle time, review quality, operational load, defects, and user behavior.",
+      "Trained teams on effective use cases, prohibited uses, and review standards.",
+      "Stopped or narrowed experiments when evidence, risk, or adoption friction did not justify broader rollout.",
+      "Reallocated funding from disconnected demos to a small set of bets with durable leverage."
     ],
     "result": [
-      "The organization adopted the tools where impact was measurable.",
-      "Security and quality concerns were addressed through guardrails.",
-      "Teams learned where AI helped and where human review remained critical."
+      "The organization adopted tools and workflows only where measured impact and risk posture justified it.",
+      "Security, quality, privacy, and customer-trust concerns were handled through guardrails and stop conditions.",
+      "Some attractive ideas were deferred or killed because they lacked data readiness, workflow ownership, or unit-economics evidence.",
+      "Teams gained a shared view of where AI and automation helped, where human review remained critical, and where the company should wait."
     ],
-    "reflection": "The lesson was that innovation adoption is an operating change, not a procurement event.",
+    "reflection": "The lesson was that innovation adoption succeeds when it changes the operating model, not when it only buys a tool.",
     "systemChange": [
-      "**Emerging technology** pilot framework.",
-      "AI usage policy.",
+      "**Emerging technology** portfolio review.",
+      "Build/buy/wait decision criteria.",
+      "AI and automation usage policy.",
+      "Pilot scorecard with scale, narrow, stop, and defer thresholds.",
       "Impact measurement dashboard.",
-      "Training and review standards."
+      "Training, human-review, and quality standards."
     ]
   },
   "exampleStories": [
@@ -67,40 +79,71 @@
       "id": "ai-assisted-development",
       "title": "AI-Assisted Development Adoption",
       "level": "VP Engineering",
-      "promptVariant": "Tell me about a time you introduced a new technology that changed how your organization worked.",
+      "promptVariant": "Tell me about a time you introduced a new technology that changed how work got done in your organization.",
       "situation": "Engineers were already experimenting with AI coding tools, executives wanted productivity gains, and Security was concerned about code and data exposure.",
       "strongAnswerSketch": [
-        "Define the adoption hypothesis and acceptable-use policy.",
-        "Run a pilot measuring cycle time, review quality, defects, and developer experience.",
-        "Train teams on effective and prohibited use cases.",
-        "Scale adoption only where evidence and guardrails support it."
+        "Resist immediate company-wide rollout and define the adoption hypothesis, acceptable-use policy, and stop conditions.",
+        "Run a pilot with comparison teams, measuring review lead time, rework, defect escape, security findings, and developer experience.",
+        "Train teams on effective use cases, prohibited uses, prompt hygiene, and code-review expectations.",
+        "Scale only to workflows where evidence shows impact and reviewers can inspect the AI-assisted work.",
+        "Keep restricted repositories and sensitive customer data out of scope until enterprise controls and review behavior are proven."
       ],
       "whyItWorks": [
         "Separates innovation from license purchasing.",
         "Measures impact beyond usage.",
-        "Manages quality and security risks during adoption."
+        "Manages quality and security risks during adoption.",
+        "Names conditions that would stop or narrow rollout."
       ],
-      "weakVersion": "I bought AI coding licenses, encouraged teams to experiment, and tracked adoption to see whether people found value.",
+      "weakVersion": "I bought AI coding licenses, encouraged teams to experiment, and tracked adoption to see whether people found the tool valuable.",
       "followUpAngles": [
         "What was your hypothesis?",
         "What would have stopped rollout?",
         "How did code review **behavior change**?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/ai-assisted-development.jpg"
+    },
+    {
+      "id": "support-operations-automation",
+      "title": "Customer Support Automation Pilot",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you introduced AI or automation outside engineering workflows.",
+      "situation": "Support leaders wanted an AI summarization and routing tool to reduce backlog before renewal season, but early tests mishandled refunds, enterprise-severity cases, and PII in customer transcripts.",
+      "strongAnswerSketch": [
+        "State the hypothesis: reduce p75 triage time by 20% for low-severity tickets without increasing reopens, QA overrides, privacy exceptions, or escalations.",
+        "Partner with Support, Security, Legal, and frontline agents to define eligible queues, redaction, human approval, and escalation rules before the pilot.",
+        "Run an A/B pilot against control queues and measure handle time, reopen rate, QA defects, agent trust, customer CSAT, and cost per resolved ticket.",
+        "Stop refund and enterprise-severity use cases when override rates cross the threshold, even though the original business case assumed those savings.",
+        "Scale only summarization and routing for eligible queues, then update training and add weekly exception review."
+      ],
+      "whyItWorks": [
+        "Broadens innovation beyond developer tooling.",
+        "Shows business empathy without accepting unsafe automation.",
+        "Uses customer and operating metrics, not only tool usage.",
+        "Includes a real residual cost: the scaled scope was smaller than the original savings case."
+      ],
+      "weakVersion": "I gave Support access to the AI tool, asked agents to use it where helpful, and reviewed adoption and time-saved estimates after the first month.",
+      "followUpAngles": [
+        "Which cases were excluded from automation?",
+        "What metric stopped part of the rollout?",
+        "How did frontline workflow **behavior change**?"
+      ],
+      "aiVisual": "assets/generated/example-stories/support-operations-automation.jpg"
     },
     {
       "id": "internal-platform-trial",
       "title": "Internal Platform Trial",
       "level": "Director",
       "promptVariant": "Tell me about a time a technology experiment did not justify broader rollout.",
-      "situation": "A platform team piloted a new deployment abstraction that improved one team experience but made debugging harder for services with unusual runtime needs.",
+      "situation": "A platform team piloted a new deployment abstraction that improved one team experience but made debugging harder for services with unusual runtime and rollback needs.",
       "strongAnswerSketch": [
         "Define success criteria before the pilot: lead time, failure recovery, support load, and developer satisfaction.",
-        "Measure both happy-path adoption and operational friction.",
-        "Decide not to roll out broadly until debugging and escape-hatch problems are solved.",
-        "Document adoption criteria for the next platform experiment."
+        "Measure both happy-path adoption and operational friction: one pilot team cut deployment lead time by 18%, while services with unusual runtime needs doubled platform support tickets and missed the recovery-time threshold in rollback drills.",
+        "Decide not to roll out broadly until debugging, rollback, and escape-hatch problems are solved, leaving affected teams on the old path.",
+        "Document adoption criteria and rollback-drill requirements for the next platform experiment."
       ],
       "whyItWorks": [
         "Shows willingness to stop an exciting technology.",
+        "Uses numeric counter-evidence when the happy-path metric looked positive.",
         "Measures operational consequences, not only developer enthusiasm.",
         "Improves future **experimentation discipline**."
       ],
@@ -109,27 +152,61 @@
         "What metric changed your mind?",
         "Who was disappointed by the decision?",
         "What did the next pilot do differently?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/internal-platform-trial.jpg"
+    },
+    {
+      "id": "company-ai-portfolio-posture",
+      "title": "Company-Level AI Portfolio Posture",
+      "level": "CTO",
+      "promptVariant": "Describe how you decided whether to build, buy, partner, or wait on an emerging capability.",
+      "situation": "After a board discussion, every business unit proposed AI or automation bets, vendors pushed platform contracts, and the company had no shared view of where emerging technology created strategic leverage versus expensive theater.",
+      "strongAnswerSketch": [
+        "Frame the decision as portfolio posture: build where proprietary workflow data creates advantage, buy commodity productivity tools with enterprise controls, partner where ecosystem reach matters, and wait on autonomous customer-impacting actions until evaluation and liability controls exist.",
+        "Cancel or park three executive-sponsored demos that lacked customer workflow ownership, data readiness, or unit-economics evidence.",
+        "Fund two bets with named business owners: a customer-operations copilot and an internal engineering-assistant rollout, each with stage gates, risk owners, and kill criteria.",
+        "Create investment gates for customer value, data quality, security and legal review, model evaluation, adoption behavior, unit economics, and operational support load.",
+        "Report portfolio learning quarterly: one bet scaled, one narrowed, vendor spend fell 22%, and the company had a repeatable build/buy/wait review."
+      ],
+      "whyItWorks": [
+        "Illustrates the CTO level promised by the rubric.",
+        "Treats innovation as strategy and opportunity cost, not scattered pilots.",
+        "Shows principled stopping and narrowing despite executive sponsorship.",
+        "Leaves behind a durable portfolio mechanism."
+      ],
+      "weakVersion": "I asked each business unit to propose AI use cases, selected the most promising demos, and created an innovation roadmap so executives could see momentum.",
+      "followUpAngles": [
+        "Which bets did you stop or defer?",
+        "What made a bet strategic enough to build?",
+        "How did the board conversation change?"
+      ],
+      "aiVisual": "assets/generated/example-stories/company-ai-portfolio-posture.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows **experimentation discipline**, adoption strategy, risk management, and measurable impact.",
+    "summary": "The candidate shows **experimentation discipline**, adoption strategy, portfolio judgment, risk management, and measurable impact.",
     "moves": [
       "Explains the hypothesis and **decision criteria**.",
-      "Includes risk, security, and quality controls.",
-      "Measures behavior and outcomes, not only adoption.",
-      "Invests in training and workflow integration.",
+      "Connects the technology bet to strategy, workflow ownership, and opportunity cost.",
+      "Explains build, buy, partner, wait, scale, narrow, or stop decisions.",
+      "Includes risk, security, quality, and human-review controls.",
+      "Measures customer, operating, and behavior outcomes, not only adoption.",
+      "Invests in training, workflow integration, and manager reinforcement.",
       "Scales, changes, or stops based on evidence."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
     "summary": "The candidate treats innovation as buying tools or following trends without disciplined evaluation or adoption design.",
     "redFlags": [
       "Uses hype language without a testable hypothesis.",
       "Measures only usage or licenses.",
+      "Cannot explain strategic fit, opportunity cost, or build/buy/wait reasoning.",
       "Ignores security, quality, or **behavior change**.",
+      "Cannot name who owned the workflow after rollout.",
       "Cannot name conditions under which they would stop rollout."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
@@ -138,31 +215,89 @@
       "tests": [
         "decision quality",
         "measurement"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "For support automation, I was testing whether low-severity summarization could cut p75 triage time by 20% without increasing reopens, QA overrides, privacy exceptions, or escalations.",
+          "For AI-assisted development, the hypothesis was not that developers would use it; it was that selected workflows would reduce review lead time while keeping defect escape and security findings flat."
+        ],
+        "weak": [
+          "We wanted to see whether AI would make people more productive.",
+          "The hypothesis was that the new platform would be easier for teams and therefore worth adopting."
+        ]
+      }
     },
     {
       "id": "risk-controls",
-      "question": "What risks did you control before adoption?",
+      "question": "What risks did you control before adoption or scaling?",
       "tests": [
         "risk judgment",
         "technical judgment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We blocked sensitive repositories and customer data, required enterprise SSO and vendor terms, added code-review rules, and named stop conditions for security findings or review-quality regression.",
+          "For support automation, we limited the pilot to low-severity queues, redacted PII, kept human approval, and excluded refunds and enterprise incidents after override rates were too high."
+        ],
+        "weak": [
+          "Security reviewed the tool, and we told people not to paste sensitive data into it.",
+          "We had humans check the output, so the automation risk felt manageable."
+        ]
+      }
     },
     {
       "id": "impact",
-      "question": "How did you measure impact beyond usage?",
+      "question": "How did you measure impact beyond usage or enthusiasm?",
       "tests": [
         "measurement",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I compared pilot and control cohorts on review lead time, rework, defect escape, security exceptions, developer sentiment, and manager-observed workflow change.",
+          "For support, usage was secondary; we measured triage time, reopen rate, QA defects, customer CSAT, escalation load, and cost per resolved ticket."
+        ],
+        "weak": [
+          "The main evidence was that most people activated the tool and reported that it saved time.",
+          "We looked at license usage, survey feedback, and a few anecdotes from teams that liked it."
+        ]
+      }
     },
     {
       "id": "adoption",
-      "question": "What changed in how teams actually worked?",
+      "question": "What changed in the day-to-day workflow?",
       "tests": [
         "execution",
         "learning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We changed pull-request templates, reviewer checklists, onboarding, and manager coaching so AI-assisted output had to be inspectable rather than copied into production.",
+          "Support agents got queue-specific playbooks, override buttons, weekly exception reviews, and a clear rule for when the automation must not be used."
+        ],
+        "weak": [
+          "Teams started using the tool regularly, and people said it made the work feel faster.",
+          "We published guidance and held a training session so everyone knew the recommended practices."
+        ]
+      }
+    },
+    {
+      "id": "portfolio",
+      "question": "How did you decide where to build, buy, partner, or wait?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We built only where proprietary workflow data or customer integration gave us durable advantage, bought commodity productivity tooling under enterprise controls, partnered for ecosystem reach, and waited on autonomous customer actions until evaluation and liability controls existed.",
+          "I made opportunity cost visible: three executive-sponsored demos lost funding because they lacked a workflow owner, data readiness, or a credible unit-economics path."
+        ],
+        "weak": [
+          "We prioritized the ideas that looked most promising and matched the vendor capabilities we could buy quickly.",
+          "I let each business unit pick its best use case and then compared them in an innovation roadmap."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -170,38 +305,44 @@
       {
         "id": "experimentation-discipline",
         "name": "Experimentation Discipline",
-        "strong": "Defines hypotheses, metrics, risks, and rollout criteria.",
-        "weak": "Runs broad adoption based on enthusiasm."
+        "strong": "Defines hypotheses, metrics, risks, comparison points, and rollout criteria.",
+        "weak": "Runs broad adoption based on enthusiasm or executive pressure."
       },
       {
         "id": "risk-aware-adoption",
         "name": "Risk-Aware Adoption",
-        "strong": "Integrates security, quality, and responsible-use guardrails.",
+        "strong": "Integrates security, quality, privacy, and responsible-use guardrails before scaling.",
         "weak": "Treats risk as a later compliance concern."
       },
       {
         "id": "measurable-impact",
         "name": "Measurable Impact",
-        "strong": "Measures outcomes and **behavior change**.",
+        "strong": "Measures customer, operating, and **behavior change** outcomes.",
         "weak": "Confuses usage with impact."
+      },
+      {
+        "id": "strategic-portfolio",
+        "name": "Strategic Portfolio Judgment",
+        "strong": "Connects emerging-technology bets to strategy, opportunity cost, and build/buy/wait choices.",
+        "weak": "Chases scattered demos without clear strategic fit, ownership, or resource trade-offs."
       }
     ],
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Pilots technology within a team with clear metrics and guardrails."
+        "expected": "Pilots technology within a team or adjacent workflow with clear metrics, guardrails, human-review rules, and stop conditions."
       },
       {
         "level": "Director",
-        "expected": "Scales adoption across teams through training, workflow changes, and impact measurement."
+        "expected": "Scales or stops adoption across teams through training, workflow changes, stakeholder alignment, impact measurement, and support-load feedback."
       },
       {
         "level": "VP Engineering",
-        "expected": "Creates an organizational adoption model for **emerging technology** with risk controls and portfolio impact."
+        "expected": "Creates an organizational adoption model for **emerging technology** with risk controls, stage gates, and portfolio impact."
       },
       {
         "level": "CTO",
-        "expected": "Sets company-level technology adoption strategy balancing strategic leverage, risk, and operating change."
+        "expected": "Sets company-level technology portfolio strategy, including build/buy/wait posture, strategic leverage, risk appetite, operating change, and opportunity cost."
       }
     ]
   },
@@ -217,13 +358,15 @@
     "signalMap": [
       "experimentation-discipline",
       "risk-aware-adoption",
-      "measurable-impact"
+      "measurable-impact",
+      "strategic-portfolio"
     ],
     "followUpTree": [
       "hypothesis",
       "risk-controls",
       "impact",
-      "adoption"
+      "adoption",
+      "portfolio"
     ]
   },
   "practiceTemplate": {
@@ -256,8 +399,9 @@
   },
   "relatedScenarios": [
     "Introducing internal developer platforms.",
-    "Evaluating AI support tools for customer operations.",
-    "Stopping a technology rollout after pilot evidence disappoints."
+    "Piloting support, sales, finance, or operations automation with human approval and stop criteria.",
+    "Stopping a technology rollout after pilot evidence disappoints.",
+    "Choosing a company-level build/buy/wait posture for AI or automation."
   ],
   "toProbeFurther": {
     "links": [
@@ -283,24 +427,26 @@
         "groupDescription": "Resources for experimentation, emerging technology adoption, and product discovery discipline."
       },
       {
-        "id": "pair-guidebook",
-        "group": "Responsible Technology and AI",
-        "title": "People + AI Guidebook",
-        "url": "https://pair.withgoogle.com/guidebook-v2/",
-        "source": "Google PAIR",
-        "type": "Guidebook",
-        "why": "Human-centered AI design guide for setting expectations, feedback loops, and user trust.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "id": "experimentation-works",
+        "group": "Innovation and Product Discovery",
+        "title": "Experimentation Works",
+        "url": "https://store.hbr.org/product/experimentation-works-the-surprising-power-of-business-experiments/10248",
+        "source": "Stefan Thomke / Harvard Business Review Press",
+        "type": "Book",
+        "year": "2020",
+        "why": "Business-experimentation reference for turning uncertain innovation ideas into disciplined tests and learning systems.",
+        "groupDescription": "Resources for experimentation, emerging technology adoption, and product discovery discipline."
       },
       {
-        "id": "google-ai-principles",
-        "group": "Responsible Technology and AI",
-        "title": "Google AI Principles",
-        "url": "https://ai.google/responsibility/principles/",
-        "source": "Google",
-        "type": "Principles",
-        "why": "Useful example of public AI principles and boundaries for **responsible technology** decisions.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "id": "trustworthy-online-controlled-experiments",
+        "group": "Experimentation and Measurement",
+        "title": "Trustworthy Online Controlled Experiments",
+        "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/trustworthy-online-controlled-experiments/524D7D0FDF6A542F732D047118618645",
+        "source": "Ron Kohavi, Diane Tang, and Ya Xu / Cambridge University Press",
+        "type": "Book",
+        "year": "2020",
+        "why": "Practical A/B-testing reference for measuring impact, avoiding false wins, and making rollout decisions from trustworthy evidence.",
+        "groupDescription": "Resources for experimentation design, controlled rollout, product metrics, and impact measurement."
       },
       {
         "id": "nist-ai-rmf",
@@ -314,6 +460,92 @@
         "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
       },
       {
+        "id": "nist-generative-ai-profile",
+        "group": "Responsible Technology and AI",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+        "source": "NIST",
+        "type": "Profile",
+        "year": "2024",
+        "why": "Adds generative-AI-specific risks and suggested actions for governance, testing, provenance, incident disclosure, procurement, and deployment.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "iso-iec-42001-ai-management-system",
+        "group": "Responsible Technology and AI",
+        "title": "ISO/IEC 42001:2023 Information technology - Artificial intelligence - Management system",
+        "url": "https://www.iso.org/standard/42001",
+        "source": "ISO",
+        "type": "Standard",
+        "year": "2023",
+        "why": "Gives leaders a management-system pattern for AI policies, objectives, process ownership, risk treatment, monitoring, and audits.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+      },
+      {
+        "id": "pair-guidebook",
+        "group": "Human-Centered AI Adoption",
+        "title": "People + AI Guidebook",
+        "url": "https://pair.withgoogle.com/guidebook-v2/",
+        "source": "Google PAIR",
+        "type": "Guidebook",
+        "why": "Human-centered AI design guide for setting user expectations, feedback loops, agency, and trust during adoption.",
+        "groupDescription": "Resources for user trust, workflow design, human review, and AI product adoption behavior."
+      },
+      {
+        "id": "owasp-llm-top-10",
+        "group": "AI Security and Vendor Risk",
+        "title": "OWASP Top 10 for LLM Applications 2025",
+        "url": "https://genai.owasp.org/llm-top-10/",
+        "source": "OWASP Gen AI Security Project",
+        "type": "Guide",
+        "year": "2025",
+        "why": "Practical risk taxonomy for LLM products and internal tools, including prompt injection, sensitive information disclosure, supply chain risk, and excessive agency.",
+        "groupDescription": "Resources for assessing LLM application security, vendor workflows, sensitive data exposure, and autonomous-system risk."
+      },
+      {
+        "id": "google-secure-ai-framework",
+        "group": "AI Security and Vendor Risk",
+        "title": "Google's Secure AI Framework",
+        "url": "https://saif.google/secure-ai-framework",
+        "source": "Google",
+        "type": "Framework",
+        "why": "Maps AI development lifecycle components to security risks and controls, useful for turning pilots into governed production workflows.",
+        "groupDescription": "Resources for assessing LLM application security, vendor workflows, sensitive data exposure, and autonomous-system risk."
+      },
+      {
+        "id": "microsoft-ai-red-team",
+        "group": "AI Evaluation and Red Teaming",
+        "title": "Microsoft AI Red Team Building Future of Safer AI",
+        "url": "https://www.microsoft.com/en-us/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/",
+        "source": "Microsoft Security Blog",
+        "type": "Article",
+        "year": "2023",
+        "why": "Operator account of probing AI systems for security and responsible-AI failures before rollout, with emphasis on measurement and defense in depth.",
+        "groupDescription": "Resources for predeployment testing, red teaming, model evaluation, residual risk, and production monitoring."
+      },
+      {
+        "id": "dora-adopt-gen-ai",
+        "group": "Emerging Technology Adoption",
+        "title": "Helping Developers Adopt Generative AI: Four Practical Strategies for Organizations",
+        "url": "https://dora.dev/insights/adopt-gen-ai/",
+        "source": "DORA",
+        "type": "Research guide",
+        "year": "2025",
+        "why": "Adoption-specific guidance for scaling generative AI through vision, guidelines, culture, and support rather than top-down mandates alone.",
+        "groupDescription": "Resources for emerging technology adoption, organizational learning, and operating-model change."
+      },
+      {
+        "id": "space-developer-productivity",
+        "group": "Engineering Productivity and Adoption Measurement",
+        "title": "The SPACE of Developer Productivity",
+        "url": "https://queue.acm.org/detail.cfm?id=3454124",
+        "source": "ACM Queue",
+        "type": "Article",
+        "year": "2021",
+        "why": "Useful for evaluating developer-tool and AI adoption without reducing productivity to one metric or license usage.",
+        "groupDescription": "Resources for measuring developer experience, productivity, workflow change, and adoption impact."
+      },
+      {
         "id": "empowered-product-teams",
         "group": "Strategy and Execution",
         "title": "EMPOWERED: Ordinary People, Extraordinary Products",
@@ -325,36 +557,20 @@
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
-        "id": "shape-up",
-        "group": "Strategy and Execution",
-        "title": "Shape Up",
-        "url": "https://basecamp.com/books",
-        "source": "Basecamp",
-        "type": "Book",
-        "why": "Concrete model for shaping work, betting capacity, and avoiding vague roadmap commitments.",
-        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
-      },
-      {
-        "id": "ai-engineering",
-        "group": "Responsible Technology and AI",
-        "title": "AI Engineering",
-        "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
-        "source": "Chip Huyen / O'Reilly",
-        "type": "Book",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics.",
-        "why": "Relevant here because emerging-technology answers should show production-minded AI adoption, not tool enthusiasm alone."
-      },
-      {
         "id": "build-what-matters",
         "group": "Innovation and Product Discovery",
         "title": "Build What Matters",
-        "url": "https://lioncrest.com/books/build-what-matters-foster-nerlikar/",
-        "source": "Ben Foster and Rajesh Nerlikar / Lioncrest Publishing",
+        "url": "https://www.prodify.group/resources/book",
+        "source": "Ben Foster and Rajesh Nerlikar / Prodify",
         "type": "Book",
         "year": "2020",
         "groupDescription": "Resources for experimentation, emerging technology adoption, and product discovery discipline.",
         "why": "Relevant here because innovation stories are stronger when discovery connects to strategy, outcomes, and disciplined product bets."
       }
     ]
-  }
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

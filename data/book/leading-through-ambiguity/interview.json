@@ -1,8 +1,9 @@
 {
   "id": "leading-through-ambiguity",
   "title": "Leading Through Ambiguity",
-  "description": "Turning vague executive intent into **measurable direction** without waiting for perfect information.",
+  "description": "Converting vague executive intent into **measurable direction** without waiting for perfect information.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,14 +13,15 @@
     "id": "ambiguity",
     "name": "Leading Through Ambiguity",
     "family": "Judgment and Strategy",
-    "definition": "Creates clarity, **decision criteria**, and operating rhythm when goals, ownership, or data are incomplete.",
+    "definition": "Creates clarity, **decision criteria**, ownership, and operating rhythm when goals, data, or accountability are incomplete.",
     "whyItMatters": "Senior leaders are hired to **turn uncertainty into aligned execution** without pretending the uncertainty is gone."
   },
   "prompt": {
-    "primary": "Tell me about a time you had to lead a major technical or organizational initiative when **the goal was ambiguous**.",
+    "primary": "Tell me about a time you led a major technical or organizational initiative when **the goal was ambiguous**.",
     "variants": [
       "Describe a time when you had **incomplete data** but still had to make a high-impact decision.",
-      "Tell me about a time you had to **create clarity** for a team or executive group."
+      "Tell me about a time you **created clarity** for a team or executive group.",
+      "Tell me about a time you clarified ownership when **multiple teams** were affected."
     ],
     "interviewerIntent": [
       "Can the candidate **structure ambiguity** instead of waiting for perfect direction?",
@@ -30,8 +32,8 @@
   "scenario": {
     "signatureExample": "A VP Engineering inherits a vague **board-level mandate** to improve platform reliability.",
     "context": [
-      "Reliability concerns are real but poorly measured.",
-      "Executives disagree on whether the problem is architecture, process, staffing, or product pressure.",
+      "Reliability pain is real but poorly measured.",
+      "Executives disagree on whether the root cause is architecture, process, staffing, or product pressure.",
       "Product teams fear reliability work will delay roadmap commitments."
     ],
     "constraints": [
@@ -42,16 +44,16 @@
   },
   "storyAnatomy": {
     "situation": "The organization had visible reliability pain but no **shared definition** of the problem.",
-    "task": "Create a measurable reliability strategy that executives, product leaders, and engineering teams could use for planning.",
+    "task": "Create a reliability strategy that executives, product leaders, and engineering teams could use for planning and trade-offs.",
     "action": [
-      "Segmented incidents by **customer impact**, revenue risk, and service area.",
+      "Segmented incidents by **customer impact**, revenue risk, and affected service area.",
       "Introduced **service-level objectives** for the most critical customer journeys.",
       "Aligned product and engineering on reliability budgets and **explicit trade-offs**.",
       "Built a 90-day roadmap that separated urgent **risk reduction** from deeper platform modernization."
     ],
     "result": [
-      "Executive debate moved from anecdotes to **measurable risk** after the team created an incident taxonomy covering most customer-impacting events.",
-      "Critical journey SLO coverage moved from zero to eight journeys, with named service owners and escalation paths for each.",
+      "Executive debate moved from anecdotes to **measurable risk** after incident taxonomy covered most customer-impacting events.",
+      "Critical-journey SLO coverage moved from zero to eight journeys, each with a named service owner and escalation path.",
       "**Customer-impacting incidents** dropped by about 30%, and repeat incidents dropped by about 40% over the next planning cycle."
     ],
     "reflection": "The key lesson was to define the **decision system** before choosing technical fixes.",
@@ -72,7 +74,7 @@
         "Separate **customer-impacting incidents** from internal operational noise.",
         "Define **service-level objectives** for the most important customer journeys.",
         "Align Product and Engineering on reliability budgets and **explicit roadmap trade-offs**.",
-        "Create a 90-day roadmap plus a **recurring reliability review** and ownership model."
+        "Create a 90-day roadmap, **recurring reliability review**, and ownership model."
       ],
       "whyItWorks": [
         "Names the ambiguity instead of pretending it was a normal execution problem.",
@@ -114,13 +116,13 @@
     },
     {
       "id": "delivery-predictability-mandate",
-      "title": "Delivery Predictability Without A Shared Problem",
+      "title": "Delivery Predictability Without a Shared Problem",
       "level": "Director",
-      "promptVariant": "Tell me about a time you had to create clarity for a team or executive group.",
-      "situation": "A new executive team wanted engineering to improve **delivery predictability**, but Sales, Product, and Engineering disagreed on whether the real issue was estimation, scope churn, dependencies, or unclear strategy.",
+      "promptVariant": "Tell me about a time you created clarity for a team or executive group.",
+      "situation": "A new executive team wanted better **delivery predictability**, but Sales, Product, and Engineering disagreed on whether the real issue was estimation, scope churn, dependencies, or unclear strategy.",
       "strongAnswerSketch": [
         "Separate schedule misses caused by scope churn, dependency surprises, and engineering execution.",
-        "Create a shared taxonomy and baseline from the last two quarters instead of debating anecdotes.",
+        "Create a shared taxonomy and two-quarter baseline instead of debating anecdotes.",
         "Align Product, Sales, and Engineering on planning entry criteria, change-control rules, and decision owners for trade-offs.",
         "Run two planning cycles with leading indicators for dependency age, scope changes, and confidence drift."
       ],
@@ -134,13 +136,39 @@
         "Which failure mode was most politically sensitive?",
         "What did you ask Sales or Product to change?",
         "How did you know predictability improved without hiding risk?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/delivery-predictability-mandate.jpg"
+    },
+    {
+      "id": "shared-api-ownership-ambiguity",
+      "title": "Shared API Ownership Ambiguity",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you clarified ownership when multiple teams were affected.",
+      "situation": "Two product teams and a platform team depended on a shared API, but roadmap requests, incidents, and support escalations bounced between groups because **ownership and decision rights** were unclear.",
+      "strongAnswerSketch": [
+        "Separate the ambiguity into runtime ownership, domain requirements, roadmap priority, and incident escalation.",
+        "Use evidence from support tickets, blocked stories, incident handoffs, and unclear on-call responsibility.",
+        "Propose options with trade-offs instead of asking executives to solve the ambiguity from scratch.",
+        "Align teams on decision owners, service expectations, escalation paths, and a six-week measurement window."
+      ],
+      "whyItWorks": [
+        "Shows that a Senior Manager can structure ambiguity without owning every involved team.",
+        "Creates **decision rights** and measurable accountability rather than adding another sync meeting.",
+        "Escalates only the unresolved trade-offs after clarifying the options."
+      ],
+      "weakVersion": "I created a weekly meeting between the teams, asked everyone to document their dependencies, and escalated when teams still disagreed.",
+      "followUpAngles": [
+        "Which decision rights did you own versus escalate?",
+        "What evidence changed the conversation?",
+        "How did you know teams stopped passing ownership around?"
+      ],
+      "aiVisual": "assets/generated/example-stories/shared-api-ownership-ambiguity.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate names the uncertainty, creates structure, aligns stakeholders, acts with incomplete data, measures outcome, and changes how the organization operates.",
+    "summary": "The candidate names the uncertainty, creates structure, aligns stakeholders, acts with incomplete data, measures outcomes, and changes how the organization operates.",
     "moves": [
-      "Starts with business and customer context rather than internal engineering frustration.",
+      "Starts with business and customer context, not internal engineering frustration.",
       "States what was unknown and why waiting for perfect data was not acceptable.",
       "Explains the **decision criteria** and who had to be aligned.",
       "Describes **personal actions**, not just what the team eventually did.",
@@ -149,7 +177,7 @@
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate stays vague, says they created alignment, but cannot explain trade-offs, personal actions, **measurable impact**, or what changed after the immediate project.",
+    "summary": "The candidate claims alignment but cannot explain trade-offs, personal actions, **measurable impact**, or what changed after the immediate project.",
     "redFlags": [
       "Uses generic phrases such as aligned stakeholders without naming **concrete mechanisms**.",
       "Focuses only on technical fixes and ignores **executive ambiguity**.",
@@ -206,10 +234,10 @@
       "exampleAnswers": {
         "strong": [
           "I tracked **customer-impacting incidents** on the critical journeys, time to detect, time to recover, and the percentage of services with named owners and current SLOs.",
-          "For the delivery-predictability case, I tracked commitment accuracy, scope-change rate after planning, dependency age, and whether confidence changes were surfaced before the last two weeks of the cycle."
+          "For delivery predictability, I tracked commitment accuracy, post-planning scope-change rate, dependency age, and whether confidence changes surfaced before the final two weeks."
         ],
         "weak": [
-          "The organization felt calmer, and fewer people were complaining about reliability in planning meetings.",
+          "The organization felt calmer, and fewer people complained about reliability in planning meetings.",
           "We had fewer incidents, although I did not have a clean baseline or a consistent way to compare them."
         ]
       }
@@ -224,7 +252,7 @@
       "exampleAnswers": {
         "strong": [
           "I would involve Support and Sales earlier because they had the clearest view of **customer pain**, and we initially over-weighted internal engineering symptoms.",
-          "For the AI strategy work, I would define the board narrative earlier around learning velocity, risk boundaries, and customer workflow value instead of letting the conversation drift toward tool adoption."
+          "For the AI strategy work, I would define the board narrative earlier around learning velocity, risk boundaries, and customer workflow value so the conversation did not drift toward tool adoption."
         ],
         "weak": [
           "I would probably push harder so teams moved faster and debated less.",
@@ -263,19 +291,19 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Creates clarity for multiple teams and escalates unresolved strategic ambiguity with **concrete options**."
+        "expected": "Creates clarity for multiple teams by naming the ambiguity, proposing **concrete options** with trade-offs, and escalating only unresolved decision rights. Evidence includes a baseline, named owners, and a team-level metric that improves."
       },
       {
         "level": "Director",
-        "expected": "Creates **cross-functional alignment** and changes planning or operating mechanisms."
+        "expected": "Creates **cross-functional alignment** across Product, Engineering, and partner functions, then changes planning or operating mechanisms. Evidence includes decision rules, adoption across multiple teams, and leading indicators over at least one planning cycle."
       },
       {
         "level": "VP Engineering",
-        "expected": "Converts **executive ambiguity** into strategy, metrics, accountability, and portfolio trade-offs."
+        "expected": "Converts **executive ambiguity** into strategy, metrics, accountability, and portfolio trade-offs. Evidence includes an executive decision frame, explicit investment choices, owner-level accountability, and a cadence that prevents the same ambiguity from recurring."
       },
       {
         "level": "CTO",
-        "expected": "Connects ambiguity resolution to business risk, board-level narrative, **organizational design**, and long-term technology direction."
+        "expected": "Connects ambiguity resolution to business risk, board-level narrative, **organizational design**, and long-term technology direction. Evidence includes risk appetite, what the company will not do, technology principles, and durable decision systems."
       }
     ]
   },
@@ -312,7 +340,7 @@
       },
       {
         "field": "action",
-        "label": "What mechanisms did you introduce?"
+        "label": "What decision criteria or mechanisms did you introduce?"
       },
       {
         "field": "result",
@@ -324,14 +352,15 @@
       },
       {
         "field": "systemChange",
-        "label": "What changed beyond the immediate story?"
+        "label": "What changed after the immediate story?"
       }
     ]
   },
   "relatedScenarios": [
     "A new executive team asks engineering to improve **delivery predictability** without defining the business problem.",
     "A platform migration becomes politically charged because each product area sees a different risk.",
-    "A board asks for an AI strategy before the company has agreed on customer value, risk, or **operating model**."
+    "A board asks for an AI strategy before the company has agreed on customer value, risk, or **operating model**.",
+    "Multiple teams rely on a shared service, but **ownership and decision rights** are unclear."
   ],
   "toProbeFurther": {
     "links": [
@@ -421,7 +450,7 @@
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

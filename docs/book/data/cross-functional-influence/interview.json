@@ -1,7 +1,7 @@
 {
   "id": "cross-functional-influence",
   "title": "Cross-Functional Influence",
-  "description": "Aligning product, design, sales, customer success, finance, and engineering around difficult **trade-offs** without relying on authority.",
+  "description": "Helping product, design, sales, customer success, finance, legal, and engineering make difficult **trade-offs** without relying on reporting-line authority.",
   "roleFocus": [
     "Senior Manager",
     "Director",
@@ -14,52 +14,67 @@
     "name": "Cross-Functional Influence",
     "family": "Influence and Communication",
     "definition": "Shapes decisions across functions by building credibility, framing trade-offs, and creating shared **decision criteria**.",
-    "whyItMatters": "Senior technology leaders rarely succeed through reporting lines alone."
+    "whyItMatters": "Cross-functional commitments fail when engineering risk stays trapped inside Engineering; senior leaders translate that risk into customer, commercial, and trust decisions peers can jointly own."
   },
   "prompt": {
-    "primary": "Tell me about a time you influenced a major decision without direct authority.",
+    "primary": "Tell me about a time you influenced a major cross-functional decision without direct authority, where functions had legitimate competing incentives.",
     "variants": [
       "Describe a time you aligned engineering, product, design, sales, and customer success around a difficult **trade-off**.",
-      "Tell me about a time you had to protect quality without being seen as obstructionist."
+      "Tell me about a time you had to protect quality without being seen as obstructionist.",
+      "Tell me about a time you used evidence, options, and escalation criteria to protect customer trust across functions.",
+      "Tell me about a time when the easy compromise would have crossed a trust, legal, or operational boundary and you still had to keep peers engaged."
     ],
     "interviewerIntent": [
       "Can the candidate influence without authority?",
       "Do they understand stakeholder incentives?",
-      "Can they turn conflict into shared **decision criteria**?"
+      "Can they turn conflict into shared **decision criteria**?",
+      "Can they separate negotiable scope from non-negotiable customer, legal, or operational boundaries?",
+      "Can they tell the difference between coalition-building and timely escalation when customer trust or irreversible commitments are at stake?"
     ]
   },
   "scenario": {
-    "signatureExample": "An engineering leader needs to delay a launch because reliability is not ready, but marketing and sales have committed externally.",
+    "signatureExample": "An engineering leader needs to change a launch plan because reliability is not ready, while Marketing has campaign spend committed and Sales has promised implementation dates to three enterprise customers.",
     "context": [
-      "The launch has executive visibility.",
-      "Engineering sees reliability risk that is not obvious to other teams.",
-      "Sales and marketing fear credibility damage from delay."
+      "The launch has executive visibility and an external story already in motion.",
+      "Engineering sees customer-journey reliability risk that is not visible in the roadmap view.",
+      "Sales and Marketing fear credibility damage from a delay, while Customer Success worries about absorbing angry pilot customers.",
+      "Some customers can tolerate a staged rollout, but others have contractual or implementation dependencies.",
+      "A surface-level compromise could preserve the launch date while creating a promise the company cannot operate safely."
     ],
     "constraints": [
-      "The leader cannot simply say engineering says no.",
+      "The leader cannot simply say Engineering says no.",
       "The launch still matters commercially.",
-      "Stakeholders need a path forward, not just a risk warning."
+      "Stakeholders need a path forward, not just a risk warning.",
+      "Some scope is negotiable, but unsupported customer promises, compliance claims, and reliability boundaries may not be safe to trade.",
+      "Waiting for perfect certainty would consume the decision window.",
+      "Escalation may be appropriate if a customer-trust boundary or external commitment is still unresolved after direct alignment."
     ]
   },
   "storyAnatomy": {
-    "situation": "A planned launch had business momentum but meaningful reliability risk.",
-    "task": "Align stakeholders on a safer launch path without undermining business goals.",
+    "situation": "A planned launch had business momentum, external commitments, and meaningful reliability risk in a critical customer journey.",
+    "task": "Align stakeholders on a safer launch path without losing the commercial goal or hiding the cost of delay.",
     "action": [
-      "Translated reliability risk into customer and revenue consequences.",
-      "Proposed phased rollout criteria instead of a binary delay.",
-      "Aligned marketing, sales, product, and support on revised messaging and readiness gates.",
-      "Created shared launch-health metrics."
+      "Mapped each function's real concern: revenue timing, campaign credibility, customer implementation plans, support capacity, roadmap sequencing, and reliability margin.",
+      "Translated reliability risk into customer journeys, renewal exposure, support load, and launch-credibility consequences.",
+      "Separated negotiable launch scope from non-negotiable customer-trust commitments.",
+      "Compared full launch, silent delay, narrow beta, and phased rollout against shared readiness criteria.",
+      "Aligned Marketing, Sales, Product, Customer Success, Support, and Engineering on revised messaging, customer segmentation, and readiness gates.",
+      "Escalated only the unresolved customer-trust boundary, with options and each function's position represented fairly.",
+      "Created shared launch-health metrics and a named owner for post-launch follow-through."
     ],
     "result": [
-      "The launch moved to a staged rollout with clearer customer protection.",
+      "The launch became a staged rollout with clearer customer protection and two enterprise cohorts delayed.",
       "Stakeholders had a shared language for readiness.",
-      "The company avoided a broader reliability incident."
+      "The company avoided a broader reliability incident, but Sales absorbed a slipped implementation and Marketing reworked part of the campaign.",
+      "Future external commitments went through earlier cross-functional review."
     ],
-    "reflection": "Influence improved when engineering risk was framed as customer success and launch credibility, not internal caution.",
+    "reflection": "Influence improved when engineering risk was framed as customer success and launch credibility, not internal caution. Escalation helped only when it clarified a decision boundary rather than bypassing peers.",
     "systemChange": [
-      "Launch readiness checklist.",
-      "Cross-functional go/no-go review.",
-      "Shared rollout metrics."
+      "Launch readiness scorecard tied to customer journeys.",
+      "Cross-functional go/no-go review with explicit decision rights.",
+      "Customer-commitment review before external dates are promised to customers.",
+      "Escalation criteria for irreversible customer-trust decisions.",
+      "Shared rollout metrics with post-launch owner."
     ]
   },
   "exampleStories": [
@@ -68,68 +83,139 @@
       "title": "Launch Readiness Delay",
       "level": "Director",
       "promptVariant": "Tell me about a time you influenced a major decision without direct authority.",
-      "situation": "Marketing and Sales had committed to a launch date, but reliability testing showed customer-impact risk that engineering could not ignore.",
+      "situation": "Marketing had paid campaign spend committed, Sales had promised implementation dates to three enterprise customers, and beta data showed a 7% checkout-failure rate on the highest-value customer path.",
       "strongAnswerSketch": [
-        "Translate reliability risk into customer and launch credibility consequences.",
-        "Propose a phased rollout with explicit readiness gates instead of a vague delay.",
-        "Align Product, Sales, Marketing, and Support on customer messaging.",
-        "Create a cross-functional go/no-go review for future launches."
+        "Translate reliability risk into customer impact, support load, renewal exposure, and launch credibility rather than internal engineering discomfort.",
+        "Name the rejected options: full launch with support heroics, silent delay with vague messaging, and postponing every customer.",
+        "Propose a phased rollout with explicit readiness gates, customer segmentation, and a prepared message Sales and Marketing could defend.",
+        "Convene Product, Sales, Marketing, Customer Success, Support, and Engineering around the same readiness scorecard.",
+        "Accept the cost: two customer cohorts moved by three weeks and Marketing had to rework the campaign."
       ],
       "whyItWorks": [
         "Influences through shared risk framing, not authority.",
         "Offers a path forward instead of obstruction.",
+        "Shows rejected alternatives and a real cost, not a frictionless win.",
         "Creates a repeatable launch mechanism."
       ],
-      "weakVersion": "I told stakeholders engineering was not comfortable launching and escalated the reliability risk to executives.",
+      "weakVersion": "I told stakeholders Engineering was not comfortable launching, then escalated the reliability risk without a customer segmentation plan or usable options.",
       "followUpAngles": [
         "What did Sales and Marketing care about?",
         "What data changed the conversation?",
+        "What cost did your recommendation create?",
         "What became repeatable?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/launch-readiness-delay.jpg"
+    },
+    {
+      "id": "customer-commitment-reset",
+      "title": "Customer Commitment Reset",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you had to protect quality without being seen as obstructionist.",
+      "situation": "Customer Success had promised a top account an admin workflow before its quarterly business review, Product wanted the full design shipped, and the platform dependency was two sprints behind.",
+      "strongAnswerSketch": [
+        "Separate the customer's real need from the requested full scope.",
+        "After an async pushback created defensiveness, bring Support tickets, implementation dates, dependency status, and a prototype walkthrough into one conversation with Product, Design, Customer Success, and Engineering.",
+        "Propose a narrow workflow that solved the QBR-critical use case while deferring low-usage analytics and visual polish.",
+        "Ask Customer Success to own the revised customer message and Product to own the scope guardrails.",
+        "Create a commitment review for future customer promises that depended on platform work."
+      ],
+      "whyItWorks": [
+        "Shows Senior Manager-level influence across adjacent teams without formal authority.",
+        "Protects quality while preserving the customer outcome.",
+        "Makes each function own a visible part of the revised commitment.",
+        "Shows the candidate adjusting after an initial influence attempt failed."
+      ],
+      "weakVersion": "I pushed back on the scope because Engineering could not finish it safely and told Customer Success to stop promising work without checking with us.",
+      "followUpAngles": [
+        "What was the customer outcome behind the requested scope?",
+        "What did your first framing get wrong?",
+        "Which lower-value work did you defer?",
+        "Who owned the new customer message?"
+      ],
+      "aiVisual": "assets/generated/example-stories/customer-commitment-reset.jpg"
     },
     {
       "id": "infrastructure-cost-alignment",
       "title": "Infrastructure Cost Alignment",
       "level": "VP Engineering",
       "promptVariant": "Describe a time you aligned engineering, product, finance, and customer success around a difficult **trade-off**.",
-      "situation": "Finance needed infrastructure cost reduction, Product wanted roadmap speed, and Customer Success feared reliability regression from aggressive savings work.",
+      "situation": "Finance needed an 18% infrastructure cost reduction before annual planning, Product wanted roadmap speed, and Customer Success feared reliability regression in three high-volume enterprise journeys.",
       "strongAnswerSketch": [
-        "Create a shared view of cost by customer journey and service owner.",
-        "Separate safe efficiency wins from changes that reduce reliability margin.",
-        "Agree on cost, reliability, and roadmap guardrails with Finance and Product.",
-        "Assign service-level cost ownership and monthly review."
+        "Create a shared view of cost by customer journey, gross margin, incident history, and service owner.",
+        "Separate efficiency wins from changes that reduce reliability margin or consume roadmap capacity.",
+        "Reject a flat team-by-team savings target because it would hide customer risk and reward underinvestment.",
+        "Agree on cost, reliability, and roadmap guardrails with Finance, Product, Customer Success, and Engineering.",
+        "Assign service-level cost ownership and a monthly review; accept that one roadmap theme moved out by a quarter."
       ],
       "whyItWorks": [
         "Shows multi-function empathy.",
         "Frames the **trade-off** with shared metrics.",
+        "Names a trade-off Finance can trust and Customer Success can monitor.",
         "Turns influence into operating ownership."
       ],
-      "weakVersion": "I asked Finance for more realistic targets and told teams to identify cost savings that would not hurt reliability.",
+      "weakVersion": "I asked Finance for more realistic targets and told teams to find cost savings that would not hurt reliability, but I did not create a shared view of customer risk or ongoing ownership.",
       "followUpAngles": [
         "Where did you accept customer risk?",
         "What metric did Finance trust?",
+        "What roadmap work did you defer?",
         "How did teams own ongoing cost?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/infrastructure-cost-alignment.jpg"
+    },
+    {
+      "id": "data-residency-commitment",
+      "title": "Data Residency Commitment Before Quarter-End",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you used evidence, options, and escalation criteria to protect customer trust across functions.",
+      "situation": "Sales wanted data-residency language in a strategic contract before quarter-end; Legal needed precise wording, Product wanted the deal reference, and Engineering could not yet verify the operational controls.",
+      "strongAnswerSketch": [
+        "Acknowledge the strategic account, quarter pressure, and Product reference value without treating Sales as reckless.",
+        "Build a fact table with Legal, Security, Product, Customer Success, Sales, and Engineering covering implemented controls, manual processes, evidence gaps, and customer promises.",
+        "Define the non-negotiable boundary: the company could not contractually promise controls it could not verify and operate.",
+        "Offer three options: narrower contract language, a paid pilot with explicit limits, or delayed signature tied to control verification.",
+        "Escalate the unresolved decision to the CEO with every function's position represented fairly, then own the cost when the signature slips.",
+        "Create a customer-commitment review for regulated deals before contract language reached negotiation."
+      ],
+      "whyItWorks": [
+        "Shows CTO-level influence across external commitments, trust risk, and commercial pressure.",
+        "Treats escalation as decision clarity after direct alignment, not as a way to win against Sales.",
+        "Includes residual cost and a durable mechanism."
+      ],
+      "weakVersion": "I told Sales and Legal Engineering could not support the contract language and escalated to the CEO because the risk was too high.",
+      "followUpAngles": [
+        "What made the promise non-negotiable?",
+        "What options did you give the CEO?",
+        "How did you preserve trust with Sales after the deal slipped?"
+      ],
+      "aiVisual": "assets/generated/example-stories/data-residency-commitment.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate demonstrates **stakeholder empathy**, credible framing, and decision mechanisms that outlive the individual debate.",
+    "summary": "The candidate demonstrates **stakeholder empathy**, credible framing, boundary judgment, careful escalation, and decision mechanisms that outlive the individual debate.",
     "moves": [
-      "Understands each function's legitimate concern.",
+      "Understands each function's legitimate concern and constraint.",
       "Frames **technical risk** in business and customer language.",
-      "Offers a constructive alternative.",
+      "Compares options, rejected alternatives, and residual costs.",
+      "Offers a constructive alternative that preserves the business goal when possible.",
+      "Names what is negotiable and what cannot be traded away safely.",
       "Aligns **decision criteria** before asking for a decision.",
+      "Escalates transparently when customer trust, decision rights, or irreversible commitments remain unresolved.",
       "Creates a repeatable cross-functional mechanism."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate either relies on authority or presents engineering concerns in a way other functions cannot use.",
+    "summary": "The candidate relies on authority, mistakes harmony for influence, or presents engineering concerns in a way other functions cannot use.",
     "redFlags": [
-      "Describes other functions as careless or political.",
-      "Cannot explain the other side's constraints.",
-      "Only escalates upward instead of building alignment.",
+      "Describes other functions as careless, naive, or political.",
+      "Cannot explain the constraints on the other side.",
+      "Escalates to win the argument before giving peers evidence, options, and a fair statement of the decision boundary.",
+      "Keeps searching for compromise after the remaining option would create an unsupported customer, legal, compliance, or reliability promise.",
+      "Avoids timely escalation when a customer-trust or external-commitment risk exceeds the team's decision rights.",
+      "Presents a clean win with no rejected alternative, residual cost, or stakeholder pushback.",
       "Has no **shared mechanism** for future decisions."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
@@ -138,7 +224,17 @@
       "tests": [
         "stakeholder alignment",
         "influence"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Sales needed a credible customer date, Marketing had campaign spend committed, Customer Success would absorb pilot pain, and Product was protecting the launch narrative.",
+          "Finance was not just cutting cost; they needed margin predictability before annual planning, while Customer Success needed guardrails against reliability-driven churn."
+        ],
+        "weak": [
+          "Sales cared about revenue and Marketing cared about the launch date, but Engineering had the real risk data.",
+          "Finance wanted savings, Product wanted speed, and Customer Success mostly wanted us not to break anything."
+        ]
+      }
     },
     {
       "id": "framing",
@@ -146,15 +242,71 @@
       "tests": [
         "judgment",
         "measurement"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I converted the beta failure rate into affected customer journeys, expected support load, renewal exposure, and the credibility cost of launching and then rolling back.",
+          "I framed cost work as gross-margin improvement bounded by error budget, incident history, and customer journey risk, not as Engineering refusing Finance's target."
+        ],
+        "weak": [
+          "I explained that the system was not reliable enough and that launching would be risky.",
+          "I told Finance the savings target would slow the roadmap and could hurt reliability."
+        ]
+      }
     },
     {
       "id": "authority",
-      "question": "What did you do without relying on **positional authority**?",
+      "question": "How did you influence the decision before escalating, and when was escalation appropriate?",
       "tests": [
         "influence",
         "ownership"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I met each peer first, documented options and trade-offs in language they could use, then escalated only the unresolved customer-trust boundary while representing their positions fairly.",
+          "I was not asking the CEO to side with Engineering; I was asking for a decision against agreed readiness criteria, contract risk, and the cost each option created."
+        ],
+        "weak": [
+          "I escalated because Sales was pushing too hard and I needed an executive decision.",
+          "I avoided escalation because I did not want to look political, so I kept trying to persuade people until the date was already too close."
+        ]
+      }
+    },
+    {
+      "id": "boundary",
+      "question": "What was negotiable, and what boundary would you not trade away?",
+      "tests": [
+        "risk judgment",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Scope, rollout order, and messaging were negotiable; promising unverifiable data-residency controls was not.",
+          "We could defer lower-usage analytics and polish, but we could not hand Support a broken admin path for the customer's QBR."
+        ],
+        "weak": [
+          "Everything was negotiable once people understood the trade-off.",
+          "The boundary was that Engineering would not ship something it was uncomfortable with."
+        ]
+      }
+    },
+    {
+      "id": "residual-cost",
+      "question": "What cost did your preferred path create, and who had to absorb it?",
+      "tests": [
+        "trade-off reasoning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Two enterprise cohorts moved by three weeks, Marketing rewrote part of the launch plan, and I owned the explanation that the staged rollout protected the long-term customer promise.",
+          "One roadmap theme moved out by a quarter, and I made that cost visible in Product planning rather than pretending the savings work was free."
+        ],
+        "weak": [
+          "There was some delay, but everyone understood it was necessary once the risk was clear.",
+          "The main cost was that stakeholders were frustrated, but the better technical decision won."
+        ]
+      }
     },
     {
       "id": "repeatable",
@@ -162,7 +314,17 @@
       "tests": [
         "learning",
         "execution"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added a launch-readiness scorecard with customer-journey metrics, named owners, and a go/no-go forum including Sales, Marketing, Support, Product, and Engineering.",
+          "We created a customer-commitment review so Legal, Sales, Security, Product, and Engineering agreed on verifiable promises before contract language reached negotiation."
+        ],
+        "weak": [
+          "We agreed to involve Engineering earlier in launch planning.",
+          "I asked stakeholders to communicate more before making commitments."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -170,38 +332,51 @@
       {
         "id": "stakeholder-empathy",
         "name": "Stakeholder Empathy",
-        "strong": "Accurately represents other functions' goals and constraints.",
-        "weak": "Frames other teams as obstacles."
+        "strong": "Accurately represents other functions' goals, constraints, incentives, and costs.",
+        "weak": "Frames other teams as obstacles or reduces their concerns to politics.",
+        "strongAiVisual": "assets/generated/signals/stakeholder-empathy-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/stakeholder-empathy-weak.jpg"
       },
       {
         "id": "credible-framing",
         "name": "Credible Framing",
-        "strong": "Connects **technical risk** to customer, business, or operational consequences.",
-        "weak": "Uses technical language that does not help the decision."
+        "strong": "Connects **technical risk** to customer journeys, revenue exposure, support load, contract risk, and operational consequences.",
+        "weak": "Uses technical language that does not help the decision or hides the recommendation's business cost.",
+        "strongAiVisual": "assets/generated/signals/credible-framing-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/credible-framing-weak.jpg"
       },
       {
         "id": "shared-mechanism",
         "name": "Shared Mechanism",
         "strong": "Creates criteria, rituals, or metrics for future alignment.",
-        "weak": "Depends on one-off persuasion."
+        "weak": "Depends on one-off persuasion or personal relationships.",
+        "weakAiVisual": "assets/generated/signals/shared-mechanism-weak.jpg"
+      },
+      {
+        "id": "escalation-judgment",
+        "name": "Boundary and Escalation Judgment",
+        "strong": "Distinguishes negotiable trade-offs from non-negotiable trust, legal, and operational boundaries, then escalates transparently when decision rights require it.",
+        "weak": "Treats every disagreement as a compromise exercise, escalates to bypass peers, or waits until the decision window has closed.",
+        "strongAiVisual": "assets/generated/signals/escalation-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/escalation-judgment-weak.jpg"
       }
     ],
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Influences adjacent teams with clear evidence and practical alternatives."
+        "expected": "Influences adjacent teams with clear evidence, practical alternatives, and ownership of the chosen path's cost."
       },
       {
         "level": "Director",
-        "expected": "Aligns multiple functions around shared trade-offs and **decision criteria**."
+        "expected": "Aligns multiple functions around shared trade-offs, rejected alternatives, **decision criteria**, and customer-facing consequences."
       },
       {
         "level": "VP Engineering",
-        "expected": "Shapes executive peer decisions through credibility, customer framing, and **operating mechanisms**."
+        "expected": "Shapes executive peer decisions through credibility, customer framing, measurement, and **operating mechanisms** that last beyond the debate."
       },
       {
         "level": "CTO",
-        "expected": "Influences company strategy and external commitments without relying only on formal authority."
+        "expected": "Influences company strategy and external commitments by clarifying trust boundaries, decision rights, and escalation paths without relying only on formal authority."
       }
     ]
   },
@@ -217,12 +392,15 @@
     "signalMap": [
       "stakeholder-empathy",
       "credible-framing",
-      "shared-mechanism"
+      "shared-mechanism",
+      "escalation-judgment"
     ],
     "followUpTree": [
       "stakeholders",
       "framing",
       "authority",
+      "boundary",
+      "residual-cost",
       "repeatable"
     ]
   },
@@ -238,15 +416,15 @@
       },
       {
         "field": "action",
-        "label": "How did you frame, align, and propose alternatives?"
+        "label": "How did you frame the trade-off, align peers, and propose alternatives?"
       },
       {
         "field": "result",
-        "label": "What decision or behavior changed?"
+        "label": "What decision, commitment, or behavior changed?"
       },
       {
         "field": "reflection",
-        "label": "What did you learn about influence?"
+        "label": "What did you learn about influence without authority?"
       },
       {
         "field": "systemChange",
@@ -257,19 +435,22 @@
   "relatedScenarios": [
     "Aligning finance and engineering on infrastructure cost reduction.",
     "Coordinating sales commitments with platform readiness.",
-    "Changing product scope to protect customer trust."
+    "Changing product scope to protect customer trust.",
+    "Escalating an unsupported external commitment after direct cross-functional alignment fails.",
+    "Use executive-conflict when the core evidence is a direct peer or CEO disagreement rather than coalition-building across functions."
   ],
   "toProbeFurther": {
     "links": [
       {
-        "id": "govuk-structured-interviews",
-        "group": "Interviewing and Calibration",
-        "title": "Use Fair and Structured Interview Techniques",
-        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
-        "source": "GOV.UK",
-        "type": "Guide",
-        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
-        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+        "id": "getting-to-yes",
+        "group": "Influence and Executive Communication",
+        "title": "Getting to Yes",
+        "url": "https://www.penguinrandomhouse.com/books/324551/getting-to-yes-by-roger-fisher-and-william-ury/",
+        "source": "Roger Fisher, William Ury, and Bruce Patton / Penguin Random House",
+        "type": "Book",
+        "year": "2011",
+        "why": "Canonical principled-negotiation resource for separating interests from positions, creating options, and using objective criteria in cross-functional disagreement.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
       },
       {
         "id": "empowered-product-teams",
@@ -279,7 +460,7 @@
         "source": "Silicon Valley Product Group",
         "type": "Book",
         "year": "2020",
-        "why": "Useful for cross-functional product-engineering leadership, team empowerment, and product strategy alignment.",
+        "why": "Useful for product-engineering influence because it emphasizes empowered teams, decision rights, and shared accountability rather than command-and-control coordination.",
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
@@ -294,14 +475,25 @@
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
-        "id": "google-effective-teams",
-        "group": "Culture and Organizational Design",
-        "title": "The Five Dynamics of an Effective Team",
-        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
-        "source": "Google",
-        "type": "Article",
-        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
-        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+        "id": "bain-rapid-decision-making",
+        "group": "Strategy and Execution",
+        "title": "RAPID Decision Making",
+        "url": "https://www.bain.com/insights/rapid-decision-making/",
+        "source": "Bain & Company",
+        "type": "Decision framework",
+        "why": "Clarifies decision accountabilities across Recommend, Agree, Perform, Input, and Decide when conflict is caused by ambiguous decision rights.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "sre-reliable-product-launches",
+        "group": "Strategy and Execution",
+        "title": "Deployment Strategies for Product Launches",
+        "url": "https://sre.google/sre-book/reliable-product-launches/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Offers concrete launch-readiness, staged rollout, and cross-functional coordination mechanisms for turning reliability concern into shared go/no-go criteria.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
         "id": "crucial-conversations",
@@ -310,7 +502,39 @@
         "url": "https://cruciallearning.com/crucialconversations_book.aspx",
         "source": "Crucial Learning",
         "type": "Book",
-        "why": "Useful for high-stakes disagreement, **executive conflict**, and emotionally loaded conversations.",
+        "why": "Useful for high-stakes disagreement, **executive conflict**, and conversations where relationships can distort the decision.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "influence-without-authority",
+        "group": "Influence and Executive Communication",
+        "title": "Influence Without Authority",
+        "url": "https://www.gsb.stanford.edu/faculty-research/books/influence-without-authority-2nd-edition",
+        "source": "Allan R. Cohen and David L. Bradford / Stanford Graduate School of Business",
+        "type": "Book",
+        "year": "2005",
+        "why": "Directly addresses influencing people who do not report to you by understanding the stakeholder **currencies** they value.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "amazon-2016-shareholder-letter",
+        "group": "Influence and Executive Communication",
+        "title": "2016 Letter to Shareholders",
+        "url": "https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders",
+        "source": "Amazon",
+        "type": "Shareholder letter",
+        "year": "2016",
+        "why": "Concrete executive reference for high-velocity decisions, **disagree-and-commit**, and separating reversible from irreversible calls.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "atlassian-daci-decision-framework",
+        "group": "Influence and Executive Communication",
+        "title": "DACI Decision-Making Framework",
+        "url": "https://www.atlassian.com/team-playbook/plays/daci",
+        "source": "Atlassian Team Playbook",
+        "type": "Playbook",
+        "why": "Turns ambiguous cross-functional debates into explicit driver, approver, contributor, and informed roles so decision rights are visible before alignment work stalls.",
         "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
       },
       {
@@ -320,7 +544,7 @@
         "url": "https://basecamp.com/books",
         "source": "Basecamp",
         "type": "Book",
-        "why": "Concrete model for shaping work, betting capacity, and avoiding vague roadmap commitments.",
+        "why": "Concrete model for turning vague cross-functional demand into shaped work, explicit appetite, betting capacity, and negotiable scope.",
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
@@ -332,7 +556,7 @@
         "type": "Book",
         "year": "2018",
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs.",
-        "why": "Relevant here because **cross-functional influence** often requires moving the conversation from output delivery to outcome and product value."
+        "why": "Relevant here because **cross-functional influence** often requires moving the conversation from output delivery to outcomes and product value."
       },
       {
         "id": "art-business-value",
@@ -343,8 +567,12 @@
         "type": "Book",
         "year": "2016",
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs.",
-        "why": "Relevant here because influence improves when technology work is framed as business value, **risk reduction**, learning, or optionality."
+        "why": "Relevant here because influence improves when technology work is framed as business value, **risk reduction**, learning, or option value."
       }
     ]
-  }
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

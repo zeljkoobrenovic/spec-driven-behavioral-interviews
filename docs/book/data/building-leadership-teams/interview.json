@@ -1,8 +1,9 @@
 {
   "id": "building-leadership-teams",
   "title": "Building Leadership Teams",
-  "description": "Building, upgrading, and calibrating engineering **leadership teams** without treating leadership as a generic management layer.",
+  "description": "Building, upgrading, and calibrating engineering **leadership teams** as an intentional operating system, not a generic management layer.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,54 +13,61 @@
     "id": "leadership-team-building",
     "name": "Building Leadership Teams",
     "family": "People Leadership",
-    "definition": "Assesses **leadership capability**, defines expectations, grows internal talent, and hires for missing strengths.",
-    "whyItMatters": "At senior levels, impact depends on the leaders a person builds, not only the teams they directly manage."
+    "definition": "Defines **leadership capability**, assesses current leaders, grows internal talent, and hires for missing strengths.",
+    "whyItMatters": "At senior levels, impact depends on the leaders a person builds and the mechanisms they leave behind, not only on the teams they directly manage."
   },
   "prompt": {
     "primary": "Tell me about a time you built or rebuilt an engineering **leadership team**.",
     "variants": [
       "Describe a time you promoted someone into leadership who was not the obvious choice.",
-      "Tell me about a time you had to upgrade **leadership capability** across multiple teams."
+      "Tell me about a time you had to upgrade **leadership capability** across multiple teams.",
+      "Describe a time you rebuilt a leadership team after an acquisition, reorg, or major scope change."
     ],
     "interviewerIntent": [
       "Can the candidate diagnose **leadership gaps** accurately?",
       "Do they balance **internal development** with external hiring?",
-      "Can they define expectations without creating a clone army?"
+      "Can they define expectations without selecting for people who mirror their own style?"
     ]
   },
   "scenario": {
-    "signatureExample": "A VP Engineering joins a company with strong senior ICs but weak **middle management**.",
+    "signatureExample": "A VP Engineering joins a company with strong senior ICs but uneven **middle management**.",
     "context": [
       "Teams have capable engineers but inconsistent **management quality**.",
-      "Planning, feedback, and execution discipline vary widely by team.",
+      "Planning quality, feedback loops, and execution discipline vary widely by team.",
       "Some informal leaders are trusted but have never been calibrated against **role expectations**."
     ],
     "constraints": [
       "The organization cannot replace the entire management layer.",
       "**Internal candidates** need a fair chance to grow.",
-      "The business needs better execution quickly."
+      "The business needs better execution quickly.",
+      "Some leaders are culture carriers, so a clean-slate replacement plan could destroy trust before it improves capability."
     ]
   },
   "storyAnatomy": {
     "situation": "The engineering organization had strong technical talent but an uneven leadership layer that limited scale.",
-    "task": "Create a stronger **leadership team** while preserving trust and retaining high-potential internal leaders.",
+    "task": "Build a stronger **leadership team** while preserving trust and retaining high-potential internal leaders.",
     "action": [
       "Defined clear **leadership expectations** for managers and directors.",
-      "Assessed current leaders against delivery, talent, communication, and operating judgment.",
+      "Assessed current leaders against delivery, talent development, communication, and operating judgment.",
+      "Rejected a clean-slate replacement plan because it would have erased trusted context before the actual capability gaps were understood.",
       "Coached two internal managers into broader roles and hired externally for a missing scaling capability.",
+      "Changed scope decisively when evidence showed a leader's current role was creating risk for the teams, while preserving an alternate senior IC path.",
       "Introduced **calibration rituals** for feedback, performance, and succession planning."
     ],
     "result": [
-      "**Leadership expectations** became explicit rather than personality-based.",
+      "**Leadership expectations** became explicit and evidence-based rather than personality-based.",
       "Internal leaders had clearer **development paths**.",
-      "Execution and people decisions became more consistent across teams."
+      "Execution, feedback, and people decisions became more consistent across teams.",
+      "Within two quarters, cross-team commitment misses fell from five to one, manager-effectiveness pulse scores rose from 3.2 to 4.0, and two of three leadership openings had ready internal successors.",
+      "One roadmap area slowed for a quarter while a leadership role was reset, but team attrition stayed below the company baseline and the next planning cycle had clearer ownership."
     ],
     "reflection": "The key lesson was that **leadership-team building** requires a portfolio view of capability, not isolated hiring decisions.",
     "systemChange": [
       "**Leadership expectations** document.",
       "Manager calibration rhythm.",
       "**Succession plan** for critical leadership roles.",
-      "Hiring scorecard tied to missing **leadership capabilities**."
+      "Hiring scorecard tied to missing **leadership capabilities**.",
+      "Promotion-readiness checklist with staged scope and exit criteria."
     ]
   },
   "exampleStories": [
@@ -72,19 +80,19 @@
       "strongAnswerSketch": [
         "Define explicit **leadership expectations** across delivery, talent, communication, and operating judgment.",
         "Assess existing leaders using evidence instead of reputation.",
-        "Coach two internal managers while hiring externally for a missing scaling capability.",
+        "Coach two internal managers through staged scope while hiring externally for a missing scaling capability.",
         "Introduce calibration and **succession planning** rituals."
       ],
       "whyItWorks": [
         "Shows a portfolio view of **leadership capability**.",
         "Balances **internal development** with external hiring.",
-        "Makes expectations consistent across the organization."
+        "Makes expectations measurable and consistent across the organization."
       ],
       "weakVersion": "I raised the bar for managers, replaced a few weak leaders, and hired stronger people from larger companies.",
       "followUpAngles": [
         "How did you assess existing leaders fairly?",
-        "What capability was missing externally?",
-        "How did calibration change?"
+        "What capability was missing that required an external hire?",
+        "What changed in calibration rituals?"
       ],
       "aiVisual": "assets/generated/example-stories/weak-middle-management-layer.jpg"
     },
@@ -96,8 +104,8 @@
       "situation": "A quiet senior engineer had strong systems thinking and trust across teams but was not the most visible candidate for a **manager-of-managers** role.",
       "strongAnswerSketch": [
         "Define the actual role need: cross-team clarity and calm execution, not charisma.",
-        "Test readiness through temporary scope and coaching.",
-        "Create support around feedback, delegation, and stakeholder communication.",
+        "Test readiness through a temporary scope expansion and coaching.",
+        "Build support around feedback, delegation, and stakeholder communication.",
         "Use calibration to explain the **promotion criteria** transparently."
       ],
       "whyItWorks": [
@@ -108,20 +116,74 @@
       "weakVersion": "I trusted my gut that the person had potential and promoted them because people respected them.",
       "followUpAngles": [
         "What made them ready?",
-        "What risks did you mitigate?",
+        "What risks did you name and mitigate?",
         "How did peers react?"
       ],
       "aiVisual": "assets/generated/example-stories/non-obvious-promotion.jpg"
+    },
+    {
+      "id": "failed-acting-manager-promotion",
+      "title": "Failed Acting Manager Promotion",
+      "level": "Senior Manager",
+      "promptVariant": "Describe a time you promoted someone into leadership who was not the obvious choice.",
+      "situation": "A senior manager promoted a trusted tech lead into an acting manager role across two platform squads, but within six weeks one squad's feedback loop stalled and two project leads escalated conflicting priorities.",
+      "strongAnswerSketch": [
+        "Own the selection mistake instead of blaming the new leader.",
+        "Use a short evidence window: skip-level feedback, planning quality, delegation behavior, and commitment misses.",
+        "Separate the person's technical credibility from the manager role, roll back the acting scope, and appoint an interim manager to protect the teams.",
+        "Create a **promotion-readiness** checklist and staged manager trial so future candidates show feedback, delegation, and cross-team prioritization before they receive broader scope."
+      ],
+      "whyItWorks": [
+        "Shows a failed promotion without turning the person into the problem.",
+        "Balances development support with decisive protection of two teams.",
+        "Names metrics and a corrected **promotion mechanism**."
+      ],
+      "weakVersion": "I gave someone a chance, but they were not ready, so I moved them back and picked a stronger manager.",
+      "followUpAngles": [
+        "What signal did you underweight before the promotion?",
+        "When did coaching stop being enough?",
+        "What changed in the next promotion decision?"
+      ],
+      "aiVisual": "assets/generated/example-stories/failed-acting-manager-promotion.jpg"
+    },
+    {
+      "id": "post-acquisition-leadership-reset",
+      "title": "Post-Acquisition Leadership Reset",
+      "level": "CTO",
+      "promptVariant": "Describe a time you rebuilt a leadership team after an acquisition, reorg, or major scope change.",
+      "situation": "After a product acquisition, the CTO inherited two engineering leadership groups with different operating styles: acquired-team leaders held deep customer context, central platform leaders wanted tighter standards, and executives expected integration without losing key talent.",
+      "strongAnswerSketch": [
+        "Name the missing **leadership capabilities**: integration planning, enterprise delivery, platform judgment, and credible customer migration communication.",
+        "Reject both extremes: immediately replacing acquired leaders or preserving every legacy reporting line to avoid discomfort.",
+        "Create staged scope trials for two acquired directors, hire externally for enterprise delivery experience, and move one respected leader whose strengths no longer matched the role into a senior architecture fellowship.",
+        "Define decision rights for product integration, platform standards, customer migration risk, and talent calibration across the combined leadership team.",
+        "Acknowledge the residual cost: one roadmap area slowed and one manager chose to leave, but integration commitments became measurable and successor coverage improved."
+      ],
+      "whyItWorks": [
+        "Shows CTO-level **leadership-team design** across product, platform, customer, and talent constraints.",
+        "Makes rejected alternatives and residual cost visible instead of presenting a frictionless clean win.",
+        "Balances inherited trust with evidence-based scope changes and external hiring."
+      ],
+      "weakVersion": "After the acquisition I standardized the leadership team, replaced leaders who did not fit our culture, and put everyone on the same planning process.",
+      "followUpAngles": [
+        "What did you deliberately preserve from the acquired organization?",
+        "Which leadership-team design option did you reject?",
+        "What cost did you accept during the transition?",
+        "How did you know the new team could make enterprise-level trade-offs?"
+      ],
+      "aiVisual": "assets/generated/example-stories/post-acquisition-leadership-reset.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows talent judgment, coaching, fair assessment, and the ability to build a complementary **leadership team**.",
+    "summary": "The candidate shows talent judgment, coaching range, evidence-based assessment, and the ability to build a complementary **leadership team**.",
     "moves": [
       "Describes the **leadership gaps** in behavioral terms.",
-      "Explains how expectations were defined and communicated.",
-      "Balances development, scope changes, hiring, and succession.",
+      "Explains how expectations were defined, communicated, and used in decisions.",
+      "Balances coaching, staged scope, hiring, succession, and timely role changes.",
+      "Names rejected leadership-team designs and the residual cost of the chosen path.",
+      "Names evidence and proxy metrics used to judge whether capability improved.",
       "Shows how decisions were made fairly and humanely.",
-      "Connects leadership-team changes to organizational outcomes."
+      "Connects leadership-team changes to delivery, talent, and organizational outcomes."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
@@ -130,8 +192,10 @@
     "redFlags": [
       "Uses vague talent language without evidence.",
       "Equates leadership quality with loyalty or style similarity.",
-      "Only hires externally and ignores **internal development**.",
-      "Cannot describe what changed in calibration, succession, or feedback."
+      "Defaults either to external hiring or endless coaching instead of matching the decision to evidence and urgency.",
+      "Presents a clean leadership reset without naming alternatives, resistance, or the cost of transition.",
+      "Treats replacing leaders as proof of high standards without explaining support, timing, or team protection.",
+      "Cannot describe what changed in calibration, succession, feedback, or promotion decisions."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
@@ -142,31 +206,107 @@
       "tests": [
         "judgment",
         "measurement"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I used the same scorecard for every manager: planning quality, delegation behavior, feedback cadence, regretted attrition risk, and whether peers trusted their commitments.",
+          "I combined skip-level input, delivery evidence, calibration notes, and observed staff meetings so one loud stakeholder or one heroic delivery did not dominate the assessment."
+        ],
+        "weak": [
+          "I could tell from the team mood and my one-on-ones which managers were strong and which ones needed upgrading.",
+          "I asked senior leaders who they trusted most and used that as the basis for the leadership changes."
+        ]
+      }
     },
     {
       "id": "internal-vs-external",
-      "question": "How did you decide when to develop internally versus hire externally?",
+      "question": "How did you decide when to develop from within versus hire externally?",
       "tests": [
         "decision quality",
         "trade-off reasoning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I developed internal leaders when the gap was teachable and the business could safely absorb a staged scope trial; I hired externally for missing scale experience where repeated planning misses were already hurting customers.",
+          "For each role, I named the missing capability first, then compared internal readiness, coaching time, succession risk, and external search cost before deciding."
+        ],
+        "weak": [
+          "I prefer to promote from within, but sometimes you need people from bigger companies to raise the bar.",
+          "I looked at who had potential internally and filled the rest of the leadership team with experienced external hires."
+        ]
+      }
     },
     {
       "id": "fairness",
-      "question": "How did you make the process feel fair to existing leaders?",
+      "question": "How did you make the process fair and understandable to existing leaders?",
       "tests": [
         "stakeholder alignment",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I published role expectations, shared the evidence categories, gave each leader a private development plan, and explained decisions in terms of role needs rather than personal preference.",
+          "I calibrated with HR and peer executives before decisions, then told managers which evidence would change the decision and what support they would receive."
+        ],
+        "weak": [
+          "I told everyone the bar was going up and that leadership roles would be based on performance.",
+          "I made the decisions privately to avoid politics and trusted people would see that the stronger leaders were promoted."
+        ]
+      }
+    },
+    {
+      "id": "decisive-change",
+      "question": "When did you decide coaching or staged scope was no longer enough?",
+      "tests": [
+        "decision quality",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I stopped coaching as the primary path when the same delegation and planning misses repeated after two explicit cycles and the team was losing ownership clarity.",
+          "The threshold was not frustration; it was evidence that continued trial scope was costing the teams more than it was developing the leader."
+        ],
+        "weak": [
+          "I moved quickly once I felt the person was not going to scale.",
+          "I kept coaching because replacing a leader would have sent the wrong message to the organization."
+        ]
+      }
+    },
+    {
+      "id": "rejected-design",
+      "question": "Which leadership-team design did you reject, and what did that choice cost?",
+      "tests": [
+        "trade-off reasoning",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I rejected replacing the acquired managers immediately because they held the customer context we needed for migration; the cost was a slower first-quarter reset while we tested scope and decision rights.",
+          "I rejected preserving every legacy reporting line because it hid platform and customer-migration accountability; the cost was one painful role change and a temporary roadmap delay."
+        ],
+        "weak": [
+          "We considered several structures and chose the one that seemed most efficient.",
+          "I tried to keep disruption low, but eventually some people had to leave because the new organization needed stronger leaders."
+        ]
+      }
     },
     {
       "id": "mechanism",
-      "question": "What mechanism made leadership quality more consistent afterward?",
+      "question": "What mechanism made leadership quality more consistent after the change?",
       "tests": [
         "learning",
         "execution"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added quarterly manager calibration, a succession map for critical roles, and a promotion-readiness checklist requiring evidence of feedback, delegation, and cross-team prioritization.",
+          "Leadership hiring and promotion both used the same scorecard, so gaps found in calibration flowed into coaching plans, scope trials, and hiring requirements."
+        ],
+        "weak": [
+          "We met with managers more often and discussed leadership expectations more regularly.",
+          "I created a document describing what good leadership looked like and asked directors to use it."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -174,23 +314,23 @@
       {
         "id": "talent-judgment",
         "name": "Talent Judgment",
-        "strong": "Uses evidence-based expectations to assess **leadership capability**.",
-        "weak": "Uses vague impressions or style preferences.",
+        "strong": "Uses a shared scorecard, observed behavior, and outcome proxies to assess **leadership capability**.",
+        "weak": "Uses vague impressions, reputation, or style preferences.",
         "strongAiVisual": "assets/generated/signals/talent-judgment-strong.jpg",
         "weakAiVisual": "assets/generated/signals/talent-judgment-weak.jpg"
       },
       {
         "id": "development-range",
         "name": "Development Range",
-        "strong": "Combines coaching, scope design, hiring, and succession.",
-        "weak": "Treats **leadership gaps** as only hiring problems.",
+        "strong": "Chooses among coaching, staged scope, hiring, succession, and well-timed role changes based on evidence and urgency.",
+        "weak": "Treats **leadership gaps** as only hiring problems or only coaching problems.",
         "strongAiVisual": "assets/generated/signals/development-range-strong.jpg",
         "weakAiVisual": "assets/generated/signals/development-range-weak.jpg"
       },
       {
         "id": "calibration",
         "name": "Calibration",
-        "strong": "Creates rituals that make **leadership expectations** consistent.",
+        "strong": "Ties **leadership expectations** to calibration, promotion, succession, and hiring rituals.",
         "weak": "Leaves expectations implicit and uneven.",
         "strongAiVisual": "assets/generated/signals/calibration-strong.jpg",
         "weakAiVisual": "assets/generated/signals/calibration-weak.jpg"
@@ -199,19 +339,19 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Develops managers or leads within a focused area and gives clear expectations."
+        "expected": "Develops managers or leads within a focused area, tests readiness with scoped responsibility, and gives clear expectations."
       },
       {
         "level": "Director",
-        "expected": "Builds a leadership bench across multiple teams and calibrates expectations."
+        "expected": "Builds a leadership bench across multiple teams, calibrates managers, and creates succession coverage for key areas."
       },
       {
         "level": "VP Engineering",
-        "expected": "Designs a complementary **leadership team** and succession plan for the organization."
+        "expected": "Designs a complementary **leadership team**, manages trade-offs between internal development and external hiring, and owns the succession plan."
       },
       {
         "level": "CTO",
-        "expected": "Builds executive-level technical **leadership capability** aligned to company strategy and culture."
+        "expected": "Builds executive-level technical **leadership capability** for company strategy, culture, integration risk, and long-term succession."
       }
     ]
   },
@@ -233,6 +373,8 @@
       "assessment",
       "internal-vs-external",
       "fairness",
+      "decisive-change",
+      "rejected-design",
       "mechanism"
     ]
   },
@@ -244,15 +386,15 @@
       },
       {
         "field": "task",
-        "label": "What leadership-team outcome were you accountable for?"
+        "label": "What leadership-team outcome, decision, or reset did you own?"
       },
       {
         "field": "action",
-        "label": "How did you assess, develop, hire, or recalibrate leaders?"
+        "label": "How did you assess, develop, hire, recalibrate, or change scope?"
       },
       {
         "field": "result",
-        "label": "What changed in leadership quality or organizational execution?"
+        "label": "What changed in execution, leadership quality, or successor readiness?"
       },
       {
         "field": "reflection",
@@ -260,17 +402,19 @@
       },
       {
         "field": "systemChange",
-        "label": "What calibration or succession mechanism remained?"
+        "label": "What calibration, promotion, or succession mechanism remained?"
       }
     ]
   },
   "relatedScenarios": [
     "Rebuilding a **leadership team** after rapid growth.",
     "Promoting a strong IC into management with support and guardrails.",
-    "Hiring externally for a **leadership capability** the organization lacks."
+    "Hiring externally for a **leadership capability** the organization lacks.",
+    "Rolling back a leadership promotion while preserving trust and correcting the promotion mechanism.",
+    "Integrating acquired or reorganized leadership teams without losing customer context or accountability."
   ],
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg",
   "toProbeFurther": {
@@ -308,6 +452,50 @@
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
+        "id": "engineering-executives-primer",
+        "group": "Strategy and Execution",
+        "title": "The Engineering Executive's Primer",
+        "url": "https://www.oreilly.com/library/view/the-engineering-executives/9781098149475/",
+        "source": "Will Larson / O'Reilly",
+        "type": "Book",
+        "year": "2024",
+        "why": "Executive-level companion for diagnosing organizational health, hiring, performance management, planning, and operating cadences.",
+        "groupDescription": "Resources for executive operating systems, planning, execution, and high-growth leadership-team decisions."
+      },
+      {
+        "id": "an-elegant-puzzle",
+        "group": "Culture and Organizational Design",
+        "title": "An Elegant Puzzle",
+        "url": "https://lethain.com/elegant-puzzle/",
+        "source": "Will Larson",
+        "type": "Book",
+        "year": "2019",
+        "why": "Engineering-management reference for organizational design, planning, sizing teams, succession, and senior leadership trade-offs.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "team-topologies",
+        "group": "Culture and Organizational Design",
+        "title": "Team Topologies",
+        "url": "https://teamtopologies.com/book",
+        "source": "Team Topologies",
+        "type": "Book",
+        "year": "2025",
+        "why": "Useful when leadership-team changes must also reset team boundaries, cognitive load, platform ownership, and interaction modes.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "high-growth-handbook",
+        "group": "Strategy and Execution",
+        "title": "High Growth Handbook",
+        "url": "https://press.stripe.com/high-growth-handbook",
+        "source": "Elad Gil / Stripe Press",
+        "type": "Book",
+        "year": "2018",
+        "why": "Scaling-company reference for recruitment and management of executive teams, M&A, board context, and high-growth operating decisions.",
+        "groupDescription": "Resources for executive operating systems, planning, execution, and high-growth leadership-team decisions."
+      },
+      {
         "id": "high-output-management",
         "group": "People Leadership and Feedback",
         "title": "High Output Management",
@@ -325,7 +513,7 @@
         "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
         "source": "Google",
         "type": "Article",
-        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "why": "Summarizes Google's team-effectiveness findings, including psychological safety, dependable execution, structure, meaning, and impact.",
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
@@ -339,15 +527,15 @@
         "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
-        "id": "staff-engineer-book",
-        "group": "Technical Judgment and Architecture",
-        "title": "Staff Engineer",
-        "url": "https://staffeng.com/book/",
-        "source": "Will Larson",
-        "type": "Book / Interviews",
-        "year": "2021",
-        "why": "Useful for senior technical leadership patterns, influence without authority, and technical scope growth.",
-        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+        "id": "leadership-pipeline",
+        "group": "People Leadership and Feedback",
+        "title": "The Leadership Pipeline",
+        "url": "https://www.wiley-vch.de/en/areas-interest/finance-economics-law/the-leadership-pipeline-978-1-394-16097-6",
+        "source": "Ram Charan, Stephen Drotter, James L. Noel, Kent Jonasen / Wiley",
+        "type": "Book",
+        "year": "2024",
+        "why": "Leadership-team-specific reference for assessing leadership layers, developing successors, and building a durable leadership pipeline.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
         "id": "five-dysfunctions-team",

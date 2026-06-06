@@ -1,8 +1,9 @@
 {
   "id": "culture-change",
   "title": "Culture Change",
-  "description": "Changing engineering culture through incentives, rituals, role modeling, and **operating mechanisms** rather than slogans.",
+  "description": "Engineering culture change through the incentives, rituals, role modeling, and **operating mechanisms** that shape repeated behavior.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,8 +13,8 @@
     "id": "culture-change",
     "name": "Culture Change",
     "family": "People Leadership",
-    "definition": "Diagnoses behavior patterns and changes the incentives, rituals, and leadership actions that sustain culture.",
-    "whyItMatters": "Culture is what the organization repeats under pressure; senior leaders must change behavior, not just messaging."
+    "definition": "Diagnoses repeated behavior patterns and changes the incentives, rituals, and leadership actions that sustain them.",
+    "whyItMatters": "Culture is what the organization repeats under pressure; senior leaders must change the conditions behind behavior, not just the messaging around it."
   },
   "prompt": {
     "primary": "Tell me about a time you intentionally changed engineering culture.",
@@ -22,67 +23,74 @@
       "Tell me about a time you moved a team away from heroics toward sustainable execution."
     ],
     "interviewerIntent": [
-      "Can the candidate diagnose culture through behavior?",
-      "Do they change incentives and rituals rather than slogans?",
-      "Can they sustain the change under pressure?"
+      "Can the candidate diagnose culture from repeated behavior rather than stated values?",
+      "Do they change incentives, rituals, and leadership behavior rather than relying on slogans?",
+      "Can they sustain the change when delivery pressure would pull the organization back?"
     ]
   },
   "scenario": {
-    "signatureExample": "A CTO finds a culture of heroic firefighting and shifts recognition toward prevention, operational excellence, documentation, and sustainable delivery.",
+    "signatureExample": "A CTO finds an organization that celebrates heroic firefighting and shifts recognition toward prevention, operational excellence, documentation, and sustainable delivery.",
     "context": [
-      "The organization celebrates last-minute saves.",
-      "Preventive work is under-recognized.",
-      "Teams are exhausted and reliability is uneven."
+      "The organization celebrates last-minute saves and fast founder-driven decisions.",
+      "Preventive work, documentation, and explicit decision ownership are under-recognized.",
+      "Teams are exhausted; reliability, onboarding, and cross-time-zone execution are uneven."
     ],
     "constraints": [
-      "The existing culture has produced some short-term success.",
-      "Leaders must model different behavior.",
+      "The existing culture has produced short-term wins and genuine customer trust.",
+      "Some emergency response is still necessary; the change must distinguish avoidable chaos from useful urgency.",
+      "Leaders must model different behavior when delivery pressure returns.",
       "Recognition and planning systems must change together."
     ]
   },
   "storyAnatomy": {
-    "situation": "Engineering had a hero culture that rewarded firefighting more than prevention.",
-    "task": "Shift the culture toward sustainable delivery and operational excellence.",
+    "situation": "Engineering had a hero culture that rewarded firefighting over prevention.",
+    "task": "Shift the culture toward sustainable delivery and operational excellence without losing useful urgency.",
     "action": [
-      "Named the behavior pattern and its cost in incidents, burnout, and missed learning.",
-      "Changed recognition to highlight prevention, documentation, and durable fixes.",
-      "Added operational excellence goals to planning and reviews.",
-      "Coached leaders to stop rewarding avoidable heroics."
+      "Named the repeated behavior pattern and its cost in incidents, burnout, and missed learning.",
+      "Separated harmful heroics from strengths worth preserving, such as urgency during true customer emergencies.",
+      "Changed recognition and calibration to highlight prevention, documentation, and durable fixes.",
+      "Added operational excellence goals to planning, launch readiness, and incident reviews.",
+      "Coached leaders to stop rewarding avoidable heroics and adjusted mechanisms when legitimate pushback showed the first version was too heavy."
     ],
     "result": [
-      "Teams invested more in prevention and reliability work.",
-      "Incident reviews focused more on durable fixes.",
+      "Teams invested more in prevention, reliability work, and reusable decision context.",
+      "Routine launches stopped depending on after-hours rescues, while real incidents still received fast escalation.",
+      "Incident reviews focused more consistently on durable fixes and action ownership.",
       "Recognition became aligned with sustainable engineering behavior."
     ],
     "reflection": "The lesson was that culture changes when repeated leadership signals and **operating mechanisms** change together.",
     "systemChange": [
-      "Recognition criteria for preventive work.",
-      "Operational excellence review.",
+      "Recognition and calibration criteria for preventive work.",
+      "Operational excellence review in planning and launch readiness.",
+      "Emergency exception rules that preserved speed for true customer risk.",
       "Leadership behavior expectations.",
-      "Incident learning rituals."
+      "Incident learning rituals with named action ownership."
     ]
   },
   "exampleStories": [
     {
       "id": "heroics-to-prevention",
-      "title": "Heroics To Prevention",
+      "title": "Heroics to Prevention",
       "level": "CTO",
       "promptVariant": "Tell me about a time you intentionally changed engineering culture.",
-      "situation": "The organization celebrated engineers who saved launches at the last minute, while prevention, documentation, and operational excellence were invisible.",
+      "situation": "The organization celebrated engineers who saved launches at the last minute, while prevention, documentation, and operational excellence were invisible. A few executives worried that changing this would slow the company's ability to respond quickly to customers.",
       "strongAnswerSketch": [
         "Name the behavior pattern and its cost in burnout, incidents, and missed learning.",
+        "Distinguish legitimate emergency response from avoidable rescue work so useful urgency is preserved.",
         "Change recognition to reward prevention and durable fixes.",
         "Add operational excellence goals to planning and reviews.",
-        "Coach leaders to stop praising avoidable heroics."
+        "Coach leaders to stop praising avoidable heroics, then simplify the first launch-readiness checklist after teams showed it was being bypassed."
       ],
       "whyItWorks": [
         "Defines culture as repeated behavior under pressure.",
         "Changes incentives, not just language.",
-        "Shows how the new behavior was sustained."
+        "Shows how the new behavior was sustained.",
+        "Handles resistance by preserving the old culture's useful strength instead of treating every heroic act as bad."
       ],
-      "weakVersion": "I told the organization we needed a more sustainable culture and encouraged managers to recognize preventive work.",
+      "weakVersion": "I announced that we needed a more sustainable culture, stopped praising heroics, and asked managers to recognize preventive work.",
       "followUpAngles": [
         "What did you stop rewarding?",
+        "Which part of the old culture did you intentionally preserve?",
         "How did leaders model the change?",
         "How did you know the culture shifted?"
       ],
@@ -92,45 +100,98 @@
       "id": "blameful-incident-reviews",
       "title": "Blameful Incident Reviews",
       "level": "VP Engineering",
-      "promptVariant": "Describe a time when the existing culture was blocking technical progress.",
-      "situation": "Incident reviews were nominally blameless but engineers avoided surfacing weak ownership, bad alerts, and risky shortcuts because leaders used reviews to find fault.",
+      "promptVariant": "Describe a time when the existing culture was blocking business or technical progress.",
+      "situation": "Incident reviews were nominally blameless, but engineers avoided surfacing ownership gaps, bad alerts, and risky shortcuts because leaders used reviews to find fault.",
       "strongAnswerSketch": [
         "Identify the gap between stated values and actual behavior in reviews.",
-        "Redesign reviews around decision points, system conditions, and action ownership.",
+        "Redesign reviews around decision points, contributing system conditions, and named action ownership.",
         "Model accountability by naming leadership misses first.",
-        "Track action completion and review quality over time."
+        "Track action completion, repeat issue rates, and review quality over time."
       ],
       "whyItWorks": [
         "Shows culture diagnosis through behavior.",
         "Changes the ritual where the culture is reinforced.",
-        "Makes accountability rigorous without blame."
+        "Makes accountability rigorous without making people defensive."
       ],
-      "weakVersion": "I reminded teams that our postmortems were blameless and asked managers to create psychological safety.",
+      "weakVersion": "I reminded teams that our postmortems were blameless and asked managers to create more psychological safety.",
       "followUpAngles": [
         "What behavior showed the culture was unsafe?",
         "What did you personally model?",
-        "What changed in the review format?"
+        "What changed in the review format and action tracking?"
       ],
       "aiVisual": "assets/generated/example-stories/blameful-incident-reviews.jpg"
+    },
+    {
+      "id": "remote-documentation-norms",
+      "title": "Remote Documentation Norms",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you moved a team away from heroics toward sustainable execution.",
+      "situation": "A distributed group relied on live meetings and hallway context. People in later time zones waited for decisions, new hires repeated the same questions, and the engineers who knew the most were praised for manually unblocking everyone.",
+      "strongAnswerSketch": [
+        "Diagnose the cultural norm as meeting-dependent decision making, not a generic lack of documentation.",
+        "Require short decision notes only for cross-team or long-lived choices, with an owner, options considered, and a review date.",
+        "Model the change by cancelling status meetings when written context was sufficient and recognizing teams that created reusable decision context.",
+        "Simplify the first template after engineers showed it was too heavy and was delaying low-risk work."
+      ],
+      "whyItWorks": [
+        "Broadens culture change beyond incident response.",
+        "Changes a repeated behavior, the recognition pattern, and the operating mechanism together.",
+        "Shows a partial failure and correction instead of pretending the first mechanism was perfect."
+      ],
+      "weakVersion": "I told the team we needed a stronger writing culture and rolled out a documentation template for everyone to use.",
+      "followUpAngles": [
+        "Which decisions required documentation, and which did not?",
+        "What did you do when the first template slowed people down?",
+        "How did recognition change for quiet preventive work?"
+      ],
+      "aiVisual": "assets/generated/example-stories/remote-documentation-norms.jpg"
+    },
+    {
+      "id": "founder-driven-decisions-to-ownership",
+      "title": "Founder-Driven Decisions to Ownership",
+      "level": "Director",
+      "promptVariant": "Describe a time when the existing culture was blocking business or technical progress.",
+      "situation": "A growing product engineering area still waited for a founder or two early architects to bless many decisions. This preserved speed during customer emergencies but made routine roadmap, API, and ownership choices stall across teams.",
+      "strongAnswerSketch": [
+        "Separate decisions that truly needed founder or architecture review from reversible domain decisions that teams should own.",
+        "Pilot explicit decision rights in two product areas, with a lightweight ADR for cross-team choices and a documented escalation rule for irreversible customer or regulatory risk.",
+        "Ask the founder to model the new behavior by redirecting routine questions to domain owners and joining calibration only for the first few decisions.",
+        "Correct an early over-delegation miss after two teams designed incompatible APIs by adding a shared-contract review for public interfaces."
+      ],
+      "whyItWorks": [
+        "Shows culture change through decision rights rather than slogans.",
+        "Preserves the speed that made the old culture valuable while removing the bottleneck it created.",
+        "Includes a real correction when the first version went too far."
+      ],
+      "weakVersion": "I asked the founder to delegate more, encouraged teams to be owners, and told managers they should make decisions faster.",
+      "followUpAngles": [
+        "Which decisions stayed centralized?",
+        "What did the founder stop doing publicly?",
+        "What broke in the first version and how did you adjust?"
+      ],
+      "aiVisual": "assets/generated/example-stories/founder-driven-decisions-to-ownership.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows culture diagnosis, incentive change, role modeling, and measurable behavioral shift.",
+    "summary": "The candidate shows behavioral diagnosis, incentive change, role modeling, and measurable culture shift.",
     "moves": [
-      "Defines culture as observed behavior under pressure.",
+      "Defines culture as observed behavior under pressure, not stated values.",
+      "Separates harmful norms from strengths worth preserving.",
       "Explains what incentives reinforced the old behavior.",
       "Changes rituals, recognition, and **leadership expectations**.",
-      "Shows resistance and how it was handled.",
+      "Shows legitimate resistance, an early miss, and how the mechanism was corrected.",
       "Measures **behavior change** over time."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate describes culture through values posters, slogans, or broad messaging without changing what leaders reward.",
+    "summary": "The candidate describes culture through values posters, slogans, or broad messaging without changing what people and leaders reward.",
     "redFlags": [
-      "Uses vague culture terms without behavior examples.",
+      "Uses vague culture terms without concrete behavior examples.",
       "Cannot explain what incentives changed.",
       "Relies on all-hands messaging only.",
+      "Treats the old culture as entirely bad and accidentally kills useful urgency or ownership.",
+      "Frames resistance as lack of buy-in without learning from the pushback.",
       "Has no evidence the culture changed under pressure."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
@@ -138,11 +199,21 @@
   "followUps": [
     {
       "id": "diagnosis",
-      "question": "What behavior told you the culture needed to change?",
+      "question": "What specific behavior told you the culture needed to change?",
       "tests": [
         "judgment",
         "measurement"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I saw teams praise launch rescues more than the prevention work that would have avoided them; after-hours pages, repeat incidents, and action-item reopen rates made the pattern visible.",
+          "In the remote teams, decisions were made in live meetings and rediscovered later; the behavior showed up as onboarding delays, duplicate questions, and late-time-zone teams waiting for context."
+        ],
+        "weak": [
+          "The culture felt reactive and people complained that we needed to be more proactive.",
+          "I could tell morale was low, so I knew we needed to change the culture."
+        ]
+      }
     },
     {
       "id": "incentives",
@@ -150,7 +221,17 @@
       "tests": [
         "decision quality",
         "execution"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We stopped treating avoidable rescues as performance or promotion evidence unless the emergency was external and unavoidable; calibration started crediting prevention, clear ownership, and durable risk reduction.",
+          "Managers changed shoutouts from who unblocked the most people manually to who made decisions reusable through runbooks, ADRs, and clean escalation paths."
+        ],
+        "weak": [
+          "I asked managers to praise people who wrote docs and fixed root causes.",
+          "We added operational excellence as one of the values people should keep in mind."
+        ]
+      }
     },
     {
       "id": "modeling",
@@ -158,15 +239,35 @@
       "tests": [
         "ownership",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I stopped giving public praise for avoidable last-minute saves, named my own planning misses first in incident reviews, and delayed one launch when the readiness evidence was weak.",
+          "I used the lightweight decision-note format for my own cross-team decisions and cancelled recurring status meetings when written context made them unnecessary."
+        ],
+        "weak": [
+          "I talked about the new behavior in all-hands and asked my staff to reinforce it.",
+          "I made sure people knew I supported documentation and blameless reviews."
+        ]
+      }
     },
     {
       "id": "sustained",
-      "question": "How did you know the change sustained under pressure?",
+      "question": "What pressure test showed the change had sustained?",
       "tests": [
         "measurement",
         "learning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "During the next peak launch window, teams escalated true customer-risk issues quickly but did not rely on after-hours rescues for routine readiness gaps; repeat incidents and reopened actions both dropped.",
+          "After a severe incident, the review named system conditions, assigned owners, and closed the preventive actions without reverting to individual blame."
+        ],
+        "weak": [
+          "People seemed more positive about the culture after a few months.",
+          "The new process stayed in place, so I believe the culture changed."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -174,24 +275,24 @@
       {
         "id": "behavioral-diagnosis",
         "name": "Behavioral Diagnosis",
-        "strong": "Defines culture through observed behaviors and consequences.",
-        "weak": "Uses abstract value language only.",
+        "strong": "Defines culture through repeated behaviors, trade-offs, and consequences.",
+        "weak": "Uses abstract value language or labels the old culture as bad without evidence.",
         "strongAiVisual": "assets/generated/signals/behavioral-diagnosis-strong.jpg",
         "weakAiVisual": "assets/generated/signals/behavioral-diagnosis-weak.jpg"
       },
       {
         "id": "incentive-design",
         "name": "Incentive Design",
-        "strong": "Changes what leaders recognize, reward, and tolerate.",
-        "weak": "Communicates values without changing incentives.",
+        "strong": "Changes what leaders recognize, reward, tolerate, and preserve.",
+        "weak": "Communicates values without changing incentives or loses useful strengths in the process.",
         "strongAiVisual": "assets/generated/signals/incentive-design-strong.jpg",
         "weakAiVisual": "assets/generated/signals/incentive-design-weak.jpg"
       },
       {
         "id": "sustained-change",
         "name": "Sustained Change",
-        "strong": "Shows the new behavior persisted during pressure.",
-        "weak": "Shows only initial enthusiasm.",
+        "strong": "Shows the new behavior persisted when launches, incidents, planning pressure, or executive pushback tested it.",
+        "weak": "Shows only initial enthusiasm or the continued existence of a process.",
         "strongAiVisual": "assets/generated/signals/sustained-change-strong.jpg",
         "weakAiVisual": "assets/generated/signals/sustained-change-weak.jpg"
       }
@@ -199,11 +300,11 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Changes team norms through behavior, feedback, and consistent expectations."
+        "expected": "Changes team norms through explicit expectations, feedback, and repeatable rituals."
       },
       {
         "level": "Director",
-        "expected": "Changes cross-team rituals and incentives that shape engineering behavior."
+        "expected": "Changes cross-team rituals, decision rights, and incentives that shape engineering behavior."
       },
       {
         "level": "VP Engineering",
@@ -248,7 +349,7 @@
       },
       {
         "field": "action",
-        "label": "What incentives, rituals, and leadership behaviors changed?"
+        "label": "What incentives, rituals, decision rights, or leadership behaviors changed?"
       },
       {
         "field": "result",
@@ -256,18 +357,18 @@
       },
       {
         "field": "reflection",
-        "label": "What did you learn about changing culture?"
+        "label": "What did you learn after resistance or an early miss?"
       },
       {
         "field": "systemChange",
-        "label": "What mechanism sustained the new behavior?"
+        "label": "What mechanism made the new behavior repeatable?"
       }
     ]
   },
   "relatedScenarios": [
-    "Changing a blame-heavy incident culture.",
+    "Replacing blame-heavy incident reviews with learning rituals.",
     "Moving from founder-driven decisions to scalable ownership.",
-    "Building a culture of documentation in a remote organization."
+    "Building reusable decision context in a remote organization."
   ],
   "toProbeFurther": {
     "links": [
@@ -280,6 +381,16 @@
         "type": "Guide",
         "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
         "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "dora-generative-culture",
+        "group": "Culture and Organizational Design",
+        "title": "Generative Organizational Culture",
+        "url": "https://dora.dev/capabilities/generative-organizational-culture/",
+        "source": "DORA / Google Cloud",
+        "type": "Capability",
+        "why": "Connects culture change to **information flow**, shared responsibility, failure inquiry, and measurable Westrum culture signals.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
         "id": "accelerate",
@@ -295,23 +406,35 @@
       {
         "id": "google-effective-teams",
         "group": "Culture and Organizational Design",
-        "title": "The Five Dynamics of an Effective Team",
+        "title": "Team Dynamics: Five Keys to Building Effective Teams",
         "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
-        "source": "Google",
+        "source": "Think with Google",
         "type": "Article",
-        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "year": "2023",
+        "why": "Grounds culture diagnosis in psychological safety, dependability, clarity, meaning, and impact rather than values language.",
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
-        "id": "team-topologies",
+        "id": "organizational-culture-leadership",
         "group": "Culture and Organizational Design",
-        "title": "Team Topologies",
-        "url": "https://teamtopologies.com/book",
-        "source": "Team Topologies",
+        "title": "Organizational Culture and Leadership",
+        "url": "https://www.wiley-vch.de/en/areas-interest/finance-economics-law/organizational-culture-and-leadership-978-1-119-21204-1",
+        "source": "Edgar H. Schein and Peter A. Schein / Wiley",
         "type": "Book",
-        "year": "2019",
-        "why": "Useful for scaling team boundaries, cognitive load, platform teams, and interaction modes.",
+        "year": "2017",
+        "why": "Foundational reference for diagnosing artifacts, stated values, assumptions, and leader behavior during culture change.",
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "sre-postmortem-culture",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows how senior leaders can turn incidents into durable learning mechanisms, visible recognition, and blameless accountability.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
       },
       {
         "id": "etsy-blameless-postmortems",
@@ -336,15 +459,25 @@
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
-        "id": "culture-map",
+        "id": "team-topologies",
         "group": "Culture and Organizational Design",
-        "title": "The Culture Map",
-        "url": "https://erinmeyer.com/books/the-culture-map/",
-        "source": "Erin Meyer",
+        "title": "Team Topologies",
+        "url": "https://teamtopologies.com/book",
+        "source": "Team Topologies",
         "type": "Book",
-        "year": "2014",
-        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems.",
-        "why": "Relevant here because culture-change stories are stronger when they account for different norms, communication styles, and interpretations of behavior."
+        "year": "2025",
+        "why": "Useful for changing team boundaries, cognitive load, platform groupings, and interaction modes when culture issues come from org design.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "gitlab-all-remote",
+        "group": "Culture and Organizational Design",
+        "title": "GitLab's Guide to All-Remote",
+        "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/guide/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "why": "Concrete operating example for changing remote culture through async communication, handbook-first documentation, and explicit norms.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
         "id": "no-rules-rules",
@@ -360,7 +493,7 @@
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

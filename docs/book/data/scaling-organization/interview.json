@@ -1,8 +1,9 @@
 {
   "id": "scaling-organization",
   "title": "Scaling An Organization",
-  "description": "Adding structure as engineering grows without burying teams in ceremony or losing ownership.",
+  "description": "Adding enough structure as engineering grows without burying teams in ceremony or weakening ownership.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -16,50 +17,54 @@
     "whyItMatters": "Senior leaders must know what should change as an organization grows and what should stay lightweight."
   },
   "prompt": {
-    "primary": "Tell me about a time you scaled an engineering organization significantly.",
+    "primary": "Tell me about a time you scaled an engineering organization beyond informal coordination.",
     "variants": [
       "What broke as your organization grew, and what did you change?",
       "Tell me about a time you added process without creating bureaucracy.",
       "Tell me about a time you simplified an organization or operating model as it scaled."
     ],
     "interviewerIntent": [
-      "Can the candidate diagnose scale-related failure modes?",
-      "Do they add structure proportionally?",
-      "Can they preserve speed, ownership, and clarity?"
+      "Can the candidate distinguish scale-related failure modes from ordinary execution misses?",
+      "Do they add structure only where coordination, ownership, or decision quality is breaking?",
+      "Can they preserve speed, autonomy, and accountability while the organization gets larger?"
     ]
   },
   "scenario": {
-    "signatureExample": "A company grows from 40 to 180 engineers and informal coordination stops working.",
+    "signatureExample": "A company grows from 40 to 180 engineers, and informal coordination no longer gives teams clear decisions or ownership.",
     "context": [
       "**Architecture decisions** happen inconsistently.",
-      "Managers use different planning and feedback practices.",
-      "Incident reviews and **ownership boundaries** are uneven."
+      "Managers use different planning, feedback, and escalation practices.",
+      "Incident reviews and **ownership boundaries** are uneven.",
+      "The leadership layer lags hiring growth, so onboarding and manager span become hidden constraints."
     ],
     "constraints": [
       "The organization values autonomy and fears bureaucracy.",
       "Coordination problems are already hurting delivery.",
-      "New leaders need common expectations quickly."
+      "New leaders need common expectations quickly.",
+      "Any new layer, forum, cadence, or role must justify its coordination payoff."
     ]
   },
   "storyAnatomy": {
-    "situation": "Engineering grew quickly, and informal mechanisms no longer handled ownership, planning, or technical decisions.",
+    "situation": "Engineering grew quickly, and informal habits no longer handled ownership, planning, or technical decisions reliably.",
     "task": "Add enough operating structure to support scale without slowing teams unnecessarily.",
     "action": [
-      "Mapped repeated failures to missing mechanisms.",
-      "Introduced architecture review for cross-team decisions.",
-      "Created manager training, quarterly planning, incident review discipline, and ownership standards.",
+      "Mapped repeated delivery, incident, and decision failures to the missing operating mechanisms behind them.",
+      "Introduced architecture review for cross-team or hard-to-reverse decisions.",
+      "Created manager expectations, quarterly planning, incident review discipline, and ownership standards.",
+      "Rolled back a weekly review that created status theater and kept only exception-based escalation for blocked dependencies.",
       "Kept team-local decisions lightweight and explicit."
     ],
     "result": [
       "Planning predictability improved from roughly 55% to 75% of committed cross-team milestones over two quarters.",
       "Repeat ownership-related incidents dropped by about a third after every critical service had a named owner and escalation path.",
-      "Architecture decision lead time became visible, and low-risk team-local decisions no longer waited for central review."
+      "Architecture decision lead time became visible, and low-risk team-local choices no longer waited for central review.",
+      "Manager span and onboarding load became explicit planning constraints instead of after-the-fact explanations for delivery misses."
     ],
     "reflection": "The lesson was to add structure at the points of coordination failure, not everywhere.",
     "systemChange": [
       "Architecture review forum.",
       "Quarterly planning rhythm.",
-      "Manager operating expectations.",
+      "Manager expectations and coaching cadence.",
       "Service ownership model."
     ]
   },
@@ -68,11 +73,11 @@
       "id": "forty-to-one-eighty-engineers",
       "title": "From 40 To 180 Engineers",
       "level": "VP Engineering",
-      "promptVariant": "Tell me about a time you scaled an engineering organization significantly.",
-      "situation": "The company grew from 40 to 180 engineers, and informal **architecture decisions**, planning, and incident ownership stopped scaling.",
+      "promptVariant": "Tell me about a time you scaled an engineering organization beyond informal coordination.",
+      "situation": "The company grew from 40 to 180 engineers, and informal **architecture decisions**, planning habits, and incident ownership stopped giving teams predictable outcomes.",
       "strongAnswerSketch": [
         "Map repeated failures to missing mechanisms instead of adding generic process.",
-        "Introduce architecture review only for cross-team decisions.",
+        "Introduce architecture review only for cross-team or hard-to-reverse decisions.",
         "Create manager operating expectations, quarterly planning, incident review discipline, and service ownership.",
         "Keep team-local decisions decentralized."
       ],
@@ -81,23 +86,49 @@
         "Adds structure proportionally.",
         "Preserves autonomy while fixing coordination failures."
       ],
-      "weakVersion": "I introduced more planning meetings, architecture reviews, and manager training as the organization grew.",
+      "weakVersion": "I introduced more planning meetings, architecture reviews, and manager training because the organization had grown.",
       "followUpAngles": [
         "What broke first?",
         "Where did you intentionally avoid process?",
         "How did managers need to change?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/forty-to-one-eighty-engineers.jpg"
+    },
+    {
+      "id": "manager-bench-under-hiring-pressure",
+      "title": "Manager Bench Under Hiring Pressure",
+      "level": "Senior Manager",
+      "promptVariant": "What broke as your organization grew, and what did you change?",
+      "situation": "A product area grew from 28 to 55 engineers in six months, but the manager bench and onboarding system did not keep up; new managers inherited 11-13 reports, senior ICs became default coordinators, and delivery risk shifted from coding capacity to leadership capacity.",
+      "strongAnswerSketch": [
+        "Name manager span, onboarding load, and decision latency as the real scaling bottlenecks.",
+        "Try a weekly cross-team program review, then roll it back after it creates status theater and consumes manager time without reducing dependencies.",
+        "Create manager pairing, onboarding cohorts, team charters, and explicit thresholds for when a team split needs a ready manager rather than another hire.",
+        "Accept the cost of slowing two hires and moving one feature by a quarter; within two planning cycles, average manager span drops from 11-13 to 7-8 reports and missed onboarding checkpoints fall by about half."
+      ],
+      "whyItWorks": [
+        "Centers people and leadership-layer capacity, not just process mechanics.",
+        "Shows a mechanism that backfired and was changed based on evidence.",
+        "Names the cost and leadership-capacity outcome of healthier scaling instead of presenting a clean growth story."
+      ],
+      "weakVersion": "I added a weekly review, asked managers to communicate more, and kept hiring because more people would eventually solve the bandwidth problem.",
+      "followUpAngles": [
+        "How did you know manager capacity was the bottleneck?",
+        "What mechanism did you stop or simplify?",
+        "What cost did the business absorb?"
+      ],
+      "aiVisual": "assets/generated/example-stories/manager-bench-under-hiring-pressure.jpg"
     },
     {
       "id": "remote-organization-planning",
       "title": "Remote Organization Planning Breakdown",
       "level": "Director",
       "promptVariant": "What broke as your organization grew, and what did you change?",
-      "situation": "A newly distributed engineering organization kept missing cross-time-zone dependencies because planning remained optimized for hallway conversations.",
+      "situation": "A newly distributed engineering organization kept missing cross-time-zone dependencies because planning still depended on hallway conversations.",
       "strongAnswerSketch": [
         "Identify which coordination assumptions stopped working remotely.",
         "Introduce written planning artifacts, dependency owners, and decision deadlines.",
-        "Create async architecture review for low-risk decisions and live review for high-risk ones.",
+        "Use async architecture review for low-risk decisions and live review for high-risk ones.",
         "Measure dependency churn and planning predictability."
       ],
       "whyItWorks": [
@@ -105,12 +136,13 @@
         "Uses async mechanisms where they fit.",
         "Measures whether the new **operating model** works."
       ],
-      "weakVersion": "I added more standups and asked managers to communicate better across time zones.",
+      "weakVersion": "I added more standups and asked managers to communicate better across time zones without changing how dependencies were owned.",
       "followUpAngles": [
         "Which decisions had to become written?",
         "How did you prevent documentation theater?",
         "What metric showed better coordination?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/remote-organization-planning.jpg"
     },
     {
       "id": "simplifying-platform-bottleneck",
@@ -129,33 +161,38 @@
         "Clarifies **decision rights** while preserving risk controls.",
         "Connects org design to flow, ownership, and measurable risk."
       ],
-      "weakVersion": "I told the platform team to approve requests faster and asked product teams to plan their architecture reviews earlier.",
+      "weakVersion": "I told the platform team to approve requests faster and asked product teams to plan architecture reviews earlier, without changing decision rights.",
       "followUpAngles": [
         "Which decisions stayed centralized?",
         "How did you keep architectural quality from regressing?",
         "What metric proved the simplification worked?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/simplifying-platform-bottleneck.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows scaling instincts, proportional process, and clarity about ownership and communication complexity.",
+    "summary": "The candidate shows scaling judgment, proportional process, and clarity about ownership, manager capacity, and communication complexity.",
     "moves": [
-      "Names what broke because of scale.",
+      "Names what broke because of scale, with evidence from delivery, incidents, decisions, or onboarding.",
       "Adds mechanisms tied to concrete failure modes.",
       "Removes or simplifies mechanisms that became bottlenecks.",
+      "Accounts for manager capability, onboarding load, and the cost of new structure.",
       "Explains what stayed decentralized.",
       "Shows adoption and measurable improvement.",
-      "Reflects on where process could have gone too far."
-    ]
+      "Reflects on which mechanisms were too heavy, too late, or missing entirely."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate either celebrates process for its own sake or rejects structure even when coordination failures are obvious.",
+    "summary": "The candidate either celebrates process for its own sake or rejects structure even when coordination and ownership failures are visible.",
     "redFlags": [
       "Cannot explain why each mechanism was needed.",
       "Equates scale with more meetings only.",
       "Ignores **manager capability** and ownership design.",
-      "Has no feedback loop for whether the process helped."
-    ]
+      "Treats manager span, onboarding load, and structure cost as secondary concerns.",
+      "Has no feedback loop for whether the structure improved decisions, delivery, onboarding, or ownership."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
@@ -167,8 +204,8 @@
       ],
       "exampleAnswers": {
         "strong": [
-          "Architecture decisions crossed team boundaries, but no one owned the final call; we saw repeated rework, dependency churn, and two incidents where services had unclear ownership.",
-          "Planning was still built around informal relationships, so cross-team commitments slipped even when each individual team believed it was on track."
+          "Architecture decisions crossed team boundaries, but no one owned the final call; we saw repeated rework, dependency churn, and two incidents tied to unclear service ownership.",
+          "Planning was still built around informal relationships, so cross-team commitments slipped even when each individual team believed its own work was on track."
         ],
         "weak": [
           "We got bigger, so communication became harder and we needed more structure.",
@@ -189,8 +226,26 @@
           "I asked teams to name what a mechanism prevented; if no failure mode or decision owner was clear after two cycles, we stopped or simplified it."
         ],
         "weak": [
-          "I tried to keep meetings short and told managers not to overdo the process.",
+          "I tried to keep meetings short and told managers not to overdo the new process.",
           "People did not complain much, so I assumed the process level was acceptable."
+        ]
+      }
+    },
+    {
+      "id": "structure-cost",
+      "question": "What did the added structure cost, and how did you decide it was worth it?",
+      "tests": [
+        "trade-off reasoning",
+        "measurement"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The weekly review cost roughly six manager-hours a week and was not reducing dependency age, so we replaced it with exception-based escalation tied to blocked work and decision deadlines.",
+          "Delaying two hires was painful, but onboarding throughput and manager span were the constraint; we used ramp time, attrition risk, and dependency misses to decide the trade-off was worth it."
+        ],
+        "weak": [
+          "The cost was mostly a few extra meetings, which seemed reasonable for a bigger organization.",
+          "I did not measure the cost directly; people understood we needed more process as we scaled."
         ]
       }
     },
@@ -237,19 +292,29 @@
         "id": "scale-diagnosis",
         "name": "Scale Diagnosis",
         "strong": "Identifies specific coordination, ownership, and decision failures caused by growth.",
-        "weak": "Uses generic growth language."
+        "weak": "Uses generic growth language.",
+        "strongAiVisual": "assets/generated/signals/scale-diagnosis-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/scale-diagnosis-weak.jpg"
       },
       {
         "id": "proportional-structure",
         "name": "Proportional Structure",
         "strong": "Adds only the mechanisms needed for the failure mode.",
-        "weak": "Adds broad process without clear payoff."
+        "weak": "Adds broad process without clear payoff.",
+        "strongAiVisual": "assets/generated/signals/proportional-structure-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/proportional-structure-weak.jpg"
       },
       {
         "id": "ownership-design",
         "name": "Ownership Design",
         "strong": "Clarifies **decision rights** and service or domain ownership.",
         "weak": "Leaves accountability diffuse."
+      },
+      {
+        "id": "manager-cost-judgment",
+        "name": "Manager and Cost Judgment",
+        "strong": "Recognizes manager capacity, onboarding load, and the cost of structure as scaling constraints.",
+        "weak": "Treats growth as a process rollout without capacity or cost trade-offs."
       }
     ],
     "rubric": [
@@ -283,11 +348,13 @@
     "signalMap": [
       "scale-diagnosis",
       "proportional-structure",
-      "ownership-design"
+      "ownership-design",
+      "manager-cost-judgment"
     ],
     "followUpTree": [
       "what-broke",
       "too-much-process",
+      "structure-cost",
       "manager-capability",
       "ownership"
     ]
@@ -304,7 +371,7 @@
       },
       {
         "field": "action",
-        "label": "What mechanisms did you add, remove, or standardize?"
+        "label": "What mechanisms did you add, remove, standardize, or deliberately avoid?"
       },
       {
         "field": "result",
@@ -312,7 +379,7 @@
       },
       {
         "field": "reflection",
-        "label": "Where did you need more or less structure?"
+        "label": "Where did you need more structure, and where did you need less?"
       },
       {
         "field": "systemChange",
@@ -322,9 +389,9 @@
   },
   "relatedScenarios": [
     "Growing from a single engineering team to multiple product areas.",
-    "Introducing an architecture forum after repeated cross-team incidents.",
-    "Creating planning rituals for a newly distributed engineering organization.",
-    "Removing a central approval bottleneck after teams have enough guardrails and ownership maturity."
+    "Moving from founder-led or executive-led approvals to explicit domain ownership without losing product judgment or architectural safety.",
+    "Merging an acquired team into existing ownership boundaries without copying every legacy process.",
+    "Reducing layers, review forums, or platform approval gates under cost pressure after teams have enough guardrails."
   ],
   "toProbeFurther": {
     "links": [
@@ -341,12 +408,12 @@
       {
         "id": "team-topologies",
         "group": "Culture and Organizational Design",
-        "title": "Team Topologies",
-        "url": "https://teamtopologies.com/book",
-        "source": "Team Topologies",
+        "title": "Team Topologies, 2nd Edition",
+        "url": "https://itrevolution.com/product/team-topologies-second-edition/",
+        "source": "Matthew Skelton and Manuel Pais / IT Revolution",
         "type": "Book",
         "year": "2025",
-        "why": "The current second edition is useful for scaling team boundaries, cognitive load, platform teams, and interaction modes.",
+        "why": "Publisher page for the verified 2025 second edition, useful for scaling team boundaries, cognitive load, platform teams, and interaction modes.",
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
@@ -370,6 +437,49 @@
         "year": "2019",
         "why": "Engineering-management reference for **organizational design**, planning, sizing teams, and senior leadership trade-offs.",
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "will-larson-team-sizing",
+        "group": "Culture and Organizational Design",
+        "title": "How to Size and Assess Teams From an Eng Lead at Stripe, Uber and Digg",
+        "url": "https://review.firstround.com/how-to-size-and-assess-teams-from-an-eng-lead-at-stripe-uber-and-digg/",
+        "source": "First Round Review / Will Larson",
+        "type": "Interview",
+        "why": "Concrete team-size and team-state diagnostics for deciding when to split, combine, or support teams as an engineering organization grows.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "accelerate",
+        "group": "Culture and Organizational Design",
+        "title": "Accelerate",
+        "url": "https://itrevolution.com/product/accelerate/",
+        "source": "Nicole Forsgren, Jez Humble, Gene Kim / IT Revolution",
+        "type": "Book",
+        "year": "2018",
+        "why": "**Evidence-based** link between delivery performance, culture, technical practices, and organizational outcomes.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "documenting-architecture-decisions",
+        "group": "Technical Judgment and Architecture",
+        "title": "Documenting Architecture Decisions",
+        "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+        "source": "Michael Nygard / Cognitect",
+        "type": "Article",
+        "year": "2011",
+        "why": "Lightweight ADR guidance for preserving **decision context**, trade-offs, and consequences as teams and architectures scale.",
+        "groupDescription": "Resources for technical judgment, architecture decision quality, and durable engineering standards."
+      },
+      {
+        "id": "sre-postmortem-culture",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows how incident reviews become durable **learning mechanisms** instead of blame rituals or status theater.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
       },
       {
         "id": "high-output-management",
@@ -403,5 +513,9 @@
         "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       }
     ]
-  }
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

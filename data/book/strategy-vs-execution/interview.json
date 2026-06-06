@@ -1,8 +1,9 @@
 {
   "id": "strategy-vs-execution",
-  "title": "Strategy Versus Execution",
-  "description": "Translating changing business strategy into engineering priorities, **operating mechanisms**, and explicit stop-doing decisions.",
+  "title": "Strategy vs. Execution",
+  "description": "Making business strategy executable through engineering priorities, **operating mechanisms**, and explicit stop-doing decisions.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -10,55 +11,55 @@
   "difficulty": "advanced",
   "competency": {
     "id": "strategy-execution",
-    "name": "Strategy Versus Execution",
+    "name": "Strategy vs. Execution",
     "family": "Judgment and Strategy",
-    "definition": "Connects technology plans to business strategy and adjusts execution when the business context changes.",
-    "whyItMatters": "Senior leaders must do more than describe strategy; they must convert it into priorities, mechanisms, and **trade-offs**."
+    "definition": "Turns business strategy into technology plans, then adjusts execution when the business context changes.",
+    "whyItMatters": "Senior leaders must make strategy visible in priorities, capacity choices, operating cadence, and **trade-offs**."
   },
   "prompt": {
-    "primary": "Tell me about a time you translated business strategy into a technology roadmap.",
+    "primary": "Tell me about a time you turned a business strategy shift into a technology roadmap.",
     "variants": [
       "Give me an example of when you changed engineering priorities because the business context changed.",
       "Tell me about a time you stopped important engineering work because it no longer matched company strategy."
     ],
     "interviewerIntent": [
-      "Does the candidate understand commercial context?",
-      "Can they stop or defer work, not just add work?",
-      "Do they connect roadmap changes to measurable business outcomes?"
+      "Can the candidate explain the commercial trigger behind the roadmap change?",
+      "Can they stop or defer work, not just add strategic work?",
+      "Do they connect execution changes to measurable business outcomes and guardrails?"
     ]
   },
   "scenario": {
-    "signatureExample": "A CTO at a B2B SaaS company realizes enterprise deals are blocked by security, integration, and deployment gaps.",
+    "signatureExample": "A VP Engineering at a multi-product company sees regulated-market expansion stall unless every product adopts shared audit logging, data-retention, and access-control capabilities.",
     "context": [
-      "Several platform projects are technically interesting but not unlocking revenue.",
-      "Sales is losing enterprise deals because of auditability and identity gaps.",
-      "Engineering teams distrust roadmap shifts that look like sales interruptions."
+      "Healthcare and public-sector opportunities are growing, but each product has different audit trails and retention practices.",
+      "Two teams are building near-duplicate compliance features while a flagship launch wants to keep a local implementation.",
+      "Security warns that failed audits would block contracts, while product leaders worry shared controls will slip customer commitments."
     ],
     "constraints": [
-      "Enterprise revenue is a company-level priority.",
-      "Teams need a credible reason to pause internal platform work.",
-      "Security and integration work must become productized capability, not custom work."
+      "Regulated-market readiness is a board-level commitment.",
+      "Existing customer roadmap commitments cannot all move without revenue and trust risk.",
+      "The shared controls must prevent a custom compliance path for every product line."
     ]
   },
   "storyAnatomy": {
-    "situation": "The company strategy shifted toward enterprise expansion, but the engineering roadmap still reflected earlier self-serve priorities.",
-    "task": "Reframe engineering priorities so the roadmap supported enterprise revenue without becoming a custom-feature queue.",
+    "situation": "The company strategy shifted toward regulated-market expansion, but the engineering roadmap still optimized for product-specific feature velocity.",
+    "task": "Rebalance engineering priorities so shared compliance capabilities unblocked regulated go-to-market without freezing the few launches the business still needed.",
     "action": [
-      "Mapped lost and delayed deals to missing platform capabilities.",
-      "Paused lower-leverage internal projects and explained the opportunity cost.",
-      "Created a roadmap around auditability, identity integration, deployment controls, and customer administration.",
-      "Defined **decision rules** for future enterprise commitments."
+      "Mapped blocked opportunities, audit findings, and duplicate engineering work to the missing shared platform capabilities.",
+      "Paused two product-specific admin enhancements and one experimental analytics project, while keeping a launch-critical migration funded.",
+      "Put shared audit logging, access control, data-retention, and evidence packaging ahead of lower-risk feature work.",
+      "Defined **decision rules** for product-team exceptions, compliance scope, and future regulated-market commitments."
     ],
     "result": [
-      "Enterprise blockers became a product roadmap rather than scattered escalations.",
-      "Sales and product had clearer rules for what engineering would support.",
-      "The company improved enterprise readiness while preserving platform coherence."
+      "Security-review cycle time for regulated deals dropped from 18 business days to 6 after teams reused the shared evidence package.",
+      "Three previously blocked opportunities moved to contract signature, representing $4.2M in annual recurring revenue.",
+      "The cost was visible: a low-margin analytics launch slipped one quarter, and paused partner work cost two co-sell opportunities before a recovery plan stabilized the relationship."
     ],
-    "reflection": "The hard part was not choosing enterprise work; it was making the stop-doing decisions explicit enough that teams trusted the change.",
+    "reflection": "The hard part was not choosing regulated-market work; it was making the capacity cost, exception rules, and customer impact explicit enough that teams trusted the change.",
     "systemChange": [
-      "Roadmap review tied to business segment strategy.",
-      "Enterprise commitment intake process.",
-      "Quarterly measurement of revenue blockers and platform capabilities."
+      "Roadmap reviews tied to target-segment requirements and regulatory evidence.",
+      "Compliance-capability intake with an exception process.",
+      "Quarterly measurement of blocked deals, audit findings, review cycle time, and duplicate platform work."
     ]
   },
   "exampleStories": [
@@ -66,43 +67,45 @@
       "id": "enterprise-readiness-roadmap",
       "title": "Enterprise Readiness Roadmap",
       "level": "CTO",
-      "promptVariant": "Tell me about a time you translated business strategy into a technology roadmap.",
-      "situation": "A SaaS company shifted from self-serve growth to enterprise expansion, but enterprise deals were blocked by auditability, identity integration, and deployment controls.",
+      "promptVariant": "Tell me about a time you turned a business strategy shift into a technology roadmap.",
+      "situation": "A SaaS company shifted from self-serve growth to enterprise expansion. Enterprise deals were blocked by auditability, identity integration, and deployment controls while a partner-marketplace integration was already staffed.",
       "strongAnswerSketch": [
-        "Map lost deals and delayed opportunities to missing platform capabilities.",
-        "Pause lower-leverage internal platform work and explain the opportunity cost.",
-        "Define a roadmap around reusable enterprise capabilities rather than custom features.",
-        "Create intake rules for future enterprise commitments."
+        "Use $6M in blocked pipeline and security-questionnaire delays to identify the missing platform capabilities.",
+        "Stop the partner-marketplace integration and an internal analytics rewrite, naming the expected channel risk before committing the capacity shift.",
+        "Convert enterprise readiness into reusable platform capabilities rather than custom account-by-account work.",
+        "Track security-review cycle time, blocked-pipeline conversion, and custom exception count."
       ],
       "whyItWorks": [
-        "Connects engineering priorities to business strategy.",
-        "Shows the courage to stop work, not only add work.",
-        "Protects platform coherence while responding to revenue pressure."
+        "Connects engineering priorities to segment strategy and revenue evidence.",
+        "Shows the courage to stop work rather than pretending the partner cost was free.",
+        "Models a measurable outcome: security-review turnaround fell from 18 to 6 business days, and 4 of 7 blocked deals closed worth $3.1M ARR.",
+        "Keeps the trade-off honest: two co-sell opportunities were lost while the partner-marketplace work was paused."
       ],
       "weakVersion": "I asked teams to support enterprise requests faster and added security work to the roadmap.",
       "followUpAngles": [
         "Which projects did you stop?",
         "How did you prevent custom work from taking over?",
-        "What business metric improved?"
+        "What business metric improved?",
+        "What cost did the paused work create?"
       ],
       "aiVisual": "assets/generated/example-stories/enterprise-readiness-roadmap.jpg"
     },
     {
       "id": "profitability-pivot",
-      "title": "Growth To Profitability Pivot",
+      "title": "Growth-to-Profitability Pivot",
       "level": "VP Engineering",
       "promptVariant": "Give me an example of when you changed engineering priorities because the business context changed.",
-      "situation": "The company moved from growth at all costs to profitability, and engineering had to reduce infrastructure cost while preserving customer-facing roadmap commitments.",
+      "situation": "The company moved from growth at all costs to profitability, and engineering had to reduce infrastructure cost without breaking customer-facing roadmap commitments.",
       "strongAnswerSketch": [
-        "Translate the financial target into service-level cost ownership and product **trade-offs**.",
+        "Translate the financial target into service-level unit economics, support cost, and product **trade-offs** teams can reason about.",
         "Rank cost opportunities by customer risk, engineering effort, and recurring savings.",
-        "Pair platform efficiency work with product milestones instead of running an isolated cost program.",
-        "Introduce monthly cost reviews owned by service teams."
+        "Reject a storage-tier change that would have violated latency SLOs, and pause low-use enterprise sandbox work instead.",
+        "Introduce monthly cost reviews with service-owner accountability and finance-visible baselines."
       ],
       "whyItWorks": [
         "Shows commercial understanding beyond feature delivery.",
-        "Makes cost reduction an **operating model** change.",
-        "Balances short-term financial needs with customer reliability."
+        "Makes cost reduction an **operating model** change, not a one-time platform ask: cloud spend dropped 23 percent and gross margin improved 4 points.",
+        "Balances short-term financial needs with customer reliability and names the deferred customer impact."
       ],
       "weakVersion": "I told teams to reduce cloud spend by 20 percent and asked platform engineering to find savings.",
       "followUpAngles": [
@@ -111,14 +114,63 @@
         "What did you stop funding?"
       ],
       "aiVisual": "assets/generated/example-stories/profitability-pivot.jpg"
+    },
+    {
+      "id": "post-acquisition-platform-consolidation",
+      "title": "Post-Acquisition Platform Consolidation",
+      "level": "Director",
+      "promptVariant": "Give me an example of when you changed engineering priorities because the business context changed.",
+      "situation": "After acquiring a smaller competitor, the company strategy shifted from closing the deal to unifying the customer experience, but engineering still had separate account, billing, and identity roadmaps.",
+      "strongAnswerSketch": [
+        "Map churn risk, support volume, and duplicate roadmap commitments across the acquired and core products.",
+        "Reject a full replatform as too slow, then sequence an integration facade plus two explicit sunset milestones.",
+        "Pause net-new admin UI work in two teams so account identity and billing migration had named owners.",
+        "Publish a migration dashboard covering accounts moved, billing defects, support contacts, and decommissioned services."
+      ],
+      "whyItWorks": [
+        "Broadens strategy-to-execution beyond revenue pivots into M&A and platform consolidation.",
+        "Shows sequencing judgment instead of turning strategy into a big-bang rewrite.",
+        "Includes residual cost: two roadmap features slipped, and one strategic customer stayed on the legacy plan for six months."
+      ],
+      "weakVersion": "I created an integration task force and asked teams to align their roadmaps after the acquisition.",
+      "followUpAngles": [
+        "Why did you reject the full replatform?",
+        "Which product commitments moved?",
+        "How did you know consolidation was working?"
+      ]
+    },
+    {
+      "id": "segment-focus-service-sunset",
+      "title": "Segment Focus Service Sunset",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you stopped important engineering work because it no longer matched company strategy.",
+      "situation": "A billing integrations team still supported two low-revenue partner integrations after the company narrowed strategy to mid-market customers using standard checkout flows.",
+      "strongAnswerSketch": [
+        "Bring usage, support tickets, on-call pages, ARR, and contractual obligations into one decision view.",
+        "Recommend sunsetting one integration and moving another to maintenance-only while protecting checkout reliability for the target segment.",
+        "Work with Product and Sales on customer notification, migration credits, and a named exception list.",
+        "Replace ad hoc partner requests with a quarterly segment-fit review and support-cost dashboard."
+      ],
+      "whyItWorks": [
+        "Illustrates Senior Manager scope: connecting team work to strategy and escalating the real trade-off.",
+        "Names a concrete residual cost: two small customers churned, while integration support tickets fell 31 percent and on-call pages fell 18 percent.",
+        "Shows stop-doing discipline without pretending the decision was painless."
+      ],
+      "weakVersion": "I deprioritized the older integrations because leadership wanted us focused on bigger customers.",
+      "followUpAngles": [
+        "Which customers were harmed?",
+        "How did you handle exceptions?",
+        "What operating review changed afterward?"
+      ]
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows business understanding, prioritization discipline, and the ability to turn strategy into operating decisions.",
+    "summary": "The candidate shows business understanding, prioritization discipline, and the ability to turn a strategy shift into operating decisions.",
     "moves": [
-      "Explains the business shift and why the old roadmap no longer fit.",
+      "Explains the business shift, affected customer segment, and why the old roadmap no longer fit.",
       "Names what was stopped, delayed, or reduced.",
-      "Connects engineering work to revenue, risk, customer trust, or market position.",
+      "Connects engineering work to revenue, risk, customer trust, market position, or capital constraints.",
+      "Names measurable outcomes and the residual cost of the chosen trade-off.",
       "Protects product/platform coherence while responding to commercial pressure.",
       "Shows how roadmap **governance changed**."
     ],
@@ -127,9 +179,10 @@
   "weakAnswerPattern": {
     "summary": "The candidate talks strategy abstractly but cannot show how it changed execution, **trade-offs**, or operating cadence.",
     "redFlags": [
-      "No clear business outcome is tied to the roadmap.",
+      "No clear business trigger, outcome, or guardrail metric is tied to the roadmap.",
       "Everything becomes a priority, so no **trade-off** is visible.",
       "Sales, product, or finance are described as distractions rather than stakeholders.",
+      "The answer celebrates the winning priority but hides what got worse or more expensive.",
       "The answer presents a one-time reprioritization with no governance change."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
@@ -137,27 +190,57 @@
   "followUps": [
     {
       "id": "stopped-work",
-      "question": "What work did you stop or defer, and how did you explain it?",
+      "question": "What work did you stop or defer, and how did you explain the cost?",
       "tests": [
         "trade-off reasoning",
         "stakeholder alignment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I paused a partner-marketplace integration and an analytics rewrite because they consumed 14 engineers for a quarter while 7 enterprise deals were blocked by auditability and identity gaps; I also named the two co-sell opportunities we expected to put at risk.",
+          "At Senior Manager scope, I stopped a low-volume integration after showing it represented 3 percent of ARR but 28 percent of support tickets; I named the two customers who needed exceptions."
+        ],
+        "weak": [
+          "We shifted resources from lower-priority work, but I do not remember the exact projects.",
+          "I told teams the strategy had changed and asked them to be flexible about their roadmaps."
+        ]
+      }
     },
     {
       "id": "business-metrics",
-      "question": "Which business metrics told you the roadmap needed to change?",
+      "question": "Which business and guardrail metrics told you the roadmap needed to change?",
       "tests": [
         "measurement",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Blocked pipeline, security-review cycle time, custom exception count, and win rate by target segment showed enterprise readiness was the constraint.",
+          "For the profitability pivot, I used service unit cost, gross margin, p95 latency, incident rate, and churn risk so cost work did not silently become reliability risk."
+        ],
+        "weak": [
+          "The executive team said enterprise was important, so the roadmap needed to follow that strategy.",
+          "I mostly looked at roadmap progress and stakeholder feedback from Product and Sales."
+        ]
+      }
     },
     {
       "id": "resistance",
-      "question": "Who resisted the change, and what did you do?",
+      "question": "Who resisted the change, and how did you turn that resistance into a decision?",
       "tests": [
         "influence",
         "stakeholder alignment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Sales resisted pausing the partner integration, so I separated committed customer revenue from speculative channel upside and got the CRO and CPO to approve the exception list.",
+          "Engineers saw compliance work as sales-driven churn; I brought audit findings, a reusable platform design, and stop criteria for custom requests."
+        ],
+        "weak": [
+          "Some people resisted, so I explained why the company strategy mattered until they accepted the priority.",
+          "The executives disagreed, so I asked the CEO to choose and then told teams to align."
+        ]
+      }
     },
     {
       "id": "afterward",
@@ -165,7 +248,17 @@
       "tests": [
         "accountability",
         "learning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Quarterly planning added an explicit stop-doing list with an owner, metric, review date, and known customer or partner cost.",
+          "Enterprise and regulated-market intake required a reusable capability statement, exception budget, evidence owner, and post-quarter review of blocked deals and review cycle time."
+        ],
+        "weak": [
+          "We communicated strategy better and I stayed closer to Product during planning.",
+          "We added a roadmap review meeting, but the criteria were mostly the same as before."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -173,24 +266,24 @@
       {
         "id": "commercial-judgment",
         "name": "Commercial Judgment",
-        "strong": "Connects technology choices to business strategy and customer segments.",
-        "weak": "Treats the roadmap as an internal engineering artifact.",
+        "strong": "Links technology choices to business strategy, customer segments, risk, and capital constraints with measurable evidence.",
+        "weak": "Treats the roadmap as an internal engineering artifact or uses strategy language without business evidence.",
         "strongAiVisual": "assets/generated/signals/commercial-judgment-strong.jpg",
         "weakAiVisual": "assets/generated/signals/commercial-judgment-weak.jpg"
       },
       {
         "id": "prioritization",
         "name": "Prioritization",
-        "strong": "Makes explicit stop-doing decisions with rationale.",
-        "weak": "Adds strategic work without removing anything.",
+        "strong": "Makes explicit stop-doing decisions with rationale, owner, timing, and residual cost.",
+        "weak": "Adds strategic work without removing anything or admitting what got worse.",
         "strongAiVisual": "assets/generated/signals/prioritization-strong.jpg",
         "weakAiVisual": "assets/generated/signals/prioritization-weak.jpg"
       },
       {
         "id": "operating-governance",
         "name": "Operating Governance",
-        "strong": "Changes planning, intake, or review mechanisms so strategy keeps shaping execution.",
-        "weak": "Relies on a one-time roadmap reset.",
+        "strong": "Changes planning, intake, review mechanisms, and metrics so strategy continues to shape execution.",
+        "weak": "Relies on a one-time roadmap reset with no durable decision rule.",
         "strongAiVisual": "assets/generated/signals/operating-governance-strong.jpg",
         "weakAiVisual": "assets/generated/signals/operating-governance-weak.jpg"
       }
@@ -198,19 +291,19 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Connects team priorities to business goals and escalates **trade-offs** clearly."
+        "expected": "Connects team priorities to business goals, names stopped work, and escalates customer or segment **trade-offs** with evidence."
       },
       {
         "level": "Director",
-        "expected": "Rebalances priorities across multiple teams and aligns product or go-to-market partners."
+        "expected": "Rebalances priorities across multiple teams, resolves product or go-to-market conflicts, and leaves a shared measurement mechanism."
       },
       {
         "level": "VP Engineering",
-        "expected": "Converts company strategy into portfolio choices, operating cadence, and executive **trade-offs**."
+        "expected": "Converts company strategy into portfolio choices, capacity allocation, operating cadence, and executive **trade-offs**."
       },
       {
         "level": "CTO",
-        "expected": "Shapes technology strategy around company positioning, risk, capital allocation, and long-term leverage."
+        "expected": "Shapes technology strategy around company positioning, risk, capital allocation, and long-term leverage, including what not to build."
       }
     ]
   },
@@ -239,19 +332,19 @@
     "prompts": [
       {
         "field": "situation",
-        "label": "What changed in the business context?"
+        "label": "What changed in the business strategy or constraints?"
       },
       {
         "field": "task",
-        "label": "What roadmap or operating decision were you accountable for?"
+        "label": "Which roadmap or operating decision were you accountable for?"
       },
       {
         "field": "action",
-        "label": "What did you stop, start, or reframe?"
+        "label": "What did you stop, start, sequence, or reframe?"
       },
       {
         "field": "result",
-        "label": "Which business or execution outcomes changed?"
+        "label": "Which business outcomes and guardrails changed?"
       },
       {
         "field": "reflection",
@@ -259,14 +352,15 @@
       },
       {
         "field": "systemChange",
-        "label": "What planning or governance mechanism changed?"
+        "label": "Which planning or governance mechanism changed?"
       }
     ]
   },
   "relatedScenarios": [
-    "A consumer product pivots to enterprise customers.",
-    "A cost-reduction strategy requires platform and architecture **trade-offs**.",
-    "A company shifts from growth at all costs to durable profitability."
+    "A regulated-market entry requires shared compliance and auditability capabilities.",
+    "A post-acquisition integration forces account, billing, and identity consolidation.",
+    "A cost-reduction strategy requires product, platform, and architecture **trade-offs**.",
+    "A company narrows segment focus and sunsets low-fit integrations."
   ],
   "toProbeFurther": {
     "links": [
@@ -313,17 +407,6 @@
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
-        "id": "empowered-product-teams",
-        "group": "Strategy and Execution",
-        "title": "EMPOWERED: Ordinary People, Extraordinary Products",
-        "url": "https://www.svpg.com/books/empowered-ordinary-people-extraordinary-products/",
-        "source": "Silicon Valley Product Group",
-        "type": "Book",
-        "year": "2020",
-        "why": "Useful for cross-functional product-engineering leadership, team empowerment, and product strategy alignment.",
-        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
-      },
-      {
         "id": "working-backwards",
         "group": "Strategy and Execution",
         "title": "Working Backwards",
@@ -335,42 +418,72 @@
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
       },
       {
-        "id": "high-output-management",
-        "group": "People Leadership and Feedback",
-        "title": "High Output Management",
-        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
-        "source": "Andrew S. Grove / Penguin Random House",
-        "type": "Book",
-        "year": "1983",
-        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
-      },
-      {
-        "id": "effective-executive",
-        "group": "People Leadership and Feedback",
-        "title": "The Effective Executive",
-        "url": "https://www.harperacademic.com/book/9780062678065/the-effective-executive",
-        "source": "Peter F. Drucker / Harper Business",
-        "type": "Book",
-        "year": "1967",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
-        "why": "Relevant here because the interview tests whether leaders focus scarce attention on the few decisions that change outcomes."
-      },
-      {
-        "id": "how-big-things-get-done",
+        "id": "crafting-engineering-strategy",
         "group": "Strategy and Execution",
-        "title": "How Big Things Get Done",
-        "url": "https://www.panmacmillan.com/authors/bent-flyvbjerg/how-big-things-get-done/9781035018956",
-        "source": "Bent Flyvbjerg and Dan Gardner / Pan Macmillan",
+        "title": "Crafting Engineering Strategy",
+        "url": "https://craftingengstrategy.com/",
+        "source": "Will Larson / O'Reilly",
         "type": "Book",
-        "year": "2023",
-        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs.",
-        "why": "Relevant here because execution stories become stronger when they explain forecasting, risk, sequencing, and stakeholder coordination."
+        "why": "Gives engineering leaders concrete patterns for diagnosis, policy, and operationalizing strategy beyond roadmap slogans.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "enterprise-architecture-as-strategy",
+        "group": "Strategy and Execution",
+        "title": "Enterprise Architecture as Strategy",
+        "url": "https://cisr.mit.edu/publication/enterprise-architecture-as-strategy",
+        "source": "MIT CISR",
+        "type": "Book",
+        "year": "2006",
+        "why": "Connects strategy execution to operating models, core process choices, and the technology foundation needed to make those choices real.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "finops-unit-economics",
+        "group": "Strategy and Execution",
+        "title": "Capability: Unit Economics",
+        "url": "https://www.finops.org/framework/capabilities/unit-economics/",
+        "source": "FinOps Foundation",
+        "type": "Framework capability",
+        "why": "Useful for profitability-pivot stories because it links cloud cost, architecture choices, and business value in decision reviews.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "sre-implementing-slos",
+        "group": "Technical Judgment and Architecture",
+        "title": "Implementing SLOs",
+        "url": "https://sre.google/workbook/implementing-slos/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2018",
+        "why": "Shows how reliability objectives and error budgets turn technical guardrails into explicit product and engineering trade-offs.",
+        "groupDescription": "Resources for architecture choices, reliability guardrails, platform leverage, and technical trade-offs."
+      },
+      {
+        "id": "dora-research-core-model",
+        "group": "Technical Judgment and Architecture",
+        "title": "DORA Research Program",
+        "url": "https://dora.dev/research/",
+        "source": "DORA / Google",
+        "type": "Research program",
+        "why": "Provides evidence-backed delivery capabilities and metrics that help interviewers test whether execution mechanisms improved outcomes.",
+        "groupDescription": "Resources for architecture choices, reliability guardrails, platform leverage, and technical trade-offs."
+      },
+      {
+        "id": "team-topologies",
+        "group": "Culture and Organizational Design",
+        "title": "Team Topologies",
+        "url": "https://teamtopologies.com/home",
+        "source": "Team Topologies",
+        "type": "Book and operating model",
+        "year": "2019",
+        "why": "Helps connect strategic priorities to team boundaries, platform leverage, cognitive load, and flow of value.",
+        "groupDescription": "Resources for operating models, team structures, and organizational mechanisms that make execution work."
       }
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

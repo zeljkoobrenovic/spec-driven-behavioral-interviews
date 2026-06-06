@@ -1,7 +1,7 @@
 {
   "id": "failure-accountability",
   "title": "Failure and Accountability",
-  "description": "Owning a major outage, migration failure, missed goal, or organizational mistake without blame shifting or performative accountability.",
+  "description": "Owning a major outage, migration failure, missed goal, or organizational mistake by explaining the miss, the consequences, and the system change without blame shifting.",
   "roleFocus": [
     "Senior Manager",
     "Director",
@@ -13,7 +13,7 @@
     "id": "failure-accountability",
     "name": "Failure and Accountability",
     "family": "Execution and Accountability",
-    "definition": "Takes responsibility for failure, communicates clearly, learns deeply, and changes the system that produced the failure.",
+    "definition": "Takes responsibility for failure, communicates clearly under pressure, learns deeply, and changes the operating mechanisms that allowed the failure to happen.",
     "whyItMatters": "Senior leaders are judged by how they behave when the organization misses, breaks trust, or causes **customer harm**."
   },
   "prompt": {
@@ -23,42 +23,44 @@
       "Tell me about a time a technical decision you owned created **customer impact**."
     ],
     "interviewerIntent": [
-      "Does the candidate take real ownership?",
-      "Can they communicate under pressure without hiding or blaming?",
-      "Did the failure lead to meaningful **system change**?"
+      "Does the candidate name specific personal ownership?",
+      "Can they communicate under pressure without hiding impact or shifting blame?",
+      "Did the failure lead to meaningful **system change** rather than only a retrospective?"
     ]
   },
   "scenario": {
-    "signatureExample": "A CTO leads a migration that causes customer-impacting instability.",
+    "signatureExample": "A CTO leads a platform migration that causes customer-impacting instability.",
     "context": [
-      "The migration was strategically necessary but under-tested.",
-      "Teams underestimated operational coupling and rollout complexity.",
-      "Customers and executives need clear communication during instability."
+      "The migration is strategically necessary but under-tested.",
+      "Teams underestimate operational coupling, customer segmentation, and rollout complexity.",
+      "Customers and executives need clear updates while instability is still unfolding."
     ],
     "constraints": [
-      "The incident is visible to customers.",
+      "The failure is visible to customers.",
       "The leader must support teams without hiding accountability.",
-      "The post-**incident response** must improve reliability, not only produce a report."
+      "The leader must disclose known impact and material risk before every technical detail is resolved.",
+      "The post-**incident** work must improve reliability, not only produce a report."
     ]
   },
   "storyAnatomy": {
-    "situation": "A platform migration caused customer-impacting instability after leadership underestimated operational risk.",
-    "task": "Stabilize the system, communicate transparently, and identify what leadership missed.",
+    "situation": "A platform migration caused customer-impacting instability after leadership treated strategic approval as enough evidence of readiness.",
+    "task": "Stabilize the system, communicate what is known, and identify what leadership missed.",
     "action": [
-      "Separated **incident command** from executive and customer communication.",
-      "Named what assumptions were wrong and what decision checkpoints were missing.",
-      "Paused rollout, created recovery criteria, and assigned owners for high-risk areas.",
+      "Kept **incident command** separate from executive and customer communication.",
+      "Named the wrong assumptions and missing decision checkpoints.",
+      "Shared known impact, uncertainty, customer actions, and next-update times before **root cause** was complete.",
+      "Paused rollout, set recovery criteria, and assigned owners for high-risk areas.",
       "Led a rigorous review focused on system conditions rather than blame."
     ],
     "result": [
-      "Customer communication became more predictable during the incident.",
+      "Customers and executives received predictable updates during the incident.",
       "The migration resumed only after readiness criteria were met.",
-      "Reliability and rollout controls improved over the following quarter."
+      "Readiness and rollout controls became standard for the next quarter's high-risk changes."
     ],
-    "reflection": "The personal miss was treating **executive alignment** as sufficient when operational readiness was not proven.",
+    "reflection": "The personal miss was treating **executive alignment** as readiness, even though operational proof was missing.",
     "systemChange": [
-      "Migration readiness review.",
-      "Progressive rollout policy.",
+      "Migration readiness review with evidence requirements.",
+      "Progressive rollout policy with stop conditions.",
       "Customer-impact incident communication protocol.",
       "**Post-incident** action tracking with executive visibility."
     ]
@@ -69,19 +71,19 @@
       "title": "Migration-Caused Customer Instability",
       "level": "CTO",
       "promptVariant": "Tell me about a major failure you were responsible for.",
-      "situation": "A platform migration created customer-impacting instability because readiness checks were too optimistic and operational coupling was underestimated.",
+      "situation": "A platform migration created customer-impacting instability because readiness checks were too optimistic and operational coupling was not proven in production-like conditions.",
       "strongAnswerSketch": [
-        "Name the personal miss: **executive alignment** was treated as readiness when operational proof was missing.",
-        "Separate **incident command** from executive and customer communication.",
-        "Pause rollout and define recovery criteria before continuing.",
+        "Name the personal miss: treating **executive alignment** as readiness when operational proof was missing.",
+        "Keep **incident command** separate from executive and customer communication.",
+        "Pause rollout, define recovery criteria, and assign owners before continuing.",
         "Introduce migration readiness reviews and progressive rollout controls."
       ],
       "whyItWorks": [
-        "Shows real accountability instead of vague ownership.",
-        "Covers response, communication, and systemic correction.",
-        "Makes the learning concrete through new controls."
+        "Shows specific accountability instead of vague ownership.",
+        "Connects response, communication, and systemic correction.",
+        "Turns learning into concrete controls."
       ],
-      "weakVersion": "The migration had unexpected issues, the team worked around the clock, and afterward we improved testing.",
+      "weakVersion": "The migration ran into unexpected issues, the team worked around the clock, and afterward we improved testing.",
       "followUpAngles": [
         "What did you personally miss?",
         "What did you tell customers before **root cause** was clear?",
@@ -94,16 +96,16 @@
       "title": "Missed Quarterly Delivery Goal",
       "level": "Director",
       "promptVariant": "Describe a time when your organization missed an important goal.",
-      "situation": "A cross-team initiative missed a quarter because dependency risk was known by managers but never escalated into planning decisions.",
+      "situation": "A cross-team initiative missed a quarter because dependency risk was known by managers but never converted into planning decisions.",
       "strongAnswerSketch": [
-        "Own the planning miss rather than blaming dependent teams.",
-        "Reconstruct where risk signals were visible and ignored.",
-        "Reset the plan with explicit dependency owners and decision dates.",
+        "Own the planning miss instead of blaming dependent teams.",
+        "Reconstruct where risk signals were visible, who saw them, and why they did not change the plan.",
+        "Reset the plan with explicit dependency owners, decision dates, and escalation thresholds.",
         "Introduce dependency health reviews during quarterly planning."
       ],
       "whyItWorks": [
         "Shows accountability for the system that produced the miss.",
-        "Identifies leadership mechanisms, not only execution gaps.",
+        "Identifies leadership mechanisms rather than only execution gaps.",
         "Demonstrates learning at director scope."
       ],
       "weakVersion": "A dependency team slipped and there was not much we could do, but we adjusted the timeline and communicated the delay.",
@@ -113,26 +115,82 @@
         "How did planning change next quarter?"
       ],
       "aiVisual": "assets/generated/example-stories/missed-quarterly-goal.jpg"
+    },
+    {
+      "id": "bulk-job-customer-corrections",
+      "title": "Bulk Job Created Customer Corrections",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time a technical decision you owned created **customer impact**.",
+      "situation": "A team-level data cleanup job was approved without a full dry run. The job corrected many stale records but also overwrote customer preferences for a small enterprise segment, creating support tickets and manual restoration work.",
+      "strongAnswerSketch": [
+        "Own the shortcut: accepting sampling-based validation because the quarter was tight.",
+        "Stop the job, preserve audit data, identify affected customers, and give Support a fact sheet before **root cause** was complete.",
+        "Reject the easy story that one engineer wrote a bad script; explain the missing approval gate and rollback rehearsal.",
+        "Add dry-run evidence, blast-radius limits, and named business approval for irreversible bulk changes."
+      ],
+      "whyItWorks": [
+        "Shows accountability at Senior Manager scope with real customer and team consequences.",
+        "Keeps both the partial benefit and residual cost visible.",
+        "Turns a local failure into concrete release controls."
+      ],
+      "weakVersion": "A script had an edge-case bug, we restored the data from backup, and I reminded the team to test bulk jobs more carefully.",
+      "followUpAngles": [
+        "Which shortcut did you personally approve?",
+        "How did you explain what worked, what failed, and what still cost customers?",
+        "What changed before the next irreversible job?"
+      ],
+      "aiVisual": "assets/generated/example-stories/bulk-job-customer-corrections.jpg"
+    },
+    {
+      "id": "cost-savings-reliability-miss",
+      "title": "Cost Savings Caused Reliability Miss",
+      "level": "VP Engineering",
+      "promptVariant": "Describe a time when your organization missed an important goal.",
+      "situation": "A VP Engineering committed to an infrastructure cost-reduction target while also promising no reliability regression. The consolidation saved money but increased latency and support escalations for two enterprise customer segments.",
+      "strongAnswerSketch": [
+        "Name the personal miss: letting a financial target outrank customer-risk segmentation.",
+        "Tell executives and customer-facing teams plainly that the program produced savings with unacceptable reliability cost.",
+        "Stop blanket consolidation, restore capacity for affected enterprise journeys, and accept a smaller savings number.",
+        "Create a portfolio review that ties cost work to error-budget burn, customer tier, and explicit rollback criteria."
+      ],
+      "whyItWorks": [
+        "Shows a mixed outcome rather than a polished turnaround.",
+        "Names the rejected alternative: keep chasing the savings target and ask teams to tune around customer pain.",
+        "Connects recovery to operating governance at VP scope."
+      ],
+      "weakVersion": "Finance pushed for savings, the teams optimized aggressively, and once customers complained we tuned the system and adjusted the plan.",
+      "followUpAngles": [
+        "What did you trade off incorrectly?",
+        "Which outcome got worse even though another metric improved?",
+        "How did the next cost program change?"
+      ],
+      "aiVisual": "assets/generated/example-stories/cost-savings-reliability-miss.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate owns the failure specifically, describes actions under pressure, measures recovery, and changes the operating system.",
+    "summary": "The candidate owns a specific leadership miss, describes actions under pressure, measures recovery, and changes the operating system.",
     "moves": [
-      "Names their own miss early.",
-      "Explains what happened without drowning in technical detail.",
-      "Separates immediate response from long-term correction.",
-      "Shows customer, team, and **executive communication**.",
+      "Names the specific leadership miss early.",
+      "Explains what failed and who was affected without drowning in technical detail.",
+      "Separates immediate response, stakeholder communication, and long-term correction.",
+      "Shows what was communicated to customers, teams, and **executives**.",
+      "Shares known impact, uncertainty, next-update timing, and escalation paths before the explanation is complete.",
+      "Acknowledges residual cost or partial recovery instead of polishing the story.",
+      "Explains whether the right fix is a control, a decision habit, or a judgment change.",
       "Connects reflection to durable controls."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate either chooses a harmless failure or uses the story to blame teams, executives, vendors, or unclear requirements.",
+    "summary": "The candidate chooses a harmless failure or tells a story that shifts blame to teams, executives, vendors, or unclear requirements.",
     "redFlags": [
       "The failure is too small for the level being interviewed.",
-      "The candidate says they owned it but mostly describes other people's mistakes.",
+      "The candidate says they owned it but mainly describes other people's mistakes.",
       "There is no customer, business, or team consequence.",
-      "The review produced lessons but no changed controls.",
+      "The review produces lessons but no changed controls.",
+      "They wait for perfect root cause before disclosing known impact or escalating material risk.",
+      "The story turns into a clean win with no rejected alternative, residual cost, or visible trade-off.",
+      "The candidate adds a checklist or review without explaining which failure mode it prevents.",
       "The candidate cannot explain what they would do differently."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
@@ -144,7 +202,17 @@
       "tests": [
         "accountability",
         "reflection"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I approved a migration go/no-go gate that used executive sign-off instead of production-readiness evidence; that was my decision, not just a team miss.",
+          "I kept a dependency risk in manager conversations instead of forcing a planning decision, so the organization had no real trade-off until it was too late."
+        ],
+        "weak": [
+          "I probably should have pushed the team harder to test more before launch.",
+          "A dependency slipped in a way we did not expect, so I learned to communicate more often."
+        ]
+      }
     },
     {
       "id": "communication",
@@ -152,7 +220,17 @@
       "tests": [
         "stakeholder alignment",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I told customers the observed impact, available workaround, actions underway, what we still did not know, and the next update time; I did not name a suspected team before evidence existed.",
+          "With executives, I separated facts, quarter risk, customer risk, and option costs; with teams, I made clear that no blame would be assigned before the review."
+        ],
+        "weak": [
+          "I waited until root cause was clear so we did not confuse customers with incomplete information.",
+          "I told executives the team had it under control and gave updates whenever there was new information."
+        ]
+      }
     },
     {
       "id": "recovery",
@@ -160,7 +238,17 @@
       "tests": [
         "measurement",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Recovery meant affected accounts were restored, support backlog cleared, error-budget burn was back under threshold, and customer commitments were revalidated with named owners.",
+          "Prevention meant the next two high-risk launches used dry runs, stop conditions, rollback owners, and dependency risks escalated before commitment."
+        ],
+        "weak": [
+          "The system looked stable and we did not get new complaints, so we considered it recovered.",
+          "We added tests and wrote a postmortem, but I did not track whether the behavior changed afterward."
+        ]
+      }
     },
     {
       "id": "differently",
@@ -168,7 +256,17 @@
       "tests": [
         "learning",
         "reflection"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I would force an earlier go/no-go with Support, Sales, and risk owners instead of treating executive alignment as readiness.",
+          "I would name the residual customer and team cost in the planning memo instead of letting manual cleanup make the outcome look cleaner than it was."
+        ],
+        "weak": [
+          "I would communicate more and make sure everyone knew the risks.",
+          "Mostly the same; the failure came from an edge case and the team recovered well."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -176,15 +274,15 @@
       {
         "id": "ownership",
         "name": "Ownership",
-        "strong": "Names personal misses and consequences without blame shifting.",
-        "weak": "Describes accountability abstractly while blaming others.",
+        "strong": "Names the personal miss, consequences, and residual cost without blame shifting.",
+        "weak": "Describes accountability abstractly while blaming others or hiding partial outcomes.",
         "strongAiVisual": "assets/generated/signals/ownership-strong.jpg",
         "weakAiVisual": "assets/generated/signals/ownership-weak.jpg"
       },
       {
         "id": "pressure-communication",
         "name": "Pressure Communication",
-        "strong": "Communicates clearly to customers, executives, and teams during uncertainty.",
+        "strong": "Gives customers, executives, and teams clear facts, unknowns, options, and next-update timing.",
         "weak": "Waits for perfect information or hides behind technical detail.",
         "strongAiVisual": "assets/generated/signals/pressure-communication-strong.jpg",
         "weakAiVisual": "assets/generated/signals/pressure-communication-weak.jpg"
@@ -192,8 +290,8 @@
       {
         "id": "systemic-learning",
         "name": "Systemic Learning",
-        "strong": "Changes controls, reviews, ownership, or rollout mechanisms.",
-        "weak": "Stops at individual lessons learned.",
+        "strong": "Introduces proportionate controls, decision habits, ownership, or rollout mechanisms.",
+        "weak": "Stops at individual lessons learned or adds generic process.",
         "strongAiVisual": "assets/generated/signals/systemic-learning-strong.jpg",
         "weakAiVisual": "assets/generated/signals/systemic-learning-weak.jpg"
       }
@@ -201,15 +299,15 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Owns team-level failure and improves execution controls."
+        "expected": "Owns a team-level failure, names their approved shortcut or missed signal, and improves release or execution controls."
       },
       {
         "level": "Director",
-        "expected": "Owns cross-team failure and changes coordination, readiness, or accountability mechanisms."
+        "expected": "Owns cross-team failure and changes dependency, readiness, or escalation mechanisms."
       },
       {
         "level": "VP Engineering",
-        "expected": "Owns organizational failure in front of executives and customers while changing operating systems."
+        "expected": "Owns organizational failure in front of executives and customers, makes trade-offs visible, and changes operating governance."
       },
       {
         "level": "CTO",
@@ -250,11 +348,11 @@
       },
       {
         "field": "action",
-        "label": "What did you do to respond, communicate, and learn?"
+        "label": "What did you do to contain the issue, communicate, and learn?"
       },
       {
         "field": "result",
-        "label": "What recovered or improved?"
+        "label": "What recovered, improved, or remained costly?"
       },
       {
         "field": "reflection",
@@ -262,14 +360,14 @@
       },
       {
         "field": "systemChange",
-        "label": "What controls or mechanisms changed afterward?"
+        "label": "What control, decision habit, or mechanism changed afterward?"
       }
     ]
   },
   "relatedScenarios": [
-    "A quarterly goal is missed because dependencies were poorly managed.",
-    "A security incident exposes weak ownership and escalation paths.",
-    "A reorganization slows delivery and damages team trust."
+    "A quarterly goal is missed because dependency risk never reaches a planning decision.",
+    "A security incident exposes unclear ownership and weak escalation paths.",
+    "A reorganization slows delivery after leaders understate team-impact risk."
   ],
   "toProbeFurther": {
     "links": [
@@ -280,8 +378,40 @@
         "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
         "source": "GOV.UK",
         "type": "Guide",
+        "year": "2026",
         "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
         "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Interviewing and Calibration",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
+        "id": "google-sre-managing-incidents",
+        "group": "Incident Response and Customer Communication",
+        "title": "Managing Incidents",
+        "url": "https://sre.google/sre-book/managing-incidents/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows why incident command, communication, and live state tracking need explicit roles before pressure rises.",
+        "groupDescription": "Resources for coordinating response, communicating impact, and keeping customer-visible failures under control."
+      },
+      {
+        "id": "pagerduty-external-communication-guidelines",
+        "group": "Incident Response and Customer Communication",
+        "title": "External Communication Guidelines",
+        "url": "https://response.pagerduty.com/during/external_communication_guidelines/",
+        "source": "PagerDuty Incident Response Documentation",
+        "type": "Guide",
+        "why": "Gives concrete timing, scope, update cadence, and recovery guidance for communicating with customers before every detail is known.",
+        "groupDescription": "Resources for coordinating response, communicating impact, and keeping customer-visible failures under control."
       },
       {
         "id": "sre-postmortem-culture",
@@ -306,60 +436,74 @@
         "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
       },
       {
-        "id": "google-effective-teams",
-        "group": "Culture and Organizational Design",
-        "title": "The Five Dynamics of an Effective Team",
-        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
-        "source": "Google",
+        "id": "aws-correction-of-error",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Why You Should Develop a Correction of Error (COE)",
+        "url": "https://aws.amazon.com/blogs/mt/why-you-should-develop-a-correction-of-error-coe/",
+        "source": "AWS Cloud Operations Blog",
         "type": "Article",
-        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
-        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+        "year": "2022",
+        "why": "Gives a concrete post-incident mechanism for impact analysis, corrective actions, and blame-free disclosure after operational failure.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
       },
       {
-        "id": "amazon-leadership-principles",
-        "group": "Interviewing and Calibration",
-        "title": "Amazon Leadership Principles",
-        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
-        "source": "Amazon",
-        "type": "Framework",
-        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
-        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+        "id": "pagerduty-effective-postmortems",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Effective Postmortems",
+        "url": "https://response.pagerduty.com/after/effective_post_mortems/",
+        "source": "PagerDuty Incident Response Documentation",
+        "type": "Guide",
+        "why": "Calibrates what a useful postmortem includes: accurate timelines, honest impact, separated fixes, and action items that improve the system.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
       },
       {
-        "id": "manager-tools-basics",
-        "group": "People Leadership and Feedback",
-        "title": "Manager Tools Basics",
-        "url": "https://www.manager-tools.com/manager-tools-basics",
-        "source": "Manager Tools",
-        "type": "Podcast / Guide",
-        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+        "id": "human-error-models-management",
+        "group": "Systems Safety and Accountability",
+        "title": "Human Error: Models and Management",
+        "url": "https://www.bmj.com/content/320/7237/768",
+        "source": "BMJ",
+        "type": "Article",
+        "year": "2000",
+        "groupDescription": "Resources for systems-safety thinking, just culture, scapegoating, and meaningful accountability.",
+        "why": "Classic systems-safety article for distinguishing a person-blame explanation from a **system approach** to failure prevention."
       },
       {
-        "id": "dare-to-lead",
-        "group": "People Leadership and Feedback",
-        "title": "Dare to Lead",
-        "url": "https://brenebrown.com/book/dare-to-lead/",
-        "source": "Brene Brown",
+        "id": "how-complex-systems-fail",
+        "group": "Systems Safety and Accountability",
+        "title": "How Complex Systems Fail",
+        "url": "https://www.adaptivecapacitylabs.com/HowComplexSystemsFail.pdf",
+        "source": "Adaptive Capacity Labs",
+        "type": "Paper",
+        "year": "1998",
+        "groupDescription": "Resources for systems-safety thinking, just culture, scapegoating, and meaningful accountability.",
+        "why": "Helps interviewers test whether the candidate understands multiple contributors, production pressure, hindsight bias, and latent failure modes."
+      },
+      {
+        "id": "restorative-just-culture",
+        "group": "Systems Safety and Accountability",
+        "title": "Restorative Just Culture: From Disciplinary Action to Meaningful Accountability",
+        "url": "https://www.routledge.com/Restorative-Just-Culture-From-Disciplinary-Action-to-Meaningful-Accountability-Fourth-Edition/Dekker/p/book/9781032868233",
+        "source": "Routledge / CRC Press",
         "type": "Book",
-        "year": "2018",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
-        "why": "Relevant here because accountability stories should show courage, ownership, and learning without turning into defensiveness."
+        "year": "2025",
+        "why": "Helps interviewers distinguish accountability that restores trust and learning from punitive blame after an incident.",
+        "groupDescription": "Resources for systems-safety thinking, just culture, scapegoating, and meaningful accountability."
       },
       {
         "id": "scapegoats-at-work",
-        "group": "Failure, Incidents, and Learning",
-        "title": "Scapegoats at Work",
-        "url": "https://grounded-architecture.io/scapegoating",
-        "source": "Grounded Architecture",
-        "type": "Article",
-        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops.",
+        "group": "Systems Safety and Accountability",
+        "title": "Scapegoats at Work: Taking the Bull's-Eye Off Your Back",
+        "url": "https://www.bloomsbury.com/us/scapegoats-at-work-9780313072086/",
+        "source": "Praeger / Bloomsbury Publishing",
+        "type": "Book",
+        "year": "2003",
+        "groupDescription": "Resources for systems-safety thinking, just culture, scapegoating, and meaningful accountability.",
         "why": "Relevant here because the interviewer needs to distinguish real accountability from blame shifting or scapegoating."
       }
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

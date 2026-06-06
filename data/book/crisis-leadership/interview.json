@@ -1,7 +1,7 @@
 {
   "id": "crisis-leadership",
   "title": "Crisis Leadership",
-  "description": "Leading through outages, security incidents, reputational risk, layoffs, or customer-trust events with calm execution and clear communication.",
+  "description": "Leading through outages, security incidents, reputational risk, layoffs, or customer-trust events with calm execution, clear communication, and learning.",
   "roleFocus": [
     "Senior Manager",
     "Director",
@@ -17,14 +17,15 @@
     "whyItMatters": "Senior leaders are often most visible when systems fail, trust is strained, or the organization is under pressure."
   },
   "prompt": {
-    "primary": "Tell me about the most serious production incident you led through.",
+    "primary": "Tell me about the most serious operational crisis or production incident you led through.",
     "variants": [
-      "Describe a time when you had to communicate bad technical news to customers or executives.",
+      "Describe a time when you had to communicate bad technical or business-impact news to customers or executives.",
       "Tell me about a time you led through a security, reputational, or organizational crisis."
     ],
     "interviewerIntent": [
       "Can the candidate stay calm and structured?",
-      "Do they separate **incident command**, stakeholder communication, and recovery?",
+      "Do they separate **incident command**, stakeholder communication, and recovery planning?",
+      "Can they make containment or escalation decisions before every fact is known?",
       "Does the crisis lead to rigorous learning rather than blame?"
     ]
   },
@@ -38,27 +39,30 @@
     "constraints": [
       "Communication must be frequent but not speculative.",
       "Teams need a clear **command structure**.",
+      "Some decisions may need to be made before root cause, legal exposure, or people impact is fully understood.",
       "The review must be blameless but rigorous."
     ]
   },
   "storyAnatomy": {
     "situation": "A major customer-facing outage created pressure from customers, executives, and internal teams.",
-    "task": "Restore service, communicate clearly, and make sure the organization learned the right lessons.",
+    "task": "Restore service, communicate clearly, and change the mechanisms that allowed the crisis to escalate.",
     "action": [
       "Established an incident commander and kept executives out of the troubleshooting path.",
-      "Created a separate communication channel for customers and executives.",
+      "Created a separate update channel for customers and executives.",
+      "Named escalation thresholds and containment options while root cause was still uncertain.",
       "Tracked decisions, hypotheses, and recovery criteria.",
       "Led a **post-incident** review that focused on architecture, ownership, monitoring, and escalation."
     ],
     "result": [
-      "The team restored service with less coordination noise.",
+      "The team restored service with fewer interruptions to responders.",
       "Stakeholders received predictable updates.",
       "Follow-up work reduced recurrence risk and improved detection."
     ],
-    "reflection": "The lesson was that calm crisis leadership is mostly about reducing ambiguity and protecting attention.",
+    "reflection": "The lesson was that calm crisis leadership is mostly about reducing ambiguity and protecting responder attention.",
     "systemChange": [
       "Incident command model.",
-      "Executive and customer update template.",
+      "Executive and customer update cadence and template.",
+      "Escalation and containment decision thresholds.",
       "**Post-incident** review action tracker.",
       "Alerting and ownership improvements."
     ]
@@ -68,11 +72,11 @@
       "id": "major-customer-outage",
       "title": "Major Customer Outage",
       "level": "VP Engineering",
-      "promptVariant": "Tell me about the most serious production incident you led through.",
+      "promptVariant": "Tell me about the most serious operational crisis or production incident you led through.",
       "situation": "A critical service outage affected top customers while engineers were still unsure whether the trigger was deployment, dependency saturation, or data corruption.",
       "strongAnswerSketch": [
-        "Assign **incident command** and keep troubleshooting channels focused.",
-        "Create a separate executive/customer update rhythm with facts, unknowns, and next update time.",
+        "Assign an **incident commander** and keep troubleshooting channels focused.",
+        "Create a separate executive and customer update rhythm with facts, unknowns, and the next update time.",
         "Make **recovery trade-offs** explicit, including rollback risk and partial restoration.",
         "Drive **post-incident** ownership, alerting, and architecture follow-ups."
       ],
@@ -83,22 +87,47 @@
       ],
       "weakVersion": "I joined the incident bridge, helped debug, and sent updates whenever we learned something new.",
       "followUpAngles": [
-        "Who was incident commander?",
+        "Who was the incident commander?",
         "What did you communicate before **root cause** was known?",
         "Which follow-up action mattered most?"
       ],
       "aiVisual": "assets/generated/example-stories/major-customer-outage.jpg"
     },
     {
+      "id": "feature-shutdown-data-risk",
+      "title": "Feature Shutdown During Data-Risk Incident",
+      "level": "Senior Manager",
+      "promptVariant": "Describe a time when you had to communicate bad technical or business-impact news to customers or executives.",
+      "situation": "A newly launched workflow began duplicating billing events for a small but growing customer segment. Telemetry was noisy, Finance needed the daily close protected, Product wanted the launch to stay live, and **root cause** was not confirmed.",
+      "strongAnswerSketch": [
+        "Call the incident, name a single incident commander, and personally own customer-facing and business-impact communication.",
+        "Disable the workflow for the affected segment after comparing duplicate-charge risk against launch availability.",
+        "Escalate the containment decision to Product, Support, and Finance with facts, unknowns, next update time, and remediation owner.",
+        "Add billing anomaly monitors, rollback criteria, and launch go/no-go ownership after recovery."
+      ],
+      "whyItWorks": [
+        "Shows **decisive containment** before perfect root cause.",
+        "Makes the business trade-off explicit instead of hiding behind technical uncertainty.",
+        "Leaves behind release and monitoring mechanisms at Senior Manager scope."
+      ],
+      "weakVersion": "I kept the team focused on debugging, asked Product whether to turn off the feature, and waited until we understood root cause before involving customer-facing teams.",
+      "followUpAngles": [
+        "What threshold made you shut down the workflow?",
+        "Who needed approval versus immediate information?",
+        "What residual customer cost remained after recovery?"
+      ],
+      "aiVisual": "assets/generated/example-stories/feature-shutdown-data-risk.jpg"
+    },
+    {
       "id": "security-token-exposure",
       "title": "Security Token Exposure",
       "level": "CTO",
       "promptVariant": "Tell me about a time you led through a security or customer-trust crisis.",
-      "situation": "An internal service exposed sensitive tokens in logs, and the team had to rotate credentials, assess **customer impact**, and decide notification scope.",
+      "situation": "An internal service exposed sensitive tokens in logs. The team had to rotate credentials, preserve evidence, assess **customer impact**, and decide notification scope.",
       "strongAnswerSketch": [
         "Set up incident roles across Security, Engineering, Legal, Support, and Communications.",
-        "Prioritize containment and forensic evidence before broad speculation.",
-        "Communicate executive decisions around customer notification and risk posture.",
+        "Prioritize containment and forensic evidence before broad communication.",
+        "Frame executive decisions around customer notification, evidence quality, and risk posture.",
         "Change logging standards, secret scanning, and production access reviews."
       ],
       "whyItWorks": [
@@ -113,37 +142,75 @@
         "Which controls changed permanently?"
       ],
       "aiVisual": "assets/generated/example-stories/security-token-exposure.jpg"
+    },
+    {
+      "id": "post-layoff-trust-reset",
+      "title": "Post-Layoff Trust Reset",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you led through a security, reputational, or organizational crisis.",
+      "situation": "A cost reset eliminated one product area and merged three engineering teams. Managers had partial information, surviving teams worried about workload and fairness, and an important customer migration still depended on people whose roles were changing.",
+      "strongAnswerSketch": [
+        "Separate what was already decided from what was still open, and prevent managers from improvising inconsistent explanations.",
+        "Sequence communication through manager briefings, affected-team conversations with People partners, and a same-day forum for the remaining organization.",
+        "Reject the tempting message that the roadmap was unchanged; pause lower-priority work and name continuity owners for customer-critical systems.",
+        "Track trust and execution recovery through manager check-ins, workload triage, attrition risk, and a four-week decision log for unresolved team-design decisions."
+      ],
+      "whyItWorks": [
+        "Expands crisis leadership beyond operational incidents into **people trust** and organizational continuity.",
+        "Shows honesty and care without pretending the decision was harmless.",
+        "Creates measurable operating follow-through after a painful decision."
+      ],
+      "weakVersion": "I communicated the reorg plan, told managers to support their teams, and pushed everyone to move forward quickly so the organization would not dwell on the change.",
+      "followUpAngles": [
+        "What did you refuse to say because it would have been falsely reassuring?",
+        "Which work did you stop or delay after the layoff?",
+        "How did you know trust and execution were recovering?"
+      ],
+      "aiVisual": "assets/generated/example-stories/post-layoff-trust-reset.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows operational discipline, communication clarity, accountability, and learning under pressure.",
+    "summary": "The candidate shows operational discipline, communication clarity, decisive judgment, accountability, and learning under pressure.",
     "moves": [
-      "Names the stakes and uncertainty.",
-      "Explains the command and communication structure.",
-      "Shows how decisions were made during incomplete information.",
+      "Names the stakes and uncertainty, including customer, trust, legal, or people impact.",
+      "Explains the command and communication structure, or the decision and communication sequence for a people crisis.",
+      "Shows how decisions were made during incomplete information, including escalation thresholds.",
+      "Makes containment, recovery, or notification trade-offs explicit.",
       "Avoids blame while still being rigorous.",
-      "Connects the crisis to lasting operational improvements."
+      "Connects the crisis to lasting operating, communication, or governance improvements."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate describes technical firefighting but misses leadership structure, communication, or learning.",
+    "summary": "The candidate describes firefighting or status broadcasting but misses leadership structure, hard calls, communication discipline, or learning.",
     "redFlags": [
       "Centers the story on heroics rather than coordination.",
       "Cannot explain who made decisions during the crisis.",
+      "Waits for certainty when delay increases customer, security, or people harm.",
       "Provides vague or defensive stakeholder communication.",
-      "The postmortem has no concrete follow-through."
+      "Treats a people crisis like a one-way status update.",
+      "The review has no concrete follow-through."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
       "id": "command",
-      "question": "Who was in command, and how were decisions made?",
+      "question": "Who was in command, and how were decisions made or escalated?",
       "tests": [
         "execution",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I named an incident commander for the technical bridge, kept executives in a separate update channel, and made myself accountable for customer-impact decisions that crossed team boundaries.",
+          "For the reorg, there was no incident bridge; I owned the communication sequence, manager briefing quality, and decision log while People handled individual employment conversations."
+        ],
+        "weak": [
+          "Everyone who understood the system joined the bridge, and decisions happened naturally as we found more information.",
+          "I let each manager decide how to explain the change because they knew their teams best."
+        ]
+      }
     },
     {
       "id": "updates",
@@ -151,23 +218,71 @@
       "tests": [
         "stakeholder alignment",
         "judgment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I sent facts, observed impact, actions underway, known unknowns, and the next update time; I explicitly said we did not yet know root cause and avoided naming a suspected team.",
+          "For the layoff, I separated what was decided, what remained open, what support existed, and when people would hear the next concrete update."
+        ],
+        "weak": [
+          "I waited until we understood root cause because I did not want to alarm customers with incomplete information.",
+          "I told people leadership was still working through details and asked them to stay focused."
+        ]
+      }
     },
     {
       "id": "tradeoffs",
-      "question": "What **trade-offs** did you make during recovery?",
+      "question": "What **trade-offs** did you make during containment or recovery?",
       "tests": [
         "trade-off reasoning",
         "risk judgment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I took the feature offline for the affected segment because duplicate charges were worse than temporary unavailability, and I named refund ownership before the fix was complete.",
+          "I accepted a launch delay after the layoff because keeping the old roadmap would have overloaded the remaining on-call owners and increased customer migration risk."
+        ],
+        "weak": [
+          "We balanced customer impact and delivery pressure and tried to choose the safest path.",
+          "I asked teams to do their best to keep roadmap commitments while they adjusted to the new structure."
+        ]
+      }
+    },
+    {
+      "id": "escalation",
+      "question": "When did you escalate or act before you had complete information?",
+      "tests": [
+        "risk judgment",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I escalated to Legal and Security once token exposure crossed the customer-notification threshold, with a recommendation and the evidence we still needed.",
+          "I acted within my delegated authority to disable the risky workflow, then informed Product, Support, and Finance with the reason, expected duration, and reversal criteria."
+        ],
+        "weak": [
+          "I escalated because the situation felt serious and I wanted executives to be aware.",
+          "I waited for the executive team to decide because the data was incomplete and I did not want to overstep."
+        ]
+      }
     },
     {
       "id": "learning",
-      "question": "What changed after the incident?",
+      "question": "What changed after the crisis?",
       "tests": [
         "learning",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We changed rollback criteria, alert ownership, and customer-update templates, then checked whether the next two incidents used the new model without executive noise.",
+          "After the reorg, we changed workload review cadence, manager briefing templates, and decision ownership for team design changes; I tracked attrition risk and blocked work for six weeks."
+        ],
+        "weak": [
+          "We wrote a postmortem, documented the root cause, and reminded teams to communicate earlier next time.",
+          "Managers learned that they needed to communicate more during difficult changes."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -175,23 +290,31 @@
       {
         "id": "calm-structure",
         "name": "Calm Structure",
-        "strong": "Creates roles, decision paths, and update rhythms under pressure.",
-        "weak": "Lets the crisis run through ad hoc activity.",
+        "strong": "Creates roles, decision paths, sequencing, and update rhythms under pressure.",
+        "weak": "Lets the crisis run through ad hoc activity or inconsistent manager messages.",
         "strongAiVisual": "assets/generated/signals/calm-structure-strong.jpg",
         "weakAiVisual": "assets/generated/signals/calm-structure-weak.jpg"
       },
       {
         "id": "communication-clarity",
         "name": "Communication Clarity",
-        "strong": "Communicates uncertainty honestly without speculation.",
-        "weak": "Hides uncertainty or floods stakeholders with noise.",
+        "strong": "Communicates uncertainty, next steps, and decision boundaries honestly without speculation.",
+        "weak": "Hides uncertainty, floods stakeholders with noise, or uses false reassurance during a people crisis.",
         "strongAiVisual": "assets/generated/signals/communication-clarity-strong.jpg",
         "weakAiVisual": "assets/generated/signals/communication-clarity-weak.jpg"
       },
       {
+        "id": "decisive-escalation",
+        "name": "Decisive Escalation",
+        "strong": "Acts or escalates when delay increases harm, naming thresholds, the decision owner, and reversibility.",
+        "weak": "Waits for complete certainty or escalates vaguely without a recommendation.",
+        "strongAiVisual": "assets/generated/signals/decisive-escalation-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/decisive-escalation-weak.jpg"
+      },
+      {
         "id": "operational-learning",
         "name": "Operational Learning",
-        "strong": "Turns crisis review into ownership, architecture, or monitoring changes.",
+        "strong": "Turns crisis review into ownership, architecture, monitoring, or communication changes.",
         "weak": "Treats the review as a report-writing exercise.",
         "strongAiVisual": "assets/generated/signals/operational-learning-strong.jpg",
         "weakAiVisual": "assets/generated/signals/operational-learning-weak.jpg"
@@ -200,19 +323,19 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Leads team-level incidents with clear roles and follow-through."
+        "expected": "Owns the room for team-level incidents or trust events: roles, reversible containment calls within scope, impact updates, and follow-through."
       },
       {
         "level": "Director",
-        "expected": "Coordinates multi-team crises and communicates effectively across functions."
+        "expected": "Owns cross-team crisis coordination: decision rights, manager or customer messaging, recovery trade-offs, and durable mechanisms across teams."
       },
       {
         "level": "VP Engineering",
-        "expected": "Manages organizational response, **executive communication**, customer impact, and systemic correction."
+        "expected": "Owns organizational response, **executive communication**, customer impact, notification or containment trade-offs, and systemic correction."
       },
       {
         "level": "CTO",
-        "expected": "Owns company-level technology trust during crisis and changes risk governance afterward."
+        "expected": "Owns company-level technology trust, external risk posture, governance, and escalation paths after the crisis."
       }
     ]
   },
@@ -228,12 +351,14 @@
     "signalMap": [
       "calm-structure",
       "communication-clarity",
+      "decisive-escalation",
       "operational-learning"
     ],
     "followUpTree": [
       "command",
       "updates",
       "tradeoffs",
+      "escalation",
       "learning"
     ]
   },
@@ -241,7 +366,7 @@
     "prompts": [
       {
         "field": "situation",
-        "label": "What crisis occurred, and what was at stake?"
+        "label": "What crisis happened, and what was at stake?"
       },
       {
         "field": "task",
@@ -249,7 +374,7 @@
       },
       {
         "field": "action",
-        "label": "How did you structure decisions, recovery, and updates?"
+        "label": "How did you structure decisions, escalation, recovery, and updates?"
       },
       {
         "field": "result",
@@ -261,13 +386,14 @@
       },
       {
         "field": "systemChange",
-        "label": "What operational mechanism changed?"
+        "label": "What operational, communication, or governance mechanism changed?"
       }
     ]
   },
   "relatedScenarios": [
     "Leading through a security incident.",
     "Handling customer trust damage after a data issue.",
+    "Taking a product capability offline before root cause is known.",
     "Communicating layoffs or a major reorganization with clarity and care."
   ],
   "toProbeFurther": {
@@ -336,15 +462,68 @@
         "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
       },
       {
-        "id": "turn-ship-around",
-        "group": "People Leadership and Feedback",
-        "title": "Turn the Ship Around!",
-        "url": "https://www.penguinrandomhouse.com/books/314163/turn-the-ship-around-by-l-david-marquet/9781101623695",
-        "source": "L. David Marquet / Penguin Random House",
+        "id": "howie-post-incident-investigations",
+        "group": "Failure, Incidents, and Learning",
+        "title": "The Howie Guide to Post-Incident Investigations",
+        "url": "https://post-incident.pagerduty.com/",
+        "source": "PagerDuty / Jeli",
+        "type": "Guide",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops.",
+        "why": "Practical human-factors guide for learning reviews, responder interviews, incident narratives, and follow-through after high-pressure events."
+      },
+      {
+        "id": "nist-sp-800-61r3",
+        "group": "Security, Trust, and Disclosure",
+        "groupDescription": "Resources for security incidents, disclosure decisions, legal escalation, and customer-trust communication.",
+        "title": "SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management",
+        "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "source": "NIST CSRC",
+        "type": "Special publication",
+        "year": "2025",
+        "why": "Current NIST guidance for connecting incident response to risk management, preparation, recovery, and information sharing."
+      },
+      {
+        "id": "cisa-incident-vulnerability-playbooks",
+        "group": "Security, Trust, and Disclosure",
+        "groupDescription": "Resources for security incidents, disclosure decisions, legal escalation, and customer-trust communication.",
+        "title": "Federal Government Cybersecurity Incident and Vulnerability Response Playbooks",
+        "url": "https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks",
+        "source": "CISA",
+        "type": "Playbook",
+        "why": "Concrete operating procedures for coordinating cybersecurity incident response, vulnerability response, containment, escalation, and remediation."
+      },
+      {
+        "id": "sec-cybersecurity-disclosure",
+        "group": "Security, Trust, and Disclosure",
+        "groupDescription": "Resources for security incidents, disclosure decisions, legal escalation, and customer-trust communication.",
+        "title": "Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure",
+        "url": "https://www.sec.gov/resources-small-businesses/small-business-compliance-guides/cybersecurity-risk-management-strategy-governance-incident-disclosure",
+        "source": "U.S. Securities and Exchange Commission",
+        "type": "Compliance guide",
+        "year": "2023",
+        "why": "Useful for executive-level security crisis stories where materiality, legal timing, board oversight, and external disclosure shape the response."
+      },
+      {
+        "id": "hbs-layoffs-that-dont-break-company",
+        "group": "People and Organizational Crisis",
+        "groupDescription": "Resources for layoffs, reorganizations, trust repair, and continuity after painful people decisions.",
+        "title": "Layoffs That Don't Break Your Company: Better Approaches to Workforce Transition",
+        "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=54502",
+        "source": "Harvard Business School / Harvard Business Review",
+        "type": "Article",
+        "year": "2018",
+        "why": "Grounds the layoff example in fairness, alternatives, long-term trust cost, and execution continuity."
+      },
+      {
+        "id": "hard-thing-about-hard-things",
+        "group": "People and Organizational Crisis",
+        "groupDescription": "Resources for layoffs, reorganizations, trust repair, and continuity after painful people decisions.",
+        "title": "The Hard Thing About Hard Things",
+        "url": "https://a16z.com/books/the-hard-thing-about-hard-things/",
+        "source": "Ben Horowitz / Andreessen Horowitz",
         "type": "Book",
-        "year": "2013",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
-        "why": "Relevant here because crisis leadership depends on creating ownership and clarity close to the work instead of centralizing every decision."
+        "year": "2014",
+        "why": "Operator perspective on leading through no-clean-answer decisions, company pressure, leadership psychology, and hard communication."
       },
       {
         "id": "leadership-is-language",
@@ -360,7 +539,7 @@
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

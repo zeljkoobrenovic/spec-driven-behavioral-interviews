@@ -1,7 +1,7 @@
 {
   "id": "interview-method",
   "title": "The Senior Behavioral Interview Method",
-  "description": "A reusable method for structuring senior technology leadership stories with ownership, trade-offs, **measurable outcomes**, reflection, and system change.",
+  "description": "A reusable method for structuring senior technology leadership stories with clear ownership, hard trade-offs, **measurable outcomes**, reflection, and system change.",
   "roleFocus": [
     "Senior Manager",
     "Director",
@@ -13,63 +13,64 @@
     "id": "structured-storytelling",
     "name": "Structured Leadership Storytelling",
     "family": "Interview Method",
-    "definition": "Turns real leadership situations into concise, **evidence-based** stories that reveal judgment and operating impact.",
-    "whyItMatters": "Senior interviews test how a leader thinks under pressure, not whether they can recite a polished anecdote."
+    "definition": "Turns real leadership situations into concise, **evidence-based** stories that reveal judgment, ownership, and operating impact.",
+    "whyItMatters": "Senior interviews test how a leader thinks under pressure, not how well they can recite a polished anecdote."
   },
   "prompt": {
     "primary": "Walk me through a senior leadership story using Situation, Task, Action, Result, Reflection, and **System Change**.",
     "variants": [
-      "How do you decide which behavioral story to use for a broad prompt?",
-      "How do you keep an answer concise while still showing senior-level depth?"
+      "How do you choose the right behavioral story for a broad prompt?",
+      "How do you keep a senior answer concise without flattening the important judgment?"
     ],
     "interviewerIntent": [
-      "Can the candidate separate context from personal action?",
+      "Can the candidate separate necessary context from personal action?",
       "Do they show judgment, trade-offs, and **measurable outcomes**?",
-      "Do they demonstrate learning and **durable operating change**?"
+      "Do they connect learning to **durable operating change**?"
     ]
   },
   "scenario": {
-    "signatureExample": "A candidate prepares a leadership story bank and maps each story to competencies, signals, and follow-up risks.",
+    "signatureExample": "A candidate builds a leadership story bank, then selects and frames one story around competencies, signals, and follow-up risks.",
     "context": [
-      "Senior behavioral prompts are often broad and ambiguous.",
-      "The same story can demonstrate different signals depending on framing.",
-      "Interviewers will probe for details that reveal real ownership."
+      "Senior behavioral prompts are often broad, so story selection matters.",
+      "The same event can demonstrate different signals depending on the opening frame.",
+      "Interviewers will probe for details that expose real ownership, trade-offs, and evidence."
     ],
     "constraints": [
-      "Answers must usually land in three to five minutes before follow-ups.",
-      "The candidate must avoid sounding rehearsed or generic.",
+      "Answers usually need to land in three to five minutes before follow-ups.",
+      "The candidate must sound prepared without sounding scripted or generic.",
       "The story must expose **trade-offs**, not just successful execution."
     ]
   },
   "storyAnatomy": {
-    "situation": "Name the business, organizational, or technical context in one or two sentences.",
-    "task": "State your personal accountability and the decision pressure you had to manage.",
+    "situation": "Give the interviewer the business, organizational, or technical context they need in one or two sentences.",
+    "task": "State your personal accountability, the decision pressure, and what success required.",
     "action": [
-      "Explain the mechanisms you introduced.",
-      "Name the stakeholders you aligned or challenged.",
-      "Describe **trade-offs** and alternatives without getting lost in chronology."
+      "Describe the decisions, mechanisms, or conversations you drove.",
+      "Name the stakeholders who had different incentives.",
+      "Explain **trade-offs** and alternatives without getting lost in chronology."
     ],
     "result": [
-      "Quantify the outcome where possible.",
-      "Describe customer, business, team, or reliability impact.",
-      "Be explicit when the outcome was mixed."
+      "Quantify the outcome when possible.",
+      "Describe customer, business, team, or reliability impact in concrete terms.",
+      "Name mixed or partial outcomes explicitly."
     ],
-    "reflection": "State what you learned, what you would do differently, and what judgment improved.",
+    "reflection": "State what you learned, what you would now do differently, and what judgment changed.",
     "systemChange": [
       "Show the **operating mechanism** that changed after the event.",
-      "Connect the story to how the organization became more capable."
+      "Connect the change to how the organization became more capable.",
+      "Right-size the mechanism to the scope: team ritual, cross-team governance, portfolio investment rule, or company policy."
     ]
   },
   "exampleStories": [
     {
       "id": "outage-story-selection",
-      "title": "Choosing The Right Outage Story",
+      "title": "Choosing the Right Outage Story",
       "level": "Director",
       "promptVariant": "Tell me about a major failure you were responsible for.",
-      "situation": "The candidate has three possible outage stories and chooses the one where they owned **executive communication**, recovery trade-offs, and post-incident operating changes.",
+      "situation": "The candidate has three outage stories available and chooses the one where they owned **executive communication**, recovery trade-offs, and post-incident operating changes.",
       "strongAnswerSketch": [
-        "Open with why the outage mattered to customers and the business, not the full technical timeline.",
-        "State the personal accountability: incident structure, executive updates, and recovery criteria.",
+        "Open with why the outage mattered to customers and the business, not with the full technical timeline.",
+        "State personal accountability for incident structure, executive updates, and recovery criteria.",
         "Name the **trade-off** between fast rollback and data consistency risk.",
         "Close with the **durable mechanism**: rollout readiness gates and a post-incident action tracker."
       ],
@@ -78,59 +79,107 @@
         "Separates personal leadership action from team troubleshooting.",
         "Ends with reflection and **system change**, which is the senior-level signal."
       ],
-      "weakVersion": "I would describe the outage chronologically, mention that the team worked hard, and end by saying we learned to test more.",
+      "weakVersion": "I would walk through the outage chronologically, say the team worked hard, and end by saying we learned to test more.",
       "followUpAngles": [
         "What did you personally miss before the outage?",
         "What alternatives did you consider during recovery?",
-        "What changed in rollout governance afterward?"
+        "What changed in rollout governance after the incident?"
       ],
       "aiVisual": "assets/generated/example-stories/outage-story-selection.jpg"
     },
     {
       "id": "compressing-complex-conflict",
-      "title": "Compressing A Complex Conflict Story",
+      "title": "Compressing a Complex Conflict Story",
       "level": "VP Engineering",
       "promptVariant": "Tell me about a time you strongly disagreed with an executive peer.",
-      "situation": "A broad conflict with Sales, Product, and Finance could become a ten-minute story unless the candidate frames it around one decision and one operating change.",
+      "situation": "A conflict involving Sales, Product, and Finance could become a ten-minute org-history tour unless the candidate frames it around one decision and one operating change.",
       "strongAnswerSketch": [
-        "Name the decision: whether to commit to a bespoke enterprise feature.",
-        "Explain the competing incentives in one sentence per function.",
-        "Describe the mechanism introduced: enterprise commitment review with productized alternatives.",
-        "Report the outcome and what changed in future deal reviews."
+        "Name the decision: whether to commit engineering capacity to a bespoke enterprise feature.",
+        "Explain each function's competing incentive in one sentence.",
+        "Describe the mechanism introduced: an enterprise commitment review with productized alternatives.",
+        "Report the outcome and what changed in later deal reviews."
       ],
       "whyItWorks": [
         "Avoids drowning the interviewer in organizational history.",
         "Shows empathy for other functions without surrendering judgment.",
         "Makes the story probeable through concrete decisions and mechanisms."
       ],
-      "weakVersion": "I would explain all the politics, say Sales was making unrealistic promises, and emphasize that engineering was right.",
+      "weakVersion": "I would spend most of the answer explaining the politics, say Sales made unrealistic promises, and emphasize that Engineering was right.",
       "followUpAngles": [
         "What was Sales right about?",
         "What did you offer instead of saying no?",
         "How did the relationship change afterward?"
       ],
       "aiVisual": "assets/generated/example-stories/compressing-complex-conflict.jpg"
+    },
+    {
+      "id": "planning-cadence-story",
+      "title": "Turning a Planning Cadence Change into a Story",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you improved execution across multiple teams.",
+      "situation": "There was no outage, executive blow-up, or single dramatic incident: four teams repeatedly missed cross-team commitments because dependencies surfaced only after scope and dates were promised.",
+      "strongAnswerSketch": [
+        "Open with the recurring business cost: three enterprise commitments slipped, and dependency surprises appeared after customer dates were promised.",
+        "State personal accountability for the planning mechanism, dependency owner rules, and escalation path, not for every team's roadmap.",
+        "Name the **trade-off** among a heavyweight quarterly planning freeze, a lightweight weekly status sync, and a narrower dependency review.",
+        "Show the durable mechanism: planning entry criteria, dependency owner review, and a two-cycle confidence dashboard; also name the residual cost that two exploratory projects slowed down."
+      ],
+      "whyItWorks": [
+        "Demonstrates that senior stories do not need an outage or confrontation to reveal judgment.",
+        "Makes a quiet operating-system change concrete through decision rights, measurement, rejected alternatives, and residual cost.",
+        "Shows ownership across teams without overstating authority over each roadmap."
+      ],
+      "weakVersion": "I would say we improved communication, added a weekly planning sync, and got better at surfacing dependencies.",
+      "followUpAngles": [
+        "Which dependency rules or owners did you personally change?",
+        "What process did you reject because it was too heavy?",
+        "What residual cost remained after the planning change?"
+      ]
+    },
+    {
+      "id": "strategy-story-framing",
+      "title": "Framing a Company-Level Strategy Story",
+      "level": "CTO",
+      "promptVariant": "Tell me about a time you changed the company's technical direction.",
+      "situation": "A candidate could describe an entire multi-year platform strategy, but instead chooses the board-level decision where they rejected an all-in rewrite and funded a staged modernization path.",
+      "strongAnswerSketch": [
+        "Name the business trigger: enterprise churn risk, slow integrations, and rising platform cost.",
+        "Frame the decision: rewrite, incremental modernization, or tolerate the constraint for another year.",
+        "Explain the stakeholder conflict across Product, Finance, Sales, and Engineering without turning it into a roadmap tour.",
+        "Close with measurable outcomes, the cost of the slower path, and the governance mechanism that changed future investment decisions."
+      ],
+      "whyItWorks": [
+        "Shows how to compress a company-level story into one decision and one durable mechanism.",
+        "Credits the rejected attractive option instead of presenting the chosen strategy as obvious.",
+        "Keeps the answer executive-level by tying architecture, revenue risk, investment, and trust together."
+      ],
+      "weakVersion": "I would explain the full strategy, describe the architecture vision, and say the executive team aligned on the roadmap.",
+      "followUpAngles": [
+        "Which CTO-level risk did you personally own?",
+        "What did you stop funding?",
+        "What remained worse after the first year?"
+      ]
     }
   ],
   "strongAnswerPattern": {
     "summary": "A strong senior answer is compact, specific, owned, trade-off-aware, measurable, reflective, and connected to durable **system change**.",
     "moves": [
-      "Chooses a story with real stakes and real ambiguity.",
-      "Frames the answer around personal leadership actions.",
-      "Uses metrics and consequences rather than adjectives.",
-      "Anticipates follow-ups by naming rejected alternatives and disagreements.",
-      "Ends with reflection and a mechanism that outlived the incident."
+      "Chooses a story with real stakes and ambiguity, not just the most dramatic event.",
+      "Frames the answer around personal leadership decisions and mechanisms.",
+      "Uses metrics and consequences instead of adjectives.",
+      "Anticipates follow-ups by naming rejected alternatives, disagreements, and residual costs.",
+      "Ends with reflection and a mechanism scaled to the leader's scope."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
     "summary": "A **weak answer** sounds polished but generic: it over-describes context, hides behind the team, avoids trade-offs, and ends at the immediate result.",
     "redFlags": [
-      "The candidate says we more than I when describing critical decisions.",
-      "The answer has no measurable result or only uses vanity metrics.",
+      "The candidate uses we more than I when describing critical decisions.",
+      "The answer has no measurable result, or it relies on vanity metrics.",
       "The story has no disagreement, constraint, or hard choice.",
       "The reflection is a slogan rather than a concrete learning.",
-      "No **operating mechanism** changed afterward."
+      "No **operating mechanism** changed after the event."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
@@ -141,7 +190,17 @@
       "tests": [
         "accountability",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I chose the dependency story because I changed the planning entry criteria, assigned dependency owners, and owned the escalation rule for unresolved trade-offs.",
+          "In the executive conflict story, the team supplied the analysis, but I made the recommendation to reject bespoke delivery and accepted the revenue and relationship consequences."
+        ],
+        "weak": [
+          "We improved the process together, and I helped everyone communicate more clearly.",
+          "The team made the right call after a lot of discussion, and I supported the decision."
+        ]
+      }
     },
     {
       "id": "alternatives",
@@ -149,7 +208,17 @@
       "tests": [
         "trade-off reasoning",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I rejected a weekly status meeting because the failure mode was unowned dependencies, not missing updates; I also rejected freezing all roadmap work because only two commitments carried high customer risk.",
+          "I rejected the all-in rewrite because it would have delayed enterprise commitments for a year; I chose staged modernization with explicit exit criteria and a plan to stop funding low-leverage custom work."
+        ],
+        "weak": [
+          "We looked at several options and picked the one that seemed most practical.",
+          "The other options were too risky, so we went with the plan everyone could support."
+        ]
+      }
     },
     {
       "id": "measurement",
@@ -157,7 +226,17 @@
       "tests": [
         "measurement",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I compared two planning cycles: dependency age dropped, late scope changes surfaced earlier, and cross-team commitments moved from 62% to 84% delivered within the agreed window.",
+          "For the platform strategy story, I tracked integration lead time, percentage of custom work, gross-margin impact, and whether renewal-risk accounts stopped escalating architecture blockers."
+        ],
+        "weak": [
+          "People felt planning was smoother, and the leadership team seemed more comfortable.",
+          "The strategy worked because the executive team aligned and the roadmap looked more coherent."
+        ]
+      }
     },
     {
       "id": "learning",
@@ -165,7 +244,17 @@
       "tests": [
         "reflection",
         "learning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I would name the residual cost earlier: planning became more predictable, but two exploratory projects slowed, so now I include both the gain and the trade-off when I describe the result.",
+          "I would involve Finance and Customer Success earlier in the platform strategy because they had clearer evidence of margin pressure and customer-trust risk than Engineering did."
+        ],
+        "weak": [
+          "I would communicate earlier and more often so people understood the plan.",
+          "Nothing major; the story worked out, and the remaining issues were normal execution details."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -174,7 +263,7 @@
         "id": "ownership",
         "name": "Ownership",
         "strong": "Names personal decisions, mechanisms, and consequences.",
-        "weak": "Hides behind broad team activity.",
+        "weak": "Hides behind the team or vague facilitation.",
         "strongAiVisual": "assets/generated/signals/ownership-strong.jpg",
         "weakAiVisual": "assets/generated/signals/ownership-weak.jpg"
       },
@@ -182,15 +271,15 @@
         "id": "trade-offs",
         "name": "Trade-off Reasoning",
         "strong": "Explains options, rejected paths, and why the chosen path fit the constraints.",
-        "weak": "Presents the final decision as obvious.",
+        "weak": "Treats the final decision as obvious.",
         "strongAiVisual": "assets/generated/signals/trade-offs-strong.jpg",
         "weakAiVisual": "assets/generated/signals/trade-offs-weak.jpg"
       },
       {
         "id": "learning-loop",
         "name": "Learning Loop",
-        "strong": "Connects reflection to a changed **operating mechanism**.",
-        "weak": "Offers a generic lesson with no **behavior change**.",
+        "strong": "Connects reflection to a right-sized **operating mechanism**: team ritual, org governance, portfolio rule, or company policy.",
+        "weak": "Offers a generic lesson, or proposes an oversized process disconnected from the story's scope.",
         "strongAiVisual": "assets/generated/signals/learning-loop-strong.jpg",
         "weakAiVisual": "assets/generated/signals/learning-loop-weak.jpg"
       }
@@ -198,19 +287,19 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Shows ownership across teams with clear action and measurable delivery or people impact."
+        "expected": "Shows ownership across teams with clear action, measurable delivery or people impact, and a team-level mechanism that can keep working without them."
       },
       {
         "level": "Director",
-        "expected": "Shows cross-functional **trade-offs** and changes how multiple teams operate."
+        "expected": "Shows cross-functional **trade-offs** and changes how multiple teams plan, decide, inspect, or escalate work."
       },
       {
         "level": "VP Engineering",
-        "expected": "Shows executive judgment, portfolio-level consequences, and durable leadership mechanisms."
+        "expected": "Shows executive judgment, portfolio-level consequences, and governance that improves repeated leadership decisions."
       },
       {
         "level": "CTO",
-        "expected": "Shows company-level judgment across technology, **business risk**, culture, and external trust."
+        "expected": "Shows company-level judgment across technology, **business risk**, culture, and external trust, then turns the learning into policy, investment rules, or operating principles."
       }
     ]
   },
@@ -247,7 +336,7 @@
       },
       {
         "field": "action",
-        "label": "Which mechanisms, decisions, or conversations did you drive?"
+        "label": "Which decisions, mechanisms, or conversations did you drive?"
       },
       {
         "field": "result",
@@ -259,14 +348,15 @@
       },
       {
         "field": "systemChange",
-        "label": "What changed beyond the immediate story?"
+        "label": "What changed beyond the immediate story, and was the mechanism right-sized for your responsibility level?"
       }
     ]
   },
   "relatedScenarios": [
     "Choosing the right story for a broad leadership-principle prompt.",
     "Condensing a complex executive story into a concise interview answer.",
-    "Preparing for follow-ups that test whether ownership was real."
+    "Preparing for follow-ups that test whether ownership, trade-offs, and measurement were real.",
+    "Turning an operating cadence, talent, or strategy change into a concrete story."
   ],
   "toProbeFurther": {
     "links": [
@@ -277,87 +367,119 @@
         "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
         "source": "GOV.UK",
         "type": "Guide",
-        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
+        "year": "2026",
+        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and scored against prepared criteria.",
         "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
       },
       {
-        "id": "amazon-leadership-principles",
+        "id": "opm-structured-interviews",
         "group": "Interviewing and Calibration",
-        "title": "Amazon Leadership Principles",
-        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
-        "source": "Amazon",
-        "type": "Framework",
-        "why": "A widely used behavior-based leadership framework for probing ownership, judgment, bias for action, and learning.",
+        "title": "Structured Interviews",
+        "url": "https://www.opm.gov/policy-data-oversight/assessment-and-selection/other-assessment-methods/structured-interviews/",
+        "source": "U.S. Office of Personnel Management",
+        "type": "Guide",
+        "why": "Explains behavioral-description questions, rating scales, and why structured follow-ups improve validity for complex managerial roles.",
         "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
       },
       {
-        "id": "google-effective-teams",
-        "group": "Culture and Organizational Design",
-        "title": "The Five Dynamics of an Effective Team",
-        "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
-        "source": "Google",
+        "id": "ddi-star-method",
+        "group": "Behavioral Storytelling",
+        "title": "STAR Method",
+        "url": "https://www.ddi.com/solutions/behavioral-interviewing/star-method",
+        "source": "DDI",
+        "type": "Guide",
+        "why": "Shows the Situation/Task, Action, Result frame and the STAR/AR learning extension used to connect missed outcomes to better future action.",
+        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
+      },
+      {
+        "id": "mit-star-method",
+        "group": "Behavioral Storytelling",
+        "title": "Using the STAR method for your next behavioral interview",
+        "url": "https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/",
+        "source": "MIT Career Advising & Professional Development",
+        "type": "Guide / Worksheet",
+        "why": "Candidate-facing guidance for preparing adaptable stories with personal ownership, specific actions, and quantifiable outcomes.",
+        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
+      },
+      {
+        "id": "amazon-star-interview-tips",
+        "group": "Behavioral Storytelling",
+        "title": "An Amazon recruiting manager offers his 3 best tips for a successful job interview",
+        "url": "https://www.aboutamazon.com/news/workplace/amazon-interview-best-tips",
+        "source": "Amazon",
         "type": "Article",
-        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
-        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+        "why": "Concrete company example of behavioral questions, STAR structure, data points, and first-person ownership.",
+        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
       },
       {
-        "id": "high-output-management",
-        "group": "People Leadership and Feedback",
-        "title": "High Output Management",
-        "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
-        "source": "Andrew S. Grove / Penguin Random House",
-        "type": "Book",
-        "year": "1983",
-        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
-      },
-      {
-        "id": "manager-tools-basics",
-        "group": "People Leadership and Feedback",
-        "title": "Manager Tools Basics",
-        "url": "https://www.manager-tools.com/manager-tools-basics",
-        "source": "Manager Tools",
-        "type": "Podcast / Guide",
-        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
-      },
-      {
-        "id": "scaling-people",
-        "group": "Culture and Organizational Design",
-        "title": "Scaling People",
-        "url": "https://press.stripe.com/scaling-people",
-        "source": "Claire Hughes Johnson / Stripe Press",
-        "type": "Book",
+        "id": "hbs-stories-statistics-memory",
+        "group": "Behavioral Storytelling",
+        "title": "Looking to Leave a Mark? Memorable Leaders Don't Just Spout Statistics, They Tell Stories",
+        "url": "https://www.library.hbs.edu/working-knowledge/looking-to-leave-mark-memorable-leaders-tell-stories-dont-spout-statistics",
+        "source": "Harvard Business School Working Knowledge",
+        "type": "Research summary",
         "year": "2023",
-        "why": "Operator-focused reference for scaling leadership systems, decision making, communication, and company rituals.",
-        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+        "why": "Explains why concrete stories are memorable, while warning that senior leaders should pair anecdotes with representative evidence and measured results.",
+        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
       },
       {
-        "id": "dare-to-lead",
-        "group": "People Leadership and Feedback",
-        "title": "Dare to Lead",
-        "url": "https://brenebrown.com/book/dare-to-lead/",
-        "source": "Brene Brown",
-        "type": "Book",
-        "year": "2018",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
-        "why": "Relevant here because it sharpens the leadership-story standard around courage, responsibility, and developing people rather than reciting achievements."
+        "id": "mcclelland-behavioral-event-interviews",
+        "group": "Behavioral Interview Research",
+        "title": "Identifying Competencies with Behavioral-Event Interviews",
+        "url": "https://journals.sagepub.com/doi/abs/10.1111/1467-9280.00065",
+        "source": "David C. McClelland / Psychological Science",
+        "type": "Research article",
+        "year": "1998",
+        "why": "Grounds the method in evidence that behavioral-event interviews can identify executive competencies more reliably than generic expert judgment.",
+        "groupDescription": "Research behind behavioral event interviewing, competency evidence, and structured selection."
       },
       {
-        "id": "leadership-is-language",
-        "group": "Influence and Executive Communication",
-        "title": "Leadership Is Language",
-        "url": "https://www.penguinrandomhouse.com/books/555238/leadership-is-language-by-l-david-marquet/",
-        "source": "L. David Marquet / Penguin Random House",
-        "type": "Book",
-        "year": "2020",
-        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
-        "why": "Relevant here because behavioral interviews reward candidates who can describe the language and decision moves that changed how a team operated."
+        "id": "campion-structuring-employment-interviews",
+        "group": "Behavioral Interview Research",
+        "title": "Structuring Employment Interviews to Improve Reliability, Validity, and Users' Reactions",
+        "url": "https://journals.sagepub.com/doi/10.1111/1467-8721.ep10773001",
+        "source": "Michael A. Campion, David K. Palmer, and James E. Campion / Current Directions in Psychological Science",
+        "type": "Research article",
+        "year": "1998",
+        "why": "Shows why interview structure, planned questions, scoring discipline, and user reactions matter when turning stories into comparable evidence.",
+        "groupDescription": "Research behind behavioral event interviewing, competency evidence, and structured selection."
+      },
+      {
+        "id": "levashina-structured-employment-interview-review",
+        "group": "Behavioral Interview Research",
+        "title": "The Structured Employment Interview: Narrative and Quantitative Review of the Research Literature",
+        "url": "https://doi.org/10.1111/peps.12052",
+        "source": "Julia Levashina, Christopher J. Hartwell, Frederick P. Morgeson, and Michael A. Campion / Personnel Psychology",
+        "type": "Research review",
+        "year": "2014",
+        "why": "Reviews evidence on structured interviews, bias reduction, past-behavior questions, rating scales, probing, follow-ups, and candidate reactions.",
+        "groupDescription": "Research behind behavioral event interviewing, competency evidence, and structured selection."
+      },
+      {
+        "id": "engineering-executives-interviewing",
+        "group": "Senior Leadership Interview Prep",
+        "title": "Interviewing Engineering Executives",
+        "url": "https://www.oreilly.com/library/view/the-engineering-executives/9781098149475/app02.html",
+        "source": "Will Larson / O'Reilly",
+        "type": "Book appendix",
+        "year": "2024",
+        "why": "Provides VP and CTO-level calibration for executive skills, company-specific fit, engineering functional expertise, and historical behavior.",
+        "groupDescription": "Resources for calibrating senior technology leadership stories by scope, level, historical behavior, and executive impact."
+      },
+      {
+        "id": "staff-plus-interview-processes",
+        "group": "Senior Leadership Interview Prep",
+        "title": "Staff-plus interview processes",
+        "url": "https://staffeng.com/guides/staff-plus-interview-process/",
+        "source": "Will Larson / StaffEng",
+        "type": "Guide",
+        "why": "Helps distinguish senior-level impact signals from generic communication polish or speed, which improves story selection for technical leadership interviews.",
+        "groupDescription": "Resources for calibrating senior technology leadership stories by scope, level, historical behavior, and executive impact."
       }
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

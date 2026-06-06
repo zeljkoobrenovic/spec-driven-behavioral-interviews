@@ -3,6 +3,7 @@
   "title": "Conflict With Executives or Peers",
   "description": "Handling disagreement with Sales, Product, Finance, the CEO, or the board without becoming political or passive.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,32 +13,36 @@
     "id": "executive-conflict",
     "name": "Conflict With Executives or Peers",
     "family": "Influence and Communication",
-    "definition": "Challenges risky decisions while preserving trust, **business empathy**, and shared goals.",
+    "definition": "Challenges risky decisions while preserving trust, **business empathy**, and a shared path forward.",
     "whyItMatters": "Senior leaders must disagree productively when commitments, architecture, customer trust, or delivery integrity are at risk."
   },
   "prompt": {
-    "primary": "Tell me about a time you strongly disagreed with a product, sales, finance, or executive peer.",
+    "primary": "Tell me about a time you strongly disagreed with a Product, Sales, Finance, or executive peer.",
     "variants": [
       "Describe a situation where you had to challenge the CEO, founder, or board on a technology decision.",
-      "Tell me about a time you had to say no to an important stakeholder."
+      "Tell me about a time you had to say no to an important stakeholder.",
+      "Tell me about a time you disagreed with a decision, lost the debate, and still had to lead the outcome."
     ],
     "interviewerIntent": [
       "Can the candidate disagree without turning the conflict personal?",
       "Do they understand the other function's incentives?",
-      "Can they reframe disagreement around business outcomes?"
+      "Can they reframe disagreement around business outcomes?",
+      "Can they explain when the situation called for compromise, escalation, disagree-and-commit, or a principled no?"
     ]
   },
   "scenario": {
-    "signatureExample": "A VP Engineering disagrees with Sales committing to a custom feature for one large customer.",
+    "signatureExample": "A VP Engineering disagrees with Sales about committing to a custom feature for one large customer.",
     "context": [
       "The customer is commercially important.",
       "The requested feature would distort the product architecture.",
-      "Sales believes engineering is being too rigid."
+      "Sales believes Engineering is hiding behind architecture concerns.",
+      "The disagreement may involve customer commitments, budget targets, trust boundaries, or legal and security constraints."
     ],
     "constraints": [
-      "The leader cannot simply block revenue.",
+      "The leader cannot protect the roadmap by simply blocking revenue.",
       "The team is already committed to roadmap work.",
-      "The decision will set precedent for future enterprise deals."
+      "The decision will set precedent for future enterprise deals.",
+      "Some conflicts require a safe alternative, some require transparent escalation, and some require a principled no."
     ]
   },
   "storyAnatomy": {
@@ -46,15 +51,18 @@
     "action": [
       "Quantified opportunity cost and platform risk.",
       "Separated the customer's underlying need from the requested implementation.",
+      "Named which constraints were negotiable and which were customer-trust, legal, or security boundaries.",
       "Proposed a narrower platform capability that served multiple customers.",
+      "When overruled on a reasonable executive call, committed to the final decision with guardrails.",
       "Created an escalation and intake process for future enterprise commitments."
     ],
     "result": [
       "The company kept the customer conversation alive without making an unsustainable commitment.",
       "Sales gained clearer rules for technical commitments.",
-      "Engineering delivered a reusable capability rather than a one-off feature."
+      "Engineering delivered a reusable capability rather than a one-off feature.",
+      "Future exceptions had named decision owners, risk thresholds, and rollback criteria."
     ],
-    "reflection": "The conflict improved when the conversation moved from engineering says no to which commitment creates the best company outcome.",
+    "reflection": "The conflict improved when the conversation moved from 'Engineering says no' to 'Which commitment, boundary, or trade-off creates the best company outcome?'",
     "systemChange": [
       "Deal-review checkpoint for technical commitments.",
       "Enterprise feature **decision criteria**.",
@@ -66,102 +74,203 @@
       "id": "custom-enterprise-feature",
       "title": "Custom Enterprise Feature Commitment",
       "level": "VP Engineering",
-      "promptVariant": "Tell me about a time you strongly disagreed with a product, sales, finance, or executive peer.",
-      "situation": "Sales wanted to commit to a custom feature for a large enterprise customer, creating roadmap and architecture risk.",
+      "promptVariant": "Tell me about a time you strongly disagreed with a Product, Sales, Finance, or executive peer.",
+      "situation": "Sales wanted to commit to a custom feature for a $2.4M renewal, creating roadmap risk, support burden, and precedent for three similar enterprise requests.",
       "strongAnswerSketch": [
         "Acknowledge the commercial importance of the customer.",
         "Separate the customer need from the requested implementation.",
-        "Quantify opportunity cost and platform risk.",
-        "Propose a reusable platform capability and create enterprise commitment review."
+        "Quantify the six-week roadmap delay, one-off support cost, and platform coupling risk.",
+        "Propose a narrower reusable capability with a commercial concession Sales could take back to the customer.",
+        "Create an enterprise commitment review with Product, Sales, Engineering, and Customer Success before contracts include technical promises."
       ],
       "whyItWorks": [
         "Shows courage without dismissing Sales.",
         "Offers an alternative instead of only saying no.",
-        "Turns conflict into a repeatable decision mechanism."
+        "Turns conflict into a repeatable decision mechanism.",
+        "Makes the rejected path and residual commercial cost explicit."
       ],
       "weakVersion": "I pushed back because the feature was too custom and would distract the team from the roadmap.",
       "followUpAngles": [
         "What was Sales right about?",
         "How did you quantify opportunity cost?",
         "Did you escalate?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/custom-enterprise-feature.jpg"
     },
     {
       "id": "founder-architecture-preference",
-      "title": "Founder Architecture Preference",
+      "title": "Founder and Board Architecture Preference",
       "level": "CTO",
-      "promptVariant": "Describe a situation where you had to challenge the CEO or founder on a technology decision.",
-      "situation": "A founder wanted to rebuild the core platform in a new stack to attract talent, but the timing would delay enterprise commitments and increase migration risk.",
+      "promptVariant": "Describe a situation where you had to challenge the CEO, founder, or board on a technology decision.",
+      "situation": "A founder and two board members wanted to rebuild the core platform in a new stack to improve the talent and investor narrative, but the timing would delay enterprise commitments and increase migration risk.",
       "strongAnswerSketch": [
-        "Clarify the founder real goal: talent signal, velocity, and long-term platform leverage.",
-        "Compare rewrite, incremental modernization, and targeted platform extraction.",
-        "Recommend a staged modernization path with visible talent and architecture benefits.",
-        "Create decision checkpoints tied to customer commitments and migration risk."
+        "Clarify the founder and board goals: talent signal, investor confidence, velocity, and long-term platform leverage.",
+        "Compare rewrite, incremental modernization, and targeted platform extraction against customer commitments, hiring signal, and migration risk.",
+        "Recommend a staged modernization path with board-visible milestones and architecture benefits.",
+        "Name the rejected full-rewrite path, the slower modernization cost, and decision checkpoints tied to customer commitments and migration risk."
       ],
       "whyItWorks": [
-        "Challenges the CEO while preserving the underlying strategic concern.",
+        "Challenges the founder and board while preserving the underlying strategic concern.",
         "Uses options rather than positional disagreement.",
-        "Connects **technical risk** to company commitments."
+        "Connects **technical risk** to company commitments.",
+        "Shows the residual cost of the compromise rather than presenting a frictionless win."
       ],
-      "weakVersion": "I explained that rewrites are risky and convinced the founder it was not the right time.",
+      "weakVersion": "I explained to the founder and board that rewrites are risky and convinced them it was not the right time.",
       "followUpAngles": [
-        "What was the founder optimizing for?",
+        "What were the founder and board optimizing for?",
         "What option did you recommend instead?",
-        "How did you maintain trust?"
-      ]
+        "How did you keep the board conversation decision-ready?"
+      ],
+      "aiVisual": "assets/generated/example-stories/founder-architecture-preference.jpg"
+    },
+    {
+      "id": "security-exception-refusal",
+      "title": "Security Exception Refusal for a Strategic Deal",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you had to say no to an important stakeholder.",
+      "situation": "A Sales VP asked the platform team to bypass audit logging and promise manual data-deletion controls so a regulated customer could sign before quarter-end.",
+      "strongAnswerSketch": [
+        "Acknowledge the quota pressure and strategic customer value without treating Sales as reckless.",
+        "Validate the actual control gap with Security, Legal, Support, and the service owner.",
+        "State the non-negotiable boundary: the company could not contractually promise controls it could not verify.",
+        "Offer a safe pilot scope and delivery date for supported controls, then escalate transparently when Sales still pushed for the exception.",
+        "Accept that the deal slipped and create an exception policy for regulated-customer commitments."
+      ],
+      "whyItWorks": [
+        "Shows a principled no when no safe alternative exists.",
+        "Separates business empathy from accepting an unsupported customer-trust risk.",
+        "Includes a real cost rather than turning every conflict into a tidy compromise."
+      ],
+      "weakVersion": "I told Sales security would not approve the exception and that they needed to wait for the roadmap work.",
+      "followUpAngles": [
+        "What made the boundary non-negotiable?",
+        "Who did you involve before escalating?",
+        "What cost did the company absorb?"
+      ],
+      "aiVisual": "assets/generated/example-stories/security-exception-refusal.jpg"
+    },
+    {
+      "id": "cost-reduction-after-losing",
+      "title": "Disagree and Commit on Cost Reduction",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you disagreed with a decision, lost the debate, and still had to lead the outcome.",
+      "situation": "Finance and the CEO chose a 15% cloud-spend reduction target before a seasonal traffic peak, even after Engineering recommended an 8% target with more reliability margin.",
+      "strongAnswerSketch": [
+        "Present the strongest Engineering case with spend, reliability, roadmap, and customer-impact scenarios.",
+        "Ask for explicit decision rights, guardrails, and rollback thresholds before the final call.",
+        "After losing the target debate, communicate the decision to teams without relitigating it or blaming Finance.",
+        "Protect critical flows, defer lower-value optimizations, and review reliability and savings weekly with Finance and Product.",
+        "Document the residual roadmap delay and update the annual budget-planning process."
+      ],
+      "whyItWorks": [
+        "Shows that commitment after losing is active ownership, not passive compliance.",
+        "Preserves trust with Finance while making risk boundaries visible.",
+        "Turns a painful decision into a better planning mechanism."
+      ],
+      "weakVersion": "I disagreed with Finance, but once the CEO decided I told teams to find the savings and tried to limit the damage.",
+      "followUpAngles": [
+        "What did you do after losing the decision?",
+        "What guardrails did you negotiate?",
+        "What residual cost remained?"
+      ],
+      "aiVisual": "assets/generated/example-stories/cost-reduction-after-losing.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows courage, **business empathy**, and the ability to reframe disagreement into a better decision.",
+    "summary": "The candidate shows courage, **business empathy**, and the judgment to decide whether the moment calls for reframing, principled refusal, escalation, or disagree-and-commit.",
     "moves": [
       "Acknowledges the other stakeholder's legitimate goal.",
       "Uses data, opportunity cost, and risk rather than **positional authority**.",
-      "Offers alternatives instead of only blocking.",
-      "Handles escalation transparently.",
+      "Distinguishes negotiable preferences from customer-trust, legal, security, or safety boundaries.",
+      "Offers alternatives when a safe path exists and explains why a principled no is required when it does not.",
+      "Handles escalation transparently and commits with guardrails when overruled on a reasonable decision.",
       "Creates a mechanism to prevent repeated ad hoc conflict."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate either avoids conflict or wins the argument in a way that damages trust.",
+    "summary": "The candidate either avoids conflict or wins the argument narrowly while damaging trust.",
     "redFlags": [
       "Frames Sales, Product, or the CEO as unreasonable without showing empathy.",
-      "Says no without offering a viable alternative.",
-      "Escalates as a first move rather than after direct alignment attempts.",
-      "Cannot explain how the relationship or process improved afterward."
-    ]
+      "Treats every disagreement as a chance to win the argument or avoid blame.",
+      "Says no without explaining alternatives considered, impact, or the non-negotiable boundary.",
+      "Escalates to bypass direct alignment or accepts an overrule passively without guardrails.",
+      "Cannot explain how the relationship, decision criteria, or process improved afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
       "id": "other-side",
-      "question": "What was the other person's strongest argument?",
+      "question": "What was the other side's strongest argument?",
       "tests": [
         "stakeholder alignment",
         "influence"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Sales was right that the customer was a reference account and that a quarter delay would put the renewal at risk; my concern was the specific implementation and precedent.",
+          "Finance was right that cloud spend had grown faster than revenue, so I treated the target as a real company constraint rather than an annoyance from outside Engineering."
+        ],
+        "weak": [
+          "They mostly cared about revenue and did not understand the technical downside.",
+          "Their argument was that leadership had already promised it, so they wanted Engineering to make it happen."
+        ]
+      }
     },
     {
       "id": "risk",
-      "question": "How did you quantify the risk or opportunity cost?",
+      "question": "How did you quantify the risk and opportunity cost?",
       "tests": [
         "measurement",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I showed a six-week roadmap slip, two extra on-call rotations for custom support, and the likely follow-on requests from three other enterprise accounts.",
+          "For the cost target, I separated safe savings from changes that consumed error budget, then tracked weekly savings, incident rate, and the roadmap work we deferred."
+        ],
+        "weak": [
+          "I explained that the request would be risky and would slow the team down.",
+          "I estimated it would be a big distraction, but the exact impact was hard to calculate."
+        ]
+      }
     },
     {
       "id": "escalation",
-      "question": "Did you escalate, and how did you keep trust intact?",
+      "question": "Did you escalate or get overruled, and how did you keep trust intact?",
       "tests": [
         "influence",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I first met with the peer directly, wrote down the options and my recommendation, then escalated the unresolved decision with their position represented fairly.",
+          "When the CEO chose Finance's target, I told teams I owned execution, kept Finance in the weekly review, and used pre-agreed rollback thresholds instead of reopening the debate."
+        ],
+        "weak": [
+          "I escalated to the CEO because the peer was blocking the right technical decision.",
+          "I accepted the decision publicly but kept reminding people that Engineering had warned everyone."
+        ]
+      }
     },
     {
       "id": "process",
-      "question": "What process changed so the same conflict would not repeat?",
+      "question": "What mechanism changed so the same conflict would not repeat?",
       "tests": [
         "learning",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added a deal-review checkpoint where Sales, Product, Engineering, Security, and Legal had to approve technical commitments before they appeared in contracts.",
+          "We created an exception register with named decision owners, expiry dates, rollback criteria, and a quarterly review of which exceptions should become roadmap work."
+        ],
+        "weak": [
+          "We agreed to communicate earlier before big commitments were made.",
+          "I asked stakeholders to bring Engineering into discussions sooner next time."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -169,34 +278,48 @@
       {
         "id": "courage",
         "name": "Courage",
-        "strong": "Challenges risky commitments directly and respectfully.",
-        "weak": "Avoids disagreement or waits for someone else to resolve it."
+        "strong": "Challenges risky commitments or decisions directly and respectfully.",
+        "weak": "Avoids disagreement or waits for someone else to resolve it.",
+        "strongAiVisual": "assets/generated/signals/courage-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/courage-weak.jpg"
       },
       {
         "id": "business-empathy",
         "name": "Business Empathy",
-        "strong": "Understands the other function's goal and reframes the **trade-off**.",
-        "weak": "Treats non-engineering pressure as ignorance."
+        "strong": "Understands the other function's goals and constraints, then reframes the **trade-off**.",
+        "weak": "Treats non-engineering pressure as ignorance.",
+        "strongAiVisual": "assets/generated/signals/business-empathy-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/business-empathy-weak.jpg"
       },
       {
         "id": "conflict-mechanism",
         "name": "Conflict Mechanism",
-        "strong": "Creates **decision rules** or escalation paths that reduce future conflict.",
-        "weak": "Relies on personal negotiation every time."
+        "strong": "Creates **decision rules**, review checkpoints, or escalation paths that reduce future conflict.",
+        "weak": "Relies on personal negotiation every time.",
+        "strongAiVisual": "assets/generated/signals/conflict-mechanism-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/conflict-mechanism-weak.jpg"
+      },
+      {
+        "id": "decision-integrity",
+        "name": "Decision Integrity",
+        "strong": "Chooses compromise, principled refusal, escalation, or disagree-and-commit based on explicit boundaries and decision rights.",
+        "weak": "Treats conflict as either winning the argument or staying out of the way.",
+        "strongAiVisual": "assets/generated/signals/decision-integrity-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/decision-integrity-weak.jpg"
       }
     ],
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Handles cross-team disagreement with data, clarity, and respectful escalation."
+        "expected": "Handles peer or stakeholder disagreement with evidence, clear boundaries, and respectful escalation."
       },
       {
         "level": "Director",
-        "expected": "Aligns peers across functions and turns repeated conflict into decision mechanisms."
+        "expected": "Handles disagreement with cross-functional leaders, then turns repeated conflict into decision criteria, exception paths, or guardrails."
       },
       {
         "level": "VP Engineering",
-        "expected": "Challenges executive peers while protecting company-level priorities and relationships."
+        "expected": "Challenges executive peers while protecting company-level priorities, customer trust, and long-term relationships."
       },
       {
         "level": "CTO",
@@ -216,7 +339,8 @@
     "signalMap": [
       "courage",
       "business-empathy",
-      "conflict-mechanism"
+      "conflict-mechanism",
+      "decision-integrity"
     ],
     "followUpTree": [
       "other-side",
@@ -237,11 +361,11 @@
       },
       {
         "field": "action",
-        "label": "How did you reframe, influence, or escalate?"
+        "label": "How did you choose between reframing, refusing, committing, or escalating?"
       },
       {
         "field": "result",
-        "label": "What changed in the decision and relationship?"
+        "label": "What changed in the decision, relationship, and operating rules?"
       },
       {
         "field": "reflection",
@@ -249,14 +373,15 @@
       },
       {
         "field": "systemChange",
-        "label": "What mechanism reduced future conflict?"
+        "label": "What decision rule, exception path, or review mechanism reduced future conflict?"
       }
     ]
   },
   "relatedScenarios": [
     "Pushing back on a launch date that creates customer risk.",
-    "Challenging a founder's preferred architecture decision.",
-    "Negotiating a cost reduction target with Finance."
+    "Challenging a founder's or board's preferred architecture decision.",
+    "Refusing an unsupported security or compliance exception for a strategic deal.",
+    "Negotiating a cloud-spend reduction target with Finance, then leading guardrailed execution after losing the decision."
   ],
   "toProbeFurther": {
     "links": [
@@ -313,15 +438,14 @@
         "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
-        "id": "radical-candor",
-        "group": "People Leadership and Feedback",
-        "title": "Radical Candor",
-        "url": "https://www.radicalcandor.com/the-book/",
-        "source": "Kim Scott",
-        "type": "Book",
-        "year": "2017",
-        "why": "Feedback model for balancing direct challenge with care when handling performance and trust issues.",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+        "id": "harvard-principled-negotiation",
+        "group": "Influence and Executive Communication",
+        "title": "Principled Negotiation: Focus on Interests to Create Value",
+        "url": "https://www.pon.harvard.edu/daily/negotiation-skills-daily/principled-negotiation-focus-interests-create-value/",
+        "source": "Program on Negotiation at Harvard Law School",
+        "type": "Article",
+        "why": "Conflict-specific framework for separating interests from positions when executive peers are stuck on incompatible demands.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
       },
       {
         "id": "never-split-difference",
@@ -333,7 +457,74 @@
         "year": "2016",
         "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
         "why": "Relevant here because negotiation techniques help reveal interests and constraints instead of escalating positional conflict."
+      },
+      {
+        "id": "amazon-2016-shareholder-letter",
+        "group": "Influence and Executive Communication",
+        "title": "2016 Letter to Shareholders",
+        "url": "https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders",
+        "source": "Amazon",
+        "type": "Shareholder letter",
+        "year": "2016",
+        "why": "Concrete executive reference for high-velocity decisions, **disagree-and-commit**, and separating reversible from irreversible calls.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "netflix-culture-memo",
+        "group": "Culture and Organizational Design",
+        "title": "Netflix Culture Memo",
+        "url": "https://jobs.netflix.com/netflix-culture.pdf",
+        "source": "Netflix",
+        "type": "Culture memo",
+        "year": "2024",
+        "why": "Shows an operating model for informed captains, farming for dissent, and committing after disagreement.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "bain-rapid-decision-making",
+        "group": "Strategy and Execution",
+        "title": "RAPID Decision Making",
+        "url": "https://www.bain.com/insights/rapid-decision-making/",
+        "source": "Bain & Company",
+        "type": "Decision framework",
+        "why": "Clarifies decision accountabilities across Recommend, Agree, Perform, Input, and Decide when conflict is caused by ambiguous decision rights.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "sre-embracing-risk",
+        "group": "Strategy and Execution",
+        "title": "Embracing Risk",
+        "url": "https://sre.google/sre-book/embracing-risk/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2017",
+        "why": "Gives a data-driven model for turning Product-Engineering reliability tension into shared risk budgets and explicit trade-offs.",
+        "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "thoughtworks-adrs",
+        "group": "Technical Judgment and Architecture",
+        "title": "Lightweight Architecture Decision Records",
+        "url": "https://www.thoughtworks.com/en-us/radar/techniques/lightweight-architecture-decision-records",
+        "source": "Thoughtworks Technology Radar",
+        "type": "Technique",
+        "why": "Concrete mechanism for making technical decisions explicit, reviewable, and durable after executive disagreement.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "owasp-asvs",
+        "group": "Responsible Technology and AI",
+        "title": "Application Security Verification Standard",
+        "url": "https://owasp.org/www-project-application-security-verification-standard/",
+        "source": "OWASP Foundation",
+        "type": "Standard",
+        "why": "Useful when a security or compliance exception needs verifiable requirements rather than an unsupported promise to a customer.",
+        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
       }
     ]
-  }
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

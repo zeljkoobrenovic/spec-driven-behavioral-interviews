@@ -7,7 +7,7 @@ description: "Review behavioral interview specs in this repository for realism, 
 
 ## Workflow
 
-1. Read `AGENTS.md`, `REVIEW.md` if it exists, the relevant group manifest, and the target `interview.json` files.
+1. Read `AGENTS.md` if it exists, the relevant group manifest, and the target `interview.json` files.
 2. Run the data checks before judging content:
 
 ```bash
@@ -18,7 +18,7 @@ python3 _scripts/summarize_coverage.py
 3. Review source files under `data/`, not generated copies under `docs/`.
 4. Evaluate each interview against the review dimensions below.
 5. Review `toProbeFurther.links[]` when present. For leadership, management, communication, strategy, and technology-leadership topics, check whether relevant resources from `https://obren.io/bookshelf/docs/leadership.html` have been considered as inspiration, while ensuring the final links point to canonical non-Obren resources and do not duplicate the same book or article.
-6. Write findings in `REVIEW.md` when the user asks for a documented review, catalog audit, or reusable review process.
+6. Write findings in `REVIEW.md` in the folder of the interview when the user asks for a documented review, catalog audit, or reusable review process.
 7. Separate fixable data issues from subjective content recommendations.
 
 ## Review Dimensions

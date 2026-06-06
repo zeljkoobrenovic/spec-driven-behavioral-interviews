@@ -1,8 +1,9 @@
 {
   "id": "executive-communication",
   "title": "Executive Communication",
-  "description": "Explaining complex technical reality, uncertainty, risk, and decision options to executives or the board without hiding behind technical detail.",
+  "description": "Translating complex technical situations, uncertainty, risk, and decision options for executives or the board without hiding behind implementation detail.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,17 +13,18 @@
     "id": "executive-communication",
     "name": "Executive Communication",
     "family": "Influence and Communication",
-    "definition": "Communicates technical complexity in decision-ready language for non-technical or executive audiences.",
+    "definition": "Translates technical complexity into decision-ready language for non-technical or executive audiences.",
     "whyItMatters": "Senior technology leaders must create confidence without oversimplifying, hiding uncertainty, or distorting **trade-offs**."
   },
   "prompt": {
     "primary": "Tell me about a time you had to explain a complex technical issue to a non-technical executive audience.",
     "variants": [
-      "Describe a time when you had to communicate uncertainty upward.",
+      "Describe a time you had to turn a team-level technical risk into a decision-ready update for senior business partners.",
+      "Describe a time you had to communicate unresolved technical uncertainty upward without creating false confidence or panic.",
       "Tell me about a time you had to explain **technical risk** to a board or executive team."
     ],
     "interviewerIntent": [
-      "Can the candidate simplify without distorting?",
+      "Can the candidate simplify without distorting the technical reality?",
       "Do they frame options and consequences clearly?",
       "Can they communicate uncertainty honestly and usefully?"
     ]
@@ -31,113 +33,198 @@
     "signatureExample": "A VP Engineering explains a platform migration delay to the board using customer risk, financial **trade-offs**, delivery scenarios, and decision options rather than architecture diagrams.",
     "context": [
       "A major platform migration is behind plan.",
-      "Executives need to understand risk, not implementation details.",
+      "Executives need to decide what risk to accept, not learn implementation details.",
       "Product and revenue commitments depend on the migration path."
     ],
     "constraints": [
-      "The message must be accurate and concise.",
+      "The message must be accurate, concise, and tied to the decision.",
       "The leader must communicate uncertainty without sounding evasive.",
-      "Executives need decision options."
+      "Executives need comparable options, a recommendation, and the cost of each path.",
+      "Executives may push for a single date, status color, or low-cost answer before evidence is complete."
     ]
   },
   "storyAnatomy": {
     "situation": "A platform migration delay created executive concern about customer commitments and delivery risk.",
     "task": "Explain the situation in a way that enabled an informed executive decision.",
     "action": [
+      "Started with the decision needed, recommendation, and decision owner before explaining the technical cause.",
       "Translated technical issues into customer, financial, and delivery consequences.",
       "Prepared three scenarios with risk, cost, and timing **trade-offs**.",
       "Separated facts, assumptions, unknowns, and decisions needed.",
-      "Used technical detail only where it changed the decision."
+      "Used technical detail only where it changed the decision.",
+      "Answered pushback on cost, timing, and customer messaging with thresholds rather than defensiveness."
     ],
     "result": [
-      "Executives understood the **trade-offs** and chose a staged migration path.",
-      "Customer commitments were reset with clearer risk language.",
+      "Executives understood the **trade-offs** and chose a staged migration path with explicit risk acceptance.",
+      "Customer commitments were reset with clearer risk language and named customer owners.",
       "Engineering gained support for risk-reduction work."
     ],
     "reflection": "The lesson was that **executive communication** should make decisions easier, not prove technical expertise.",
     "systemChange": [
-      "Executive risk brief template.",
+      "One-page executive risk brief template.",
       "Decision-options format for technical escalations.",
-      "Regular migration risk update cadence."
+      "Regular migration risk update cadence with confidence levels."
     ]
   },
   "exampleStories": [
+    {
+      "id": "customer-reporting-risk-briefing",
+      "title": "Customer Reporting Risk Briefing",
+      "level": "Senior Manager",
+      "promptVariant": "Describe a time you had to turn a team-level technical risk into a decision-ready update for senior business partners.",
+      "situation": "A data quality regression made usage reports unreliable two days before a strategic customer's renewal review, while Customer Success wanted to send the deck and Finance wanted the renewal forecast protected.",
+      "strongAnswerSketch": [
+        "Open with the business decision: send the report as planned, delay the review, or use a validated subset with explicit caveats.",
+        "Translate stale and missing events into customer trust, renewal confidence, and support-load risk rather than explaining the ingestion pipeline.",
+        "Separate confirmed bad metrics, the still-unknown affected window, and the validation threshold needed before any report could go out.",
+        "Recommend using a validated subset, moving one customer meeting by three business days, and naming owners for the data fix, customer message, and forecast update.",
+        "Acknowledge the residual cost: Customer Success absorbed an uncomfortable reschedule and Finance carried a wider forecast range for one week."
+      ],
+      "whyItWorks": [
+        "Shows Senior Manager-level communication to non-technical partners without pretending the issue is board-scale.",
+        "Makes the business decision clear before introducing technical detail.",
+        "Includes a rejected lower-friction option and a visible business cost.",
+        "Turns the incident into a repeatable pre-review data-readiness check."
+      ],
+      "weakVersion": "I explained the data pipeline issue to Customer Success and Finance and asked them to wait until Engineering could fix the reports.",
+      "followUpAngles": [
+        "What decision did Customer Success and Finance need to make?",
+        "Which numbers were reliable enough to use?",
+        "What cost did your recommendation create for the business?",
+        "What reporting checkpoint changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/customer-reporting-risk-briefing.jpg"
+    },
     {
       "id": "board-migration-delay",
       "title": "Board-Level Migration Delay",
       "level": "VP Engineering",
       "promptVariant": "Tell me about a time you had to explain a complex technical issue to a non-technical executive audience.",
-      "situation": "A platform migration delay affected customer commitments, and the board needed decision options rather than architecture details.",
+      "situation": "A platform migration delay affected customer commitments, the CEO wanted one recovery date, and the CFO challenged whether extra reliability spend was necessary.",
       "strongAnswerSketch": [
-        "Start with the decision the board needs to make.",
+        "Open with the board decision and recommended path before explaining why the plan changed.",
         "Separate facts, assumptions, unknowns, and risk scenarios.",
         "Translate technical constraints into customer, financial, and delivery consequences.",
-        "Present options with timing, risk, and **trade-offs**."
+        "Present options in one comparison with timing, risk, and **trade-offs**.",
+        "Handle pushback by naming the confidence level, decision threshold, and consequence of choosing the lower-cost path."
       ],
       "whyItWorks": [
         "Makes the communication decision-ready.",
         "Handles uncertainty honestly.",
-        "Keeps technical detail tied to executive choices."
+        "Keeps technical detail tied to executive choices.",
+        "Shows the candidate can stay clear under executive pressure instead of retreating into technical explanation."
       ],
       "weakVersion": "I explained the technical reasons for the delay and showed the board why the migration was more complex than expected.",
       "followUpAngles": [
         "What decision did they need to make?",
         "What uncertainty did you name?",
-        "Which option did you recommend?"
-      ]
+        "Which option did you recommend?",
+        "How did executives push back?"
+      ],
+      "aiVisual": "assets/generated/example-stories/board-migration-delay.jpg"
+    },
+    {
+      "id": "enterprise-launch-risk-briefing",
+      "title": "Enterprise Launch Risk Briefing",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you had to explain **technical risk** to a board or executive team.",
+      "situation": "Three weeks before an enterprise launch, pilot data showed intermittent authentication failures on the highest-value customer path while Sales and Product still wanted to hold the external date.",
+      "strongAnswerSketch": [
+        "Open with the launch decision: full launch, limited cohort, or date change.",
+        "Translate failure rate, support load, and recovery time into customer onboarding, renewal exposure, and launch credibility.",
+        "Show the evidence threshold for each option rather than asking executives to trust Engineering's discomfort.",
+        "Recommend a limited cohort launch with named readiness gates and an owner for every open risk.",
+        "Acknowledge the residual cost: two customer dates moved and Marketing had to revise the launch message."
+      ],
+      "whyItWorks": [
+        "Illustrates Director-level communication across Product, Sales, Marketing, Support, and Engineering.",
+        "Uses technical evidence only where it changes the executive decision.",
+        "Makes the rejected full-launch path and business cost explicit.",
+        "Creates a repeatable launch-risk briefing instead of a one-off escalation."
+      ],
+      "weakVersion": "I showed the executive team the reliability metrics and explained that Engineering was not comfortable launching until the authentication failures were fixed.",
+      "followUpAngles": [
+        "What business decision did the metrics change?",
+        "Who disagreed with your recommendation?",
+        "What customer or launch cost did your message create?",
+        "What briefing format changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/enterprise-launch-risk-briefing.jpg"
     },
     {
       "id": "security-risk-briefing",
       "title": "Security Risk Briefing",
       "level": "CTO",
-      "promptVariant": "Describe a time when you had to communicate uncertainty upward.",
-      "situation": "A newly discovered vulnerability might affect enterprise customers, but the exploitability and customer exposure were still being investigated.",
+      "promptVariant": "Describe a time you had to communicate unresolved technical uncertainty upward without creating false confidence or panic.",
+      "situation": "A newly discovered vulnerability might affect enterprise customers, while exploitability, customer exposure, and disclosure obligations were still being verified.",
       "strongAnswerSketch": [
-        "Tell executives what is known, unknown, and being verified.",
-        "Define decision thresholds for customer notification and remediation priority.",
-        "Use scenarios rather than false certainty.",
-        "Set an update cadence and owner for each open question."
+        "Open with what executives could decide now versus what had to wait for evidence.",
+        "Separate confirmed affected product areas, unverified exploitability, likely customer segments, and legal or security review gates.",
+        "Define thresholds for customer notification, temporary controls, remediation priority, and Sales or Support messaging.",
+        "Use scenarios rather than false certainty, including the cost of over-notifying and the trust risk of waiting too long.",
+        "Set a named update cadence and owner for each open question."
       ],
       "whyItWorks": [
         "Communicates uncertainty without sounding chaotic.",
         "Turns ambiguity into decision thresholds.",
+        "Balances trust, legal exposure, customer operations, and security response.",
         "Builds executive confidence through cadence and ownership."
       ],
-      "weakVersion": "I told executives we were investigating and would provide details once Security had confirmed the full impact.",
+      "weakVersion": "I told executives Security was investigating and that we should avoid saying anything externally until the full impact was confirmed.",
       "followUpAngles": [
         "What did you avoid saying prematurely?",
         "What thresholds drove decisions?",
+        "What customer trust or legal trade-off did each threshold protect?",
         "How did you keep executives updated?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/security-risk-briefing.jpg"
     }
   ],
   "strongAnswerPattern": {
     "summary": "The candidate shows audience awareness, clarity, honest uncertainty, and **decision framing**.",
     "moves": [
-      "Starts from the executive decision, not the technical narrative.",
-      "Separates knowns, unknowns, risks, and options.",
+      "Starts from the executive decision and recommendation, not the technical narrative.",
+      "Separates facts, assumptions, unknowns, risks, and options.",
       "Uses business and customer consequences.",
       "Keeps technical detail relevant to the decision.",
+      "Names the recommendation, rejected alternatives, residual cost, and owner for next action.",
+      "Responds to executive pushback with decision thresholds and evidence.",
       "Creates a repeatable communication format."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
     "summary": "The candidate either oversimplifies into false certainty or buries the audience in technical detail.",
     "redFlags": [
       "Cannot explain what decision the **audience needed** to make.",
-      "Uses technical detail to avoid accountability.",
+      "Uses technical detail to avoid accountability for a recommendation.",
       "Hides uncertainty or presents one path as risk-free.",
+      "Gives a status update without a recommendation or decision threshold.",
+      "Claims executives aligned but cannot describe what they challenged or what changed.",
       "Does not adapt communication to audience needs."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
       "id": "audience",
-      "question": "What did the audience need to decide?",
+      "question": "What decision did the audience need to make?",
       "tests": [
         "judgment",
         "stakeholder alignment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Customer Success and Finance needed to decide whether to use the renewal report as planned, delay the review, or send a validated subset with caveats; I recommended the subset plus a three-day customer reschedule.",
+          "The board needed to choose between holding the committed date with higher customer risk, funding a parallel reliability track, or accepting a staged migration; I recommended the staged path.",
+          "The executive team needed to choose the launch scope and decide whether Sales could move two enterprise customer dates before contracts were finalized."
+        ],
+        "weak": [
+          "They needed to know there was a data issue so they would not use a bad report.",
+          "They needed to understand why the migration was delayed and why Engineering needed more time.",
+          "They needed an update on the risk so they would not be surprised later."
+        ]
+      }
     },
     {
       "id": "uncertainty",
@@ -145,7 +232,19 @@
       "tests": [
         "risk judgment",
         "reflection"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I marked which usage metrics were confirmed wrong, which customer segment might be affected, and the validation check required before the report could be used in the renewal review.",
+          "I separated confirmed failure modes, assumptions from limited pilot data, unknown customer exposure, and the date when we would have enough evidence to change the recommendation.",
+          "For the vulnerability, I said exploitability was unconfirmed, customer exposure was bounded to two product areas, and notification would trigger if either exploitability or regulated-customer exposure crossed the threshold."
+        ],
+        "weak": [
+          "I told them the pipeline was unreliable and that Engineering needed more time before anyone could trust the numbers.",
+          "I told them we were still investigating and that I would come back with more details when Security had confirmed the full impact.",
+          "I avoided committing to anything because the team did not have all the facts yet."
+        ]
+      }
     },
     {
       "id": "options",
@@ -153,7 +252,19 @@
       "tests": [
         "decision quality",
         "trade-off reasoning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I compared sending the full report, delaying the review, or using a validated subset with caveats, including customer trust risk, renewal timing impact, and owner for each open data check.",
+          "I presented a full delay, a staged migration, and a lower-cost keep-the-date option, with customer impact, engineering effort, cash cost, and residual reliability risk for each.",
+          "For the launch, I compared full launch, limited cohort, and date change against readiness gates, Sales commitments, support capacity, and credibility risk if we had to roll back."
+        ],
+        "weak": [
+          "The options were to wait for Engineering to fix the data or send the report and hope the missing numbers were not material.",
+          "The choices were basically to delay or keep pushing; I recommended delaying because it was safer.",
+          "I gave executives a few technical options, but the details were too deep for them to compare directly."
+        ]
+      }
     },
     {
       "id": "format",
@@ -161,7 +272,19 @@
       "tests": [
         "learning",
         "execution"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added a pre-review data-readiness check with owner, metric freshness, known gaps, customer-impact note, and go/no-go threshold before Customer Success used renewal reports.",
+          "We adopted a one-page technical risk brief with the decision, recommendation, knowns, unknowns, options, thresholds, owner, and next-update time at the top.",
+          "Launch and migration escalations moved to a standard decision-options format, so executives saw customer impact, confidence level, rejected alternatives, and residual risk before the meeting."
+        ],
+        "weak": [
+          "We agreed that Customer Success should check with Engineering earlier before sending important reports.",
+          "We agreed to communicate earlier and set up a recurring status meeting for technical risks.",
+          "I started simplifying technical updates more and tried to avoid too many implementation details."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -169,38 +292,44 @@
       {
         "id": "audience-awareness",
         "name": "Audience Awareness",
-        "strong": "Frames communication around the audience's decision and context.",
-        "weak": "Communicates from the technical team's perspective only."
+        "strong": "Frames communication around the audience's decision, stakes, and context.",
+        "weak": "Leads with the technical team's implementation story.",
+        "strongAiVisual": "assets/generated/signals/audience-awareness-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/audience-awareness-weak.jpg"
       },
       {
         "id": "uncertainty-framing",
         "name": "Uncertainty Framing",
-        "strong": "Separates facts, assumptions, unknowns, and decision options.",
-        "weak": "Hides uncertainty or makes it sound chaotic."
+        "strong": "Separates facts, assumptions, unknowns, confidence levels, and decision thresholds.",
+        "weak": "Treats uncertainty as either too vague to act on or already settled.",
+        "strongAiVisual": "assets/generated/signals/uncertainty-framing-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/uncertainty-framing-weak.jpg"
       },
       {
         "id": "decision-ready-clarity",
         "name": "Decision-Ready Clarity",
-        "strong": "Presents options, **trade-offs**, and consequences clearly.",
-        "weak": "Explains the problem but not the decision."
+        "strong": "Presents comparable options, **trade-offs**, consequences, recommendation, and owners.",
+        "weak": "Explains the problem but leaves the decision and next action unclear.",
+        "strongAiVisual": "assets/generated/signals/decision-ready-clarity-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/decision-ready-clarity-weak.jpg"
       }
     ],
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Explains team-level **technical risk** clearly to non-technical partners."
+        "expected": "Explains team-level technical risk to senior business partners with clear options, bounded uncertainty, and ownership of the chosen path's cost."
       },
       {
         "level": "Director",
-        "expected": "Communicates cross-team risk, options, and **trade-offs** to senior stakeholders."
+        "expected": "Communicates cross-team risk to senior stakeholders with clear decision criteria, rejected alternatives, and customer or business consequences."
       },
       {
         "level": "VP Engineering",
-        "expected": "Frames organizational technology risk for executives in decision-ready terms."
+        "expected": "Frames organizational technology risk for executives with a recommendation, confidence level, cost and risk scenarios, and decision owner."
       },
       {
         "level": "CTO",
-        "expected": "Communicates company-level technology strategy and risk to the CEO, board, customers, or external stakeholders."
+        "expected": "Communicates company-level technology strategy and risk to the CEO, board, customers, or external stakeholders with explicit trust, legal, financial, and timing trade-offs."
       }
     ]
   },
@@ -241,7 +370,7 @@
       },
       {
         "field": "result",
-        "label": "What decision or alignment changed?"
+        "label": "What decision, action, or risk acceptance changed?"
       },
       {
         "field": "reflection",
@@ -249,7 +378,7 @@
       },
       {
         "field": "systemChange",
-        "label": "What communication format or cadence changed?"
+        "label": "What reusable brief, decision format, or cadence changed?"
       }
     ]
   },
@@ -278,6 +407,28 @@
         "source": "Barbara Minto",
         "type": "Book / Method",
         "why": "Classic structured-communication method for executive-ready recommendations and concise reasoning.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "duarte-datastory",
+        "group": "Influence and Executive Communication",
+        "title": "DataStory",
+        "url": "https://www.duarte.com/resources/books/datastory/",
+        "source": "Nancy Duarte / Duarte",
+        "type": "Book",
+        "year": "2019",
+        "why": "Shows how to turn data, charts, and technical evidence into executive summaries that support decisions and action.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "think-fast-audience-first",
+        "group": "Influence and Executive Communication",
+        "title": "It's Not About You: Why Effective Communicators Put Others First",
+        "url": "https://www.fastersmarter.io/82-its-not-about-you-why-effective-communicators-put-others-first/",
+        "source": "Think Fast Talk Smart",
+        "type": "Podcast episode",
+        "year": "2023",
+        "why": "Calibrates audience-first communication: understand the listeners' needs, anticipate resistance, and design the message around adoption.",
         "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
       },
       {
@@ -323,16 +474,6 @@
         "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
       },
       {
-        "id": "so-what-strategy",
-        "group": "Influence and Executive Communication",
-        "title": "The So What Strategy",
-        "url": "https://sowhatstrategy.com/",
-        "source": "Davina Stanley and Gerard Castles",
-        "type": "Book",
-        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
-        "why": "Relevant here because **executive communication** must quickly answer why the message matters and what decision is needed."
-      },
-      {
         "id": "supercommunicators",
         "group": "Influence and Executive Communication",
         "title": "Supercommunicators",
@@ -342,7 +483,43 @@
         "year": "2024",
         "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing.",
         "why": "Relevant here because strong communication answers should show listening, connection, clarity, and adaptation to the audience."
+      },
+      {
+        "id": "hbr-communicating-why",
+        "group": "Influence and Executive Communication",
+        "title": "Good Leadership Is About Communicating \"Why\"",
+        "url": "https://hbr.org/2020/05/good-leadership-is-about-communicating-why",
+        "source": "Harvard Business Review",
+        "type": "Article",
+        "year": "2020",
+        "why": "Useful for probing whether a candidate explains the reason behind a recommendation instead of only the what and how.",
+        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+      },
+      {
+        "id": "google-sre-incident-management-guide",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Incident Management Guide",
+        "url": "https://sre.google/resources/practices-and-processes/incident-management-guide/",
+        "source": "Google SRE",
+        "type": "Guide",
+        "why": "Shows how technical incidents need stakeholder updates, clear communication roles, user impact framing, and post-incident learning.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, and learning loops."
+      },
+      {
+        "id": "nist-csf-20",
+        "group": "Technical Risk and Governance",
+        "title": "The NIST Cybersecurity Framework (CSF) 2.0",
+        "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+        "source": "NIST",
+        "type": "Framework",
+        "year": "2024",
+        "why": "Provides shared language for cybersecurity risk, governance, prioritization, and communication across technical and executive stakeholders.",
+        "groupDescription": "Resources for turning technical uncertainty, security exposure, and governance trade-offs into decision-ready risk language."
       }
     ]
-  }
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

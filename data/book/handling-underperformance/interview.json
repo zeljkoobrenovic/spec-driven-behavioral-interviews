@@ -1,7 +1,7 @@
 {
   "id": "handling-underperformance",
   "title": "Handling Underperformance",
-  "description": "Addressing senior leader underperformance with clarity, fairness, documentation, compassion, and decisiveness.",
+  "description": "Addressing senior leader underperformance with observable expectations, fair support, careful documentation, compassion, and timely decisions.",
   "roleFocus": [
     "Senior Manager",
     "Director",
@@ -13,53 +13,63 @@
     "id": "underperformance",
     "name": "Handling Underperformance",
     "family": "People Leadership",
-    "definition": "Distinguishes skill gaps, role mismatch, and motivation problems, then acts fairly and decisively.",
-    "whyItMatters": "Senior leaders damage organizations when they tolerate unclear expectations or avoid difficult people decisions."
+    "definition": "Distinguishes skill gaps, role mismatch, motivation problems, and harmful behavior, then acts fairly and decisively.",
+    "whyItMatters": "When senior leaders tolerate unclear expectations or avoid difficult people decisions, teams absorb hidden delivery, trust, and morale costs."
   },
   "prompt": {
     "primary": "Tell me about a time you had to address underperformance in a senior leader.",
     "variants": [
       "Describe a time when you waited too long to make a people decision.",
-      "Tell me about a time a well-liked leader was not scaling with the role."
+      "Tell me about a time a well-liked leader was not scaling with the role.",
+      "Tell me about a time a talented leader's behavior was damaging team trust."
     ],
     "interviewerIntent": [
       "Can the candidate be fair and direct?",
       "Do they distinguish role mismatch from character judgment?",
-      "Can they act decisively without losing compassion?"
+      "Can they act decisively without losing compassion?",
+      "Do they recognize when harmful behavior needs boundaries rather than extended coaching?"
     ]
   },
   "scenario": {
-    "signatureExample": "An engineering director realizes one manager is well-liked but unable to scale as the organization grows.",
+    "signatureExample": "An engineering director addresses a well-liked manager who is not scaling, while a VP faces a high-output leader whose behavior is damaging team trust.",
     "context": [
       "The manager has strong trust with engineers but weak planning and delegation.",
       "Team delivery depends too much on personal heroics.",
-      "Peers are frustrated by missed commitments but reluctant to criticize the person."
+      "Peers are frustrated by missed commitments but reluctant to criticize the person.",
+      "In harder cases, a leader may deliver results while creating fear, blame, or avoidable attrition risk."
     ],
     "constraints": [
       "The leader deserves clear expectations and support.",
-      "The business cannot keep absorbing delivery misses.",
-      "The decision will signal how the organization handles performance."
+      "The business cannot keep absorbing delivery misses, hidden coordination cost, or trust damage.",
+      "The decision will signal how the organization handles performance.",
+      "Harmful behavior may require faster boundaries than a teachable skill gap."
     ]
   },
   "storyAnatomy": {
-    "situation": "A respected manager was struggling with scale, creating repeated delivery and delegation problems.",
+    "situation": "An influential leader was underperforming because the scope had outgrown their current capability or because their behavior was damaging trust.",
     "task": "Address the performance gap clearly and fairly while protecting the team and business outcomes.",
     "action": [
-      "Clarified **role expectations** and specific gaps.",
-      "Created a time-bound improvement plan with coaching and reduced ambiguity.",
-      "Documented progress and impact.",
-      "Eventually moved the person into a better-fitting role when improvement was insufficient."
+      "Clarified **role expectations**, specific gaps, and the evidence that would change the decision.",
+      "Separated skill gap, role mismatch, motivation, and harmful behavior instead of treating every case as a generic coaching problem.",
+      "Rejected both immediate removal without evidence and open-ended support that would keep the team absorbing the cost.",
+      "Created a time-bound improvement plan when the gap was teachable, or set immediate behavioral boundaries when trust was being damaged.",
+      "Documented progress, support provided, team impact, and decision thresholds.",
+      "Changed scope, moved the person into a better-fitting role, or exited the leader when evidence showed the current scope was no longer viable."
     ],
     "result": [
-      "The team gained clearer planning and ownership.",
-      "The individual was treated respectfully and placed where they could succeed.",
-      "The organization saw that **performance expectations** were real and humane."
+      "Cross-team commitment misses fell from four in one quarter to one in the next planning cycle, and decision lead time for the affected area dropped from nine days to two.",
+      "Skip-level confidence in local leadership recovered from 3.1 to 4.0, while escalation volume about unclear ownership dropped by half.",
+      "The individual was treated respectfully, with either a better-fitting role or a documented exit path.",
+      "One roadmap area slowed by six weeks during the transition, but the team stopped absorbing hidden coordination and morale costs.",
+      "The organization saw that **performance expectations** were real, humane, and not dependent on popularity or output alone."
     ],
     "reflection": "The hard lesson was that compassion without clarity prolongs stress for everyone involved.",
     "systemChange": [
-      "Clear manager expectations.",
-      "Earlier performance calibration.",
-      "Role-fit review before expanding management scope."
+      "Clear manager expectations with evidence categories for planning, delegation, feedback, and collaboration.",
+      "Earlier performance calibration with peer, skip-level, and delivery signals.",
+      "Role-fit review before expanding management scope.",
+      "Behavior escalation rule for high-output leaders who damage trust.",
+      "Transition plan template covering succession, communication, and team protection."
     ]
   },
   "exampleStories": [
@@ -67,24 +77,26 @@
       "id": "beloved-manager-not-scaling",
       "title": "Beloved Manager Not Scaling",
       "level": "Director",
-      "promptVariant": "Tell me about a time you had to address underperformance in a senior leader.",
-      "situation": "A manager was trusted and well-liked but could not delegate, plan across teams, or develop leads as the organization scaled.",
+      "promptVariant": "Tell me about a time a well-liked leader was not scaling with the role.",
+      "situation": "A manager in a 45-person product area was trusted and well-liked, but was not delegating, planning across teams, or developing leads as the organization scaled. Three cross-team commitments slipped in one quarter because important decisions still routed through them.",
       "strongAnswerSketch": [
-        "Describe observable gaps rather than labeling the person.",
-        "Clarify expectations and create a time-bound **coaching plan**.",
-        "Measure progress through delegation, planning quality, and team ownership.",
-        "Move the person into a better-fitting role when the gap remained."
+        "Describe observable gaps in delegation, planning quality, and lead development rather than labeling the person.",
+        "Reject an immediate exit because the gap is teachable, but also reject another vague quarter of encouragement.",
+        "Clarify expectations and create a 60-day **coaching plan** with decision latency, planning quality, lead ownership, and commitment misses as evidence.",
+        "Move the person into a smaller, better-fitting role when the same gaps remain after the evidence window, while naming the residual cost: one delayed roadmap milestone and a frustrated peer lead."
       ],
       "whyItWorks": [
         "Balances compassion and clarity.",
         "Shows fair support before decision-making.",
-        "Protects the team from prolonged ambiguity."
+        "Models measurable evidence instead of relying on reputation.",
+        "Protects the team from prolonged ambiguity while admitting the transition cost."
       ],
       "weakVersion": "I gave them feedback several times, but eventually it was clear they were not a fit and we had to move on.",
       "followUpAngles": [
         "What exact expectation did they miss?",
         "How long did you give the **coaching plan**?",
-        "Did you wait too long?"
+        "Which alternative did you reject?",
+        "What cost did the role change create?"
       ],
       "aiVisual": "assets/generated/example-stories/beloved-manager-not-scaling.jpg"
     },
@@ -93,45 +105,82 @@
       "title": "Senior IC In A Lead Role Mismatch",
       "level": "Senior Manager",
       "promptVariant": "Describe a time when you waited too long to make a people decision.",
-      "situation": "A senior IC was made a team lead because of technical depth, but they avoided feedback conversations and became a bottleneck for decisions.",
+      "situation": "A senior IC was made a team lead because of technical depth, but avoided feedback conversations and became a decision bottleneck. Two project leads started escalating around them, and sprint planning lead time grew from two days to more than a week.",
       "strongAnswerSketch": [
         "Acknowledge the leadership design mistake instead of blaming the person.",
-        "Clarify whether the issue is skill gap, motivation, or role mismatch.",
-        "Offer coaching and an alternate senior IC path.",
-        "Change **promotion criteria** for future lead assignments."
+        "Clarify whether the issue is skill gap, motivation, or role mismatch, using missed feedback conversations, decision latency, and team ownership as evidence.",
+        "Offer coaching and an alternate senior IC path, then remove lead scope when the same bottleneck repeats.",
+        "Admit the residual cost: a delivery slip and a trust reset with two project leads who had been waiting for action.",
+        "Change **promotion criteria** so future lead assignments require evidence of feedback, delegation, and conflict handling before scope expands."
       ],
       "whyItWorks": [
         "Shows ownership for role design.",
         "Distinguishes performance from fit.",
+        "Includes a measurable before/after signal.",
         "Creates a fairer leadership selection mechanism."
       ],
       "weakVersion": "The person was not leadership material, so I replaced them with someone more people-oriented.",
       "followUpAngles": [
         "What signals did you ignore?",
-        "How did you preserve the person dignity?",
+        "How did you preserve the person's dignity?",
+        "What did waiting too long cost the team?",
         "What changed in **promotion criteria**?"
       ],
       "aiVisual": "assets/generated/example-stories/senior-ic-lead-role-mismatch.jpg"
+    },
+    {
+      "id": "talented-director-corrosive-behavior",
+      "title": "Talented Director With Corrosive Behavior",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time a talented leader's behavior was damaging team trust.",
+      "situation": "A director owned a revenue-critical platform migration and hit delivery milestones, but publicly blamed managers in incident reviews, dismissed peer input, and created two regretted attrition risks in one quarter.",
+      "strongAnswerSketch": [
+        "Separate high output from acceptable leadership behavior, and name the specific expectations being violated.",
+        "Use evidence from skip-levels, peer commitments, incident reviews, attrition risk, and direct observation so the case is not framed as a style conflict.",
+        "Reject ignoring the behavior because the migration is important, and reject a long generic performance plan that would leave the team exposed.",
+        "Set immediate behavioral boundaries, remove the director from people-management and incident-review authority after a repeat breach, and appoint an interim lead for the migration.",
+        "Manage the residual cost: the migration slows by four weeks, but skip-level safety improves, incident reviews become usable again, and peer leaders re-engage."
+      ],
+      "whyItWorks": [
+        "Tests underperformance as harmful behavior, not only capability or role mismatch.",
+        "Shows fairness through evidence and direct expectations while protecting the team quickly.",
+        "Makes the rejected alternatives and cost of decisiveness explicit.",
+        "Demonstrates VP-level judgment about succession, communication, and organizational signal."
+      ],
+      "weakVersion": "They were brilliant but difficult, so I coached them on communication until it became clear the team could not work with them.",
+      "followUpAngles": [
+        "What evidence showed harmful behavior rather than a personality mismatch?",
+        "Which alternative did you reject?",
+        "What boundary did you set before changing scope?",
+        "How did you protect the roadmap and the team after the decision?"
+      ],
+      "aiVisual": "assets/generated/example-stories/talented-director-corrosive-behavior.jpg"
     }
   ],
   "strongAnswerPattern": {
     "summary": "The candidate shows clear expectations, evidence, coaching, documentation, and timely action.",
     "moves": [
       "Describes observable performance gaps rather than labels.",
-      "Gives the person a fair chance with explicit expectations.",
-      "Measures progress and impact.",
+      "Separates skill gap, role mismatch, motivation, and harmful behavior before choosing the intervention.",
+      "Gives the person a fair chance with explicit expectations when the gap is teachable.",
+      "Sets faster boundaries when behavior is damaging trust or safety.",
+      "Measures progress and impact with delivery, team health, and ownership evidence.",
+      "Names rejected alternatives and the residual cost of the chosen path.",
       "Acts when the situation does not improve.",
       "Reflects on timing and system improvements."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate either avoids the issue or describes a cold termination without coaching, documentation, or learning.",
+    "summary": "The candidate either avoids the issue or jumps to a cold termination without evidence, coaching, documentation, or learning.",
     "redFlags": [
       "Cannot name the expectation the person failed to meet.",
       "Confuses being liked with being effective.",
+      "Confuses high output with acceptable leadership behavior.",
       "Delegates the hard conversation to HR or another leader.",
-      "Lets the situation continue until team trust is damaged."
+      "Treats every case as coaching even when the behavior is harming the team.",
+      "Lets the situation continue until team trust is damaged.",
+      "Presents a clean win without naming the cost, rejected alternative, or transition risk."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
@@ -142,15 +191,35 @@
       "tests": [
         "accountability",
         "judgment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I named the role outcomes and behaviors: planning quality, delegation to leads, feedback cadence, decision ownership, and respectful disagreement in reviews.",
+          "For the director behavior case, I made the non-negotiables explicit: no public blame, no retaliation for escalation, and no bypassing peer decision rights."
+        ],
+        "weak": [
+          "I told them they needed to communicate better and step up as a leader.",
+          "I explained that people were frustrated and that they needed to rebuild trust."
+        ]
+      }
     },
     {
       "id": "support",
-      "question": "What support did you provide before making a final decision?",
+      "question": "What support or boundary did you provide before making a final decision?",
       "tests": [
         "ownership",
         "stakeholder alignment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "For the scaling gap, I gave a 60-day plan, weekly coaching, a delegation checklist, and examples of planning artifacts that would meet the bar.",
+          "For the harmful behavior case, support included direct feedback and HR partnership, but the boundary was immediate: one repeat breach would remove people-management scope."
+        ],
+        "weak": [
+          "I gave them feedback in our one-on-ones and told HR I was worried.",
+          "I tried to be supportive because I did not want the person to feel attacked."
+        ]
+      }
     },
     {
       "id": "timing",
@@ -158,7 +227,17 @@
       "tests": [
         "reflection",
         "decision quality"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I waited too long on the lead-role mismatch; two project leads had already started escalating around the person, so I changed the promotion trial design afterward.",
+          "I acted faster on the corrosive director because the repeated behavior was creating attrition risk and teaching the organization that results excused harm."
+        ],
+        "weak": [
+          "I think the timing was right because I wanted to be fair and give them enough chances.",
+          "In hindsight maybe I waited too long, but these decisions are always difficult."
+        ]
+      }
     },
     {
       "id": "team-impact",
@@ -166,7 +245,17 @@
       "tests": [
         "measurement",
         "execution"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I named an interim owner, reset decision rights, told the team what would change without sharing private performance details, and tracked commitment misses, skip-level confidence, and escalation volume.",
+          "I acknowledged the roadmap slip openly, protected the team from more hidden coordination cost, and watched whether incident reviews and planning meetings became usable again."
+        ],
+        "weak": [
+          "I reassured the team that we were handling it and asked them to stay focused.",
+          "I did not say much because performance matters are confidential."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -174,24 +263,24 @@
       {
         "id": "clarity",
         "name": "Clarity",
-        "strong": "Names expectations, gaps, support, and **decision criteria**.",
-        "weak": "Relies on vague performance concerns.",
+        "strong": "Names expected outcomes, leadership behaviors, evidence, support, and **decision criteria**.",
+        "weak": "Relies on vague performance concerns or style judgments.",
         "strongAiVisual": "assets/generated/signals/clarity-strong.jpg",
         "weakAiVisual": "assets/generated/signals/clarity-weak.jpg"
       },
       {
         "id": "fairness",
         "name": "Fairness",
-        "strong": "Provides support and evidence before making a decision.",
-        "weak": "Surprises the person or skips feedback.",
+        "strong": "Uses consistent evidence, direct feedback, documented support, and clear boundaries before making a decision.",
+        "weak": "Surprises the person, skips feedback, or lets reputation dominate the evidence.",
         "strongAiVisual": "assets/generated/signals/fairness-strong.jpg",
         "weakAiVisual": "assets/generated/signals/fairness-weak.jpg"
       },
       {
         "id": "decisiveness",
         "name": "Decisiveness",
-        "strong": "Acts when evidence shows the role is not working.",
-        "weak": "Confuses compassion with delay.",
+        "strong": "Acts at the right pace for the failure mode: coaching when teachable, faster boundaries when behavior damages trust.",
+        "weak": "Confuses compassion with delay or treats harmful behavior as merely a communication gap.",
         "strongAiVisual": "assets/generated/signals/decisiveness-strong.jpg",
         "weakAiVisual": "assets/generated/signals/decisiveness-weak.jpg"
       }
@@ -199,19 +288,19 @@
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Handles team-level performance with clear feedback and documentation."
+        "expected": "Handles lead or manager performance in a focused area with concrete feedback, support, documentation, and team protection."
       },
       {
         "level": "Director",
-        "expected": "Addresses manager underperformance across teams while protecting delivery and trust."
+        "expected": "Distinguishes capability gaps from role mismatch across managers, uses calibration evidence, and changes scope before teams absorb repeated misses."
       },
       {
         "level": "VP Engineering",
-        "expected": "Makes senior leadership changes with fairness, speed, and organizational clarity."
+        "expected": "Makes senior leadership changes with fairness, speed, succession coverage, and a clear signal about what leadership behavior is tolerated."
       },
       {
         "level": "CTO",
-        "expected": "Handles executive-level role fit and succession implications with company-level judgment."
+        "expected": "Sets the company-level bar for executive behavior by separating recoverable gaps from trust-breaking conduct, aligning HR and succession coverage, and acting before delay teaches the wrong norm."
       }
     ]
   },
@@ -252,11 +341,11 @@
       },
       {
         "field": "result",
-        "label": "What changed for the person, team, and organization?"
+        "label": "What measurable change happened for the person, team, and organization?"
       },
       {
         "field": "reflection",
-        "label": "What would you change about your timing or approach?"
+        "label": "What would you change about your timing, rejected alternative, or approach?"
       },
       {
         "field": "systemChange",
@@ -267,51 +356,52 @@
   "relatedScenarios": [
     "A senior IC in a leadership role blocks delegation.",
     "A manager is culturally beloved but delivery-poor.",
-    "A director cannot scale from team execution to organizational leadership."
+    "A director cannot scale from team execution to organizational leadership.",
+    "A high-output leader damages trust through blame, intimidation, or peer bypassing.",
+    "A VP must choose between protecting a critical roadmap and removing a harmful leader."
   ],
   "toProbeFurther": {
     "links": [
       {
-        "id": "govuk-structured-interviews",
-        "group": "Interviewing and Calibration",
-        "title": "Use Fair and Structured Interview Techniques",
-        "url": "https://www.gov.uk/government/publications/use-fair-and-structured-interview-techniques/use-fair-and-structured-interview-techniques",
-        "source": "GOV.UK",
+        "id": "fair-work-underperformance",
+        "group": "People Leadership and Feedback",
+        "title": "Managing Underperformance Best Practice Guide",
+        "url": "https://www.fairwork.gov.au/tools-and-resources/best-practice-guides/managing-underperformance",
+        "source": "Fair Work Ombudsman",
         "type": "Guide",
-        "why": "Official guidance for making interviews structured, fair, **evidence-based**, and less dependent on interviewer instinct.",
-        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+        "why": "Gives managers a concrete process for identifying gaps, setting expectations, documenting evidence, and acting promptly without treating underperformance as a character judgment.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
         "id": "radical-candor",
         "group": "People Leadership and Feedback",
-        "title": "Radical Candor",
-        "url": "https://www.radicalcandor.com/the-book/",
-        "source": "Kim Scott",
+        "title": "Radical Candor: Fully Revised & Updated Edition",
+        "url": "https://www.radicalcandor.com/the-book",
+        "source": "Kim Scott / Radical Candor",
         "type": "Book",
-        "year": "2017",
-        "why": "Feedback model for balancing direct challenge with care when handling performance and trust issues.",
+        "why": "Gives vocabulary for pairing direct challenge with personal care, avoiding both conflict avoidance and needlessly harsh delivery.",
         "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
         "id": "crucial-conversations",
-        "group": "Influence and Executive Communication",
+        "group": "People Leadership and Feedback",
         "title": "Crucial Conversations",
-        "url": "https://cruciallearning.com/crucialconversations_book.aspx",
+        "url": "https://cruciallearning.com/books/crucial-conversations-book/",
         "source": "Crucial Learning",
-        "type": "Book",
-        "why": "Useful for high-stakes disagreement, **executive conflict**, and emotionally loaded conversations.",
-        "groupDescription": "Resources for executive communication, cross-functional influence, conflict, and decision framing."
+        "type": "Book / Resources",
+        "why": "Useful for performance conversations where stakes, emotion, and disagreement are high and the leader must keep dialogue specific.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
         "id": "managers-path",
-        "group": "People Leadership and Feedback",
+        "group": "Engineering Management and Role Fit",
         "title": "The Manager's Path",
         "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/",
         "source": "Camille Fournier / O'Reilly",
         "type": "Book",
         "year": "2017",
-        "why": "Maps engineering leadership responsibilities from mentorship through senior organizational leadership.",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+        "why": "Grounds senior-leader underperformance in engineering-management role changes, delegation, performance reviews, and difficult team-dynamics cases.",
+        "groupDescription": "Resources for technology leadership roles, delegation, manager-of-managers transitions, and role fit."
       },
       {
         "id": "manager-tools-basics",
@@ -320,7 +410,7 @@
         "url": "https://www.manager-tools.com/manager-tools-basics",
         "source": "Manager Tools",
         "type": "Podcast / Guide",
-        "why": "Practical management operating cadence for one-on-ones, feedback, coaching, and delegation.",
+        "why": "Turns the interview's coaching cadence into concrete operating habits: one-on-ones, specific feedback, coaching, and delegation.",
         "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
@@ -330,8 +420,7 @@
         "url": "https://www.penguinrandomhouse.com/books/72467/high-output-management-by-andrew-s-grove-former-chairman-and-ceo-of-intel/",
         "source": "Andrew S. Grove / Penguin Random House",
         "type": "Book",
-        "year": "1983",
-        "why": "Classic operating-management reference for leverage, meetings, output, delegation, and manager accountability.",
+        "why": "Frames manager output as organization output and gives operational grounding for delegation, performance reviews, and manager accountability.",
         "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
       },
       {
@@ -341,24 +430,35 @@
         "url": "https://business.google.com/us/think/future-of-marketing/five-dynamics-effective-team/",
         "source": "Google",
         "type": "Article",
-        "why": "Summarizes Google's team-effectiveness findings, including psychological safety and dependable execution.",
+        "year": "2023",
+        "why": "Connects underperformance to structure, clarity, dependability, and psychological safety, giving concrete team-health signals beyond individual output.",
         "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
       },
       {
+        "id": "hbr-toxic-employee",
+        "group": "Harmful Behavior and Team Protection",
+        "title": "How to Manage a Toxic Employee",
+        "url": "https://hbr.org/2016/10/how-to-manage-a-toxic-employee",
+        "source": "Harvard Business Review",
+        "type": "Article",
+        "year": "2016",
+        "why": "Helps calibrate feedback, damage control, and team protection when harmful behavior must be bounded before a final employment decision.",
+        "groupDescription": "Resources for distinguishing capability gaps from behavior that damages psychological safety, accountability, and team health."
+      },
+      {
         "id": "no-asshole-rule",
-        "group": "People Leadership and Feedback",
+        "group": "Harmful Behavior and Team Protection",
         "title": "The No Asshole Rule",
         "url": "https://bobsutton.net/book/no-asshole-rule/",
         "source": "Robert I. Sutton",
         "type": "Book",
-        "year": "2007",
-        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams.",
-        "why": "Relevant here because performance cases sometimes involve harmful behavior, not just skill gaps, and the leader must protect team health."
+        "why": "Helps distinguish high output from acceptable leadership behavior by naming the organizational cost of tolerated disrespect and intimidation.",
+        "groupDescription": "Resources for distinguishing capability gaps from behavior that damages psychological safety, accountability, and team health."
       }
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

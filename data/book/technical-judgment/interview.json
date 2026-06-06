@@ -1,8 +1,9 @@
 {
   "id": "technical-judgment",
   "title": "Technical Judgment at Executive Scale",
-  "description": "Making or reversing **architecture decisions** with enough technical depth, organizational realism, and business judgment.",
+  "description": "Evaluating, making, or reversing **architecture decisions** with enough technical depth, organizational realism, and business judgment.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -13,7 +14,7 @@
     "name": "Technical Judgment at Executive Scale",
     "family": "Judgment and Strategy",
     "definition": "Makes high-quality technical calls by weighing architecture, team maturity, operational burden, and business consequences.",
-    "whyItMatters": "Senior technology leaders do not need to be the deepest specialist, but they must create conditions for sound technical decisions."
+    "whyItMatters": "Senior technology leaders do not need to be the deepest specialist, but they must create the conditions for sound technical decisions and own the consequences."
   },
   "prompt": {
     "primary": "Tell me about a time you made or reversed a major architecture decision.",
@@ -24,60 +25,84 @@
     "interviewerIntent": [
       "Can the candidate reason about technical **trade-offs** beyond slogans?",
       "Do they respect expert input without outsourcing judgment?",
-      "Can they connect architecture choices to team and business constraints?"
+      "Can they connect architecture choices to team capability, customer impact, and business constraints?"
     ]
   },
   "scenario": {
-    "signatureExample": "An engineering director inherits a monolith-versus-microservices debate and chooses a modular monolith before selective extraction.",
+    "signatureExample": "A VP reopens a service-extraction decision after checkout incidents and on-call handoffs worsen, reconsolidates two unstable pieces, and keeps one service with clear ownership.",
     "context": [
-      "Senior engineers are split between immediate service extraction and stabilizing the existing system.",
-      "The organization has inconsistent deployment discipline.",
-      "Customers care more about reliability and delivery speed than architecture purity."
+      "A portfolio-level service extraction was approved to improve team autonomy, but checkout reliability and deployment coordination got worse.",
+      "Senior engineers are split between hardening the new services, reconsolidating the unstable pieces, and waiting for teams to mature around the new boundaries.",
+      "Customers care more about payment success, recovery speed, and predictable delivery than about the target-state architecture."
     ],
     "constraints": [
-      "The current monolith slows teams but is still understandable.",
-      "Microservices would increase operational burden.",
-      "The decision must preserve trust with senior engineers on both sides."
+      "Reversing the decision would delay two roadmap items and could embarrass leaders who sponsored the extraction.",
+      "Hardening every service would consume platform capacity without fixing unclear ownership.",
+      "The decision must preserve trust with senior engineers and make the learning explicit."
     ]
   },
   "storyAnatomy": {
-    "situation": "The team was stuck in a polarized architecture debate that was delaying delivery and raising operational risk.",
-    "task": "Choose a technical direction that improved delivery while matching the organization's maturity.",
+    "situation": "A major service extraction, meant to accelerate teams, was causing more checkout incidents, deployment coordination, and on-call handoffs.",
+    "task": "Decide whether to keep hardening the services, reverse part of the decision, or continue the migration despite the operational drag.",
     "action": [
-      "Defined evaluation criteria around team ownership, deployment frequency, incident patterns, domain boundaries, and **customer impact**.",
-      "Ran a short technical review with senior engineers from both camps.",
-      "Chose a modular monolith first, with explicit extraction criteria for services.",
-      "Invested in deployment, observability, and ownership standards before extraction."
+      "Defined reversal criteria around incident frequency, rollback time, ownership clarity, dependency age, on-call handoffs, and **payment success**.",
+      "Ran a review where service advocates, checkout leads, SRE leaders, and product leaders compared hardening, reconsolidation, and further extraction.",
+      "Stopped further extraction, reconsolidated two unstable services behind modular boundaries, and kept one service where scale and ownership justified it.",
+      "Published the reversal rationale, including the roadmap cost and what the original decision had underweighted."
     ],
     "result": [
-      "The debate moved from ideology to **decision criteria**.",
-      "Teams gained clearer boundaries without taking on premature distributed-systems overhead.",
-      "Later service extractions happened where ownership and scaling pressure justified them."
+      "Checkout P1/P2 incidents fell from seven in one month to two across the next two release cycles.",
+      "Median rollback time dropped from 90 minutes to 35 minutes, and cross-team on-call handoffs fell by roughly 40 percent.",
+      "Two roadmap items slipped by one month, but later extractions used explicit ownership and readiness criteria."
     ],
-    "reflection": "The lesson was that architecture direction must fit operating capability, not just target-state elegance.",
+    "reflection": "The lesson was that architecture direction must fit operating capability, and that reversing a stale decision is a leadership act when the evidence changes.",
     "systemChange": [
-      "Architecture decision record template.",
-      "Service extraction readiness checklist.",
-      "Regular technical **review forum** focused on trade-offs and reversibility."
+      "Architecture decision record template with revisit triggers and rejected options.",
+      "Service extraction readiness checklist covering ownership, observability, deployment, and on-call maturity.",
+      "Regular technical **review forum** that separates reversible team-local choices from hard-to-reverse company-level architecture calls."
     ]
   },
   "exampleStories": [
+    {
+      "id": "constrained-ml-platform-rollout",
+      "title": "Constraining an ML Platform Rollout",
+      "level": "Senior Manager",
+      "promptVariant": "Describe a time when your **technical judgment** was challenged by senior engineers.",
+      "situation": "A senior engineer wanted all personalization and fraud workflows moved onto a shared ML feature platform, but fraud decisions still needed deterministic explanations, batch lineage was weak, and two recent data-quality incidents had exposed unclear feature ownership.",
+      "strongAnswerSketch": [
+        "Separate workflows where shared ML features improved ranking or recommendations from workflows that required explainability, auditability, or simple rollback.",
+        "Move recommendation experiments onto the feature platform while keeping fraud blocks behind versioned rules and an explicit human-review path.",
+        "Ask the senior engineer who proposed the rollout to co-own the readiness bar for feature freshness, lineage, model rollback, and business-owner sign-off.",
+        "Measure data-quality incidents, rollback time, model-change lead time, false-positive customer impact, and support-ticket handoffs over the next release cycle."
+      ],
+      "whyItWorks": [
+        "Shows domain-level technical judgment without pretending to be the deepest ML-platform expert.",
+        "Balances a senior IC's valid platform goal with explainability, operational readiness, and customer risk.",
+        "Turns a narrowed rollout into a reusable readiness mechanism for data-dependent and model-dependent systems."
+      ],
+      "weakVersion": "I decided the ML platform was too risky for fraud, limited it to recommendations, and told the senior engineer we could revisit fraud later.",
+      "followUpAngles": [
+        "Which workflows still justified the shared ML platform?",
+        "How did you preserve trust with the engineer who advocated the original design?",
+        "What data or model readiness signal changed future architecture reviews?"
+      ]
+    },
     {
       "id": "modular-monolith-first",
       "title": "Modular Monolith Before Services",
       "level": "Director",
       "promptVariant": "Tell me about a time you chose a pragmatic architecture over a fashionable one.",
-      "situation": "Senior engineers were split between extracting microservices immediately and stabilizing a monolith that was painful but still understandable.",
+      "situation": "Senior engineers were split between extracting microservices immediately and stabilizing a monolith that slowed teams but still had clear ownership and known failure modes.",
       "strongAnswerSketch": [
         "Define criteria around deployment frequency, **ownership boundaries**, incident history, and team maturity.",
-        "Run a review that surfaces both camps strongest arguments.",
+        "Run a review that surfaces both camps' strongest arguments.",
         "Choose modular boundaries first and service extraction only where ownership and scale justify it.",
-        "Invest in observability and deployment discipline before distributed ownership."
+        "Invest in observability, deployment discipline, and domain ownership before distributing runtime responsibility."
       ],
       "whyItWorks": [
         "Uses technical criteria rather than architecture fashion.",
         "Respects senior engineers without outsourcing judgment.",
-        "Shows sequencing and reversibility."
+        "Shows sequencing, reversibility, and operating readiness."
       ],
       "weakVersion": "I decided microservices were too risky and told the team to clean up the monolith first.",
       "followUpAngles": [
@@ -88,23 +113,48 @@
       "aiVisual": "assets/generated/example-stories/modular-monolith-first.jpg"
     },
     {
+      "id": "reversing-premature-service-extraction",
+      "title": "Reversing Premature Service Extraction",
+      "level": "VP Engineering",
+      "promptVariant": "Tell me about a time you made or reversed a major architecture decision.",
+      "situation": "A portfolio-level service extraction had been approved to accelerate product teams, but after three months checkout incidents, deployment coordination, and on-call handoffs got worse while no team wanted to own the shared failure modes.",
+      "strongAnswerSketch": [
+        "Reopen the decision with evidence: deployment failure rate, incident handoffs, dependency age, ownership clarity, customer-impacting latency, and on-call load.",
+        "Admit that the original extraction criteria overweighted target-state autonomy and underweighted operational readiness.",
+        "Stop further extraction, reconsolidate two unstable services behind modular boundaries, and keep one service where scale and ownership justified it.",
+        "Absorb the cost of pausing two roadmap items, publish the reversal rationale, and replace the old review with a service-readiness gate.",
+        "Show the outcome: checkout P1/P2 incidents fell from seven in one month to two over two release cycles, rollback time dropped from 90 minutes to 35 minutes, and cross-team on-call handoffs fell by roughly 40 percent."
+      ],
+      "whyItWorks": [
+        "Makes a decision reversal credible by naming evidence, ownership, cost, and measured recovery.",
+        "Avoids both sunk-cost defense and blanket rejection of services.",
+        "Shows how an executive-level architecture call changes portfolio governance."
+      ],
+      "weakVersion": "I saw that microservices were causing incidents, so I told teams to move back to the monolith and focus on delivery.",
+      "followUpAngles": [
+        "What made reversal better than hardening the new services?",
+        "Who lost work or status because of the reversal?",
+        "What did the organization learn about service readiness?"
+      ]
+    },
+    {
       "id": "build-vs-buy-platform",
-      "title": "Build Versus Buy For A Platform Capability",
+      "title": "Build Versus Buy for a Platform Capability",
       "level": "CTO",
       "promptVariant": "Tell me about a time you made or reversed a major architecture decision.",
-      "situation": "A team wanted to build an internal workflow engine, but the company needed faster compliance readiness and lacked deep expertise in that domain.",
+      "situation": "A platform team wanted to build an internal workflow engine, but the company needed faster compliance readiness and lacked deep expertise in that domain.",
       "strongAnswerSketch": [
-        "Compare strategic differentiation, integration cost, vendor risk, compliance needs, and team opportunity cost.",
+        "Compare strategic differentiation, integration cost, vendor risk, compliance deadline, data ownership, and team opportunity cost.",
         "Choose buy for the commodity workflow layer while building differentiating policy logic internally.",
-        "Create an exit plan around data ownership and integration boundaries.",
-        "Document the decision so future platform investments use the same criteria."
+        "Create an exit plan around data export, integration boundaries, and owned policy logic.",
+        "Document the decision so future platform investments use the same build-versus-buy criteria."
       ],
       "whyItWorks": [
         "Balances technical control with business urgency.",
         "Avoids false **build-versus-buy** absolutism.",
         "Creates a reusable decision framework."
       ],
-      "weakVersion": "I chose the vendor because it was faster and told the team we could always replace it later.",
+      "weakVersion": "I chose the vendor because it was faster and told the team we could replace it later if it became a problem.",
       "followUpAngles": [
         "What vendor lock-in risk did you accept?",
         "What did you keep in-house?",
@@ -114,12 +164,13 @@
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows technical reasoning, humility with experts, and pragmatic sequencing.",
+    "summary": "The candidate shows technical reasoning, humility with experts, and pragmatic sequencing under real constraints.",
     "moves": [
-      "Frames the technical decision through constraints and outcomes.",
+      "Frames the technical decision through constraints, options, and outcomes.",
       "Names the criteria used to evaluate options.",
-      "Shows how dissenting technical input was handled.",
+      "Shows how dissenting technical input changed the decision or criteria.",
       "Explains reversibility, sequencing, and operational readiness.",
+      "Names the evidence that would trigger a reversal and owns course changes without blame.",
       "Leaves behind decision mechanisms, not just a chosen architecture."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
@@ -130,7 +181,8 @@
       "Uses architecture buzzwords without concrete constraints.",
       "Cannot explain what would make the decision wrong.",
       "Frames disagreement with senior engineers as politics rather than signal.",
-      "Ignores operational burden, ownership, or migration risk."
+      "Treats reversing a decision as embarrassment instead of learning.",
+      "Ignores operational burden, ownership, migration risk, or the cost of delay."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
@@ -141,7 +193,17 @@
       "tests": [
         "decision quality",
         "trade-off reasoning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I weighted customer impact, deployment independence, incident handoffs, ownership clarity, team on-call maturity, reversibility, and whether the choice reduced cross-team waiting.",
+          "For build versus buy, I separated strategic differentiation from commodity workflow, then scored compliance deadline, integration complexity, data ownership, vendor exit cost, and team opportunity cost."
+        ],
+        "weak": [
+          "We considered reliability, scalability, and maintainability, then chose the most balanced option.",
+          "The senior engineers reviewed the options and recommended what they thought was best."
+        ]
+      }
     },
     {
       "id": "challenge",
@@ -149,7 +211,17 @@
       "tests": [
         "influence",
         "learning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The principal engineer pushing services was right that boundaries were real; I separated module boundaries from runtime distribution and asked them to co-author extraction readiness criteria.",
+          "The platform lead wanted to build because vendor lock-in was real; I accepted that risk only after defining data export, integration boundaries, and the policy logic we would keep in-house."
+        ],
+        "weak": [
+          "Some engineers preferred a different architecture, but after some debate they agreed with the decision.",
+          "I let the experts argue it out and backed the option with the most support."
+        ]
+      }
     },
     {
       "id": "wrong",
@@ -157,7 +229,17 @@
       "tests": [
         "measurement",
         "reflection"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "If modularization did not reduce cross-team PR wait, incident handoffs, or release coupling within two cycles, I would reopen service extraction for the hottest boundary.",
+          "If the bought platform missed compliance dates, blocked policy changes, or failed data-export tests, the exit plan would trigger before deeper integration."
+        ],
+        "weak": [
+          "If delivery did not improve, I would know we had chosen the wrong architecture.",
+          "I expected the team to tell me if the choice was not working."
+        ]
+      }
     },
     {
       "id": "mechanism",
@@ -165,7 +247,17 @@
       "tests": [
         "accountability",
         "learning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "ADRs now require rejected options, a decision owner, a revisit trigger, expected operating cost, and evidence that deployment, observability, and on-call ownership are ready.",
+          "We split architecture review into reversible team-local choices and cross-team or hard-to-reverse choices, so senior engineers could move fast without hiding company-level risk."
+        ],
+        "weak": [
+          "We documented the decision and created an architecture review meeting.",
+          "I told teams to be more disciplined about trade-offs before choosing new technologies."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -173,36 +265,42 @@
       {
         "id": "technical-depth",
         "name": "Technical Depth",
-        "strong": "Uses concrete architecture, operational, and team constraints.",
-        "weak": "Relies on fashion, authority, or vague platform language.",
+        "strong": "Uses concrete architecture, operational, and team constraints to explain the decision.",
+        "weak": "Relies on fashion, authority, or vague platform language instead of evidence.",
         "strongAiVisual": "assets/generated/signals/technical-depth-strong.jpg",
         "weakAiVisual": "assets/generated/signals/technical-depth-weak.jpg"
       },
       {
         "id": "expert-collaboration",
         "name": "Expert Collaboration",
-        "strong": "Engages senior engineers as partners while owning the decision process.",
-        "weak": "Either overrules experts casually or hides behind them.",
+        "strong": "Engages senior engineers as partners while owning the criteria and decision process.",
+        "weak": "Either overrules experts casually or hides behind their recommendation.",
         "strongAiVisual": "assets/generated/signals/expert-collaboration-strong.jpg",
         "weakAiVisual": "assets/generated/signals/expert-collaboration-weak.jpg"
       },
       {
         "id": "pragmatic-sequencing",
         "name": "Pragmatic Sequencing",
-        "strong": "Chooses a path that fits current capability and creates options.",
-        "weak": "Jumps directly to an idealized target state.",
+        "strong": "Chooses a path that fits current capability, reduces near-term risk, and creates options.",
+        "weak": "Jumps directly to an idealized target state without sequencing the migration.",
         "strongAiVisual": "assets/generated/signals/pragmatic-sequencing-strong.jpg",
         "weakAiVisual": "assets/generated/signals/pragmatic-sequencing-weak.jpg"
+      },
+      {
+        "id": "reversal-discipline",
+        "name": "Reversal Discipline",
+        "strong": "Owns stale or wrong decisions, names the evidence that changed, and adjusts course without blame.",
+        "weak": "Defends old decisions too long or reverses abruptly without explaining what was learned."
       }
     ],
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Leads technical **trade-offs** within a domain and uses senior IC input well."
+        "expected": "Leads domain-level technical **trade-offs**, uses senior IC input well, and defines readiness signals before expanding a pattern."
       },
       {
         "level": "Director",
-        "expected": "Coordinates architecture choices across teams with explicit criteria and migration discipline."
+        "expected": "Coordinates architecture choices across teams with explicit criteria, ownership boundaries, and migration discipline."
       },
       {
         "level": "VP Engineering",
@@ -210,7 +308,7 @@
       },
       {
         "level": "CTO",
-        "expected": "Sets technical direction that creates strategic leverage while managing company-level risk."
+        "expected": "Sets technical direction that creates strategic leverage while managing company-level risk, capital allocation, and reversibility."
       }
     ]
   },
@@ -226,7 +324,8 @@
     "signalMap": [
       "technical-depth",
       "expert-collaboration",
-      "pragmatic-sequencing"
+      "pragmatic-sequencing",
+      "reversal-discipline"
     ],
     "followUpTree": [
       "criteria",
@@ -292,27 +391,6 @@
         "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
       },
       {
-        "id": "lethain-engineering-strategy",
-        "group": "Technical Judgment and Architecture",
-        "title": "Writing Engineering Strategy",
-        "url": "https://lethain.com/eng-strategies/",
-        "source": "Will Larson",
-        "type": "Article",
-        "why": "Practical guidance for writing technical strategy that explains diagnosis, policies, and coherent actions.",
-        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
-      },
-      {
-        "id": "staff-engineer-book",
-        "group": "Technical Judgment and Architecture",
-        "title": "Staff Engineer",
-        "url": "https://staffeng.com/book/",
-        "source": "Will Larson",
-        "type": "Book / Interviews",
-        "year": "2021",
-        "why": "Useful for senior technical leadership patterns, influence without authority, and technical scope growth.",
-        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
-      },
-      {
         "id": "thoughtworks-adrs",
         "group": "Technical Judgment and Architecture",
         "title": "Lightweight Architecture Decision Records",
@@ -320,6 +398,105 @@
         "source": "Thoughtworks Technology Radar",
         "type": "Technique",
         "why": "Concrete mechanism for making technical decisions explicit, reviewable, and durable.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "nygard-documenting-architecture-decisions",
+        "group": "Technical Judgment and Architecture",
+        "title": "Documenting Architecture Decisions",
+        "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+        "source": "Michael Nygard / Cognitect",
+        "type": "Article",
+        "year": "2011",
+        "why": "Original ADR reference for preserving **decision rationale**, including what to do when a past decision is superseded.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "fowler-microservice-prerequisites",
+        "group": "Technical Judgment and Architecture",
+        "title": "Microservice Prerequisites",
+        "url": "https://martinfowler.com/bliki/MicroservicePrerequisites.html",
+        "source": "Martin Fowler",
+        "type": "Article",
+        "year": "2014",
+        "why": "Useful calibration for whether teams have the monitoring, deployment, provisioning, and incident response maturity needed before service extraction.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "fowler-monolith-first",
+        "group": "Technical Judgment and Architecture",
+        "title": "Monolith First",
+        "url": "https://martinfowler.com/bliki/MonolithFirst.html",
+        "source": "Martin Fowler",
+        "type": "Article",
+        "year": "2015",
+        "why": "Gives candidates language for pragmatic sequencing, boundary discovery, and avoiding premature distributed-systems overhead.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "newman-monolith-to-microservices",
+        "group": "Technical Judgment and Architecture",
+        "title": "Monolith to Microservices",
+        "url": "https://samnewman.io/books/monolith-to-microservices/",
+        "source": "Sam Newman / O'Reilly",
+        "type": "Book",
+        "year": "2019",
+        "why": "Practical migration reference for incremental decomposition, business-as-usual constraints, data ownership, and knowing whether the migration is working.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "software-architecture-hard-parts",
+        "group": "Technical Judgment and Architecture",
+        "title": "Software Architecture: The Hard Parts",
+        "url": "https://www.oreilly.com/library/view/software-architecture-the/9781492086888/",
+        "source": "Neal Ford, Mark Richards, Pramod Sadalage, and Zhamak Dehghani / O'Reilly",
+        "type": "Book",
+        "year": "2021",
+        "why": "Deepens trade-off analysis for service granularity, decomposition, coupling, data ownership, and architecture decisions with no clean best practice.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      },
+      {
+        "id": "accelerate",
+        "group": "Culture and Organizational Design",
+        "title": "Accelerate",
+        "url": "https://itrevolution.com/product/accelerate/",
+        "source": "Nicole Forsgren, Jez Humble, Gene Kim / IT Revolution",
+        "type": "Book",
+        "year": "2018",
+        "why": "**Evidence-based** link between delivery performance, culture, technical practices, and organizational outcomes.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "team-topologies-second-edition",
+        "group": "Culture and Organizational Design",
+        "title": "Team Topologies - Second Edition",
+        "url": "https://teamtopologies.com/book",
+        "source": "Matthew Skelton and Manuel Pais / Team Topologies",
+        "type": "Book",
+        "year": "2025",
+        "why": "Connects system boundaries to team boundaries, cognitive load, platform ownership, and interaction modes that make architecture executable.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "sre-service-level-objectives",
+        "group": "Failure, Incidents, and Learning",
+        "title": "Service Level Objectives",
+        "url": "https://sre.google/sre-book/service-level-objectives/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows how to choose user-relevant reliability measures that can become reversal criteria for high-impact architecture decisions.",
+        "groupDescription": "Resources for ownership, incident response, postmortems, reliability measures, and learning loops."
+      },
+      {
+        "id": "enterprise-architecture-as-strategy",
+        "group": "Technical Judgment and Architecture",
+        "title": "Enterprise Architecture as Strategy",
+        "url": "https://store.hbr.org/product/enterprise-architecture-as-strategy-creating-a-foundation-for-business-execution/8398",
+        "source": "Jeanne W. Ross, Peter Weill, and David C. Robertson / Harvard Business Review Press",
+        "type": "Book",
+        "year": "2006",
+        "why": "Relevant here because executive **technical judgment** needs architecture choices to connect to business execution and operating leverage.",
         "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
       },
       {
@@ -332,6 +509,17 @@
         "year": "2011",
         "why": "Useful for distinguishing real strategic diagnosis and coherent action from vague aspiration.",
         "groupDescription": "Resources for strategy, prioritization, operating cadence, and execution trade-offs."
+      },
+      {
+        "id": "aws-well-architected-framework",
+        "group": "Technical Judgment and Architecture",
+        "title": "AWS Well-Architected Framework",
+        "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html",
+        "source": "AWS",
+        "type": "Framework",
+        "year": "2024",
+        "why": "Official architecture review framework for evaluating decision trade-offs across reliability, security, cost, performance, operations, and sustainability.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
       },
       {
         "id": "software-architect-elevator",
@@ -347,7 +535,7 @@
     ]
   },
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }

@@ -1,8 +1,9 @@
 {
   "id": "ethics-responsible-technology",
   "title": "Ethics and Responsible Technology",
-  "description": "Changing, stopping, or reshaping technically possible work because of privacy, security, customer trust, fairness, or regulatory risk.",
+  "description": "Changing, stopping, or narrowing technically possible work when privacy, security, customer trust, fairness, or regulatory risk changes what responsible delivery requires.",
   "roleFocus": [
+    "Senior Manager",
     "Director",
     "VP Engineering",
     "CTO"
@@ -12,53 +13,65 @@
     "id": "responsible-technology",
     "name": "Ethics and Responsible Technology",
     "family": "Risk, Ethics, and Innovation",
-    "definition": "Uses **moral courage**, risk judgment, and practical alternatives when technology decisions affect trust, safety, privacy, or fairness.",
-    "whyItMatters": "Senior technology leaders are accountable for more than what can be built; they are accountable for what should be built."
+    "definition": "Uses **moral courage**, risk judgment, and practical alternatives when technology decisions affect customer trust, safety, privacy, or fairness.",
+    "whyItMatters": "Senior technology leaders are accountable for more than whether something can be built; they are accountable for whether it should be built, and under what safeguards."
   },
   "prompt": {
-    "primary": "Tell me about a time you stopped or changed a project because of ethical, privacy, security, or customer-trust concerns.",
+    "primary": "Tell me about a time you stopped or changed a project because of ethical, privacy, security, or customer trust concerns.",
     "variants": [
       "Describe a time when a technically possible solution was not the right thing to build.",
-      "Tell me about a time you had to balance product ambition with responsible data use."
+      "Tell me about a time you had to balance product ambition with responsible data use.",
+      "Tell me about a time you had to say no to a technology request because no safe version existed yet."
     ],
     "interviewerIntent": [
       "Does the candidate recognize trust and ethical risk early?",
-      "Can they propose alternatives rather than only block?",
+      "Can they distinguish a safer alternative from a necessary principled refusal?",
+      "Can they handle business pushback without becoming a reflexive blocker?",
+      "Can they explain what evidence or controls would turn a no into a safe yes?",
       "Do they understand governance, consent, data minimization, and accountability?"
     ]
   },
   "scenario": {
-    "signatureExample": "A product team wants to use customer data for personalization, and the CTO requires privacy review, data minimization, consent clarity, and measurable customer benefit.",
+    "signatureExample": "A product team wants to use customer data for personalization before a quarterly launch; the CTO narrows the design, rejects unsupported data use, and requires consent clarity, retention limits, and measurable customer benefit.",
     "context": [
-      "The product idea is commercially attractive.",
+      "The product idea has credible customer and commercial upside.",
       "The proposed implementation uses sensitive customer behavior data.",
-      "Legal and security input has not yet been built into the design."
+      "Legal, privacy, and security review has not yet shaped the design.",
+      "Product and revenue leaders believe delay would put a strategic commitment at risk."
     ],
     "constraints": [
-      "The leader should not become a reflexive blocker.",
-      "Customer trust and compliance risk matter.",
-      "The team needs a path to responsible experimentation."
+      "The leader must avoid becoming a reflexive blocker.",
+      "Customer trust, legal exposure, and compliance risk matter.",
+      "The team needs a credible path to responsible experimentation when safeguards can be met.",
+      "If consent, security, or fairness boundaries cannot be met, the leader must narrow, refuse, or escalate rather than ship an unsafe workaround.",
+      "A principled refusal should name the boundary, the evidence required to reopen the decision, and who can approve an exception."
     ]
   },
   "storyAnatomy": {
-    "situation": "A product initiative proposed using customer data in a way that created privacy and trust concerns.",
-    "task": "Protect customers and company trust while preserving a responsible path to **customer value**.",
+    "situation": "A product initiative proposed using sensitive customer data under launch pressure in a way that created privacy and trust concerns.",
+    "task": "Protect customers and company trust while preserving **customer value** where a responsible path existed.",
     "action": [
-      "Paused the launch until privacy, security, and legal review were included.",
+      "Paused the launch long enough to include privacy, security, and legal review.",
       "Separated the customer benefit from the most invasive implementation.",
-      "Required data minimization, consent clarity, retention limits, and abuse-case review.",
-      "Defined experiment criteria that measured **customer value** and risk controls."
+      "Distinguished negotiable design choices from non-negotiable consent, security, and fairness boundaries.",
+      "Required data minimization, clear consent language, retention limits, and abuse-case review.",
+      "Escalated the decision transparently when a requested shortcut could not be made safe.",
+      "Documented the missing controls required before the refused path could be reconsidered.",
+      "Defined experiment criteria that measured **customer value**, segment impact, and risk controls."
     ],
     "result": [
-      "The project moved forward with narrower data use and clearer safeguards.",
-      "The product team gained a repeatable responsible-technology review path.",
-      "Customer **trust risk** was reduced before launch."
+      "The project shipped later with narrower data use and clearer safeguards, after a six-week slip and a lower initial personalization target.",
+      "One unsafe data-use path was rejected outright, with executives agreeing to absorb the near-term revenue risk.",
+      "The product team gained a repeatable responsible-technology review path with launch-blocking criteria.",
+      "Surprise-use, retention, and fairness risks were reduced before launch."
     ],
-    "reflection": "The lesson was that **responsible technology** works best when it creates safer alternatives, not only late-stage objections.",
+    "reflection": "The lesson was that **responsible technology** is not only finding safer designs; sometimes it requires saying no when no safe alternative exists.",
     "systemChange": [
-      "Privacy and security review checkpoint.",
-      "Data minimization checklist.",
-      "Responsible experimentation criteria.",
+      "Consent clarity and retention gate for customer-data features.",
+      "Segment harm review for model launches.",
+      "Responsible experimentation criteria with explicit stop conditions.",
+      "Escalation rule for non-negotiable trust, legal, security, or safety boundaries.",
+      "Exception review template recording the boundary, missing evidence, accountable approver, customer communication, and accepted business cost.",
       "Decision log for high-trust-risk features."
     ]
   },
@@ -67,69 +80,140 @@
       "id": "personalization-data-minimization",
       "title": "Personalization With Data Minimization",
       "level": "CTO",
-      "promptVariant": "Tell me about a time you stopped or changed a project because of privacy or customer-trust concerns.",
-      "situation": "A product team wanted to use detailed behavioral data for personalization before consent, retention, and customer benefit were clearly defined.",
+      "promptVariant": "Tell me about a time you stopped or changed a project because of privacy or customer trust concerns.",
+      "situation": "A product team wanted to use detailed behavioral data for personalization before a board-visible launch, but consent language, retention limits, and the customer benefit were not clear enough to justify the data scope.",
       "strongAnswerSketch": [
-        "Pause the launch until privacy, security, legal, and product review are included.",
-        "Separate the customer benefit from the most invasive implementation.",
-        "Require data minimization, consent clarity, retention limits, and abuse-case review.",
-        "Approve a narrower experiment with measurable customer benefit and risk controls."
+        "Name the launch pressure: Product had promised the date and expected a 4% conversion lift.",
+        "Separate the customer benefit from the most invasive implementation, rejecting raw event replay and precise location history.",
+        "Require Privacy, Security, Legal, and Support review before the feature could expose behavior-derived customer patterns.",
+        "Approve a narrower opt-in experiment using coarse behavior categories, 90-day retention, and a visible preference control.",
+        "Accept the six-week slip and lower first-quarter personalization target, then make consent clarity a launch-blocking gate."
       ],
       "whyItWorks": [
-        "Shows **moral courage** without becoming a blocker.",
-        "Proposes a responsible alternative.",
+        "Shows **moral courage** against real business momentum.",
+        "Rejects a risky implementation while preserving a responsible alternative.",
+        "Makes the business cost visible instead of pretending safeguards are free.",
         "Creates governance for future high-trust-risk decisions."
       ],
-      "weakVersion": "I asked Legal to review the plan and told Product we should be careful with customer data.",
+      "weakVersion": "I asked Legal to review the plan, told Product to be careful with customer data, and left the telemetry scope to the implementation team.",
       "followUpAngles": [
         "What **customer harm** were you preventing?",
+        "Who pushed back on the delay?",
         "What data did you remove from scope?",
-        "What governance changed?"
-      ]
+        "What review path changed?"
+      ],
+      "aiVisual": "assets/generated/example-stories/personalization-data-minimization.jpg"
     },
     {
       "id": "ai-fairness-review",
       "title": "AI Fairness Review",
       "level": "VP Engineering",
       "promptVariant": "Describe a time when a technically possible solution was not the right thing to build.",
-      "situation": "A ranking model improved aggregate conversion but created worse outcomes for a smaller customer segment and lacked explainability for support teams.",
+      "situation": "A ranking model improved aggregate conversion by 3% but reduced discovery for smaller merchants, increased support escalations, and lacked explainability for account teams.",
       "strongAnswerSketch": [
-        "Name the risk: aggregate metrics hid segment-level harm.",
-        "Require segment analysis, explainability, and human override paths before launch.",
-        "Work with Product to define acceptable **trade-offs** and customer communication.",
-        "Create responsible AI launch criteria."
+        "Name the risk: aggregate metrics hid segment-level harm to smaller merchants.",
+        "Require pre-launch segment analysis, explainability, and human override paths.",
+        "Reject the proposed full rollout and approve only a limited market test with support scripts and appeal handling.",
+        "Work with Product to define acceptable **trade-offs**, customer communication, and rollback thresholds.",
+        "Create responsible AI launch criteria for future ranking and recommendation models."
       ],
       "whyItWorks": [
         "Looks beyond top-line business metrics.",
         "Balances fairness, explainability, and product goals.",
+        "Shows what was not launched, not only what was improved.",
         "Turns a one-off concern into launch criteria."
       ],
-      "weakVersion": "I delayed the model because we were not confident enough in the fairness implications.",
+      "weakVersion": "I asked the model team to take another pass at fairness because the implications were unclear.",
       "followUpAngles": [
         "Which segment was harmed?",
         "What **trade-off** did Product accept?",
-        "What became part of future model reviews?"
-      ]
+        "What changed in future model reviews?"
+      ],
+      "aiVisual": "assets/generated/example-stories/ai-fairness-review.jpg"
+    },
+    {
+      "id": "customer-data-ai-assistant-refusal",
+      "title": "Customer Data AI Assistant Refusal",
+      "level": "Senior Manager",
+      "promptVariant": "Tell me about a time you had to say no to a technology request because no safe version existed yet.",
+      "situation": "A Customer Success VP wanted an AI assistant trained on unredacted support tickets for a strategic renewal demo, but the vendor agreement, customer notice, retention controls, and PII redaction were not ready.",
+      "strongAnswerSketch": [
+        "Acknowledge the renewal pressure and the customer value of faster support answers.",
+        "Validate the control gaps with Security, Legal, Privacy, Support, and the service owner instead of relying on personal discomfort.",
+        "State the non-negotiable boundary: production customer data could not be sent to the vendor until a DPA, redaction, retention limits, and customer notice were in place.",
+        "Reject a requested shortcut to use a small unredacted sample because the same customer-notice and vendor-control boundary still applied.",
+        "Offer a safe alternative using synthetic tickets and a small opt-in pilot once controls were ready, making clear what evidence would reopen the production-data path.",
+        "Escalate with written options when the stakeholder still pushed for the demo, accepting that the renewal would slip and a concession might be needed."
+      ],
+      "whyItWorks": [
+        "Distinguishes principled refusal from reflexive blocking.",
+        "Shows business empathy while protecting a customer trust boundary.",
+        "Makes the refusal testable by naming the controls that would change the answer.",
+        "Includes a real cost: the renewal slipped and the company absorbed a commercial concession.",
+        "Leaves behind an exception policy instead of relying on personal courage next time."
+      ],
+      "weakVersion": "I told Customer Success that Privacy would not approve using customer tickets in an AI tool and that they needed to wait for the official process.",
+      "followUpAngles": [
+        "What made the boundary non-negotiable?",
+        "Who had decision rights when the stakeholder disagreed?",
+        "What safe alternative did you offer?",
+        "What cost did the company absorb?"
+      ],
+      "aiVisual": "assets/generated/example-stories/customer-data-ai-assistant-refusal.jpg"
+    },
+    {
+      "id": "telemetry-retention-reset",
+      "title": "Telemetry Retention Reset",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you had to balance product ambition with responsible data use.",
+      "situation": "A growth and analytics program wanted to retain raw product telemetry indefinitely to improve churn prediction, but the data included admin actions, IP-derived location, and customer identifiers that were not needed for most analyses.",
+      "strongAnswerSketch": [
+        "Separate legitimate product-learning needs from retaining broad raw data by default.",
+        "Run a data inventory with Product, Data, Security, Legal, and regional business owners.",
+        "Move common analysis to aggregated events, shorten raw retention to 30 days, and require explicit approval for sensitive fields.",
+        "Accept that some long-tail analyses became slower and one churn-model release moved out by a quarter.",
+        "Create a data-purpose register and retention review tied to roadmap planning."
+      ],
+      "whyItWorks": [
+        "Connects data minimization to a concrete product and analytics trade-off.",
+        "Shows Director-level coordination across product, data, regional, and risk stakeholders.",
+        "Makes the residual cost explicit instead of claiming privacy improved everything.",
+        "Creates a durable operating mechanism for future data decisions."
+      ],
+      "weakVersion": "I asked the analytics team to anonymize the data where possible and made sure Legal was comfortable with our retention policy.",
+      "followUpAngles": [
+        "Which data fields were removed or shortened?",
+        "What analysis became harder?",
+        "How did the retention decision become repeatable?"
+      ],
+      "aiVisual": "assets/generated/example-stories/telemetry-retention-reset.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "The candidate shows **moral courage**, practical risk judgment, and ability to guide teams toward safer alternatives.",
+    "summary": "The candidate shows **moral courage**, practical risk judgment, and discipline in choosing among safer alternatives, principled refusal, and transparent escalation.",
     "moves": [
       "Names the ethical or **trust risk** concretely.",
-      "Explains who was consulted and what governance was needed.",
-      "Proposes a safer alternative.",
-      "Balances **customer value** with risk controls.",
+      "Separates the legitimate customer or business goal from the unsafe implementation.",
+      "Explains who was consulted, who owned decision rights, and what evidence was missing.",
+      "Distinguishes mitigable risks from non-negotiable trust, legal, security, or safety boundaries.",
+      "Proposes a safer alternative when one exists, or says no with clear escalation when it does not.",
+      "Explains what evidence, controls, or authority would be required to revisit a refused path.",
+      "Balances **customer value** with risk controls and names the cost of the decision.",
       "Creates a repeatable review mechanism."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "The candidate either ignores the risk, delegates responsibility entirely, or blocks without helping the team find a responsible path.",
+    "summary": "The candidate either ignores the risk, delegates responsibility entirely, blocks without judgment, or hides a hard refusal behind vague process language.",
     "redFlags": [
-      "Treats ethics as legal's problem only.",
+      "Treats ethics as Legal's problem only.",
       "Cannot explain the **customer harm** or trust risk.",
-      "Only says no and offers no alternative.",
+      "Rubber-stamps the work because it has executive or revenue momentum.",
+      "Only says no without naming the non-negotiable boundary, alternatives considered, decision owner, or cost.",
+      "Cannot describe what would make the decision safe enough to reconsider.",
       "Has no mechanism for future **responsible technology** decisions."
-    ]
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
   "followUps": [
     {
@@ -138,31 +222,89 @@
       "tests": [
         "risk judgment",
         "judgment"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The concern was not abstract privacy. The feature exposed sensitive behavior patterns without clear consent, retained raw events longer than needed, and could surprise customers if support could infer things they had not knowingly shared.",
+          "For the model, aggregate conversion hid a measurable drop for smaller merchants, and support had no explanation or appeal path when the ranking changed their outcomes."
+        ],
+        "weak": [
+          "Customer data is sensitive, so I wanted to be careful before approving the launch.",
+          "The fairness implications were unclear, and I did not want us to be exposed if someone complained later."
+        ]
+      }
     },
     {
       "id": "stakeholders",
-      "question": "Who did you involve in the decision?",
+      "question": "Who did you involve in the decision, and where did decision rights sit?",
       "tests": [
         "stakeholder alignment",
         "accountability"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I involved Product, Security, Legal, Privacy, Support, and the data owner, then made the executive trade-off explicit because the launch date and trust boundary could not be delegated to Legal alone.",
+          "When Customer Success pushed for the AI demo, I represented their renewal risk fairly, documented the control gaps with Security and Legal, and escalated the final exception decision with options and consequences."
+        ],
+        "weak": [
+          "I sent it to Legal and Security because they own privacy and compliance decisions.",
+          "I talked to Product and asked them to get the right approvals before continuing."
+        ]
+      }
     },
     {
       "id": "alternative",
-      "question": "What alternative did you propose?",
+      "question": "What alternative did you propose, or why was there no safe alternative yet?",
       "tests": [
         "decision quality",
         "trade-off reasoning"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "For personalization, we replaced raw event replay with coarse opt-in categories, shorter retention, and a visible preference control; that preserved some customer value while removing the most invasive data use.",
+          "For the AI assistant, there was no safe production-data path yet, so I offered a synthetic-data demo and an opt-in pilot after the DPA, redaction, retention, and notice controls were ready."
+        ],
+        "weak": [
+          "The alternative was to delay until Legal and Security were comfortable.",
+          "I suggested we anonymize the data, but I was not close enough to know exactly how the implementation changed."
+        ]
+      }
     },
     {
       "id": "governance",
-      "question": "What **governance changed** afterward?",
+      "question": "What **governance or launch criteria** changed afterward?",
       "tests": [
         "learning",
         "execution"
-      ]
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added a consent clarity and retention gate for customer-data features, with named launch blockers instead of advisory review comments.",
+          "We created a responsible AI launch checklist covering segment-harm analysis, explainability, human override, rollback thresholds, and who can approve exceptions."
+        ],
+        "weak": [
+          "We agreed to bring Privacy and Security in earlier for sensitive features.",
+          "I documented the decision so future teams would know to be careful with customer data."
+        ]
+      }
+    },
+    {
+      "id": "refusal-discipline",
+      "question": "How did you know this was a principled refusal rather than risk aversion?",
+      "tests": [
+        "decision quality",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I could name the exact boundary: no production customer data to the vendor until the DPA, redaction quality, retention limit, and customer notice were in place. I also gave a synthetic-data demo path and an opt-in pilot path, so the no was tied to missing controls, not discomfort.",
+          "The refusal had an owner and a reopen condition. If the executive wanted an exception, they had to accept the customer-notice gap and retention exposure in writing; otherwise the next approval point came after those controls existed."
+        ],
+        "weak": [
+          "It felt too risky, and I did not want to be the person who approved something that might create a privacy issue.",
+          "I knew it was principled because Legal and Privacy would probably say no too."
+        ]
+      }
     }
   ],
   "evaluation": {
@@ -170,38 +312,60 @@
       {
         "id": "trust-risk",
         "name": "Trust Risk Judgment",
-        "strong": "Identifies concrete customer, privacy, security, or fairness risk.",
-        "weak": "Uses vague concern without actionable risk framing."
+        "strong": "Identifies concrete customer harm, privacy exposure, security risk, or fairness impact.",
+        "weak": "Uses vague concern without actionable risk framing.",
+        "strongAiVisual": "assets/generated/signals/trust-risk-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/trust-risk-weak.jpg"
       },
       {
         "id": "moral-courage",
         "name": "Moral Courage",
         "strong": "Challenges unsafe work even when it has business momentum.",
-        "weak": "Lets momentum override customer trust concerns."
+        "weak": "Lets executive or revenue momentum override trust concerns.",
+        "strongAiVisual": "assets/generated/signals/moral-courage-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/moral-courage-weak.jpg"
       },
       {
         "id": "responsible-alternatives",
         "name": "Responsible Alternatives",
-        "strong": "Finds safer ways to pursue **customer value**.",
-        "weak": "Only blocks or rubber-stamps."
+        "strong": "Finds safer ways to pursue **customer value** when a safe path exists.",
+        "weak": "Treats the decision as only block or ship.",
+        "strongAiVisual": "assets/generated/signals/responsible-alternatives-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/responsible-alternatives-weak.jpg"
+      },
+      {
+        "id": "boundary-escalation",
+        "name": "Boundary and Escalation Judgment",
+        "strong": "Distinguishes mitigable risk from non-negotiable trust, legal, security, or safety boundaries and escalates with options.",
+        "weak": "Treats every concern as either a blocker, a compliance detail, or someone else's decision.",
+        "strongAiVisual": "assets/generated/signals/boundary-escalation-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/boundary-escalation-weak.jpg"
+      },
+      {
+        "id": "refusal-discipline",
+        "name": "Principled Refusal Discipline",
+        "strong": "States the non-negotiable boundary, reopen conditions, exception owner, and accepted business cost.",
+        "weak": "Says no from discomfort or policy shorthand without evidence, alternatives, authority, or trade-off clarity.",
+        "strongAiVisual": "assets/generated/signals/refusal-discipline-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/refusal-discipline-weak.jpg"
       }
     ],
     "rubric": [
       {
         "level": "Senior Manager",
-        "expected": "Escalates trust risks and applies team-level safeguards."
+        "expected": "Identifies trust risks in team or adjacent-team work, applies concrete safeguards, and escalates unsupported exceptions with evidence and reopen conditions."
       },
       {
         "level": "Director",
-        "expected": "Coordinates product, legal, security, and engineering decisions for responsible implementation."
+        "expected": "Coordinates product, data, legal, security, and engineering decisions across teams, making data purpose, retention, consent, exception paths, and launch criteria explicit."
       },
       {
         "level": "VP Engineering",
-        "expected": "Creates governance for high-risk product and data decisions across the organization."
+        "expected": "Creates governance for high-risk product, model, and data decisions across the organization, including segment-harm review, refusal criteria, and exception handling."
       },
       {
         "level": "CTO",
-        "expected": "Owns company-level technology trust, ethics posture, and executive decision quality."
+        "expected": "Owns company-level technology trust, responsible-technology posture, and executive decision quality, including when the company must absorb short-term cost to preserve customer trust."
       }
     ]
   },
@@ -217,20 +381,23 @@
     "signalMap": [
       "trust-risk",
       "moral-courage",
-      "responsible-alternatives"
+      "responsible-alternatives",
+      "boundary-escalation",
+      "refusal-discipline"
     ],
     "followUpTree": [
       "risk",
       "stakeholders",
       "alternative",
-      "governance"
+      "governance",
+      "refusal-discipline"
     ]
   },
   "practiceTemplate": {
     "prompts": [
       {
         "field": "situation",
-        "label": "What technically possible work created ethical or trust risk?"
+        "label": "What technically possible work created ethical, privacy, security, or trust risk?"
       },
       {
         "field": "task",
@@ -238,7 +405,7 @@
       },
       {
         "field": "action",
-        "label": "How did you assess risk, involve stakeholders, and propose alternatives?"
+        "label": "How did you assess risk, involve decision owners, propose alternatives, or refuse unsafe work?"
       },
       {
         "field": "result",
@@ -255,9 +422,10 @@
     ]
   },
   "relatedScenarios": [
-    "Changing an AI feature because of fairness or explainability concerns.",
+    "Changing or constraining an AI feature because of fairness or explainability concerns.",
     "Rejecting excessive data collection for personalization.",
-    "Delaying launch until security and privacy controls are ready."
+    "Delaying launch until security and privacy controls are ready.",
+    "Refusing to use production customer data in an AI vendor workflow until consent, redaction, retention, and contract controls exist."
   ],
   "toProbeFurther": {
     "links": [
@@ -273,78 +441,157 @@
       },
       {
         "id": "nist-ai-rmf",
-        "group": "Responsible Technology and AI",
+        "group": "AI Governance and Launch Controls",
         "title": "AI Risk Management Framework",
         "url": "https://www.nist.gov/itl/ai-risk-management-framework",
         "source": "NIST",
         "type": "Framework",
         "year": "2023",
         "why": "Authoritative framework for identifying, measuring, managing, and governing AI risk.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "groupDescription": "Frameworks for governing AI systems, launch criteria, exception handling, and risk ownership."
       },
       {
         "id": "microsoft-responsible-ai",
-        "group": "Responsible Technology and AI",
+        "group": "AI Governance and Launch Controls",
         "title": "Responsible AI Principles and Approach",
         "url": "https://www.microsoft.com/en-us/ai/principles-and-approach",
         "source": "Microsoft",
         "type": "Framework",
         "why": "Practical responsible-AI principles and governance approach from a large technology operator.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "groupDescription": "Frameworks for governing AI systems, launch criteria, exception handling, and risk ownership."
       },
       {
         "id": "google-ai-principles",
-        "group": "Responsible Technology and AI",
+        "group": "AI Governance and Launch Controls",
         "title": "Google AI Principles",
         "url": "https://ai.google/responsibility/principles/",
         "source": "Google",
         "type": "Principles",
         "why": "Useful example of public AI principles and boundaries for **responsible technology** decisions.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "groupDescription": "Frameworks for governing AI systems, launch criteria, exception handling, and risk ownership."
       },
       {
         "id": "datasheets-for-datasets",
-        "group": "Responsible Technology and AI",
+        "group": "Fairness, Model, and Data Documentation",
         "title": "Datasheets for Datasets",
         "url": "https://www.microsoft.com/en-us/research/publication/datasheets-for-datasets/",
         "source": "Microsoft Research",
         "type": "Paper",
         "year": "2018",
         "why": "Concrete documentation pattern for dataset provenance, limitations, and ethical use.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "groupDescription": "Resources for documenting datasets, models, limitations, intended use, and segment-level impact."
       },
       {
         "id": "pair-guidebook",
-        "group": "Responsible Technology and AI",
+        "group": "Human-Centered AI and Product Design",
         "title": "People + AI Guidebook",
         "url": "https://pair.withgoogle.com/guidebook-v2/",
         "source": "Google PAIR",
         "type": "Guidebook",
         "why": "Human-centered AI design guide for setting expectations, feedback loops, and user trust.",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics."
+        "groupDescription": "Resources for setting user expectations, feedback loops, agency, and trustworthy product behavior."
       },
       {
         "id": "nudge",
-        "group": "Responsible Technology and AI",
+        "group": "Human-Centered AI and Product Design",
         "title": "Nudge",
         "url": "https://www.randomhousebooks.com/books/690485/",
         "source": "Richard H. Thaler and Cass R. Sunstein / Random House",
         "type": "Book",
         "year": "2021",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics.",
+        "groupDescription": "Resources for setting user expectations, feedback loops, agency, and trustworthy product behavior.",
         "why": "Relevant here because responsible-technology answers should account for how product choices shape user behavior without removing agency."
       },
       {
-        "id": "thinking-fast-and-slow",
-        "group": "Responsible Technology and AI",
-        "title": "Thinking, Fast and Slow",
-        "url": "https://us.macmillan.com/books/9780374533557/thinkingfastandslow/",
-        "source": "Daniel Kahneman / Farrar, Straus and Giroux",
-        "type": "Book",
-        "year": "2011",
-        "groupDescription": "Resources for responsible AI, risk management, trust, fairness, and technology ethics.",
-        "why": "Relevant here because ethical technology decisions often require recognizing bias, overconfidence, and flawed judgment under uncertainty."
+        "id": "ico-data-protection-by-design",
+        "group": "Privacy, Data Governance, and Customer Trust",
+        "title": "Data protection by design and by default",
+        "url": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/accountability-and-governance/data-protection-by-design-and-default",
+        "source": "ICO",
+        "type": "Guide",
+        "groupDescription": "Resources for data minimization, consent, retention, DPIAs, sensitive data access, and customer trust.",
+        "why": "Official guidance that maps directly to data-minimization, default privacy settings, DPIAs, and privacy controls in product design."
+      },
+      {
+        "id": "nist-privacy-framework",
+        "group": "Privacy, Data Governance, and Customer Trust",
+        "title": "The NIST Privacy Framework",
+        "url": "https://www.nist.gov/privacy-framework/privacy-framework",
+        "source": "NIST",
+        "type": "Framework",
+        "year": "2020",
+        "groupDescription": "Resources for data minimization, consent, retention, DPIAs, sensitive data access, and customer trust.",
+        "why": "Translates privacy concern into enterprise risk management, control selection, communication, and durable governance."
+      },
+      {
+        "id": "ftc-ai-data-use",
+        "group": "Privacy, Data Governance, and Customer Trust",
+        "title": "Hey, Alexa! What are you doing with my data?",
+        "url": "https://www.ftc.gov/business-guidance/blog/2023/06/hey-alexa-what-are-you-doing-my-data",
+        "source": "Federal Trade Commission",
+        "type": "Business blog",
+        "year": "2023",
+        "groupDescription": "Resources for data minimization, consent, retention, DPIAs, sensitive data access, and customer trust.",
+        "why": "Shows regulator framing of consent, retention, sensitive data access, and algorithm deletion risk in AI-powered products."
+      },
+      {
+        "id": "nist-generative-ai-profile",
+        "group": "AI Governance and Launch Controls",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+        "source": "NIST",
+        "type": "Profile",
+        "year": "2024",
+        "groupDescription": "Frameworks for governing AI systems, launch criteria, exception handling, and risk ownership.",
+        "why": "Adds generative-AI-specific risks and suggested actions for product launches, procurement, and vendor workflows."
+      },
+      {
+        "id": "iso-iec-42001-ai-management-system",
+        "group": "AI Governance and Launch Controls",
+        "title": "ISO/IEC 42001:2023 Artificial intelligence management system",
+        "url": "https://www.iso.org/standard/42001",
+        "source": "ISO",
+        "type": "Standard",
+        "year": "2023",
+        "groupDescription": "Frameworks for governing AI systems, launch criteria, exception handling, and risk ownership.",
+        "why": "Gives a management-system pattern for AI policies, objectives, process ownership, risk treatment, monitoring, and audits."
+      },
+      {
+        "id": "owasp-llm-top-10",
+        "group": "AI Security and Vendor Risk",
+        "title": "OWASP Top 10 for Large Language Model Applications",
+        "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications",
+        "source": "OWASP Foundation",
+        "type": "Guide",
+        "groupDescription": "Resources for assessing LLM application security, vendor workflows, sensitive data exposure, and excessive agency.",
+        "why": "Practical risk taxonomy for LLM features, including prompt injection, sensitive information disclosure, supply chain risk, and overreliance."
+      },
+      {
+        "id": "model-cards-for-model-reporting",
+        "group": "Fairness, Model, and Data Documentation",
+        "title": "Model Cards for Model Reporting",
+        "url": "https://research.google/pubs/pub48120/",
+        "source": "Google Research",
+        "type": "Paper",
+        "year": "2019",
+        "groupDescription": "Resources for documenting datasets, models, limitations, intended use, and segment-level impact.",
+        "why": "Concrete model documentation pattern for intended use, evaluation results, limitations, and ethical considerations."
+      },
+      {
+        "id": "eu-ai-act",
+        "group": "Responsible Technology and Regulatory Signals",
+        "title": "Regulation (EU) 2024/1689 Artificial Intelligence Act",
+        "url": "https://op.europa.eu/en/publication-detail/-/publication/d79f3e5d-41bc-11f0-b9f2-01aa75ed71a1/language-en",
+        "source": "Publications Office of the European Union",
+        "type": "Regulation",
+        "year": "2024",
+        "groupDescription": "Official regulatory signals for risk classification, prohibited practices, transparency, and human oversight.",
+        "why": "Useful for calibrating product and model decisions against risk-based obligations, data governance, transparency, and human oversight expectations."
       }
     ]
-  }
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }
