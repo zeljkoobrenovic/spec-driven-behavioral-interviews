@@ -1,0 +1,12 @@
+#bash run-update-round.sh data/book/engineer-collaboration-feedback
+#bash run-update-round.sh data/book/engineer-ownership
+#bash run-update-round.sh data/book/engineer-production-issues
+#bash run-update-round.sh data/book/engineering-manager-coaching
+#bash run-update-round.sh data/book/engineering-manager-delivery
+#bash run-update-round.sh data/book/pm-customer-discovery
+#bash run-update-round.sh data/book/pm-influence-engineering
+#bash run-update-round.sh data/book/pm-prioritization-tradeoffs
+bash run-update-round.sh data/book/tech-lead-influence
+bash run-update-round.sh data/book/product-data-decisions
+bash run-update-round.sh data/book/product-launch-failure
+bash run-update-round.sh data/book/product-strategy-trust

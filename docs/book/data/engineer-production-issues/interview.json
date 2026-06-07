@@ -1,0 +1,642 @@
+{
+  "id": "engineer-production-issues",
+  "title": "Handling Production Issues",
+  "description": "Tests whether engineers respond to production failures with accountable diagnosis, clear communication, safe mitigation, and durable learning.",
+  "roleFocus": [
+    "Software Engineer",
+    "Senior Software Engineer",
+    "Tech Lead"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "production-ownership",
+    "name": "Production Ownership",
+    "family": "Execution and Accountability",
+    "definition": "Protects customers during production problems through calm investigation, clear communication, accountable mitigation, and prevention.",
+    "whyItMatters": "Production failures reveal whether engineers understand impact, communicate honestly, reduce risk safely, and learn from the failure instead of only fixing the immediate symptom."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you caused or helped resolve a production incident.",
+    "variants": [
+      "Describe a time when you had to debug a difficult production problem.",
+      "Tell me about a time you improved observability, reliability, or performance.",
+      "Describe a time something failed after release and the impact was not obvious at first.",
+      "Tell me about a time your own change caused a production issue.",
+      "Describe a time when the first mitigation fixed one symptom but left another risk.",
+      "Describe a time when you pushed back on a risky production mitigation."
+    ],
+    "interviewerIntent": [
+      "Can the candidate stay calm and structured when impact is real?",
+      "Do they communicate uncertainty and customer impact clearly?",
+      "Do they turn the incident into better tests, observability, rollout, or operational habits?",
+      "Can they own their part in causing or prolonging the incident without turning the story into blame or self-protection?",
+      "Can they explain rejected mitigations, residual customer impact, and the risk that still needed closure?",
+      "Can they push back on an unsafe fast fix while still offering a concrete path to recovery?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "An engineer helps resolve a checkout latency spike triggered by their release, communicates impact before root cause is certain, then improves rollback criteria, dashboards, and ownership for the dependency.",
+    "context": [
+      "The incident begins as intermittent latency and does not immediately point to a single service.",
+      "Product and support need usable updates before root cause is fully understood.",
+      "A rollback may reduce customer pain but also remove diagnostic evidence or create downstream cleanup.",
+      "The candidate may have authored, reviewed, or approved the change that triggered the issue.",
+      "Customer impact may remain after service dashboards recover, such as stale data, delayed jobs, or confusing status-page history.",
+      "A stakeholder may pressure the team toward a fast manual production change before the blast radius and rollback path are understood."
+    ],
+    "constraints": [
+      "The team must balance mitigation speed with diagnostic confidence.",
+      "Updates must be honest about uncertainty while still useful to non-engineers.",
+      "Follow-up work must reduce future detection or recovery time, not just document the incident.",
+      "The candidate must separate accountable ownership from personal blame or defensive explanation.",
+      "Mitigation choices may trade recovery speed against data integrity, diagnostic evidence, or support workload.",
+      "Pushback on a risky mitigation should be specific and evidence-based, not a vague attempt to avoid responsibility."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A production problem affected customers, internal operators, or a critical workflow after the candidate's change, a team release, or a latent system weakness.",
+    "task": "Help restore or contain the service, communicate status, understand root cause, and prevent recurrence at the right scope.",
+    "action": [
+      "First established impact, affected segment, severity, and current owner before deep debugging.",
+      "Named the candidate's own contribution to the trigger or response delay without making the incident about personal guilt.",
+      "Used logs, metrics, traces, recent deploys, and customer examples to narrow the search rather than guessing.",
+      "Communicated what was known, unknown, and next update time to support, product, or incident channels.",
+      "Chose or recommended rollback, flag disablement, throttling, data correction, or fix-forward with explicit trade-offs.",
+      "Rejected at least one tempting action, such as a blind rollback, direct database edit, noisy global alert, or broad rewrite, and explained the larger risk.",
+      "Escalated or paused an unsafe production action by naming a safer path, decision owner, validation plan, and customer-impact update.",
+      "Helped run a blameless review that separated trigger, contributing factors, detection gaps, and prevention work."
+    ],
+    "result": [
+      "Customer impact stopped or degraded behavior was contained, with the affected group identified within a defined window.",
+      "The team could explain root cause and contributing factors without hiding uncertainty.",
+      "Residual data loss, delayed jobs, manual cleanup, or customer communication debt was made visible with an owner.",
+      "Detection, rollback, runbook, test coverage, or ownership improved after the incident."
+    ],
+    "reflection": "The main learning was that production ownership means protecting customers while preserving enough evidence to learn, not only debugging quickly.",
+    "systemChange": [
+      "Dashboard and alert tied to customer-visible symptoms, not only service health or error rate.",
+      "Release checklist with rollback criteria and feature-flag owner.",
+      "Rollback and fix-forward decision guide that names when to preserve evidence, when to stop customer pain immediately, and who decides.",
+      "Incident review template that tracks action items to verified completion.",
+      "Runbook for the affected dependency or failure mode.",
+      "Production data-change checklist with dry-run output, peer review, rollback or reconciliation plan, and named approval threshold.",
+      "Post-incident action tracker that verifies whether detection, customer correction, and support communication actually closed."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "checkout-latency-spike",
+      "title": "Checkout Latency Spike",
+      "level": "Software Engineer",
+      "promptVariant": "Tell me about a time you caused or helped resolve a production incident.",
+      "situation": "The engineer shipped a release that changed how checkout called a promotions service. Thirty minutes later, p95 checkout latency doubled for customers using stacked discounts, but service dashboards still looked green because error rates were low.",
+      "strongAnswerSketch": [
+        "Join the incident channel with the deploy timeline, affected endpoint, customer-visible latency chart, and a clear note that their own change was the likely trigger.",
+        "Compare traces before and after release, identify the new sequential promotions calls, and recommend disabling the flag while preserving trace samples.",
+        "Post clear updates that distinguish confirmed latency from unconfirmed revenue impact, and ask support to tag discount-related checkout tickets separately.",
+        "After recovery, add a checkout-latency alert, a performance test for promotion-heavy carts, and a release checklist item for external calls."
+      ],
+      "whyItWorks": [
+        "Shows accountability for the candidate's own release even though the symptom was latency rather than a clean error.",
+        "Uses evidence to support mitigation instead of guessing.",
+        "Connects the incident to better observability and release readiness.",
+        "Explains why a scoped flag disable was safer than an automatic full rollback."
+      ],
+      "weakVersion": "My release caused latency, so we rolled it back, watched the graphs recover, and added tests afterward.",
+      "followUpAngles": [
+        "How did you know customers were affected?",
+        "What did you communicate before root cause was confirmed?",
+        "Why disable the flag instead of full rollback?",
+        "Which detection gap changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/checkout-latency-spike.jpg"
+    },
+    {
+      "id": "cache-stampede-fix-forward",
+      "title": "Cache Stampede Fix-Forward",
+      "level": "Senior Software Engineer",
+      "promptVariant": "Describe a time when the first mitigation fixed one symptom but left another risk.",
+      "situation": "A senior engineer introduced a cache-key change that looked safe in canary because the canary did not include tenant-scale imports. When a large tenant's nightly import started, API latency spiked, background jobs fell behind, and the first fix-forward attempt reduced latency but created duplicate notification jobs for about 1,800 users.",
+      "strongAnswerSketch": [
+        "Declare the incident with the deploy and tenant-import timeline, then state clearly that their cache change was the likely trigger while keeping the discussion focused on impact.",
+        "Compare full rollback, rate-limiting the tenant import, and targeted cache prewarm plus worker throttling; choose throttling first because rollback would amplify job retries and duplicate notifications.",
+        "Notice the first mitigation's duplicate-job side effect from queue metrics and support examples, pause noncritical notifications, and publish the residual customer impact instead of declaring victory when latency recovered.",
+        "Coordinate with product and support on customer messaging for delayed and duplicate notifications, then reconcile queued jobs with an idempotency check.",
+        "Afterward, add a load test with tenant-scale imports, queue-depth and duplicate-job alerts, an idempotency requirement for notification workers, and a release note rule for cache-key changes."
+      ],
+      "whyItWorks": [
+        "Makes the candidate's own triggering change explicit without collapsing into self-blame.",
+        "Shows that recovery was partial and that the candidate caught a second-order effect.",
+        "Compares mitigation alternatives under real operational trade-offs.",
+        "Treats customer communication, queue reconciliation, and idempotency as part of production ownership."
+      ],
+      "weakVersion": "I found that my cache change caused a spike, pushed a quick fix, saw latency recover, and then added a load test so the same cache issue would not happen again.",
+      "followUpAngles": [
+        "What made the canary miss this tenant-scale behavior?",
+        "Why not roll back immediately?",
+        "How did you detect that the first mitigation caused duplicate jobs?",
+        "What customer impact remained after API latency recovered?",
+        "What idempotency or rollout rule changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/cache-stampede-fix-forward.jpg"
+    },
+    {
+      "id": "silent-data-drop",
+      "title": "Silent Data Drop",
+      "level": "Senior Software Engineer",
+      "promptVariant": "Describe a time something failed after release and the impact was not obvious at first.",
+      "situation": "A new event-processing path dropped about 2 percent of analytics events when payloads contained a rare enum value. No alert fired because overall volume stayed within normal range, but a product experiment depended on the missing events.",
+      "strongAnswerSketch": [
+        "Use replayable logs to estimate affected event types, time window, and dashboards that were misleading.",
+        "Coordinate with data and product to annotate affected metrics instead of silently backfilling and pretending nothing happened.",
+        "Build a safe replay for recoverable events and explicitly list events that could not be recovered.",
+        "Add dead-letter monitoring, schema-contract tests, and product-facing data freshness indicators."
+      ],
+      "whyItWorks": [
+        "Treats data correctness as production impact.",
+        "Communicates business uncertainty instead of hiding it behind a technical fix.",
+        "Adds monitoring for silent failure, not only visible outage."
+      ],
+      "weakVersion": "I fixed the enum handling bug, backfilled what I could, and told product the dashboards were accurate again.",
+      "followUpAngles": [
+        "How did you estimate missing data?",
+        "Who needed to know the metrics were unreliable?",
+        "What could not be recovered?",
+        "What alert would catch this class of failure?"
+      ],
+      "aiVisual": "assets/generated/example-stories/silent-data-drop.jpg"
+    },
+    {
+      "id": "runbook-gap",
+      "title": "Runbook Gap During On-Call",
+      "level": "Tech Lead",
+      "promptVariant": "Tell me about a time you improved observability, reliability, or performance.",
+      "situation": "During an on-call week, a queue backlog caused delayed notifications. The immediate mitigation was known by one senior engineer, but the runbook was stale and the on-call engineer lost forty minutes finding the right lever.",
+      "strongAnswerSketch": [
+        "Stabilize the backlog with the known-safe throttle, document the exact command used, and confirm customer impact stopped increasing.",
+        "Interview the on-call engineer while the details are fresh to understand which dashboard, alert, and runbook steps failed.",
+        "Update the runbook with decision thresholds, create a queue-age alert, and run a short game-day exercise.",
+        "Assign ownership for runbook review at each service's quarterly operational health check, including an expiry date for risky manual mitigations."
+      ],
+      "whyItWorks": [
+        "Shows tech-lead scope: improving how others respond, not only fixing the current issue.",
+        "Uses the incident to expose knowledge concentration and stale documentation.",
+        "Creates a repeatable operational review habit.",
+        "Makes knowledge concentration and stale operational guidance visible as team-level risk."
+      ],
+      "weakVersion": "I updated the runbook after the incident and reminded the team to keep documentation current so on-call would be faster next time.",
+      "followUpAngles": [
+        "What did the runbook miss?",
+        "How did you validate the new steps?",
+        "What metric told you the backlog was customer-impacting?",
+        "How did ownership of runbooks change?"
+      ],
+      "aiVisual": "assets/generated/example-stories/runbook-gap.jpg"
+    },
+    {
+      "id": "billing-status-data-repair",
+      "title": "Risky Billing Status Data Repair",
+      "level": "Tech Lead",
+      "promptVariant": "Describe a time when you pushed back on a risky production mitigation.",
+      "situation": "A webhook retry bug left 614 renewal accounts with stale billing status. Support and revenue operations wanted an immediate SQL update from a spreadsheet because some customers could not renew, but the spreadsheet mixed tenant IDs, contract exceptions, and accounts already corrected by a retry.",
+      "strongAnswerSketch": [
+        "State the customer and revenue impact, suspected webhook failure window, and why the proposed direct update could corrupt accounts that were already correct.",
+        "Refuse the one-off SQL path in the incident channel, but pair that refusal with a safer plan: dry-run diff, billing-owner review, backup table, sampled validation, and a reversible correction script.",
+        "Escalate to the incident lead and billing service owner for the approval decision instead of turning the disagreement into a private argument with support.",
+        "Use a temporary manual override for the highest-value blocked renewals while the correction script is reviewed, and publish the extra delay and residual risk clearly.",
+        "After recovery, add webhook idempotency coverage, stale-status alerting, and a production data-change checklist with approval thresholds and rollback notes."
+      ],
+      "whyItWorks": [
+        "Rewards restraint without making the candidate passive or obstructionist.",
+        "Shows escalation with evidence, ownership, and a concrete safer path.",
+        "Makes the trade-off visible: a slower correction protected data integrity while temporary overrides reduced customer pain.",
+        "Converts a risky manual mitigation into a durable production-change mechanism."
+      ],
+      "weakVersion": "Support wanted a data fix, so I asked my manager if it was safe, waited for approval, ran the update, and later added a test for the webhook bug.",
+      "followUpAngles": [
+        "What exactly made the fast SQL update unsafe?",
+        "How did you avoid simply blocking support?",
+        "Who had authority to approve the correction?",
+        "What customer pain continued while you chose the safer path?",
+        "What production data-change rule changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/billing-status-data-repair.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong production story shows structured response, honest communication, accountable mitigation, and operational learning that changes future behavior.",
+    "moves": [
+      "Starts with impact, severity, affected users, and current owner.",
+      "Uses observability and recent changes to narrow the problem systematically.",
+      "Communicates knowns, unknowns, next update time, and customer implications.",
+      "Makes mitigation trade-offs explicit instead of treating rollback or fix-forward as automatic.",
+      "Pushes back on unsafe fast fixes with evidence and a concrete alternative.",
+      "Owns the candidate's contribution without claiming credit for the whole incident response.",
+      "Names residual impact after the main symptom recovers, such as data cleanup, delayed work, or customer communication debt.",
+      "Improves detection, rollback, runbooks, tests, idempotency, or ownership afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer over-focuses on debugging heroics, quick rollback, or self-defense and misses customer impact, communication, residual risk, or prevention.",
+    "redFlags": [
+      "The candidate cannot state customer impact or incident severity.",
+      "They describe a technical timeline but not their decisions or communication.",
+      "They blame the person who shipped the change or the team that owned the dependency.",
+      "They claim the fix solved everything but cannot name residual impact, detection, or prevention work.",
+      "They hide uncertainty from stakeholders until root cause is fully known.",
+      "They say the graph recovered but cannot explain residual data, queue, support, or customer cleanup.",
+      "They perform or approve risky production changes because the request is urgent without a dry run, owner, or rollback path.",
+      "They describe being blamed or being innocent more than the operational decisions they made."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "impact",
+      "question": "How did you determine customer or business impact during the issue?",
+      "tests": [
+        "measurement",
+        "risk judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We used checkout p95 latency by segment, support contacts, and order-completion rate; error rate alone was misleading because requests still succeeded slowly.",
+          "For the data issue, I estimated affected event types and time window from replayable logs, then marked downstream dashboards as unreliable.",
+          "For the cache incident, I separated API latency recovery from queued-job impact, duplicate notifications, and tenant-import delay."
+        ],
+        "weak": [
+          "The graphs looked bad, so we knew it was important.",
+          "Support said customers were unhappy."
+        ]
+      }
+    },
+    {
+      "id": "mitigation-tradeoff",
+      "question": "What mitigation alternatives did you consider?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We compared full rollback, disabling the promotions flag, and throttling calls; disabling the flag removed the latency while preserving trace data and avoiding a wider rollback.",
+          "For the event issue, we paused the new path, replayed recoverable events, and clearly documented the unrecoverable slice instead of fabricating complete data.",
+          "For the cache issue, rollback looked clean but would have retried the tenant import and duplicated more jobs, so we throttled workers first and paused noncritical notifications."
+        ],
+        "weak": [
+          "We rolled back because rollback is safest.",
+          "We fixed forward because we wanted to avoid more disruption."
+        ]
+      }
+    },
+    {
+      "id": "unsafe-fast-fix",
+      "question": "When did you decide not to take the fastest-looking mitigation?",
+      "tests": [
+        "risk judgment",
+        "decision quality",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Support wanted a direct SQL repair, but the source spreadsheet mixed corrected and uncorrected accounts, so I proposed a dry-run diff, billing-owner approval, backup table, and sampled validation instead.",
+          "We delayed the data repair by about forty minutes, but used temporary overrides for the highest-value blocked renewals so customer pain did not wait for a perfect process.",
+          "I escalated the decision to the incident lead and service owner with the blast radius, safer path, and residual customer impact rather than arguing privately or simply refusing."
+        ],
+        "weak": [
+          "I did not feel comfortable making the production change, so I waited for a manager to decide.",
+          "We were under pressure, so we made the data update and planned to clean up anything wrong afterward."
+        ]
+      }
+    },
+    {
+      "id": "communication",
+      "question": "What did you communicate while root cause was still uncertain?",
+      "tests": [
+        "stakeholder alignment",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I posted the affected endpoint, latency symptom, suspected release window, what we had ruled out, and the next update time.",
+          "I told product the dashboard data for two reports was unreliable for the window and that we would annotate, estimate, and recover what we could.",
+          "I said my cache-key change was the likely trigger, API latency was recovering, and we were still validating queue delay and duplicate notifications before calling the incident resolved."
+        ],
+        "weak": [
+          "I waited until we understood the root cause so we would not confuse people.",
+          "I kept people updated that we were investigating."
+        ]
+      }
+    },
+    {
+      "id": "prevention",
+      "question": "What changed after the incident?",
+      "tests": [
+        "learning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Checkout now alerts on customer-visible latency, and promotion-heavy carts are part of performance testing before release.",
+          "The queue runbook now has thresholds, owner review dates, and a game-day check rather than just a generic restart step.",
+          "Cache-key changes now require tenant-scale load tests, notification idempotency checks, and rollback notes for queue side effects.",
+          "Production data repairs now require dry-run output, peer review, approval threshold, rollback or reconciliation notes, and a named customer-correction owner."
+        ],
+        "weak": [
+          "We added more logging.",
+          "The team agreed to be more careful before releases."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "structured-response",
+        "name": "Structured Response",
+        "strong": "Works from impact, evidence, ownership, rejected options, and mitigation trade-offs rather than panic or guesswork.",
+        "weak": "Narrates debugging activity without clear severity, decision-making, ownership, or alternatives considered.",
+        "strongAiVisual": "assets/generated/signals/structured-response-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/structured-response-weak.jpg"
+      },
+      {
+        "id": "communication-under-uncertainty",
+        "name": "Communication Under Uncertainty",
+        "strong": "Communicates confirmed facts, uncertainty, next steps, customer implications, and residual impact clearly.",
+        "weak": "Waits for full certainty, gives vague updates, creates false confidence, or declares recovery before cleanup is understood.",
+        "strongAiVisual": "assets/generated/signals/communication-under-uncertainty-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/communication-under-uncertainty-weak.jpg"
+      },
+      {
+        "id": "boundary-and-escalation-judgment",
+        "name": "Boundary and Escalation Judgment",
+        "strong": "Pushes back on unsafe production actions with evidence, a decision owner, and a safer mitigation path.",
+        "weak": "Treats escalation as waiting for someone else, or accepts risky production changes because the request is urgent.",
+        "strongAiVisual": "assets/generated/signals/boundary-and-escalation-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/boundary-and-escalation-judgment-weak.jpg"
+      },
+      {
+        "id": "operational-learning",
+        "name": "Operational Learning",
+        "strong": "Improves detection, rollback, runbooks, tests, idempotency, or ownership in a verified way.",
+        "weak": "Ends at the fix or adds generic logging without tying it to the failure mode or verifying action-item closure.",
+        "strongAiVisual": "assets/generated/signals/operational-learning-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/operational-learning-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Software Engineer",
+        "expected": "Contributes calmly to diagnosis or mitigation, communicates evidence, acknowledges their part when relevant, flags unsafe shortcuts, and owns a clear follow-up."
+      },
+      {
+        "level": "Senior Software Engineer",
+        "expected": "Frames impact, rejected options, residual customer cost, and trade-offs; coordinates across owners; safely handles data or rollback risk; and turns root cause into stronger operational safeguards."
+      },
+      {
+        "level": "Tech Lead",
+        "expected": "Improves team response capability through runbooks, dashboards, game days, ownership, rollback and production-change decision rules, and incident-review discipline."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "structured-response",
+      "communication-under-uncertainty",
+      "boundary-and-escalation-judgment",
+      "operational-learning"
+    ],
+    "followUpTree": [
+      "impact",
+      "mitigation-tradeoff",
+      "unsafe-fast-fix",
+      "communication",
+      "prevention"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What failed, who was affected, and how did you know?"
+      },
+      {
+        "field": "task",
+        "label": "What role did you personally play in response or recovery?"
+      },
+      {
+        "field": "action",
+        "label": "How did you diagnose, mitigate, communicate, coordinate, and choose among imperfect options?"
+      },
+      {
+        "field": "result",
+        "label": "What customer impact stopped, what residual impact remained, and what outcome changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about production ownership?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What detection, runbook, release, rollback, or reliability mechanism changed?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "google-sre-effective-troubleshooting",
+        "group": "Debugging and Observability",
+        "groupDescription": "Resources for diagnosing production issues with evidence instead of guesswork.",
+        "title": "Effective Troubleshooting",
+        "url": "https://sre.google/sre-book/effective-troubleshooting/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Gives a concrete troubleshooting method that helps candidates explain hypotheses, evidence, reproduction, and safe investigation during incidents."
+      },
+      {
+        "id": "google-sre-monitoring-distributed-systems",
+        "group": "Debugging and Observability",
+        "groupDescription": "Resources for diagnosing production issues with evidence instead of guesswork.",
+        "title": "Monitoring Distributed Systems",
+        "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Useful for evaluating whether a story distinguishes customer-visible symptoms from internal causes and alert noise."
+      },
+      {
+        "id": "google-sre-managing-incidents",
+        "group": "Incident Response and Communication",
+        "groupDescription": "Resources for assigning roles, communicating status, and making decisions while systems are impaired.",
+        "title": "Managing Incidents",
+        "url": "https://sre.google/sre-book/managing-incidents/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Clarifies incident command, role assignment, live state tracking, and disciplined response instead of ad hoc debugging heroics."
+      },
+      {
+        "id": "pagerduty-external-communication-guidelines",
+        "group": "Incident Response and Communication",
+        "groupDescription": "Resources for assigning roles, communicating status, and making decisions while systems are impaired.",
+        "title": "External Communication Guidelines",
+        "url": "https://response.pagerduty.com/during/external_communication_guidelines/",
+        "source": "PagerDuty Incident Response Documentation",
+        "type": "Guide",
+        "why": "Gives concrete criteria for communicating customer impact, uncertainty, update cadence, and lingering data or corruption risk."
+      },
+      {
+        "id": "google-sre-postmortem-culture",
+        "group": "Post-Incident Learning",
+        "groupDescription": "Resources for turning production failures into durable learning and tracked prevention work.",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Connects accountable incident stories to blameless analysis, impact, mitigation, root cause, follow-up actions, and shared learning."
+      },
+      {
+        "id": "aws-correction-of-error",
+        "group": "Post-Incident Learning",
+        "groupDescription": "Resources for turning production failures into durable learning and tracked prevention work.",
+        "title": "Why You Should Develop a Correction of Error (COE)",
+        "url": "https://aws.amazon.com/blogs/mt/why-you-should-develop-a-correction-of-error-coe/",
+        "source": "AWS Cloud Operations Blog",
+        "type": "Article",
+        "year": "2022",
+        "why": "Adds a concrete corrective-action mechanism for impact analysis, customer evidence, contributing factors, and verified prevention actions."
+      },
+      {
+        "id": "atlassian-postmortems",
+        "group": "Post-Incident Learning",
+        "groupDescription": "Resources for turning production failures into durable learning and tracked prevention work.",
+        "title": "Postmortems: Enhance Incident Management Processes",
+        "url": "https://www.atlassian.com/incident-management/handbook/postmortems",
+        "source": "Atlassian",
+        "type": "Guide",
+        "why": "Shows how postmortem fields, meetings, approvals, and tracked action items make prevention work operational instead of aspirational."
+      },
+      {
+        "id": "etsy-blameless-postmortems",
+        "group": "Post-Incident Learning",
+        "groupDescription": "Resources for turning production failures into durable learning and tracked prevention work.",
+        "title": "Blameless PostMortems and a Just Culture",
+        "url": "https://www.etsy.com/codeascraft/blameless-postmortems",
+        "source": "Etsy Code as Craft",
+        "type": "Article",
+        "year": "2012",
+        "why": "Helps interviewers distinguish accountability for learning and repair from blame-centered stories that hide system contributors."
+      },
+      {
+        "id": "microsoft-research-fight-production-incidents",
+        "group": "Debugging and Observability",
+        "groupDescription": "Resources for diagnosing production issues with evidence instead of guesswork.",
+        "title": "How to Fight Production Incidents? An Empirical Study on a Large-scale Cloud Service",
+        "url": "https://www.microsoft.com/en-us/research/publication/how-to-fight-production-incidents-an-empirical-study-on-a-large-scale-cloud-service/",
+        "source": "Microsoft Research",
+        "type": "Research paper",
+        "year": "2022",
+        "why": "Adds empirical evidence about detection, root-cause analysis, mitigation patterns, and process gaps across high-severity cloud incidents."
+      },
+      {
+        "id": "google-sre-workbook-incident-response",
+        "group": "Incident Response and Communication",
+        "groupDescription": "Resources for assigning roles, communicating status, and making decisions while systems are impaired.",
+        "title": "Incident Response",
+        "url": "https://sre.google/workbook/incident-response/",
+        "source": "Google SRE Workbook",
+        "type": "Book chapter",
+        "year": "2018",
+        "why": "Gives practical incident roles, early declaration guidance, working records, and examples of coordination failures during complex outages."
+      },
+      {
+        "id": "shopify-chatops-incident-management",
+        "group": "Incident Response and Communication",
+        "groupDescription": "Resources for assigning roles, communicating status, and making decisions while systems are impaired.",
+        "title": "Implementing ChatOps into our Incident Management Procedure",
+        "url": "https://shopify.engineering/implementing-chatops-into-our-incident-management-procedure",
+        "source": "Shopify Engineering",
+        "type": "Article",
+        "year": "2018",
+        "why": "Shows concrete mechanisms for war rooms, responder roles, status updates, action records, deploy locks, and post-incident documentation."
+      },
+      {
+        "id": "google-sre-canarying-releases",
+        "group": "Mitigation and Safe Deployment",
+        "groupDescription": "Resources for rollout, rollback, feature-flag, canary, and production-change trade-offs.",
+        "title": "Canarying Releases",
+        "url": "https://sre.google/workbook/canarying-releases/",
+        "source": "Google SRE Workbook",
+        "type": "Book chapter",
+        "year": "2018",
+        "why": "Helps candidates explain how progressive exposure, clear health signals, and rollback criteria reduce blast radius when releases fail."
+      },
+      {
+        "id": "microsoft-safe-deployment-practices",
+        "group": "Mitigation and Safe Deployment",
+        "groupDescription": "Resources for rollout, rollback, feature-flag, canary, and production-change trade-offs.",
+        "title": "Architecture Strategies for Safe Deployment Practices",
+        "url": "https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments",
+        "source": "Microsoft Azure Well-Architected Framework",
+        "type": "Guide",
+        "why": "Frames every production deployment as risk management through progressive exposure, health checks, emergency protocols, rollback, and learning from anomalies."
+      },
+      {
+        "id": "gitlab-change-management",
+        "group": "Mitigation and Safe Deployment",
+        "groupDescription": "Resources for rollout, rollback, feature-flag, canary, and production-change trade-offs.",
+        "title": "Change Management",
+        "url": "https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/change-management/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "why": "Provides a public operating model for live-data scripts, production-console changes, approval thresholds, communication, and rollback planning."
+      },
+      {
+        "id": "cloudflare-workers-kv-incident-2023",
+        "group": "Incident Case Studies",
+        "groupDescription": "Real incident write-ups that show diagnosis, rollback constraints, customer impact, and durable follow-up actions.",
+        "title": "Cloudflare Incident on October 30, 2023",
+        "url": "https://blog.cloudflare.com/cloudflare-incident-on-october-30-2023/",
+        "source": "Cloudflare Blog",
+        "type": "Postmortem",
+        "year": "2023",
+        "why": "A concrete example of progressive deployment failure, rollback tooling dependency, break-glass mitigation, and follow-up actions tied to safer deployment controls."
+      },
+      {
+        "id": "pagerduty-howie-post-incident-investigations",
+        "group": "Post-Incident Learning",
+        "groupDescription": "Resources for turning production failures into durable learning and tracked prevention work.",
+        "title": "The Howie Guide to Post-Incident Investigations",
+        "url": "https://post-incident.pagerduty.com/",
+        "source": "PagerDuty / Jeli",
+        "type": "Guide",
+        "why": "Deepens post-incident learning with investigation structure, responder interviews, calibration, reporting, and blame-aware language."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A release creates latency without increasing error rate.",
+    "A data pipeline silently drops a small percentage of events.",
+    "A stale runbook slows on-call recovery.",
+    "A feature flag, rollback, or throttle decision requires a trade-off during incident response.",
+    "A stakeholder asks for a direct production data edit before blast radius, approval, and rollback are clear.",
+    "A candidate-authored change causes an incident and the first mitigation leaves residual cleanup.",
+    "An incident appears recovered on service dashboards while queues, data, support tickets, or customer communication still need closure."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

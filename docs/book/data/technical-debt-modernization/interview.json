@@ -142,7 +142,8 @@
         "What launch risk did you accept?",
         "Who owned the deferred adapter path?",
         "How did the two-day reporting delay change the roadmap?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/checkout-modernization-through-launch.jpg"
     }
   ],
   "strongAnswerPattern": {
@@ -290,7 +291,9 @@
         "id": "team-capacity-cost",
         "name": "Team Capacity Cost",
         "strong": "Quantifies debt through on-call load, support escalations, ramp time, ownership churn, or hiring drag, then connects that load to delivery and customer risk.",
-        "weak": "Relies on morale complaints or hiring anecdotes without evidence, ownership, or a decision trigger."
+        "weak": "Relies on morale complaints or hiring anecdotes without evidence, ownership, or a decision trigger.",
+        "strongAiVisual": "assets/generated/signals/team-capacity-cost-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/team-capacity-cost-weak.jpg"
       }
     ],
     "rubric": [

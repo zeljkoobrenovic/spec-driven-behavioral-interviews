@@ -1,0 +1,563 @@
+{
+  "id": "tech-lead-influence",
+  "title": "Influence Without Authority",
+  "description": "Tests whether senior ICs and tech leads can align peers around technical direction by making evidence, trade-offs, ownership, and escalation boundaries clear without relying on title power.",
+  "roleFocus": [
+    "Senior Software Engineer",
+    "Tech Lead"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "influence-without-authority",
+    "name": "Influence Without Authority",
+    "family": "Influence and Communication",
+    "definition": "Turns technical judgment into shared action through credibility, evidence, facilitation, and follow-through rather than formal people-management authority.",
+    "whyItMatters": "Senior ICs and tech leads often need peers and partner teams to change course even when they cannot assign work, set priorities, or command compliance."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you influenced a technical decision without formal authority.",
+    "variants": [
+      "Describe a time you aligned engineers who disagreed about technical direction.",
+      "Tell me about a time you had to get another team to change an interface, dependency, or operating habit.",
+      "Describe a time you led a project through trade-offs without being the manager.",
+      "Tell me about a time you escalated a technical risk after trying to influence peers."
+    ],
+    "interviewerIntent": [
+      "Can the candidate build credibility through evidence and empathy?",
+      "Can they turn discussion into an explicit decision mechanism instead of relying on persuasion alone?",
+      "Can they balance technical quality, delivery pressure, and team ownership?",
+      "Do they know when escalation is appropriate because the decision boundary exceeds peer influence?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A tech lead moves peers from fragmented local testing habits to a shared strategy by showing escaped defects, build-time cost, ownership gaps, and a practical migration path.",
+    "context": [
+      "Several engineers agree tests are painful but disagree on whether the pain is urgent enough to fund now.",
+      "The manager supports quality work in principle but will not dictate the technical answer.",
+      "Partner teams worry that new standards will slow their roadmap.",
+      "At least one peer may remain unconvinced because their local metric looks healthy even though the shared system is failing.",
+      "Some risks, such as security exceptions or customer commitments, may require an accountable decision owner after the technical options are clear."
+    ],
+    "constraints": [
+      "The lead must influence peers who own different parts of the codebase.",
+      "The decision needs to preserve delivery of near-term commitments.",
+      "The decision and adoption mechanism must be lightweight enough that teams will actually use it.",
+      "The candidate must name rejected alternatives and residual cost rather than presenting consensus as a free win.",
+      "Escalation must clarify ownership and risk rather than bypassing peers or creating political cover."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A technical direction, quality bar, or cross-team dependency needed to change, but the candidate had no formal authority over the people who owned the work or had to change behavior.",
+    "task": "Create enough shared understanding, evidence, and decision structure for peers to commit to a specific, lower-risk path.",
+    "action": [
+      "Mapped who had to change behavior and what each person or team was worried about.",
+      "Brought concrete evidence such as escaped defects, operational cost, customer impact, cycle time, or maintenance burden.",
+      "Separated the principle from the first practical step so the choice did not become an all-or-nothing rewrite.",
+      "Named rejected alternatives, the peer or stakeholder who still disliked the path, and the cost the team accepted.",
+      "Facilitated a decision through a design note, RFC, working session, or explicit trade-off review.",
+      "Escalated only when the remaining decision involved risk acceptance, customer commitment, or authority the peer group could not own.",
+      "Created ownership, adoption steps, and measurement so agreement turned into execution."
+    ],
+    "result": [
+      "Peers committed to a direction with clear owners and near-term adoption steps.",
+      "A measurable quality, delivery, reliability, or coordination problem improved.",
+      "A real cost remained visible, such as delayed cleanup, narrower scope, a missed account, or one team carrying extra adoption work.",
+      "The team gained a repeatable way to make similar decisions without depending on the candidate's persuasion each time."
+    ],
+    "reflection": "The key lesson was that influence improves when people can see their own risks, incentives, and constraints represented in the decision.",
+    "systemChange": [
+      "RFC template with decision criteria, rejected alternatives, and adoption plan.",
+      "Lightweight technical steering forum for cross-team choices.",
+      "Ownership map and success metrics for the adopted direction.",
+      "Explicit trigger for revisiting the decision if assumptions change.",
+      "Escalation rule for risks that require a named accountable decision owner."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "test-strategy-alignment",
+      "title": "Test Strategy Alignment",
+      "level": "Tech Lead",
+      "promptVariant": "Describe a time you aligned engineers who disagreed about technical direction.",
+      "situation": "Three squads used different testing approaches for a shared checkout flow. One favored end-to-end tests, one relied on mocks, and one avoided touching old tests because they were slow and flaky.",
+      "strongAnswerSketch": [
+        "Collect evidence: escaped checkout defects, flaky-test time, build duration, and which failures each test type caught.",
+        "Facilitate a working session that defines the testing pyramid for the shared flow and names what each squad's concern is protecting.",
+        "Reject both extremes: a blanket end-to-end mandate that would slow every build and a no-standard approach that would keep defects leaking across squad boundaries.",
+        "Propose a two-release adoption plan: contract tests for shared boundaries first, then selective end-to-end coverage for revenue-critical paths.",
+        "Create owners for the test fixtures, add build-time budget, and accept that one squad's cleanup work moved behind a customer fix for a release.",
+        "Track escaped defects, flaky-test quarantines, and whether new checkout changes include the agreed contract tests."
+      ],
+      "whyItWorks": [
+        "Uses evidence and empathy rather than declaring a preferred testing philosophy.",
+        "Shows practical sequencing under delivery constraints.",
+        "Names rejected alternatives and the cost of adoption.",
+        "Turns agreement into ownership, adoption, and measurement."
+      ],
+      "weakVersion": "I convinced the teams we needed better tests and got everyone to agree on a common approach, but I could not explain what we rejected or which team paid the adoption cost.",
+      "followUpAngles": [
+        "What was each team right about?",
+        "Which metric changed the discussion?",
+        "What did you choose not to standardize?",
+        "How did you know adoption was real?"
+      ],
+      "aiVisual": "assets/generated/example-stories/test-strategy-alignment.jpg"
+    },
+    {
+      "id": "deprecating-shared-service",
+      "title": "Deprecating A Shared Service",
+      "level": "Senior Software Engineer",
+      "promptVariant": "Tell me about a time you had to get another team to change an interface, dependency, or operating habit.",
+      "situation": "A shared notification service had duplicate ownership and slow incident response. The senior engineer believed two teams should migrate to a newer event-based path, but those teams saw the ask as unfunded platform work added to their roadmap.",
+      "strongAnswerSketch": [
+        "Show incident count, paging load, duplicated fixes, and the cost of keeping both paths alive.",
+        "Acknowledge that the first proposal sounded like platform cleanup being pushed onto product teams and revise the ask.",
+        "Acknowledge partner-team roadmap pressure and propose a migration slice tied to each team's next notification change.",
+        "Reject a hard cutoff that would strand contractual customers, but also reject keeping both paths indefinitely with no owner.",
+        "Create a compatibility layer and migration checklist instead of asking teams to rewrite all integrations at once.",
+        "Set a deprecation date, owners, and an exception path for customers with contractual constraints, accepting two months of dual-run support."
+      ],
+      "whyItWorks": [
+        "Makes the partner-team cost visible instead of treating resistance as laziness.",
+        "Shows the candidate adjusting after an influence attempt landed badly.",
+        "Creates a low-friction path that fits existing roadmap work.",
+        "Includes deprecation governance, exceptions, and a named residual operating cost."
+      ],
+      "weakVersion": "I explained that the old service was technical debt and kept pushing until teams agreed to migrate, without acknowledging why the cost landed on them.",
+      "followUpAngles": [
+        "Why did the other teams resist?",
+        "What did your first ask get wrong?",
+        "What did you offer to reduce migration cost?",
+        "How did you handle exceptions?",
+        "What happened to incident load?"
+      ],
+      "aiVisual": "assets/generated/example-stories/deprecating-shared-service.jpg"
+    },
+    {
+      "id": "scope-tradeoff-leadership",
+      "title": "Leading A Scope Trade-Off",
+      "level": "Tech Lead",
+      "promptVariant": "Describe a time you led a project through trade-offs without being the manager.",
+      "situation": "A team was six weeks from a customer beta, and engineers disagreed about whether to include offline sync. Product wanted the full feature, while unresolved data-conflict risk threatened the reliability of the core workflow.",
+      "strongAnswerSketch": [
+        "Break the decision into customer need, data-loss risk, engineering uncertainty, and beta learning goals.",
+        "Prototype the riskiest sync conflict in two days and show that correctness work would consume most of the remaining schedule.",
+        "Reject a hidden-quality shortcut and a full delay, then make the customer-learning trade-off explicit.",
+        "Recommend shipping read-only offline mode for beta, with explicit customer messaging and telemetry for offline usage.",
+        "Accept that one design partner could not test its full field workflow in the beta, then set a named follow-up with Product and Customer Success.",
+        "Create a post-beta decision gate for full sync based on usage, conflict rate, and customer demand."
+      ],
+      "whyItWorks": [
+        "Shows technical leadership under product pressure without hiding behind the manager.",
+        "Uses a small prototype to replace opinion with evidence.",
+        "Preserves customer learning while naming the deferred capability and disappointed stakeholder."
+      ],
+      "weakVersion": "I helped the team compromise by reducing scope and promising to add full offline sync later, but I could not name which customer workflow we knowingly left unsupported.",
+      "followUpAngles": [
+        "What evidence changed the scope decision?",
+        "How did Product react?",
+        "What was the customer impact of the narrower beta?",
+        "What decision gate did you set?"
+      ],
+      "aiVisual": "assets/generated/example-stories/scope-tradeoff-leadership.jpg"
+    },
+    {
+      "id": "security-exception-boundary",
+      "title": "Escalating A Security Exception Boundary",
+      "level": "Tech Lead",
+      "promptVariant": "Tell me about a time you escalated a technical risk after trying to influence peers.",
+      "situation": "A strategic customer wanted a legacy SSO integration that required bypassing the product's normal MFA requirement before quarter end. Sales wanted the exception, Product wanted to protect the deal, Security was overloaded, and engineers disagreed about whether a temporary bypass was acceptable.",
+      "strongAnswerSketch": [
+        "Clarify the decision boundary: the team could estimate implementation paths and controls, but could not unilaterally accept account and security risk.",
+        "Bring evidence to a working session: affected users, threat model, audit exposure, support burden, customer deadline, and two safer alternatives.",
+        "Recommend a narrower path: admin-scoped SSO support behind a feature flag with no MFA bypass, explicit customer messaging, and a two-week slip.",
+        "When Sales tried to promise the bypass anyway, escalate the same day with a short decision memo to the engineering manager and Security lead covering options, costs, recommendation, and customer impact.",
+        "Own the residual cost: the large customer signed late with a concession, one smaller expansion left the quarter, and no unsupported security exception shipped."
+      ],
+      "whyItWorks": [
+        "Shows escalation as boundary judgment after peer influence, not as a substitute for doing the hard alignment work.",
+        "Includes a real cost instead of turning the story into a clean win.",
+        "Leaves behind a reusable security-exception rule with an owner, expiration date, compensating controls, and approver."
+      ],
+      "weakVersion": "I told Sales the bypass was insecure and escalated it to my manager because the business was pushing engineering too hard.",
+      "followUpAngles": [
+        "When did escalation become the right move?",
+        "What did the safer option cost the business?",
+        "Who had authority to accept the risk?",
+        "What rule changed for future exceptions?"
+      ],
+      "aiVisual": "assets/generated/example-stories/security-exception-boundary.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer shows credible peer influence through evidence, stakeholder empathy, decision structure, and execution follow-through.",
+    "moves": [
+      "Identifies whose behavior, priority, or decision needed to change and why they might resist.",
+      "Uses concrete evidence and trade-offs instead of taste or authority.",
+      "Represents other teams' constraints fairly.",
+      "Creates a practical first step rather than demanding a perfect end state.",
+      "Names rejected alternatives, residual cost, and any stakeholder who remains dissatisfied.",
+      "Uses a decision artifact, forum, or criteria to make commitment and ownership explicit.",
+      "Escalates with options, cost, and recommendation when the decision requires accountable risk acceptance, including cases where waiting for consensus would create more risk.",
+      "Tracks adoption and leaves a mechanism the team can reuse without the candidate in the room."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer equates influence with convincing people, being the most technical person, or passing the decision upward before doing the peer work.",
+    "redFlags": [
+      "The candidate cannot explain why peers resisted.",
+      "They rely on being right technically without addressing delivery, ownership, or operational cost.",
+      "They describe alignment but not the decision mechanism, owner, or adoption signal.",
+      "They present a clean win with no rejected path, disappointed stakeholder, or residual cost.",
+      "They escalate as a substitute for evidence and options, or cannot name the decision boundary that made escalation appropriate.",
+      "They keep seeking consensus after the remaining decision requires accountable risk acceptance.",
+      "They cannot show that behavior changed after the meeting."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "resistance",
+      "question": "Who resisted the direction, and what were they right about?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The partner teams were right that migration was unfunded and risky; I tied the migration to their next notification change and provided compatibility tests.",
+          "The squad avoiding end-to-end tests was right about build time, so we limited end-to-end coverage to revenue-critical paths and used contract tests elsewhere."
+        ],
+        "weak": [
+          "Some engineers were resistant to change.",
+          "People did not understand the technical debt until I explained it."
+        ]
+      }
+    },
+    {
+      "id": "decision-mechanism",
+      "question": "What mechanism turned discussion into a decision?",
+      "tests": [
+        "decision quality",
+        "execution"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We used an RFC with decision criteria, options, rejected alternatives, adoption owners, and a date for revisiting assumptions.",
+          "The offline-sync decision had a prototype result, beta learning goals, explicit scope, and telemetry-based gate for full sync."
+        ],
+        "weak": [
+          "We discussed the options until people seemed aligned.",
+          "The manager agreed with my recommendation."
+        ]
+      }
+    },
+    {
+      "id": "tradeoffs",
+      "question": "What trade-off did you make visible?",
+      "tests": [
+        "trade-off reasoning",
+        "technical judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Full offline sync would have consumed the beta schedule and risked data loss, while read-only offline mode preserved customer learning with lower correctness risk.",
+          "A pure end-to-end strategy caught workflow regressions but made builds too slow, so we combined contract tests with selective end-to-end coverage.",
+          "The safer SSO option protected the customer relationship but cost us a two-week slip and a smaller expansion that could not wait."
+        ],
+        "weak": [
+          "We balanced quality and speed.",
+          "We chose the simpler approach."
+        ]
+      }
+    },
+    {
+      "id": "residual-cost",
+      "question": "Who still paid a cost, carried extra work, or remained dissatisfied after your recommendation?",
+      "tests": [
+        "trade-off reasoning",
+        "reflection"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "One squad moved cleanup behind a customer fix for a release, so I made their adoption work visible in planning and owned the fixture budget with them.",
+          "A design partner could not test full offline sync in beta, so Product and Customer Success gave them explicit messaging and a follow-up gate instead of pretending the beta covered every workflow.",
+          "The safer SSO path cost a two-week slip and one smaller expansion left the quarter; I included that cost in the escalation memo and the post-decision communication."
+        ],
+        "weak": [
+          "Nobody was really unhappy once they understood the trade-off.",
+          "There was no downside because the solution was better for everyone."
+        ]
+      }
+    },
+    {
+      "id": "boundary-escalation",
+      "question": "When was escalation the right move, and how did you keep it from becoming political?",
+      "tests": [
+        "judgment",
+        "influence"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I escalated only after the group agreed on the technical facts but did not own the security-risk acceptance decision; the memo named options, cost, owner, and my recommendation.",
+          "I told Sales and Product what Engineering could safely support, what it would cost, and which accountable leaders had to approve any exception."
+        ],
+        "weak": [
+          "I escalated because the teams would not agree with me.",
+          "I asked my manager to make the call so I would not be stuck in the conflict."
+        ]
+      }
+    },
+    {
+      "id": "adoption",
+      "question": "How did you know people actually adopted the direction?",
+      "tests": [
+        "measurement",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Each squad had one fixture owner, flaky-test quarantines dropped by half, and new checkout changes included contract tests before review.",
+          "Two teams migrated notification paths by the deprecation date, and paging load for the old service dropped from nine pages a month to two.",
+          "Future security exceptions needed an approver, expiration date, compensating controls, and a tracked cleanup owner before Sales could promise them."
+        ],
+        "weak": [
+          "People said the plan made sense.",
+          "The teams generally followed the new direction."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "peer-influence",
+        "name": "Peer Influence",
+        "strong": "Represents peer constraints fairly and earns commitment through evidence, options, credibility, and practical adoption steps.",
+        "weak": "Treats resistance as ignorance or relies on escalation, seniority, or persuasion alone without showing peer work.",
+        "strongAiVisual": "assets/generated/signals/peer-influence-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/peer-influence-weak.jpg"
+      },
+      {
+        "id": "technical-framing",
+        "name": "Technical Framing",
+        "strong": "Connects technical direction to failure modes, operational cost, customer impact, and delivery risk.",
+        "weak": "Frames the choice as personal preference or abstract technical purity.",
+        "strongAiVisual": "assets/generated/signals/technical-framing-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/technical-framing-weak.jpg"
+      },
+      {
+        "id": "execution-mechanism",
+        "name": "Execution Mechanism",
+        "strong": "Creates owners, adoption steps, metrics, and revisiting rules that turn agreement into changed behavior.",
+        "weak": "Ends at consensus with no evidence of ownership, adoption, or changed behavior.",
+        "strongAiVisual": "assets/generated/signals/execution-mechanism-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/execution-mechanism-weak.jpg"
+      },
+      {
+        "id": "boundary-judgment",
+        "name": "Boundary Judgment",
+        "strong": "Knows when peer influence is enough, when accountable risk acceptance is required, and how to escalate with options and cost.",
+        "weak": "Avoids escalation when risk exceeds peer authority, or escalates to bypass peers without a recommendation.",
+        "strongAiVisual": "assets/generated/signals/boundary-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/boundary-judgment-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Software Engineer",
+        "expected": "Influences peers with concrete evidence, acknowledges their constraints, and drives a bounded technical improvement across a team boundary."
+      },
+      {
+        "level": "Tech Lead",
+        "expected": "Creates repeatable decision and adoption mechanisms for cross-team technical direction, then escalates boundary decisions with evidence instead of politics."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "peer-influence",
+      "technical-framing",
+      "execution-mechanism",
+      "boundary-judgment"
+    ],
+    "followUpTree": [
+      "resistance",
+      "decision-mechanism",
+      "tradeoffs",
+      "residual-cost",
+      "boundary-escalation",
+      "adoption"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What technical direction needed to change, and who had to change behavior?"
+      },
+      {
+        "field": "task",
+        "label": "What were you accountable for without formal authority?"
+      },
+      {
+        "field": "action",
+        "label": "How did you use evidence, empathy, decision structure, escalation judgment, and follow-through to move peers?"
+      },
+      {
+        "field": "result",
+        "label": "What changed in adoption, quality, delivery, reliability, or coordination?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about influencing peers?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What decision, ownership, or adoption mechanism changed afterward?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "influence-without-authority",
+        "group": "Influence and Peer Leadership",
+        "title": "Influence Without Authority (2nd edition)",
+        "url": "https://www.gsb.stanford.edu/faculty-research/books/influence-without-authority-2nd-edition",
+        "source": "Allan R. Cohen and David L. Bradford / Stanford Graduate School of Business",
+        "type": "Book",
+        "year": "2005",
+        "why": "Directly supports tech-lead stories where the candidate must understand stakeholder currencies and earn cooperation without reporting-line authority.",
+        "groupDescription": "Resources for peer influence, senior IC leadership, stakeholder empathy, and technical direction without formal authority."
+      },
+      {
+        "id": "staff-engineer",
+        "group": "Influence and Peer Leadership",
+        "title": "Staff Engineer: Leadership Beyond the Management Track",
+        "url": "https://staffeng.com/book/",
+        "source": "Will Larson / StaffEng",
+        "type": "Book",
+        "year": "2021",
+        "why": "Gives senior IC and tech lead context for operating through technical strategy, sponsorship, alignment with authority, and influence beyond coding.",
+        "groupDescription": "Resources for peer influence, senior IC leadership, stakeholder empathy, and technical direction without formal authority."
+      },
+      {
+        "id": "staff-engineers-path",
+        "group": "Influence and Peer Leadership",
+        "title": "The Staff Engineer's Path",
+        "url": "https://www.oreilly.com/library/view/the-staff-engineers/9781098118723/",
+        "source": "Tanya Reilly / O'Reilly",
+        "type": "Book",
+        "year": "2022",
+        "why": "Adds practical senior IC guidance on leading big projects, getting aligned, communicating often, and creating good influence without becoming the manager.",
+        "groupDescription": "Resources for peer influence, senior IC leadership, stakeholder empathy, and technical direction without formal authority."
+      },
+      {
+        "id": "team-topologies-second-edition",
+        "group": "Team Boundaries and Ownership",
+        "title": "Team Topologies, 2nd Edition",
+        "url": "https://www.simonandschuster.com/books/Team-Topologies-2nd-Edition/Matthew-Skelton/9781966280002",
+        "source": "Matthew Skelton and Manuel Pais / IT Revolution",
+        "type": "Book",
+        "year": "2025",
+        "why": "Useful when influence depends on team boundaries, interaction modes, cognitive load, and who should own a capability after the decision.",
+        "groupDescription": "Resources for team boundaries, ownership design, platform interactions, and cross-team coordination."
+      },
+      {
+        "id": "google-cloud-architecture-decision-records",
+        "group": "Decision Mechanisms",
+        "title": "Architecture Decision Records Overview",
+        "url": "https://docs.cloud.google.com/architecture/architecture-decision-records",
+        "source": "Google Cloud",
+        "type": "Documentation",
+        "year": "2024",
+        "why": "Provides a concrete record format for options, requirements, decisions, and consequences so technical influence survives beyond the meeting.",
+        "groupDescription": "Resources for decision records, RFCs, explicit decision rights, and reusable technical alignment mechanisms."
+      },
+      {
+        "id": "architecture-advice-process",
+        "group": "Decision Mechanisms",
+        "title": "Scaling the Practice of Architecture, Conversationally",
+        "url": "https://martinfowler.com/articles/scaling-architecture-conversationally.html",
+        "source": "Andrew Harmel-Law / Martin Fowler",
+        "type": "Article",
+        "year": "2021",
+        "why": "Explains an advice process where decision makers seek input from affected people and experts, then record the decision instead of waiting for consensus.",
+        "groupDescription": "Resources for decision records, RFCs, explicit decision rights, and reusable technical alignment mechanisms."
+      },
+      {
+        "id": "rust-rfc-process",
+        "group": "Decision Mechanisms",
+        "title": "The Rust RFC Book",
+        "url": "https://rust-lang.github.io/rfcs/",
+        "source": "The Rust Project",
+        "type": "Documentation",
+        "why": "Shows a mature RFC process for substantial technical changes, including early feedback, consensus building, drawbacks, alternatives, and implementation ownership.",
+        "groupDescription": "Resources for decision records, RFCs, explicit decision rights, and reusable technical alignment mechanisms."
+      },
+      {
+        "id": "atlassian-daci-decision-framework",
+        "group": "Decision Mechanisms",
+        "title": "DACI Decision-Making Framework",
+        "url": "https://www.atlassian.com/team-playbook/plays/daci",
+        "source": "Atlassian Team Playbook",
+        "type": "Playbook",
+        "why": "Clarifies driver, approver, contributor, and informed roles when a tech lead must turn peer discussion into an accountable decision.",
+        "groupDescription": "Resources for decision records, RFCs, explicit decision rights, and reusable technical alignment mechanisms."
+      },
+      {
+        "id": "gitlab-making-decisions",
+        "group": "Decision Mechanisms",
+        "title": "Making Decisions",
+        "url": "https://handbook.gitlab.com/handbook/leadership/making-decisions/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "year": "2025",
+        "why": "Gives a concrete operating model for collecting input, using DRIs, documenting alternatives, and making timely decisions without confusing collaboration with unanimity.",
+        "groupDescription": "Resources for decision records, RFCs, explicit decision rights, and reusable technical alignment mechanisms."
+      },
+      {
+        "id": "atlassian-project-trade-off-analysis",
+        "group": "Trade-Offs and Operating Risk",
+        "title": "Project Trade-Off Analysis",
+        "url": "https://www.atlassian.com/team-playbook/plays/trade-offs",
+        "source": "Atlassian Team Playbook",
+        "type": "Playbook",
+        "why": "Gives interviewers a concrete way to probe whether the candidate made cost, scope, quality, time, and risk trade-offs explicit.",
+        "groupDescription": "Resources for trade-off framing, risk acceptance, launch choices, and practical engineering compromise."
+      },
+      {
+        "id": "sre-embracing-risk",
+        "group": "Trade-Offs and Operating Risk",
+        "title": "Embracing Risk",
+        "url": "https://sre.google/sre-book/embracing-risk/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2017",
+        "why": "Shows how reliability and delivery discussions can be framed as explicit risk tolerance rather than abstract quality arguments.",
+        "groupDescription": "Resources for trade-off framing, risk acceptance, launch choices, and practical engineering compromise."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A tech lead aligns squads on a shared test strategy.",
+    "A senior engineer helps partner teams migrate from a brittle shared service.",
+    "A project needs a scope trade-off under product pressure.",
+    "A security or compliance exception needs peer influence plus accountable escalation.",
+    "A cross-team technical decision needs an RFC, owner map, and adoption metric."
+  ],
+  "assets": {
+    "icon": "icon.jpg"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

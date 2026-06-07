@@ -1,0 +1,566 @@
+{
+  "id": "engineer-collaboration-feedback",
+  "title": "Collaboration and Feedback for Engineers",
+  "description": "Tests code-review maturity, peer collaboration, feedback habits, and the ability to improve work through disagreement.",
+  "roleFocus": [
+    "Software Engineer",
+    "Senior Software Engineer",
+    "Tech Lead"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "collaboration-feedback",
+    "name": "Collaboration and Feedback",
+    "family": "Influence and Communication",
+    "definition": "Uses code review, disagreement, and peer feedback to **improve the work** while **preserving trust**.",
+    "whyItMatters": "Engineering work is rarely solo; **collaboration quality** determines whether teams learn from review, avoid defects, and make decisions without turning disagreement into status conflict."
+  },
+  "prompt": {
+    "primary": "Tell me about a time **feedback** from another engineer **changed your technical approach**.",
+    "variants": [
+      "Describe a time you disagreed with **code-review feedback**.",
+      "Tell me about a time you helped a teammate through a **difficult technical problem**.",
+      "Describe a time when you had to **give feedback** to another engineer.",
+      "Tell me about a time feedback on **your collaboration style** changed your behavior."
+    ],
+    "interviewerIntent": [
+      "Can the candidate receive critique **without defensiveness**?",
+      "Do they separate **technical disagreement** from **personal status**?",
+      "Can they accept the **concern behind feedback** while rejecting or deferring an oversized fix?",
+      "Do they name their **own contribution to friction** and the concrete behavior they changed afterward?",
+      "Can they **turn feedback into better design**, clearer contracts, or stronger team norms?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A feature implementation passes tests, but review feedback shows the API contract will be hard for partner teams to use safely.",
+    "context": [
+      "The candidate is under schedule pressure and believes the implementation is technically correct.",
+      "A reviewer challenges the naming, error handling, and backward-compatibility behavior.",
+      "Product wants the feature soon, while partner teams need a stable contract.",
+      "Some feedback is valid but would expand the change beyond what the release can safely absorb.",
+      "Other feedback may concern how the candidate participated in the discussion, not only the code."
+    ],
+    "constraints": [
+      "The candidate must not turn code review into a status contest.",
+      "The team still needs a decision it can ship, not endless debate.",
+      "They need to distinguish accepted, rejected, and deferred feedback using a clear decision rule.",
+      "They need to own their contribution to friction without turning the story into broad self-blame.",
+      "The learning should improve future collaboration, not only the single pull request."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A review, disagreement, or teammate request revealed an important gap in the candidate's approach.",
+    "task": "Improve the work and reach a decision while keeping the collaboration productive.",
+    "action": [
+      "Restated the technical concern in neutral terms and asked what failure mode the reviewer or teammate wanted to prevent.",
+      "Acknowledged any behavior of their own that made collaboration harder, such as over-explaining, taking over, or arguing in review comments.",
+      "Separated must-fix correctness issues from preferences, follow-up refactors, or larger design questions.",
+      "Used a small design note, test case, pairing session, or trade-off table to move from opinion to evidence.",
+      "Changed the implementation, contract, or plan where the feedback was right, and clearly explained where the team chose not to expand scope.",
+      "Named the residual cost of the chosen path, such as temporary duplication, deferred cleanup, or compatibility tests the team would carry.",
+      "Captured the learning in a review checklist, API guideline, pairing habit, or team norm when the same friction was likely to repeat."
+    ],
+    "result": [
+      "The code or design became easier to use, test, operate, or maintain.",
+      "The team reached a decision without suppressing disagreement or letting review drag indefinitely.",
+      "A rejected or deferred alternative was captured with a trigger for revisiting it.",
+      "Trust or working cadence improved because the candidate repaired friction instead of only winning the technical point.",
+      "Future reviews or pairing sessions improved because the learning was captured."
+    ],
+    "reflection": "The useful shift was from defending the original solution to finding the failure mode the feedback was trying to prevent, naming the candidate's part in the friction, and choosing the smallest responsible change.",
+    "systemChange": [
+      "Review checklist that covers API compatibility, error states, or operational readiness.",
+      "Guideline for moving code-review debate into a short design discussion.",
+      "Pairing or review rotation for risky areas of the codebase.",
+      "Team norm that separates blocking correctness issues from optional style preferences.",
+      "Pairing protocol where the stuck teammate drives while the helper asks diagnostic questions and records the debugging path.",
+      "Rule that behavior-changing refactors need compatibility tests or a short design note before code review starts."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "api-contract-review",
+      "title": "API Contract Review",
+      "level": "Software Engineer",
+      "promptVariant": "Tell me about a time feedback from another engineer changed your technical approach.",
+      "situation": "A reviewer pushed back on an API that returned partial success for a batch update. The implementation worked for the candidate's immediate feature, but a downstream team would have to guess which records were safe to retry.",
+      "strongAnswerSketch": [
+        "Ask the reviewer to name the client failure mode rather than debating style.",
+        "Add explicit per-record status, idempotency behavior, and tests for retries instead of only changing naming.",
+        "Keep launch scope bounded by documenting one advanced retry feature as follow-up while accepting the residual cost of a more verbose response.",
+        "Add batch API review criteria to the team checklist."
+      ],
+      "whyItWorks": [
+        "Shows willingness to learn without treating seniority as the reason.",
+        "Turns review into a concrete failure-mode discussion.",
+        "Balances quality improvement with scope control.",
+        "Names a scoped deferral and the cost of the safer API contract."
+      ],
+      "weakVersion": "I accepted the review comments because the reviewer was more senior and then made the requested changes.",
+      "followUpAngles": [
+        "What was the reviewer worried would break?",
+        "Which feedback did you accept, reject, or defer?",
+        "How did the API become safer?",
+        "What changed in future reviews?"
+      ],
+      "aiVisual": "assets/generated/example-stories/api-contract-review.jpg"
+    },
+    {
+      "id": "code-review-disagreement",
+      "title": "Code Review Disagreement",
+      "level": "Senior Software Engineer",
+      "promptVariant": "Describe a time you disagreed with code-review feedback.",
+      "situation": "The candidate proposed splitting a small feature into a new service and had started defending the design in a long pull-request thread. A reviewer argued it should stay inside the existing module until traffic and ownership were clearer.",
+      "strongAnswerSketch": [
+        "Acknowledge that the review thread had become part architecture discussion and part status defense, then reset the discussion around decision criteria.",
+        "Separate the disagreement into deployment independence, ownership, latency, and operational cost.",
+        "Run a short design review using expected traffic, failure isolation, and on-call ownership rather than arguing in pull-request comments.",
+        "Accept keeping the first release inside the existing module, name the cost of continued coupled deploys, and define the extraction trigger.",
+        "Document the decision so future work does not reopen the same debate without new evidence."
+      ],
+      "whyItWorks": [
+        "Shows willingness to change direction when operational cost outweighs architectural preference.",
+        "Owns the candidate's first defensive response instead of presenting a clean win.",
+        "Uses explicit decision criteria instead of personal seniority.",
+        "Leaves a trigger for revisiting the decision and names the cost of deferring the split."
+      ],
+      "weakVersion": "I disagreed at first, but after a long review thread we compromised so the review could close.",
+      "followUpAngles": [
+        "What evidence made you change your mind?",
+        "What did you still disagree with?",
+        "How did you keep the review from becoming personal?",
+        "When would the service split become justified?"
+      ],
+      "aiVisual": "assets/generated/example-stories/code-review-disagreement.jpg"
+    },
+    {
+      "id": "teammate-debugging-support",
+      "title": "Helping a Teammate Debug Without Taking Over",
+      "level": "Tech Lead",
+      "promptVariant": "Tell me about a time you helped a teammate through a difficult technical problem.",
+      "situation": "A teammate was stuck on a flaky integration test and had started rewriting unrelated code. In the first pairing session, the tech lead grabbed the keyboard and solved part of the problem quickly; the teammate later said they still did not understand the failure and felt sidelined.",
+      "strongAnswerSketch": [
+        "Acknowledge the feedback, name that taking over optimized for speed at the expense of learning, and reset the pairing contract.",
+        "Pair for one hour with the teammate driving to narrow the problem to test data isolation and clock assumptions.",
+        "Ask diagnostic questions, capture the debugging path, and let the teammate implement the final fixture with review support.",
+        "Suggest a smaller fix, add a deterministic fixture, and avoid rewriting the test framework during the feature.",
+        "Accept that the fix took longer than if the lead had finished it alone, then turn the debugging notes into a short guide for common flaky-test causes."
+      ],
+      "whyItWorks": [
+        "Owns the leader's contribution to the collaboration problem.",
+        "Shows supportive collaboration without rescuing the teammate in a way that removes ownership.",
+        "Models systematic debugging and scope control.",
+        "Creates a reusable learning artifact for the team while preserving the teammate's confidence."
+      ],
+      "weakVersion": "I jumped in, fixed the flaky test for them, and explained what had gone wrong afterward.",
+      "followUpAngles": [
+        "What feedback did you receive about your help?",
+        "What did you change in your behavior?",
+        "How did you keep the teammate owning the fix?",
+        "What debugging habit improved afterward?",
+        "How did the team use the learning?"
+      ],
+      "aiVisual": "assets/generated/example-stories/teammate-debugging-support.jpg"
+    },
+    {
+      "id": "risky-refactor-feedback",
+      "title": "Risky Refactor Feedback",
+      "level": "Tech Lead",
+      "promptVariant": "Describe a time when you had to give feedback to another engineer.",
+      "situation": "An engineer fixing a permissions bug also rewrote the authorization cache path. The refactor made the code easier to read and tests passed, but it changed stale-token behavior that mobile clients depended on. The release branch was two days from code freeze, the teammate felt the first review comment dismissed several days of cleanup work, and the thread had become a 30-comment debate.",
+      "strongAnswerSketch": [
+        "Move the discussion from pull-request comments into a short pairing session with the teammate, mobile request traces, and a compatibility test.",
+        "Acknowledge that the teammate was right about the confusing cache code and that the first review comment was too blunt, while separating that cleanup from the release-critical permission fix.",
+        "Reject the broad refactor for this release, keep the minimal bug fix, add a compatibility test, and schedule the cache cleanup behind a design note.",
+        "Accept the residual cost of carrying duplicate cache branches for one sprint, with an owner and removal date.",
+        "Add a team rule that behavior-changing refactors require compatibility tests and a short design note before code review starts."
+      ],
+      "whyItWorks": [
+        "Delivers hard feedback without making the teammate lose face.",
+        "Credits the valid concern while rejecting the unsafe timing and scope.",
+        "Makes the residual cost explicit instead of pretending the smaller change was free.",
+        "Turns a painful review into a reusable review-entry rule."
+      ],
+      "weakVersion": "I told the engineer the refactor was too risky for the release and asked them to keep the pull request focused on the bug fix.",
+      "followUpAngles": [
+        "What was the teammate right about?",
+        "How did you know the refactor was unsafe?",
+        "What cost did you accept by deferring the cleanup?",
+        "What review rule changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/risky-refactor-feedback.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer treats feedback and disagreement as tools for improving the work, not as threats to credibility.",
+    "moves": [
+      "Names the technical or collaboration failure mode the feedback surfaced.",
+      "Shows what the candidate first believed and how their thinking changed.",
+      "Owns the candidate's contribution to friction before asking others to change.",
+      "Uses tests, examples, design notes, or pairing to move from opinion to evidence.",
+      "Distinguishes accepted, rejected, and deferred feedback with explicit criteria.",
+      "Names residual cost instead of making the chosen path sound like a clean win.",
+      "Preserves trust while still making a clear technical decision.",
+      "Improves a team norm, checklist, or decision mechanism afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer sounds agreeable or confident but stays vague about learning, evidence, and productive disagreement.",
+    "redFlags": [
+      "The candidate says they accepted feedback but cannot explain why it improved the work.",
+      "They frame disagreement as personality, seniority, or style rather than a technical trade-off.",
+      "They avoid giving feedback because they want to preserve harmony.",
+      "They describe themselves as calm or helpful but cannot name feedback they personally acted on.",
+      "They let review become a long debate with no decision rule.",
+      "They treat every comment as either mandatory or irrelevant instead of explaining what was accepted, rejected, or deferred.",
+      "They apologize broadly without changing a specific behavior, review habit, or pairing rule.",
+      "They help teammates by taking over instead of building capability."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "changed-mind",
+      "question": "What exactly changed in your thinking or implementation?",
+      "tests": [
+        "learning",
+        "technical judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I changed from returning one batch result to per-record status because retries would otherwise create duplicate updates for clients.",
+          "I stopped pushing for a separate service once we made the deployment and on-call cost visible against the actual traffic.",
+          "I accepted the cache-risk feedback but rejected the broad refactor for that release because the compatibility test showed mobile clients would see different stale-token behavior."
+        ],
+        "weak": [
+          "I learned to listen more to reviewers.",
+          "I changed the implementation to match the team's preference.",
+          "I pushed back because the feedback felt out of scope."
+        ]
+      }
+    },
+    {
+      "id": "disagreement-quality",
+      "question": "How did you keep the disagreement productive?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I moved the debate out of a 40-comment review thread into a 20-minute design review with failure modes, operational cost, and extraction triggers.",
+          "I repeated the reviewer's concern as a customer retry problem, which changed the conversation from style to correctness.",
+          "I asked the teammate to walk through the refactor with traces and a compatibility test, so we could agree on release risk without debating whose design taste was better."
+        ],
+        "weak": [
+          "I tried to stay polite and not take it personally.",
+          "We talked until everyone was comfortable.",
+          "I asked the tech lead to decide so the review would end."
+        ]
+      }
+    },
+    {
+      "id": "feedback-given",
+      "question": "When you gave feedback, how did you make it useful rather than personal?",
+      "tests": [
+        "influence",
+        "ownership"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I tied feedback to the test failure pattern, showed the smallest reproducible case, and asked the teammate to choose between two bounded fixes.",
+          "I framed it as a client retry-safety issue, not as poorly thought-out code.",
+          "I told the teammate the cache cleanup was a real issue, but the release branch needed a minimal permission fix plus a compatibility test."
+        ],
+        "weak": [
+          "I told them the code needed to be cleaner.",
+          "I tried to soften the feedback so it would not sound negative.",
+          "I told them the pull request was too big and should be split."
+        ]
+      }
+    },
+    {
+      "id": "team-learning",
+      "question": "What changed for the team after this collaboration?",
+      "tests": [
+        "accountability",
+        "measurement"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added batch API retry behavior to the review checklist, and two later APIs used it before review.",
+          "We created a rule that design-level debates leave pull-request comments and get a short decision note.",
+          "Behavior-changing refactors now need compatibility tests or a short design note before code review, and the next auth cleanup used that path before implementation."
+        ],
+        "weak": [
+          "The team communicated better afterward.",
+          "People became more open to feedback.",
+          "We agreed that large refactors should be discussed earlier."
+        ]
+      }
+    },
+    {
+      "id": "own-contribution",
+      "question": "What part of the friction or misunderstanding did you personally contribute to?",
+      "tests": [
+        "reflection",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I had been replying to every review comment as if it were a correctness challenge; I named that and moved the debate to a design note with decision criteria.",
+          "In the first debugging session I grabbed the keyboard too quickly, so I reset the pairing rule that the teammate would drive and I would ask diagnostic questions.",
+          "My first refactor comment sounded like I was dismissing the cleanup; I restated the valid maintainability concern before explaining release risk."
+        ],
+        "weak": [
+          "I probably could have communicated better.",
+          "The reviewer misunderstood my intent.",
+          "I was trying to help, but they took it personally."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "feedback-receptiveness",
+        "name": "Feedback Receptiveness",
+        "strong": "Explains how feedback exposed a real risk and what changed in the work, design, or thinking.",
+        "weak": "Claims openness but cannot describe the substance or impact of the feedback.",
+        "strongAiVisual": "assets/generated/signals/feedback-receptiveness-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/feedback-receptiveness-weak.jpg"
+      },
+      {
+        "id": "productive-disagreement",
+        "name": "Productive Disagreement",
+        "strong": "Uses evidence, decision criteria, and neutral framing to resolve disagreement while preserving trust.",
+        "weak": "Avoids disagreement, personalizes it, or relies on seniority rather than criteria.",
+        "strongAiVisual": "assets/generated/signals/productive-disagreement-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/productive-disagreement-weak.jpg"
+      },
+      {
+        "id": "scope-tradeoff-discipline",
+        "name": "Scope And Trade-Off Discipline",
+        "strong": "Explains which feedback was accepted, rejected, or deferred, the decision rule used, and the residual cost of the choice.",
+        "weak": "Treats feedback as all-or-nothing, dismisses scope risk vaguely, or makes the chosen path sound cost-free.",
+        "strongAiVisual": "assets/generated/signals/scope-tradeoff-discipline-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/scope-tradeoff-discipline-weak.jpg"
+      },
+      {
+        "id": "self-awareness-and-repair",
+        "name": "Self-Awareness And Repair",
+        "strong": "Names how their own behavior, assumptions, or first response contributed to friction and what they changed.",
+        "weak": "Frames the problem as other people's tone, seniority, or misunderstanding while leaving their own behavior vague.",
+        "strongAiVisual": "assets/generated/signals/self-awareness-and-repair-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/self-awareness-and-repair-weak.jpg"
+      },
+      {
+        "id": "shared-learning",
+        "name": "Shared Learning",
+        "strong": "Turns the collaboration lesson into a reusable norm, checklist, design note, or debugging habit.",
+        "weak": "Leaves the story as a one-off interaction with no team learning.",
+        "strongAiVisual": "assets/generated/signals/shared-learning-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/shared-learning-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Software Engineer",
+        "expected": "Receives and gives feedback respectfully, changes work based on evidence, and names the assumption or behavior they changed."
+      },
+      {
+        "level": "Senior Software Engineer",
+        "expected": "Navigates design, ownership, and operational disagreement with evidence, decision criteria, residual-cost awareness, and ownership of their own contribution to friction."
+      },
+      {
+        "level": "Tech Lead",
+        "expected": "Creates collaboration mechanisms that help peers learn, make decisions, repair trust after hard feedback, and improve quality without relying on authority."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "feedback-receptiveness",
+      "productive-disagreement",
+      "scope-tradeoff-discipline",
+      "self-awareness-and-repair",
+      "shared-learning"
+    ],
+    "followUpTree": [
+      "changed-mind",
+      "disagreement-quality",
+      "feedback-given",
+      "own-contribution",
+      "team-learning"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What feedback or disagreement exposed a real issue?"
+      },
+      {
+        "field": "task",
+        "label": "What were you trying to improve or decide?"
+      },
+      {
+        "field": "action",
+        "label": "How did you respond, use evidence, and keep the conversation productive?"
+      },
+      {
+        "field": "result",
+        "label": "What changed in the code, design, teammate's learning, or team norm?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about feedback, disagreement, or your own behavior?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What review, pairing, or decision habit changed afterward?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "google-code-review",
+        "group": "Code Review and Peer Collaboration",
+        "title": "How to Do a Code Review",
+        "url": "https://google.github.io/eng-practices/review/reviewer/",
+        "source": "Google Engineering Practices",
+        "type": "Guide",
+        "why": "Shows how reviewers balance code health, review speed, comments, and pushback instead of turning review into a status contest.",
+        "groupDescription": "Resources for code review, peer collaboration, review comments, pairing, and asynchronous engineering feedback."
+      },
+      {
+        "id": "google-cl-author-guide",
+        "group": "Code Review and Peer Collaboration",
+        "title": "The CL Author's Guide to Getting Through Code Review",
+        "url": "https://google.github.io/eng-practices/review/developer/",
+        "source": "Google Engineering Practices",
+        "type": "Guide",
+        "why": "Gives practical habits for preparing reviewable changes, handling reviewer comments, and receiving feedback with less defensiveness.",
+        "groupDescription": "Resources for code review, peer collaboration, review comments, pairing, and asynchronous engineering feedback."
+      },
+      {
+        "id": "gitlab-code-review-guidelines",
+        "group": "Code Review and Peer Collaboration",
+        "title": "Code Review Guidelines",
+        "url": "https://docs.gitlab.com/development/code_review/",
+        "source": "GitLab Docs",
+        "type": "Guide",
+        "why": "Concrete public operating model for reviewer responsibility, domain expertise, author ownership, non-blocking comments, and review readiness.",
+        "groupDescription": "Resources for code review, peer collaboration, review comments, pairing, and asynchronous engineering feedback."
+      },
+      {
+        "id": "conventional-comments",
+        "group": "Code Review and Peer Collaboration",
+        "title": "Conventional Comments",
+        "url": "https://conventionalcomments.org/",
+        "source": "Conventional Comments",
+        "type": "Specification",
+        "why": "Provides labels for clarifying whether review feedback is a blocking issue, suggestion, question, praise, or follow-up.",
+        "groupDescription": "Resources for code review, peer collaboration, review comments, pairing, and asynchronous engineering feedback."
+      },
+      {
+        "id": "github-code-review-philosophy",
+        "group": "Code Review and Peer Collaboration",
+        "title": "How to Review Code Effectively: A GitHub Staff Engineer's Philosophy",
+        "url": "https://github.blog/developer-skills/github/how-to-review-code-effectively-a-github-staff-engineers-philosophy/",
+        "source": "GitHub Blog",
+        "type": "Article",
+        "year": "2024",
+        "why": "Makes code review visible as a collaborative conversation that improves implementation, knowledge sharing, and product judgment.",
+        "groupDescription": "Resources for code review, peer collaboration, review comments, pairing, and asynchronous engineering feedback."
+      },
+      {
+        "id": "fowler-pair-programming",
+        "group": "Code Review and Peer Collaboration",
+        "title": "On Pair Programming",
+        "url": "https://martinfowler.com/articles/on-pair-programming.html",
+        "source": "Martin Fowler",
+        "type": "Article",
+        "year": "2020",
+        "why": "Useful for stories about helping a teammate without taking over, with concrete pairing roles, rotations, feedback, and learning patterns.",
+        "groupDescription": "Resources for code review, peer collaboration, review comments, pairing, and asynchronous engineering feedback."
+      },
+      {
+        "id": "thanks-for-feedback",
+        "group": "People Leadership and Feedback",
+        "title": "Thanks for the Feedback",
+        "url": "https://www.penguinrandomhouse.com/books/313485/thanks-for-the-feedback-by-douglas-stone-and-sheila-heen/",
+        "source": "Douglas Stone and Sheila Heen / Penguin Random House",
+        "type": "Book",
+        "year": "2015",
+        "why": "Strong background for candidates who need to explain what feedback changed, what they resisted, and how they separated substance from delivery.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "difficult-conversations",
+        "group": "People Leadership and Feedback",
+        "title": "Difficult Conversations",
+        "url": "https://www.penguinrandomhouse.com/books/722989/difficult-conversations-by-douglas-stone-bruce-patton-and-sheila-heen-foreword-by-roger-fisher/9780593511695/",
+        "source": "Douglas Stone, Bruce Patton, and Sheila Heen / Penguin Random House",
+        "type": "Book",
+        "year": "2023",
+        "why": "Helps interviewers probe whether the candidate can keep disagreement about facts, impact, feelings, and identity on a constructive track.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "ccl-sbi-intent-impact",
+        "group": "People Leadership and Feedback",
+        "title": "Use Situation-Behavior-Impact (SBI) To Understand Intent",
+        "url": "https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/",
+        "source": "Center for Creative Leadership",
+        "type": "Article",
+        "year": "2025",
+        "why": "Gives a compact feedback structure for naming the situation, observable behavior, impact, and intent without character judgment.",
+        "groupDescription": "Resources for management, feedback, underperformance, talent development, and leadership teams."
+      },
+      {
+        "id": "edmondson-psychological-safety",
+        "group": "Culture and Organizational Design",
+        "title": "Psychological Safety and Learning Behavior in Work Teams",
+        "url": "https://doi.org/10.2307/2666999",
+        "source": "Administrative Science Quarterly",
+        "type": "Research paper",
+        "year": "1999",
+        "why": "Research foundation for why teams need enough trust to admit mistakes, ask questions, challenge ideas, and learn from friction.",
+        "groupDescription": "Resources for culture, team topology, scaling, and organizational operating systems."
+      },
+      {
+        "id": "thoughtworks-adrs",
+        "group": "Technical Judgment and Architecture",
+        "title": "Lightweight Architecture Decision Records",
+        "url": "https://www.thoughtworks.com/en-us/radar/techniques/lightweight-architecture-decision-records",
+        "source": "Thoughtworks Technology Radar",
+        "type": "Technique",
+        "why": "Concrete mechanism for moving design-level review disagreement into explicit context, decision, consequences, and revisiting triggers.",
+        "groupDescription": "Resources for architecture judgment, technical strategy, debt, and senior technical leadership."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A reviewer challenges the safety of an API contract.",
+    "A senior engineer changes direction after operational trade-offs become clear.",
+    "A teammate says the candidate's help felt like taking over.",
+    "A teammate needs debugging support without losing ownership of the fix.",
+    "A tech lead blocks a risky refactor while preserving the teammate's ownership.",
+    "A team separates style preferences from blocking correctness issues."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

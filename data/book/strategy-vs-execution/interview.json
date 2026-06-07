@@ -137,7 +137,8 @@
         "Why did you reject the full replatform?",
         "Which product commitments moved?",
         "How did you know consolidation was working?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/post-acquisition-platform-consolidation.jpg"
     },
     {
       "id": "segment-focus-service-sunset",
@@ -161,7 +162,8 @@
         "Which customers were harmed?",
         "How did you handle exceptions?",
         "What operating review changed afterward?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/segment-focus-service-sunset.jpg"
     }
   ],
   "strongAnswerPattern": {

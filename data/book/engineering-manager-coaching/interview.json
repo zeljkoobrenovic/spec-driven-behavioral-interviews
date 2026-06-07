@@ -1,0 +1,616 @@
+{
+  "id": "engineering-manager-coaching",
+  "title": "Coaching and Developing Engineers",
+  "description": "Tests whether engineering managers diagnose growth needs, give useful feedback, create bounded opportunities, and adapt support without hiding hard conversations or promotion reality.",
+  "roleFocus": [
+    "Engineering Manager",
+    "Senior Engineering Manager"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "coaching-development",
+    "name": "Coaching and Developing Engineers",
+    "family": "People Leadership",
+    "definition": "Helps engineers grow through clear expectations, timely feedback, tailored support, meaningful opportunities, and honest calibration.",
+    "whyItMatters": "Engineering managers multiply team capability when they develop people deliberately instead of relying on generic encouragement or annual-review surprises."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you helped an engineer grow significantly.",
+    "variants": [
+      "Describe a time when someone on your team was struggling. What did you do?",
+      "Tell me about a time you gave difficult feedback to an engineer.",
+      "Describe a time when you helped a high-performing engineer reach the next level.",
+      "Tell me about a coaching plan that did not work the first time.",
+      "Tell me about a time you had to stop coaching and set a firmer boundary."
+    ],
+    "interviewerIntent": [
+      "Can the candidate diagnose the growth need rather than prescribe generic advice?",
+      "Do they combine support with clear expectations and evidence?",
+      "Can they create opportunities without hiding performance reality?",
+      "Do they name resistance, rejected alternatives, residual cost, and decision thresholds?",
+      "Can they distinguish development work from repeated behavior that needs escalation, scope change, or a formal performance path?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "An engineering manager helps a strong implementer grow into a project lead by giving direct feedback, creating a bounded leadership opportunity, handling resistance, and measuring changes in planning, communication, and peer trust.",
+    "context": [
+      "The engineer is technically strong but struggles to communicate risks and delegate work.",
+      "The team needs more project leadership capacity.",
+      "Promotion pressure exists, but the current evidence does not yet meet the next-level bar.",
+      "The manager may be tempted to soften the message because the engineer is valued and retention risk feels real.",
+      "Sometimes the evidence shows a repeated accountability or trust issue, so continuing to coach can become unfair to the team and the engineer."
+    ],
+    "constraints": [
+      "The manager must be supportive without promising promotion prematurely.",
+      "Feedback needs to be specific enough that the engineer can act on it.",
+      "Growth work must not put an important project at unmanaged risk.",
+      "The manager must distinguish a teachable coaching gap from a performance issue that needs firmer boundaries.",
+      "Escalation must be documented, timely, and unsurprising rather than used as a threat after months of vague encouragement."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "An engineer had growth potential or a visible skill gap that affected their impact, confidence, promotion readiness, or team effectiveness.",
+    "task": "Diagnose the gap, give useful feedback, create the right support and opportunity, protect the team, and calibrate progress honestly.",
+    "action": [
+      "Separated technical skill, communication, ownership, collaboration, and scope readiness instead of treating growth as a vague next-level conversation.",
+      "Shared specific observations and impact, including what was already strong and what needed to change.",
+      "Co-created a development plan with practice opportunities, feedback cadence, success evidence, and a review date.",
+      "Matched support to the person: examples, pairing, project shadowing, written planning templates, or stakeholder practice.",
+      "Protected the team by bounding risk and giving the engineer enough ownership to learn without setting them up to fail.",
+      "Defined thresholds for continuing coaching, reducing scope, changing role expectations, or starting a formal performance path.",
+      "Named rejected alternatives, such as promoting on potential, waiting for the annual review, rescuing the project personally, or turning coaching into open-ended encouragement.",
+      "Adjusted the plan when evidence showed a different need or pace, including moving from coaching to a clearer performance path when the team was absorbing repeated cost."
+    ],
+    "result": [
+      "The engineer demonstrated new behavior in project planning, peer leadership, communication, quality, or ownership.",
+      "The team gained capacity or reduced dependency on the manager or a senior engineer.",
+      "The candidate can name evidence that supported promotion, scope expansion, role refocus, or continued development.",
+      "The answer includes what did not improve, which decision was delayed or denied, and what cost the team absorbed during the coaching window.",
+      "If coaching was not enough, the manager can explain how the boundary protected team trust while preserving dignity and clarity for the engineer."
+    ],
+    "reflection": "The manager learned that development is most effective when feedback, opportunity, and evidence are designed together.",
+    "systemChange": [
+      "Development plans tied to observable behaviors and project opportunities.",
+      "Monthly growth check-ins separate from status one-on-ones.",
+      "Calibration examples for the next-level bar, including examples that did not yet meet the bar.",
+      "Project lead readiness checklist covering planning, communication, risk management, and peer leadership.",
+      "Coaching decision log that records feedback, support, evidence, review dates, and escalation thresholds.",
+      "Onboarding diagnostic checklist that separates codebase complexity, confidence, expectation clarity, and skill gaps.",
+      "Manager playbook for when coaching should become scope reduction, role refocus, or a formal performance path."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "strong-implementer-to-project-lead",
+      "title": "Strong Implementer To Project Lead",
+      "level": "Engineering Manager",
+      "promptVariant": "Tell me about a time you helped an engineer grow significantly.",
+      "situation": "A strong backend engineer wanted promotion to senior level. They delivered high-quality code, but waited for the manager to coordinate dependencies, communicate risk, and unblock other engineers. Their first reaction to the feedback was frustration because they believed implementation difficulty should already count as senior-level impact.",
+      "strongAnswerSketch": [
+        "Give direct feedback that senior-level evidence requires owning a project outcome, not only difficult implementation tasks.",
+        "Reject promoting on potential or assigning a critical launch as a prove-yourself test; choose a bounded reporting API with two dependencies and a non-critical customer deadline.",
+        "Provide a planning template, weekly risk review, and examples of strong stakeholder updates, then coach through the first late risk update without silently taking the work back.",
+        "Measure progress through dependency closure, quality of written updates, peer feedback, and whether risks surfaced before they became delays.",
+        "Promote only after two cycles of evidence, while naming the residual cost: the manager spent extra time reviewing plans for one quarter and the engineer still needed practice delegating design-review facilitation."
+      ],
+      "whyItWorks": [
+        "Connects growth to observable next-level behaviors.",
+        "Balances support with honest calibration.",
+        "Creates a real opportunity without putting a critical launch at unmanaged risk.",
+        "Shows the manager handling resistance instead of converting encouragement into an implied promotion promise."
+      ],
+      "weakVersion": "I encouraged them to take more ownership, gave them a stretch project, and they did well enough to get promoted.",
+      "followUpAngles": [
+        "What feedback did they initially resist?",
+        "How did you bound the risk of the stretch project?",
+        "What evidence supported promotion?",
+        "What development area remained?",
+        "What alternative did you reject?"
+      ],
+      "aiVisual": "assets/generated/example-stories/strong-implementer-to-project-lead.jpg"
+    },
+    {
+      "id": "struggling-new-hire",
+      "title": "Struggling New Hire",
+      "level": "Engineering Manager",
+      "promptVariant": "Describe a time when someone on your team was struggling. What did you do?",
+      "situation": "A mid-level engineer joined a complex platform team and missed two onboarding milestones. They were quiet in meetings, submitted large pull requests late, and seemed overwhelmed by the codebase. The first project also had vague ownership, so the manager had to separate individual ramp from a messy onboarding system.",
+      "strongAnswerSketch": [
+        "Diagnose whether the issue is onboarding gaps, skill mismatch, confidence, or unclear expectations instead of assuming low capability.",
+        "Reset expectations with concrete milestones: smaller pull requests, design walkthroughs, and weekly demos of newly learned system areas.",
+        "Pair them with a senior engineer for two focused sessions, temporarily reduce project scope, and create a map of the codebase domains they need first.",
+        "Name the trade-off: a reporting cleanup slips by two weeks, but the engineer and team get a fair evidence window instead of a vague failure narrative.",
+        "Review progress after four weeks and decide whether to continue ramp support, change role scope, or start a more formal performance path."
+      ],
+      "whyItWorks": [
+        "Shows empathy and structure without lowering the bar indefinitely.",
+        "Uses observable ramp evidence rather than vague impressions.",
+        "Protects the engineer and the team from ambiguity.",
+        "Owns the manager's onboarding system instead of making the new hire carry all the blame."
+      ],
+      "weakVersion": "I gave them more time, paired them with someone helpful, and checked in more often until they improved.",
+      "followUpAngles": [
+        "How did you know the problem was onboarding rather than performance?",
+        "What expectations changed?",
+        "When would you escalate beyond coaching?",
+        "What did you change in onboarding afterward?",
+        "What cost did the team absorb while you gave the ramp plan time?"
+      ],
+      "aiVisual": "assets/generated/example-stories/struggling-new-hire.jpg"
+    },
+    {
+      "id": "coaching-boundary-after-repeated-misses",
+      "title": "Coaching Boundary After Repeated Misses",
+      "level": "Engineering Manager",
+      "promptVariant": "Tell me about a time you had to stop coaching and set a firmer boundary.",
+      "situation": "A capable product engineer repeatedly missed integration commitments and surfaced blockers only after partner teams had already planned around the dates. Earlier coaching had focused on confidence and estimation, but the same pattern repeated across two milestones and teammates began adding hidden buffer because they no longer trusted the commitments.",
+      "strongAnswerSketch": [
+        "Separate the failure modes before acting: check whether scope churn, dependency ambiguity, skill gap, motivation, or avoidance of hard conversations is driving the misses.",
+        "Give direct feedback that the issue is no longer only estimation; late risk disclosure is creating rework for two partner teams and weakening trust in the team.",
+        "Set a 30-day evidence window with smaller slices, midweek risk review, written dependency status, and explicit thresholds: early escalation and reliable slice completion continue coaching; another hidden miss would remove project ownership.",
+        "Reject both easy extremes: quietly extending support because the engineer is well liked, or starting a formal path without first making expectations and support concrete.",
+        "When the engineer misses the second threshold, remove them from the integration lead role, move the critical path to another owner, document the evidence, and start a formal performance path with specific support and consequences.",
+        "Name the residual cost: the release slips one week and the manager spends time repairing partner trust, but the team stops absorbing invisible risk and the engineer is no longer receiving mixed messages."
+      ],
+      "whyItWorks": [
+        "Shows that coaching has a boundary when repeated behavior harms team reliability.",
+        "Uses evidence and thresholds rather than frustration or personality labels.",
+        "Protects delivery and team trust while preserving clarity and dignity.",
+        "Demonstrates that a fair manager can be supportive and still act decisively."
+      ],
+      "weakVersion": "I kept coaching them on estimation because they were talented and I did not want to demotivate them, then eventually moved the work to someone else when the project became too risky.",
+      "followUpAngles": [
+        "What evidence told you coaching was no longer enough?",
+        "How did you make the boundary unsurprising?",
+        "What did you document before changing scope?",
+        "How did you protect the team while staying fair to the engineer?",
+        "What did you change so future managers did not wait as long?"
+      ],
+      "aiVisual": "assets/generated/example-stories/coaching-boundary-after-repeated-misses.jpg"
+    },
+    {
+      "id": "high-performer-next-level",
+      "title": "High Performer Next-Level Growth",
+      "level": "Senior Engineering Manager",
+      "promptVariant": "Describe a time when you helped a high-performing engineer reach the next level.",
+      "situation": "A senior engineer consistently delivered critical work but was frustrated that promotion to staff required broader influence. Their manager had been giving praise without enough specific guidance, and a prior one-on-one had left the engineer believing promotion was almost guaranteed.",
+      "strongAnswerSketch": [
+        "Clarify the gap between high execution and staff-level leverage: technical direction, mentoring, and cross-team decision quality.",
+        "Repair the overpromise by explaining what evidence was missing and what evidence would not count, even if the engineer remained critical to delivery.",
+        "Assign a cross-team architecture review where the engineer must facilitate options and decision criteria rather than present a pre-decided solution.",
+        "Coach the manager to give sharper feedback and calibrate examples across teams.",
+        "Use peer feedback, RFC quality, decision adoption, and mentored engineer outcomes as evidence.",
+        "Do not promote in the first cycle when the evidence is still mixed; keep the development plan honest, then support expanded scope after the next review shows stronger cross-team adoption."
+      ],
+      "whyItWorks": [
+        "Shows Senior Engineering Manager scope by improving the manager's coaching, not only the engineer's plan.",
+        "Distinguishes high performance from next-level scope.",
+        "Uses cross-team evidence and calibration.",
+        "Includes a hard fairness decision rather than treating visibility as the same thing as readiness."
+      ],
+      "weakVersion": "I gave the engineer more visibility and encouraged them to mentor others so they could demonstrate staff-level impact.",
+      "followUpAngles": [
+        "What was missing despite strong delivery?",
+        "How did you coach the manager?",
+        "What evidence counted for staff-level impact?",
+        "How did you avoid turning this into visibility theater?",
+        "How did you handle the earlier overpromise?"
+      ],
+      "aiVisual": "assets/generated/example-stories/high-performer-next-level.jpg"
+    },
+    {
+      "id": "talented-tech-lead-peer-friction",
+      "title": "Talented Tech Lead With Peer Friction",
+      "level": "Senior Engineering Manager",
+      "promptVariant": "Tell me about a coaching plan that did not work the first time.",
+      "situation": "A technically excellent tech lead was the obvious candidate for a larger platform role, but peers avoided design reviews with them because they dismissed alternatives quickly and corrected people publicly. The team still depended on their system knowledge, so removing them immediately would have created delivery risk.",
+      "strongAnswerSketch": [
+        "Diagnose the issue as an influence and trust gap, not a personality flaw: peer review attendance, repeated decision reversals, and skip-level feedback showed people routing around the tech lead.",
+        "Give direct feedback that staff-level readiness required improving decision quality through others, not winning every technical argument.",
+        "Reject both extremes: rubber-stamping promotion because the person was indispensable, or removing all scope before testing whether the behavior could change.",
+        "Create a bounded facilitation role for one platform design review with explicit ground rules, pre-read expectations, and a senior architect observing for feedback.",
+        "When the first review still shut down a junior engineer, pause the rollout, require repair with the affected engineer, and reduce facilitation scope for the next cycle.",
+        "Do not promote that cycle; after two months, peer participation improves and design-review rework drops, but staff readiness remains open until the behavior is stable across multiple forums."
+      ],
+      "whyItWorks": [
+        "Shows a coaching story with a setback and a partially successful outcome.",
+        "Protects the team while giving a valuable engineer a fair, specific path.",
+        "Distinguishes sponsorship from lowering the staff bar for a high-output person.",
+        "Creates a durable calibration example for influence and peer leadership."
+      ],
+      "weakVersion": "They were brilliant but needed softer communication, so I coached them to listen more and gave them more opportunities to lead architecture discussions.",
+      "followUpAngles": [
+        "What evidence showed the issue was hurting the team?",
+        "What did you do when the first coaching attempt failed?",
+        "Why did you not promote them that cycle?",
+        "What changed in staff-readiness calibration afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/talented-tech-lead-peer-friction.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong coaching answer combines diagnosis, direct feedback, tailored support, real opportunity, measurable evidence, and honest calibration.",
+    "moves": [
+      "Describes the growth need in observable behavior, not personality labels.",
+      "Explains what the engineer was already doing well.",
+      "Gives direct feedback with impact and examples.",
+      "Creates a development plan with support, opportunity, evidence, and a review date.",
+      "Adapts support to the individual and protects the team from unmanaged risk.",
+      "Names resistance, rejected alternatives, and the cost of the coaching window.",
+      "Defines explicit thresholds for continuing coaching, changing scope, role refocus, or formal performance management.",
+      "Uses calibration to make promotion or scope decisions fair."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer sounds supportive but lacks specificity, evidence, directness, or honest decision points.",
+    "redFlags": [
+      "Feedback is vague: communicate better, be more senior, take ownership.",
+      "The manager gives a stretch project without support or risk boundaries.",
+      "The answer avoids hard feedback to keep the relationship positive.",
+      "Promotion or growth is based on effort and visibility rather than observable evidence.",
+      "The manager lets coaching continue indefinitely while the team absorbs delivery, trust, or quality cost.",
+      "The manager treats escalation as a personal failure, so the engineer receives mixed messages until the decision becomes abrupt.",
+      "The story is a clean win with no resistance, rejected alternative, or decision that stayed hard.",
+      "The manager cannot explain what they changed about their own management approach."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "diagnosis",
+      "question": "How did you diagnose what the engineer actually needed?",
+      "tests": [
+        "judgment",
+        "measurement"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I separated implementation skill from project ownership by looking at dependency closure, stakeholder updates, peer feedback, and whether risks surfaced early.",
+          "For the new hire, I compared missed milestones with onboarding quality, codebase complexity, pull-request size, and confidence in design discussions before labeling it performance.",
+          "For the tech lead, peer review attendance and decision reversals showed an influence problem, not just a communication preference.",
+          "For repeated commitment misses, I compared scope churn and dependency ambiguity with the pattern of late risk disclosure before deciding the issue had moved beyond estimation coaching."
+        ],
+        "weak": [
+          "They needed more confidence and communication practice.",
+          "It was clear they were not operating at the next level yet."
+        ]
+      }
+    },
+    {
+      "id": "feedback",
+      "question": "What difficult feedback did you give, and how did you make it actionable?",
+      "tests": [
+        "ownership",
+        "influence"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I told them their code quality was strong, but senior evidence required owning dependency risk and stakeholder updates without me prompting them.",
+          "I told the manager that praise was not enough for staff readiness; they needed to name the missing cross-team influence behaviors and evidence.",
+          "I told the tech lead that being indispensable technically did not offset peers routing around their reviews.",
+          "I told the engineer that the trust issue was now late risk disclosure, not only inaccurate estimates, because partner teams were replanning around surprises."
+        ],
+        "weak": [
+          "I told them they needed to step up and act more senior.",
+          "I encouraged them to communicate more proactively."
+        ]
+      }
+    },
+    {
+      "id": "opportunity",
+      "question": "How did you choose the growth opportunity without setting them up to fail?",
+      "tests": [
+        "decision quality",
+        "risk judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I picked a project with real dependencies but a non-critical customer deadline, then added weekly risk review and examples of strong updates.",
+          "For staff growth, I chose an architecture review where the engineer could facilitate a decision, but the manager and I set clear scope and feedback points.",
+          "For the new hire, I cut the project scope for four weeks and accepted a two-week slip so the ramp plan produced fair evidence."
+        ],
+        "weak": [
+          "I gave them a harder project so they could prove themselves.",
+          "I asked them to mentor more junior engineers."
+        ]
+      }
+    },
+    {
+      "id": "calibration",
+      "question": "How did you know growth was real?",
+      "tests": [
+        "measurement",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The engineer surfaced risks before delays, closed two dependencies without me, and peer feedback changed from strong implementer to credible project owner.",
+          "The staff candidate's RFC was adopted by three teams, and two mentored engineers independently applied the pattern in later work.",
+          "The tech lead was not promoted that cycle; I treated improved review participation as progress, but waited for stable behavior across multiple forums."
+        ],
+        "weak": [
+          "They seemed more confident and got good feedback.",
+          "The project went well, so I felt they were ready."
+        ]
+      }
+    },
+    {
+      "id": "setback-boundary",
+      "question": "What did you do when the coaching plan hit resistance or did not work?",
+      "tests": [
+        "reflection",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "When the first risk update was late, I did not rescue the project silently; I used it as evidence, reset the expectation, and kept the opportunity bounded.",
+          "When the tech lead shut down a junior engineer again, I paused the larger facilitation rollout, required repair, reduced scope, and did not promote that cycle.",
+          "When the engineer missed the second explicit threshold, I removed integration ownership, started a formal performance path, and repaired the partner-team commitments."
+        ],
+        "weak": [
+          "I kept encouraging them because growth takes time.",
+          "I gave them another chance because they were too important to the team."
+        ]
+      }
+    },
+    {
+      "id": "boundary-escalation",
+      "question": "When did coaching stop being enough, and how did you avoid surprise?",
+      "tests": [
+        "accountability",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I set the threshold in advance: one more hidden miss on the integration plan would remove project ownership and start a formal performance path.",
+          "I documented the feedback, support, review dates, observed evidence, and impact on partner teams so the boundary was clear rather than punitive.",
+          "I kept support in place after scope changed, but I stopped letting the team absorb unreliable commitments as the price of being patient."
+        ],
+        "weak": [
+          "I escalated once I felt they had been given enough chances.",
+          "I did not want to make it formal, so I just moved important work away from them."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "diagnostic-clarity",
+        "name": "Diagnostic Clarity",
+        "strong": "Distinguishes skill, scope, confidence, communication, motivation, and onboarding needs with evidence.",
+        "weak": "Uses vague labels or assumes a generic development need.",
+        "strongAiVisual": "assets/generated/signals/diagnostic-clarity-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/diagnostic-clarity-weak.jpg"
+      },
+      {
+        "id": "direct-supportive-feedback",
+        "name": "Direct Supportive Feedback",
+        "strong": "Gives specific, actionable feedback while preserving dignity and clarity.",
+        "weak": "Avoids the hard message or gives criticism without useful support.",
+        "strongAiVisual": "assets/generated/signals/direct-supportive-feedback-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/direct-supportive-feedback-weak.jpg"
+      },
+      {
+        "id": "growth-evidence",
+        "name": "Growth Evidence",
+        "strong": "Creates opportunity and measures behavior change against role expectations.",
+        "weak": "Relies on effort, positivity, or visibility without evidence.",
+        "strongAiVisual": "assets/generated/signals/growth-evidence-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/growth-evidence-weak.jpg"
+      },
+      {
+        "id": "boundary-judgment",
+        "name": "Boundary Judgment",
+        "strong": "Names rejected alternatives, residual cost, and the point when coaching should become role refocus or performance management.",
+        "weak": "Keeps coaching open-ended or promotes on potential while the team absorbs repeated cost.",
+        "strongAiVisual": "assets/generated/signals/boundary-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/boundary-judgment-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Engineering Manager",
+        "expected": "Diagnoses individual growth needs, gives actionable feedback, creates bounded opportunities, tracks evidence, and knows when support needs firmer boundaries."
+      },
+      {
+        "level": "Senior Engineering Manager",
+        "expected": "Improves coaching quality across managers, repairs overpromised promotion narratives, calibrates next-level evidence across teams, and creates repeatable development mechanisms."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "diagnostic-clarity",
+      "direct-supportive-feedback",
+      "growth-evidence",
+      "boundary-judgment"
+    ],
+    "followUpTree": [
+      "diagnosis",
+      "feedback",
+      "opportunity",
+      "calibration",
+      "setback-boundary",
+      "boundary-escalation"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "Who needed to grow, and what made the need important?"
+      },
+      {
+        "field": "task",
+        "label": "What were you accountable for as the manager?"
+      },
+      {
+        "field": "action",
+        "label": "How did you diagnose the need, give feedback, provide support, create opportunity, or set a boundary?"
+      },
+      {
+        "field": "result",
+        "label": "What evidence showed growth, readiness, or the need for a different decision?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about coaching, timing, resistance, or boundaries?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What development, calibration, or coaching mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A strong implementer needs to demonstrate project ownership for promotion.",
+    "A new hire struggles in a complex codebase and needs structured ramp support.",
+    "A capable engineer receives fair coaching but repeated hidden misses require scope removal and a formal performance path.",
+    "A high performer needs staff-level influence evidence, not only more visibility.",
+    "A talented tech lead needs to repair peer trust before broader technical leadership scope.",
+    "A manager learns to give sharper growth feedback instead of vague encouragement."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "google-grow-coaching",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Coach using the GROW model",
+        "url": "https://rework.withgoogle.com/intl/en/guides/coach-using-the-grow-model",
+        "source": "Google re:Work",
+        "type": "Guide",
+        "year": "2026",
+        "why": "Grounds coaching in individual needs, regular one-on-ones, timely feedback, and adapting the manager's style instead of defaulting to advice."
+      },
+      {
+        "id": "google-great-managers-research",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Following the data: The research behind great managers",
+        "url": "https://rework.withgoogle.com/intl/en/guides/following-the-data-the-research-behind-great-managers",
+        "source": "Google re:Work",
+        "type": "Article",
+        "year": "2025",
+        "why": "Connects coaching and career development to measured manager behaviors, team outcomes, and clear manager responsibilities."
+      },
+      {
+        "id": "managers-path",
+        "group": "Engineering Management and Career Growth",
+        "groupDescription": "Resources for engineering-management role expectations, career ladders, staff-plus growth, and scalable people systems.",
+        "title": "The Manager's Path",
+        "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/",
+        "source": "Camille Fournier / O'Reilly",
+        "type": "Book",
+        "year": "2017",
+        "why": "Maps the engineering-management ladder and gives context for one-on-ones, feedback, mentoring, career growth, and manager-of-manager coaching."
+      },
+      {
+        "id": "resilient-management",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Resilient Management",
+        "url": "https://resilient-management.com/",
+        "source": "Lara Hogan",
+        "type": "Book",
+        "why": "Offers practical framing for mentoring, coaching, sponsoring, feedback, clear expectations, and difficult conversations in technology teams."
+      },
+      {
+        "id": "radical-candor",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Radical Candor",
+        "url": "https://www.radicalcandor.com/the-book/",
+        "source": "Kim Scott / Radical Candor",
+        "type": "Book",
+        "why": "Helps calibrate direct feedback that is specific and humane, which is central to coaching without avoiding hard messages."
+      },
+      {
+        "id": "ccl-sbi-feedback",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Use Situation-Behavior-Impact (SBI) To Understand Intent",
+        "url": "https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/",
+        "source": "Center for Creative Leadership",
+        "type": "Article",
+        "year": "2025",
+        "why": "Gives managers a concrete feedback structure for naming observed behavior and impact before exploring intent, which helps keep coaching specific and fair."
+      },
+      {
+        "id": "lara-adapting-approach",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Resources for Managers on Adapting Your Approach & Style",
+        "url": "https://larahogan.me/resources/adapting-approach/",
+        "source": "Lara Hogan",
+        "type": "Resource collection",
+        "why": "Helps distinguish mentoring, coaching, sponsoring, feedback, direction, and empowerment so support matches the engineer's actual growth need."
+      },
+      {
+        "id": "manager-tools-basics",
+        "group": "People Leadership and Feedback",
+        "groupDescription": "Resources for coaching conversations, feedback, development plans, and manager effectiveness.",
+        "title": "Manager Tools Basics",
+        "url": "https://www.manager-tools.com/manager-tools-basics",
+        "source": "Manager Tools",
+        "type": "Podcast / Guide",
+        "why": "Turns regular one-on-ones, feedback, coaching, and delegation into concrete management habits that support the interview's practice template."
+      },
+      {
+        "id": "staffeng",
+        "group": "Engineering Management and Career Growth",
+        "groupDescription": "Resources for engineering-management role expectations, career ladders, staff-plus growth, and scalable people systems.",
+        "title": "Staff Engineer: Leadership beyond the management track",
+        "url": "https://staffeng.com/",
+        "source": "Will Larson / StaffEng",
+        "type": "Book / Guide",
+        "why": "Clarifies staff-plus scope, influence, sponsorship, and technical leadership expectations that managers must coach toward without substituting visibility for evidence."
+      },
+      {
+        "id": "etsy-engineering-career-ladder",
+        "group": "Engineering Management and Career Growth",
+        "groupDescription": "Resources for engineering-management role expectations, career ladders, staff-plus growth, and scalable people systems.",
+        "title": "Etsy Engineering Career Ladder",
+        "url": "https://etsy.github.io/Etsy-Engineering-Career-Ladder/",
+        "source": "Etsy Engineering",
+        "type": "Career framework",
+        "why": "Shows observable level expectations and track-record evidence, useful for coaching engineers toward senior, staff, and principal scope without relying on vague promotion promises."
+      },
+      {
+        "id": "scaling-people",
+        "group": "Engineering Management and Career Growth",
+        "groupDescription": "Resources for engineering-management role expectations, career ladders, staff-plus growth, and scalable people systems.",
+        "title": "Scaling People",
+        "url": "https://press.stripe.com/scaling-people",
+        "source": "Claire Hughes Johnson / Stripe Press",
+        "type": "Book",
+        "why": "Adds operating-system depth for feedback, performance mechanisms, team development, and the lightweight people processes senior managers need to make coaching repeatable."
+      },
+      {
+        "id": "gitlab-underperformance",
+        "group": "Performance Management and Boundaries",
+        "groupDescription": "Resources for distinguishing coaching from performance remediation, documenting expectations, and protecting team trust.",
+        "title": "Underperformance",
+        "url": "https://handbook.gitlab.com/handbook/leadership/underperformance/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "year": "2025",
+        "why": "Provides a transparent operating model for diagnosing skill- versus will-based issues, documenting coaching, and deciding when underperformance needs remediation."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

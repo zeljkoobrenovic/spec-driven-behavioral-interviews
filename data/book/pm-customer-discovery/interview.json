@@ -1,0 +1,576 @@
+{
+  "id": "pm-customer-discovery",
+  "title": "Customer Discovery and Product Direction",
+  "description": "Testing whether PMs use customer evidence to clarify the problem, choose a product direction, and define measurable learning instead of following opinion or request volume.",
+  "roleFocus": [
+    "Product Manager",
+    "Senior Product Manager",
+    "Group Product Manager"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "customer-discovery-product-direction",
+    "name": "Customer Discovery and Product Direction",
+    "family": "Judgment and Strategy",
+    "definition": "Turns customer evidence into a clearer product problem, focused direction, and testable learning plan.",
+    "whyItMatters": "PM interviews should reveal why something was worth building, what customer reality changed the plan, and how the PM avoided mistaking internal opinion for evidence."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you changed your product direction after learning something from customers.",
+    "variants": [
+      "Describe a time you had to define product direction from an unclear customer problem.",
+      "Tell me about a time customer discovery disproved your initial product idea.",
+      "Tell me about a time discovery confirmed a requested feature but changed how you built it.",
+      "Describe a time you had to choose which customer segment to focus on."
+    ],
+    "interviewerIntent": [
+      "Can the candidate distinguish customer requests from the underlying problem?",
+      "Do they change direction when evidence contradicts their preferred idea?",
+      "Can they translate discovery into product scope, metrics, and stakeholder decisions?",
+      "Do they name the segment, feature path, or stakeholder expectation they chose not to optimize for?",
+      "Can they explain when discovery validates a request and still narrow scope, metric, rollout, and stop rule?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A PM learns that customers asking for bulk export are trying to reconcile billing exceptions, then changes the roadmap from a generic export button to a guided reconciliation workflow.",
+    "context": [
+      "Sales and support have collected many requests for a bulk export button.",
+      "Engineering believes the export is simple, but design worries it will create a confusing workflow.",
+      "Customer interviews show different jobs behind the same feature request.",
+      "Different customer segments create conflicting evidence, so the PM must decide whose problem matters first.",
+      "Sometimes discovery confirms the requested feature, but still changes the target segment, success metric, or rollout plan."
+    ],
+    "constraints": [
+      "The PM must not dismiss the visible customer request.",
+      "The team has capacity for one focused release, not a broad reporting suite.",
+      "Stakeholders need a decision before the next planning cycle.",
+      "The decision must name the attractive path being rejected, its residual risk, and the revisit trigger.",
+      "The PM must not treat pivoting as inherently better than validating the original request with sharper scope and a kill criterion."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "Customers or internal stakeholders requested a product change, but the underlying customer problem, target segment, and success measure were unclear.",
+    "task": "Use discovery to clarify the problem, decide whether to change or constrain direction, and create a decision that engineering, design, and business stakeholders could act on.",
+    "action": [
+      "Separated customer quotes, observed behavior, support tickets, usage data, and revenue context instead of treating every request as equal evidence.",
+      "Interviewed customers across segments and looked for the job behind the feature request.",
+      "Tested the initial product idea against concrete workflows, alternatives, and success criteria.",
+      "Changed scope or direction when evidence showed a different problem mattered more.",
+      "When discovery confirmed the original request, constrained it by segment, rollout, metric, and stop rule instead of treating confirmation as automatic approval.",
+      "Named the segment not being optimized for first and the mitigation for disappointed stakeholders.",
+      "Documented the decision with target segment, rejected alternatives, metric, and next learning checkpoint."
+    ],
+    "result": [
+      "The team shipped a narrower product direction tied to a clearer customer problem.",
+      "When evidence supported the original request, the request moved forward with tighter scope, a behavior metric, and a kill criterion.",
+      "Adoption, support volume, conversion, task completion, or customer satisfaction moved in the expected direction.",
+      "When the outcome was partial, the PM turned the miss into a narrower hypothesis, metric, or segment decision.",
+      "The product planning process gained a stronger discovery gate before feature requests became roadmap commitments."
+    ],
+    "reflection": "The lesson was that PM ownership starts with defining the right problem and learning path, not defending the first plausible feature.",
+    "systemChange": [
+      "Discovery brief that separates request, job, segment, evidence, and decision.",
+      "Segment decision log with rejected alternatives, residual risk, owner, and revisit trigger.",
+      "Customer-problem review before roadmap commitment.",
+      "Validated-request brief that records the customer job, segment, scope boundary, metric, and kill criterion.",
+      "Post-launch learning checkpoint tied to one or two product metrics.",
+      "Shared repository of customer evidence linked to roadmap decisions."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "bulk-export-to-reconciliation",
+      "title": "Bulk Export To Reconciliation Workflow",
+      "level": "Product Manager",
+      "promptVariant": "Tell me about a time you changed your product direction after learning something from customers.",
+      "situation": "Enterprise customers asked for bulk invoice export. After eight customer calls, the PM found the real problem was reconciling billing exceptions across child accounts, and a generic export would push work into spreadsheets.",
+      "strongAnswerSketch": [
+        "Compare customer requests with support tickets, usage logs, and account type to identify the high-value segment.",
+        "Map the reconciliation workflow and show where the export request was a workaround.",
+        "Change scope from broad export to exception review, filtered export, and audit trail for enterprise admins.",
+        "Define success as reduced reconciliation support tickets and task completion time, not export button clicks."
+      ],
+      "whyItWorks": [
+        "Shows customer obsession through problem diagnosis, not request taking.",
+        "Connects discovery to scope, metric, and engineering decision.",
+        "Names the rejected attractive option and why it was insufficient."
+      ],
+      "weakVersion": "Customers asked for export, so I gathered requirements, aligned the team, and shipped the export feature.",
+      "followUpAngles": [
+        "What evidence made you change direction?",
+        "Which customers did you decide not to optimize for?",
+        "How did you explain the change to Sales?",
+        "What metric proved the problem was better solved?"
+      ],
+      "aiVisual": "assets/generated/example-stories/bulk-export-to-reconciliation.jpg"
+    },
+    {
+      "id": "unclear-onboarding-dropoff",
+      "title": "Unclear Onboarding Drop-Off",
+      "level": "Senior Product Manager",
+      "promptVariant": "Describe a time you had to define product direction from an unclear customer problem.",
+      "situation": "Trial conversion dropped for small businesses. Leadership wanted more onboarding prompts, while customer sessions showed users could navigate the product but did not trust importing live customer data before seeing value.",
+      "strongAnswerSketch": [
+        "Segment the funnel by company size, import behavior, activation event, and sales-assisted versus self-serve path.",
+        "Run customer interviews that test competing explanations: confusion, trust, setup effort, and perceived value.",
+        "Reject adding more tooltips and instead design a sample-data workspace plus clear import controls.",
+        "Set a learning plan around activation rate, import completion, and support contacts about data safety."
+      ],
+      "whyItWorks": [
+        "Shows ambiguity handling through competing hypotheses.",
+        "Balances qualitative discovery with funnel data.",
+        "Turns customer trust insight into product direction and measurement."
+      ],
+      "weakVersion": "I looked at the funnel, talked to users, and improved onboarding so more people understood how to get started.",
+      "followUpAngles": [
+        "What hypotheses did you reject?",
+        "How did you know this was a trust problem?",
+        "What did Engineering need to change?",
+        "What learning checkpoint did you set?"
+      ]
+    },
+    {
+      "id": "admin-dashboard-to-team-templates",
+      "title": "Admin Dashboard To Team Setup Templates",
+      "level": "Group Product Manager",
+      "promptVariant": "Describe a time you had to choose which customer segment to focus on.",
+      "situation": "A Group PM inherited a roadmap for an executive admin dashboard because large customers kept asking for account visibility. Discovery across buyers, admins, team leads, and churned accounts showed the dashboard request was a symptom: teams were failing to configure the product consistently after purchase.",
+      "strongAnswerSketch": [
+        "Compare renewal calls, usage by account stage, support tickets, churn notes, and interviews with buyers, admins, and team leads instead of overweighting the executive buyer voice.",
+        "Admit the first dashboard hypothesis was too buyer-centered and choose deployment teams as the first segment because their behavior determined activation and expansion.",
+        "Pause the broad dashboard, ship setup templates, owner handoff prompts, and a minimal admin health summary, while giving two account teams a manual reporting packet for renewal conversations.",
+        "Measure time to first configured workflow, active teams per account, and expansion-ready accounts, then set a six-week trigger for whether to resume dashboard investment."
+      ],
+      "whyItWorks": [
+        "Shows Group PM-level discovery across personas and product areas, not only one feature request.",
+        "Names the stakeholder group that lost the first decision and how the PM handled the residual commercial risk.",
+        "Makes the pivot less hindsight-polished by admitting the original hypothesis and defining a second learning checkpoint."
+      ],
+      "weakVersion": "Customers wanted dashboards, but we learned onboarding mattered more, so I aligned Sales and Engineering on a setup experience that improved adoption.",
+      "followUpAngles": [
+        "Which customer voice did you initially overvalue?",
+        "Who was disappointed by the segment choice?",
+        "What mitigation kept Sales from losing confidence?",
+        "What metric told you whether the pivot was working?"
+      ],
+      "aiVisual": "assets/generated/example-stories/admin-dashboard-to-team-templates.jpg"
+    },
+    {
+      "id": "saved-filters-request-confirmed",
+      "title": "Saved Filters Request Confirmed With A Kill Criterion",
+      "level": "Product Manager",
+      "promptVariant": "Tell me about a time discovery confirmed a requested feature but changed how you built it.",
+      "situation": "Support managers in mid-market accounts repeatedly asked for saved ticket-search filters. The PM initially suspected this was a workaround for poor dashboard design, but session replay, search logs, ticket exports, and seven customer interviews showed managers were rebuilding the same exception queues every morning to route urgent work.",
+      "strongAnswerSketch": [
+        "Test the dashboard-replacement hypothesis against observed workflows, search logs, support cases, and interviews with managers and agents.",
+        "Accept that the original saved-filter request was real for support managers, while rejecting a broad reporting dashboard and power-user query builder.",
+        "Ship saved filters for three exception queues with sharing controls, an adoption target, and a kill criterion if weekly queue reuse or routing time did not improve.",
+        "Review results after four weeks and keep the feature because 58 percent of target accounts reused saved filters weekly and urgent-ticket routing time fell."
+      ],
+      "whyItWorks": [
+        "Balances the spec by showing that discovery can validate the request rather than always force a pivot.",
+        "Still demonstrates product judgment through segmentation, scoped delivery, and a kill criterion.",
+        "Makes confirmation evidence-based instead of a disguised requirements-gathering story."
+      ],
+      "weakVersion": "Customers asked for saved filters and discovery confirmed it, so I prioritized the feature and shipped it because it was clearly valuable.",
+      "followUpAngles": [
+        "What made you trust the original request?",
+        "What broader version did you reject?",
+        "What kill criterion did you set?",
+        "How did you know the confirmed request changed behavior?"
+      ],
+      "aiVisual": "assets/generated/example-stories/saved-filters-request-confirmed.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer shows how customer evidence clarified the problem, changed or constrained direction, and created a measurable learning loop.",
+    "moves": [
+      "Starts with the customer problem and segment, not the requested feature.",
+      "Uses multiple evidence types instead of one anecdote.",
+      "Names the initial belief and what changed, confirmed, or constrained it.",
+      "Explains the segment or scope decision and rejected alternatives.",
+      "Knows when evidence confirms the request and still defines segment, scope, metric, and kill criterion.",
+      "Owns residual cost or partial learning instead of making the pivot sound obvious.",
+      "Connects the direction to product and business metrics.",
+      "Leaves behind a discovery or learning mechanism."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer sounds customer-focused but mostly describes requirement gathering, roadmap confirmation, or stakeholder alignment.",
+    "redFlags": [
+      "Treats customer requests as validated problems.",
+      "Cannot explain which segment mattered most.",
+      "Uses interviews as confirmation for an already chosen feature without showing how evidence changed scope, segment, or measurement.",
+      "Assumes customer discovery is only impressive when it produces a pivot.",
+      "Presents the direction change as a clean win and cannot name who lost from the decision.",
+      "Measures output shipped instead of customer behavior changed.",
+      "Has no post-launch learning checkpoint."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "evidence",
+      "question": "What evidence changed or constrained your product direction?",
+      "tests": [
+        "measurement",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Six of eight enterprise admins were exporting only exception rows, and support tickets showed reconciliation questions, not general reporting needs.",
+          "Funnel data showed users reached the import step, but interviews revealed they did not trust importing live data before seeing value."
+        ],
+        "weak": [
+          "Customers told us what they wanted.",
+          "The interviews confirmed there was demand."
+        ]
+      }
+    },
+    {
+      "id": "segment-choice",
+      "question": "Which customers did you choose not to optimize for?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We did not optimize for power users who wanted broad reporting because the highest retention risk was enterprise admins reconciling billing exceptions.",
+          "We deprioritized sales-assisted onboarding because the drop-off was concentrated in self-serve small businesses."
+        ],
+        "weak": [
+          "We tried to make the feature useful for everyone.",
+          "We focused on the most important customers."
+        ]
+      }
+    },
+    {
+      "id": "direction-change",
+      "question": "How did you get stakeholders comfortable with the product decision?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I showed the request-to-job map, support evidence, and the metric we would improve, then asked Sales to validate the narrower workflow with three accounts.",
+          "I framed sample data as a faster test of activation than more onboarding prompts, with a two-week checkpoint before expanding scope."
+        ],
+        "weak": [
+          "I explained the customer feedback and got everyone aligned.",
+          "I shared the research findings in the planning meeting."
+        ]
+      }
+    },
+    {
+      "id": "partial-learning",
+      "question": "Where was your first hypothesis or revised direction still wrong?",
+      "tests": [
+        "learning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I over-weighted executive buyer requests for visibility; the next discovery pass showed deployment teams were the activation bottleneck, so I changed the segment focus and tracked active teams per account.",
+          "The sample-data workspace improved activation, but users still hesitated at import, so we added explicit import controls before scaling the onboarding change."
+        ],
+        "weak": [
+          "Nothing major; the discovery gave us the right answer.",
+          "We kept iterating based on customer feedback."
+        ]
+      }
+    },
+    {
+      "id": "validated-request",
+      "question": "When did discovery confirm the original customer request rather than overturn it?",
+      "tests": [
+        "judgment",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Discovery confirmed saved filters for support managers because observed workflows and search logs showed the same exception queues being rebuilt daily; I still rejected a broad dashboard and set a reuse and routing-time kill criterion.",
+          "The request was valid for one segment, but the evidence changed the rollout, permission scope, and success metric instead of turning it into a catch-all reporting feature."
+        ],
+        "weak": [
+          "Customers confirmed they wanted it, so we built it.",
+          "It was already on the roadmap, and discovery gave us confidence."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "customer-problem-clarity",
+        "name": "Customer Problem Clarity",
+        "strong": "Identifies the customer job, segment, and evidence behind the product direction.",
+        "weak": "Repeats feature requests or generic customer pain without problem diagnosis.",
+        "strongAiVisual": "assets/generated/signals/customer-problem-clarity-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/customer-problem-clarity-weak.jpg"
+      },
+      {
+        "id": "evidence-based-direction",
+        "name": "Evidence-Based Direction",
+        "strong": "Lets qualitative and quantitative evidence change, confirm, or constrain the product direction.",
+        "weak": "Uses discovery to rubber-stamp a preselected roadmap item.",
+        "strongAiVisual": "assets/generated/signals/evidence-based-direction-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/evidence-based-direction-weak.jpg"
+      },
+      {
+        "id": "learning-loop",
+        "name": "Learning Loop",
+        "strong": "Defines metrics and checkpoints that test whether the product direction solved the problem.",
+        "weak": "Ends at shipment or stakeholder approval.",
+        "strongAiVisual": "assets/generated/signals/learning-loop-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/learning-loop-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Product Manager",
+        "expected": "Clarifies customer problems from requests, scopes a focused solution, and measures behavior change."
+      },
+      {
+        "level": "Senior Product Manager",
+        "expected": "Handles ambiguous discovery across segments, changes or constrains product direction with evidence, and aligns stakeholders around a learning plan."
+      },
+      {
+        "level": "Group Product Manager",
+        "expected": "Coordinates discovery across personas or product areas, makes segment trade-offs explicit, and creates reusable mechanisms for product direction decisions."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "customer-problem-clarity",
+      "evidence-based-direction",
+      "learning-loop"
+    ],
+    "followUpTree": [
+      "evidence",
+      "segment-choice",
+      "direction-change",
+      "partial-learning",
+      "validated-request"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What request, customer signal, or unclear problem started the work?"
+      },
+      {
+        "field": "task",
+        "label": "What product direction decision were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "How did you gather evidence, choose a segment, and change or constrain scope?"
+      },
+      {
+        "field": "result",
+        "label": "What customer behavior or business metric changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about discovery or product judgment?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What discovery, evidence, or learning mechanism changed afterward?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "continuous-discovery-habits",
+        "group": "Innovation and Product Discovery",
+        "title": "Continuous Discovery Habits (the Book) is Finally Here!",
+        "url": "https://www.producttalk.org/continuous-discovery-habits/",
+        "source": "Product Talk",
+        "type": "Book page",
+        "year": "2021",
+        "why": "Gives PMs a structured habit for weekly customer touchpoints, opportunity mapping, and assumption testing before committing roadmap work.",
+        "groupDescription": "Resources for customer discovery, problem framing, continuous discovery, and evidence-based product direction."
+      },
+      {
+        "id": "producttalk-opportunity-solution-trees",
+        "group": "Innovation and Product Discovery",
+        "title": "Opportunity Solution Trees: Visualize Your Discovery to Stay Aligned and Drive Outcomes",
+        "url": "https://www.producttalk.org/opportunity-solution-trees/",
+        "source": "Product Talk",
+        "type": "Article",
+        "year": "2023",
+        "why": "Provides a concrete way to connect desired outcomes, customer opportunities, solution options, and assumption tests without losing team alignment.",
+        "groupDescription": "Resources for customer discovery, problem framing, continuous discovery, and evidence-based product direction."
+      },
+      {
+        "id": "svpg-product-discovery",
+        "group": "Innovation and Product Discovery",
+        "title": "Product Discovery",
+        "url": "https://www.svpg.com/product-discovery/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2007",
+        "why": "Frames discovery as reducing value, usability, and feasibility risk before engineering commits to a product solution.",
+        "groupDescription": "Resources for customer discovery, problem framing, continuous discovery, and evidence-based product direction."
+      },
+      {
+        "id": "svpg-discovery-delivery",
+        "group": "Innovation and Product Discovery",
+        "title": "Discovery - Delivery",
+        "url": "https://www.svpg.com/discovery-delivery/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2020",
+        "why": "Explains why discovery and delivery should stay connected in one product team instead of becoming separate handoffs.",
+        "groupDescription": "Resources for customer discovery, problem framing, continuous discovery, and evidence-based product direction."
+      },
+      {
+        "id": "oreilly-escaping-build-trap",
+        "group": "Strategy and Execution",
+        "title": "Escaping the Build Trap",
+        "url": "https://www.oreilly.com/library/view/escaping-the-build/9781491973783/",
+        "source": "O'Reilly",
+        "type": "Book",
+        "year": "2018",
+        "why": "Connects customer discovery to outcome-based product management and warns against shipping features as a proxy for customer value.",
+        "groupDescription": "Resources for connecting discovery to outcomes, strategy, operating model, and accountable product decisions."
+      },
+      {
+        "id": "product-operations-book",
+        "group": "Strategy and Execution",
+        "title": "Product Operations",
+        "url": "https://www.productoperations.com/",
+        "source": "Product Operations",
+        "type": "Book page",
+        "year": "2023",
+        "why": "Useful for Group PM follow-ups on shared evidence, decision infrastructure, and operating mechanisms that keep discovery from being a one-off effort.",
+        "groupDescription": "Resources for connecting discovery to outcomes, strategy, operating model, and accountable product decisions."
+      },
+      {
+        "id": "hbr-jobs-to-be-done",
+        "group": "Customer Jobs and Segments",
+        "title": "Know Your Customers' Jobs to Be Done",
+        "url": "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done",
+        "source": "Harvard Business Review",
+        "type": "Article",
+        "year": "2016",
+        "why": "Canonical Jobs to Be Done framing for distinguishing feature requests from the progress customers are trying to make.",
+        "groupDescription": "Resources for translating customer requests into jobs, segments, workflows, and product choices."
+      },
+      {
+        "id": "intercom-jobs-to-be-done",
+        "group": "Customer Jobs and Segments",
+        "title": "Intercom on Jobs-to-be-Done",
+        "url": "https://www.intercom.com/books/jobs-to-be-done",
+        "source": "Intercom",
+        "type": "Book",
+        "year": "2016",
+        "why": "Software-focused Jobs to Be Done examples for moving from requested features to the customer's real workflow and motivation.",
+        "groupDescription": "Resources for translating customer requests into jobs, segments, workflows, and product choices."
+      },
+      {
+        "id": "steveblank-customer-development-manifesto",
+        "group": "Customer Development and Validation",
+        "title": "Nail the Customer Development Manifesto to the Wall",
+        "url": "https://steveblank.com/2012/03/29/nail-the-customer-development-manifesto/",
+        "source": "Steve Blank",
+        "type": "Article",
+        "year": "2012",
+        "why": "Useful reminder that product direction decisions need external evidence, not only internal conviction or stakeholder pressure.",
+        "groupDescription": "Resources for customer conversations, validation discipline, experiments, and evidence quality."
+      },
+      {
+        "id": "mom-test",
+        "group": "Customer Development and Validation",
+        "title": "The Mom Test",
+        "url": "https://www.momtestbook.com/",
+        "source": "Rob Fitzpatrick",
+        "type": "Book page",
+        "why": "Practical customer-interview guidance for avoiding leading questions, false positives, and wishful requirements gathering.",
+        "groupDescription": "Resources for customer conversations, validation discipline, experiments, and evidence quality."
+      },
+      {
+        "id": "oreilly-lean-customer-development",
+        "group": "Customer Development and Validation",
+        "title": "Lean Customer Development",
+        "url": "https://www.oreilly.com/library/view/lean-customer-development/9781449356576/",
+        "source": "O'Reilly",
+        "type": "Book",
+        "year": "2014",
+        "why": "Hands-on customer development methods for interviewing, validating needs, and building products customers will actually buy.",
+        "groupDescription": "Resources for customer conversations, validation discipline, experiments, and evidence quality."
+      },
+      {
+        "id": "strategyzer-test-card",
+        "group": "Customer Development and Validation",
+        "title": "Validate Your Ideas with the Test Card",
+        "url": "https://www.strategyzer.com/library/validate-your-ideas-with-the-test-card",
+        "source": "Strategyzer",
+        "type": "Article",
+        "year": "2014",
+        "why": "Concrete experiment-design mechanism for making hypotheses, criteria, metrics, and learning outcomes explicit.",
+        "groupDescription": "Resources for customer conversations, validation discipline, experiments, and evidence quality."
+      },
+      {
+        "id": "nng-ux-research-methods",
+        "group": "Evidence Quality and Research Methods",
+        "title": "When to Use Which User-Experience Research Methods",
+        "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+        "source": "Nielsen Norman Group",
+        "type": "Article",
+        "year": "2022",
+        "why": "Helps interviewers probe whether a PM chose evidence methods that fit the decision: behavior versus attitude, qualitative versus quantitative, and discovery versus launch assessment.",
+        "groupDescription": "Resources for choosing research methods, combining evidence types, and deciding when discovery is strong enough to change direction."
+      },
+      {
+        "id": "govuk-user-research-discovery",
+        "group": "Evidence Quality and Research Methods",
+        "title": "User Research in Discovery",
+        "url": "https://www.gov.uk/service-manual/user-research/user-research-in-discovery",
+        "source": "GOV.UK Service Manual",
+        "type": "Official guide",
+        "year": "2016",
+        "why": "Operationalizes discovery around user groups, current journeys, support logs, and team observation before planning or building a service.",
+        "groupDescription": "Resources for choosing research methods, combining evidence types, and deciding when discovery is strong enough to change direction."
+      },
+      {
+        "id": "itamar-product-discovery-enough",
+        "group": "Evidence Quality and Research Methods",
+        "title": "How Much Product Discovery Is Enough?",
+        "url": "https://itamargilad.com/how-much-product-discovery/",
+        "source": "Itamar Gilad",
+        "type": "Article",
+        "why": "Calibrates evidence strength and stop rules so a PM can explain when a request is ready for delivery, needs more testing, or should be parked.",
+        "groupDescription": "Resources for choosing research methods, combining evidence types, and deciding when discovery is strong enough to change direction."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Customers ask for a feature that hides a different workflow problem.",
+    "Funnel data and customer interviews point to different explanations.",
+    "A PM chooses one customer segment over another before roadmap commitment.",
+    "A discovery finding changes scope late in planning.",
+    "Discovery confirms a requested feature, but the PM narrows segment, rollout, metric, and kill criterion.",
+    "Discovery reveals the buyer is not the user whose behavior must change.",
+    "A customer-backed pivot produces a partial outcome and requires a second learning loop."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

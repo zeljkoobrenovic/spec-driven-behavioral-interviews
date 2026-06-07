@@ -1,0 +1,524 @@
+{
+  "id": "product-launch-failure",
+  "title": "Failed Product Launch",
+  "description": "Testing whether product leaders own launch misses, diagnose product-market, readiness, and go-to-market gaps, communicate impact, and improve launch mechanisms.",
+  "roleFocus": [
+    "Senior Product Manager",
+    "Group Product Manager",
+    "Director of Product"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "failed-product-launch",
+    "name": "Failed Product Launch",
+    "family": "Execution and Accountability",
+    "definition": "Owns product launch outcomes, learns from misses, and improves discovery, readiness, go-to-market, and recovery mechanisms.",
+    "whyItMatters": "Senior PMs need to show accountability for customer and business outcomes, not only that the team shipped on time."
+  },
+  "prompt": {
+    "primary": "Tell me about a product or feature launch that did not meet expectations.",
+    "variants": [
+      "Describe a time a launch had lower adoption than expected.",
+      "Tell me about a time go-to-market, product readiness, or customer education broke down.",
+      "Describe a time you had to recover, narrow, or stop a product bet after launch."
+    ],
+    "interviewerIntent": [
+      "Does the candidate own the miss instead of blaming Sales, Engineering, or customers?",
+      "Can they distinguish discovery, positioning, readiness, go-to-market, execution, and measurement failure modes?",
+      "Do they turn the failure into a better launch system?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A senior PM launches an automation feature on time, but adoption is low because the team solved the admin workflow while missing end-user fears about permissions and rollback.",
+    "context": [
+      "The launch shipped on schedule and met the agreed requirements.",
+      "Usage, conversion, or revenue missed expectations after launch.",
+      "Sales, Customer Success, Engineering, and Product each explain the miss differently."
+    ],
+    "constraints": [
+      "The PM must tell the truth about impact without turning the review into blame.",
+      "Recovery work competes with a committed roadmap item.",
+      "The team needs to decide whether to keep iterating, reposition, pause expansion, or sunset."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A product launch missed expected adoption, revenue, retention, trust, or operational outcomes.",
+    "task": "Own the miss, diagnose what failed, choose a recovery path, and improve the launch system.",
+    "action": [
+      "Compared expected outcomes with actual usage, conversion, support, customer feedback, and sales motion.",
+      "Separated product-market fit, customer education, pricing, readiness, technical quality, and launch execution problems.",
+      "Named the PM's own miss in discovery, assumptions, stakeholder communication, metrics, or launch criteria.",
+      "Communicated customer impact, business impact, sunk cost, and recovery choices without turning the review into blame.",
+      "Chose among recovery options such as iterating, repositioning, narrowing the segment, improving onboarding, delaying expansion, or stopping investment.",
+      "Changed launch readiness, beta criteria, customer education, or post-launch review mechanisms so the lesson would persist."
+    ],
+    "result": [
+      "The team understood why the launch missed, what could be recovered, and what cost would remain.",
+      "A focused recovery action improved the target metric, reduced customer confusion, or stopped further wasted investment.",
+      "Future launches had stronger readiness gates and learning checkpoints."
+    ],
+    "reflection": "The PM learned that shipping the agreed scope is not the same as launching a product that customers understand, trust, and use.",
+    "systemChange": [
+      "Launch readiness checklist covering customer problem, target segment, success metric, education, support, and rollback or pause criteria.",
+      "Beta exit criteria tied to user behavior and qualitative confidence.",
+      "Post-launch review that distinguishes assumption miss, execution miss, and go-to-market miss.",
+      "Executive launch review that names residual customer cost, revenue forecast changes, and explicit stop-or-continue criteria.",
+      "Recovery decision template for iterate, reposition, narrow, pause, or sunset."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "automation-adoption-miss",
+      "title": "Automation Adoption Miss",
+      "level": "Senior Product Manager",
+      "promptVariant": "Describe a time a launch had lower adoption than expected.",
+      "situation": "The team launched an admin automation builder expected to reduce manual work. Activation was only 18 percent of target because admins feared automations would change live customer workflows without sufficient preview and approval controls.",
+      "strongAnswerSketch": [
+        "Own the discovery miss: the team validated admin demand for automation but under-tested trust, approval, and rollback concerns.",
+        "Analyze activation funnel, support tickets, customer calls, and usage of preview controls.",
+        "Pause expansion, add simulation preview and approval workflow, and reposition the feature around safe automation rollout.",
+        "Update beta criteria so high-risk workflow products require trust, control, and rollback validation before launch."
+      ],
+      "whyItWorks": [
+        "Owns a product assumption miss rather than blaming cautious customers.",
+        "Uses evidence to choose a focused recovery path.",
+        "Creates launch criteria for future high-trust features."
+      ],
+      "weakVersion": "The launch underperformed because customers needed more education, so we improved onboarding and iterated on the feature.",
+      "followUpAngles": [
+        "What assumption did you personally get wrong?",
+        "How did you decide whether to keep investing?",
+        "What did you tell leadership?",
+        "What launch gate changed?"
+      ],
+      "aiVisual": "assets/generated/example-stories/automation-adoption-miss.jpg"
+    },
+    {
+      "id": "pricing-packaging-launch",
+      "title": "Pricing And Packaging Launch Miss",
+      "level": "Director of Product",
+      "promptVariant": "Tell me about a time go-to-market, product readiness, or customer education broke down.",
+      "situation": "A new packaging launch was meant to move mid-market customers to a higher tier, but conversion lagged and account teams created inconsistent discounts because value messaging, migration tooling, and renewal timing were misaligned.",
+      "strongAnswerSketch": [
+        "Diagnose the miss across product value, pricing, sales enablement, customer migration effort, and renewal timing.",
+        "Own that Product treated packaging as a commercial change without enough validation of customer workflow and migration effort.",
+        "Narrow the package to customers with proven usage signals, delay forced migration, and create migration ROI examples.",
+        "Add pricing-launch readiness criteria covering value proof, migration burden, sales enablement, and exception governance."
+      ],
+      "whyItWorks": [
+        "Shows Director-level ownership across product and go-to-market boundaries.",
+        "Avoids blaming Sales for discount behavior by identifying missing product, migration, and enablement mechanisms.",
+        "Creates a durable launch governance change."
+      ],
+      "weakVersion": "The packaging launch did not land well, so we worked with Sales on better enablement and adjusted the rollout.",
+      "followUpAngles": [
+        "Which part was a product miss versus go-to-market miss?",
+        "What did you stop or delay?",
+        "How did you handle discount exceptions?",
+        "What changed before the next pricing launch?"
+      ],
+      "aiVisual": "assets/generated/example-stories/pricing-packaging-launch.jpg"
+    },
+    {
+      "id": "self-serve-onboarding-quality-drop",
+      "title": "Self-Serve Onboarding Quality Drop",
+      "level": "Group Product Manager",
+      "promptVariant": "Describe a time a launch had lower adoption than expected.",
+      "situation": "Two PM teams launched self-serve onboarding expected to raise trial-to-paid conversion by 12 percent. Signups increased, but qualified conversion fell and support tickets doubled because the launch pulled complex enterprise prospects into a flow designed for simple teams.",
+      "strongAnswerSketch": [
+        "Own that Product optimized for activation without defining quality, support burden, or downstream retention guardrails before launch.",
+        "Segment cohorts by company size, first-week success, support cost, sales-assisted conversion, and win/loss feedback.",
+        "Keep self-serve open for low-complexity accounts, stop paid acquisition into unsupported segments, and route complex trials to guided onboarding.",
+        "Tell leadership the quarter's trial target would be missed intentionally to protect retention, customer experience, and support capacity.",
+        "Add GPM-level launch guardrails so PMs must define leading, lagging, and harm metrics before growth launches."
+      ],
+      "whyItWorks": [
+        "Shows Group Product Manager ownership across multiple PM teams rather than a single feature funnel.",
+        "Balances growth upside against customer quality, support cost, and retention risk.",
+        "Includes a residual cost: the team missed a near-term acquisition goal to avoid scaling bad demand."
+      ],
+      "weakVersion": "The onboarding launch brought in the wrong customers, so we improved lead scoring and worked with Sales and Support on a better handoff.",
+      "followUpAngles": [
+        "Which metric made the launch look successful at first?",
+        "What quality or harm metric was missing?",
+        "How did you explain missing the trial goal?",
+        "What did your PMs have to do differently on later launches?"
+      ],
+      "aiVisual": "assets/generated/example-stories/self-serve-onboarding-quality-drop.jpg"
+    },
+    {
+      "id": "partner-marketplace-sunset",
+      "title": "Partner Marketplace Sunset",
+      "level": "Director of Product",
+      "promptVariant": "Describe a time you had to recover, narrow, or stop a product bet after launch.",
+      "situation": "A partner marketplace launched after a nine-month build to create integration revenue. Enterprise customers browsed but rarely installed because security certification, shared support ownership, and incident escalation were unclear, while launch partners pushed for more marketing spend.",
+      "strongAnswerSketch": [
+        "Own that Product treated partner supply and executive enthusiasm as proof of demand without validating buyer trust or operational readiness.",
+        "Compare marketplace visits, integration installs, partner-sourced pipeline, security review drop-off, support escalations, and reliability incidents.",
+        "Reject the initial plan to add partners and marketing, pause public expansion for two quarters, and focus only on five certified integrations.",
+        "Tell executives and revenue leaders the original marketplace forecast was no longer valid, including sunk cost and partner relationship cost.",
+        "Create partner-launch governance covering certification gates, support ownership, incident escalation, and adoption thresholds before promotion."
+      ],
+      "whyItWorks": [
+        "Credits a disciplined pause-or-sunset decision rather than forcing a tidy recovery narrative.",
+        "Shows Director-level communication across executives, revenue teams, partners, security, support, and platform engineering.",
+        "Leaves a durable mechanism for future ecosystem launches."
+      ],
+      "weakVersion": "The marketplace was strategically right but needed more time, so we added partner marketing, improved documentation, and kept expanding the catalog.",
+      "followUpAngles": [
+        "What evidence made you stop the original plan?",
+        "Who disagreed with pausing expansion?",
+        "How did you handle sunk cost and partner commitments?",
+        "What launch criteria would have caught the problem earlier?"
+      ],
+      "aiVisual": "assets/generated/example-stories/partner-marketplace-sunset.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer owns the product outcome, diagnoses the launch miss precisely, chooses a recovery path, and improves launch discipline.",
+    "moves": [
+      "States the expected outcome, actual result, and size of the miss.",
+      "Names the PM's own missed assumption or decision.",
+      "Uses customer, funnel, support, sales, technical, and business evidence.",
+      "Distinguishes product, launch, go-to-market, readiness, and measurement failures.",
+      "Chooses a recovery path with opportunity cost, including pause or sunset when continued investment is not justified.",
+      "Communicates customer impact, revenue impact, sunk cost, and residual risk clearly to leaders and partners.",
+      "Improves beta, launch, education, or post-launch mechanisms."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer treats launch failure as bad luck, a communication issue, or a normal iteration cycle.",
+    "redFlags": [
+      "Blames Sales, Engineering, customers, or timing without PM ownership.",
+      "Cannot name the expected metric and actual miss.",
+      "Says customers needed education without explaining why the product was not self-evident.",
+      "Keeps investing without an explicit recovery decision rule.",
+      "Presents the recovery as a clean win without naming residual customer, revenue, partner, or team cost.",
+      "Has no change to launch readiness or beta criteria."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "own-miss",
+      "question": "What did you personally get wrong before launch?",
+      "tests": [
+        "accountability",
+        "reflection"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I validated desire for automation but not trust in live workflow changes, so our beta did not test approval controls or rollback confidence.",
+          "I treated packaging as a commercial decision and under-tested customer migration burden before launch.",
+          "I let the team optimize trial volume without requiring quality, support-cost, or retention guardrails."
+        ],
+        "weak": [
+          "We underestimated customer education needs.",
+          "The market was not ready yet."
+        ]
+      }
+    },
+    {
+      "id": "diagnosis",
+      "question": "How did you diagnose the failure mode?",
+      "tests": [
+        "measurement",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I compared activation steps, support questions, customer interviews, and preview-control usage to isolate trust and control as the adoption blocker.",
+          "We separated value proof, migration effort, sales enablement, renewal timing, and discount governance instead of calling it a sales execution issue.",
+          "We segmented the funnel by account complexity and saw the launch helped simple teams while increasing support load and churn risk for complex accounts."
+        ],
+        "weak": [
+          "We looked at the funnel and talked to customers.",
+          "We reviewed what went well and what did not."
+        ]
+      }
+    },
+    {
+      "id": "recovery",
+      "question": "How did you decide whether to iterate, reposition, pause, or stop?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We paused broad rollout, funded preview and approval controls, and set a target for activation recovery before resuming expansion.",
+          "We delayed forced migration and narrowed the package to customers with usage evidence, accepting lower short-term upsell for lower churn risk.",
+          "We stopped public marketplace expansion because the trust and support gaps made more demand harmful, even though partners wanted more promotion."
+        ],
+        "weak": [
+          "We kept iterating because the product still had potential.",
+          "We adjusted the launch plan and messaging."
+        ]
+      }
+    },
+    {
+      "id": "communication",
+      "question": "What did you communicate to executives, customers, partners, or customer-facing teams?",
+      "tests": [
+        "stakeholder alignment",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I told leadership that we would miss the trial target on purpose because the added demand was low quality and increasing support burden.",
+          "I gave Revenue and partners the updated marketplace forecast, the evidence behind the pause, and the commitments we would still honor.",
+          "I told customer-facing teams which customers should keep using the feature, which segments we would pause, and what promise they should stop making."
+        ],
+        "weak": [
+          "I shared the learnings and the new plan.",
+          "We aligned stakeholders on the revised launch strategy."
+        ]
+      }
+    },
+    {
+      "id": "system-change",
+      "question": "What changed in the launch system after the miss?",
+      "tests": [
+        "learning",
+        "execution"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Growth launches now require a harm metric, downstream retention readout, and support-capacity review before full rollout.",
+          "Partner launches now need certification, support ownership, incident escalation, and adoption thresholds before marketplace promotion."
+        ],
+        "weak": [
+          "We added a better launch checklist.",
+          "We made sure to involve more stakeholders earlier next time."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "launch-accountability",
+        "name": "Launch Accountability",
+        "strong": "Owns the product outcome and the PM's assumption miss without hiding behind shipment or other functions.",
+        "weak": "Blames execution, market timing, or stakeholders without personal accountability.",
+        "strongAiVisual": "assets/generated/signals/launch-accountability-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/launch-accountability-weak.jpg"
+      },
+      {
+        "id": "failure-diagnosis",
+        "name": "Failure Diagnosis",
+        "strong": "Distinguishes product, discovery, launch, go-to-market, readiness, and measurement failure modes.",
+        "weak": "Uses generic explanations such as education, adoption, or alignment.",
+        "strongAiVisual": "assets/generated/signals/failure-diagnosis-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/failure-diagnosis-weak.jpg"
+      },
+      {
+        "id": "recovery-decision-quality",
+        "name": "Recovery Decision Quality",
+        "strong": "Uses explicit evidence and decision criteria to iterate, reposition, narrow, pause, or sunset while naming opportunity cost.",
+        "weak": "Keeps pushing, rebrands the work, or declares learning without clear stop-or-continue criteria.",
+        "strongAiVisual": "assets/generated/signals/recovery-decision-quality-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/recovery-decision-quality-weak.jpg"
+      },
+      {
+        "id": "launch-system-change",
+        "name": "Launch System Change",
+        "strong": "Improves beta, launch readiness, customer education, or post-launch decision mechanisms.",
+        "weak": "Treats the failure as a one-off lesson.",
+        "strongAiVisual": "assets/generated/signals/launch-system-change-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/launch-system-change-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Product Manager",
+        "expected": "Owns a feature or product launch miss, diagnoses customer and product assumptions, and changes launch readiness for future work."
+      },
+      {
+        "level": "Group Product Manager",
+        "expected": "Coaches multiple PMs through launch learning, defines shared guardrails, and owns cross-team recovery trade-offs."
+      },
+      {
+        "level": "Director of Product",
+        "expected": "Diagnoses launch failure across product and go-to-market systems, then improves portfolio launch governance."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "launch-accountability",
+      "failure-diagnosis",
+      "recovery-decision-quality",
+      "launch-system-change"
+    ],
+    "followUpTree": [
+      "own-miss",
+      "diagnosis",
+      "recovery",
+      "communication",
+      "system-change"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What launch missed expectations, and what was expected?"
+      },
+      {
+        "field": "task",
+        "label": "What product outcome were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "How did you diagnose, communicate, recover, and improve launch discipline?"
+      },
+      {
+        "field": "result",
+        "label": "What recovered, what did not, and what cost remained?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about launch accountability?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What beta, readiness, education, or post-launch mechanism changed?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "svpg-rapid-response",
+        "group": "Launch Learning and Recovery",
+        "title": "Rapid Response",
+        "url": "https://www.svpg.com/rapid-response/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2006",
+        "why": "Shows why launch is the start of the highest-learning recovery window, not the finish line, and gives interviewers concrete probes about post-launch response discipline.",
+        "groupDescription": "Resources for diagnosing launch misses, responding after release, and keeping learning capacity available when early signals are weak."
+      },
+      {
+        "id": "google-sre-postmortem-culture",
+        "group": "Launch Learning and Recovery",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Helps interviewers separate accountable learning from blame by requiring impact, contributing causes, follow-up actions, and reviewed system changes after a miss.",
+        "groupDescription": "Resources for diagnosing launch misses, responding after release, and keeping learning capacity available when early signals are weak."
+      },
+      {
+        "id": "svpg-product-success",
+        "group": "Launch Learning and Recovery",
+        "title": "Product Success",
+        "url": "https://www.svpg.com/product-success/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2016",
+        "why": "Sharpens the central interview distinction between shipping output and solving the customer or business problem the launch was meant to address.",
+        "groupDescription": "Resources for diagnosing launch misses, responding after release, and keeping learning capacity available when early signals are weak."
+      },
+      {
+        "id": "escaping-build-trap",
+        "group": "Outcome Discipline",
+        "title": "Escaping the Build Trap",
+        "url": "https://www.oreilly.com/library/view/escaping-the-build/9781491973783/",
+        "source": "Melissa Perri / O'Reilly",
+        "type": "Book page",
+        "year": "2018",
+        "why": "Useful for probing whether a product leader treats a failed launch as an outcome failure rather than a project-delivery problem.",
+        "groupDescription": "Resources for connecting product launches to customer value, business outcomes, and stop-or-continue decisions."
+      },
+      {
+        "id": "lean-startup",
+        "group": "Outcome Discipline",
+        "title": "The Lean Startup",
+        "url": "https://www.penguinrandomhouse.com/books/210088/the-lean-startup-by-eric-ries/",
+        "source": "Eric Ries / Penguin Random House",
+        "type": "Book page",
+        "year": "2011",
+        "why": "Anchors validated learning, vanity-metric skepticism, and pivot-or-persevere language that maps directly to recovery decisions after a launch miss.",
+        "groupDescription": "Resources for connecting product launches to customer value, business outcomes, and stop-or-continue decisions."
+      },
+      {
+        "id": "crossing-the-chasm",
+        "group": "Adoption and Go-To-Market Fit",
+        "title": "Crossing the Chasm",
+        "url": "https://geoffreyamoore.com/book/",
+        "source": "Geoffrey A. Moore / Harper Business",
+        "type": "Author book page",
+        "year": "2014",
+        "why": "Gives interviewers a mainstream-adoption frame for launch failures where the product works for early enthusiasts but misses buyer trust, segment focus, or market-readiness needs.",
+        "groupDescription": "Resources for adoption, packaging, market transition, and go-to-market assumptions that can make a launch miss despite delivery success."
+      },
+      {
+        "id": "hbr-why-product-launches-fail",
+        "group": "Adoption and Go-To-Market Fit",
+        "title": "Why Most Product Launches Fail",
+        "url": "https://hbr.org/2011/04/why-most-product-launches-fail",
+        "source": "Harvard Business Review",
+        "type": "Magazine article",
+        "year": "2011",
+        "why": "Adds a launch-specific failure lens for unsupported growth, weak research, product claims, category education, and market-readiness problems.",
+        "groupDescription": "Resources for adoption, packaging, market transition, and go-to-market assumptions that can make a launch miss despite delivery success."
+      },
+      {
+        "id": "reforge-pricing-strategy",
+        "group": "Adoption and Go-To-Market Fit",
+        "title": "How To Price A Product: 5-Step Pricing Strategy + Examples",
+        "url": "https://www.reforge.com/blog/pricing-strategy",
+        "source": "Reforge",
+        "type": "Article",
+        "why": "Supports pricing-and-packaging launch probes by tying value metrics, willingness to pay, cost to serve, and pricing tests to real launch readiness.",
+        "groupDescription": "Resources for adoption, packaging, market transition, and go-to-market assumptions that can make a launch miss despite delivery success."
+      },
+      {
+        "id": "google-sre-launch-checklist",
+        "group": "Launch Readiness and Operating Risk",
+        "title": "Launch Coordination Checklist",
+        "url": "https://sre.google/sre-book/launch-checklist/",
+        "source": "Google SRE",
+        "type": "Book appendix",
+        "year": "2016",
+        "why": "Gives concrete readiness probes for capacity, monitoring, failover, security, dependencies, staged rollout, and schedule risk when launch success depends on production reliability.",
+        "groupDescription": "Resources for readiness gates, operational risk, rollout planning, and shared launch accountability before broad release."
+      },
+      {
+        "id": "govuk-live-phase",
+        "group": "Launch Readiness and Operating Risk",
+        "title": "How the Live Phase Works",
+        "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-live-phase-works",
+        "source": "GOV.UK Service Manual",
+        "type": "Service manual",
+        "year": "2016",
+        "why": "Shows how beta-to-live readiness should prove user need, support model, success metrics, accessibility, uptime, monitoring, and retirement criteria before broad launch.",
+        "groupDescription": "Resources for readiness gates, operational risk, rollout planning, and shared launch accountability before broad release."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A feature launches on time but adoption misses because customer trust was not validated.",
+    "A pricing or packaging launch fails because migration burden and enablement were weak.",
+    "A growth launch raises top-of-funnel activity while damaging downstream quality and support capacity.",
+    "A partner marketplace or ecosystem launch must be paused despite sunk cost and partner pressure.",
+    "A product team must choose whether to iterate, reposition, pause, or sunset after a miss.",
+    "A post-launch review changes beta criteria and readiness gates."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

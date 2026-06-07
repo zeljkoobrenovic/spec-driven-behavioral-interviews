@@ -1,0 +1,646 @@
+{
+  "id": "pm-prioritization-tradeoffs",
+  "title": "Product Prioritization and Trade-Offs",
+  "description": "Tests whether PMs can choose among attractive opportunities by weighing customer value, business impact, feasibility, risk, and explicit stop-doing decisions.",
+  "roleFocus": [
+    "Product Manager",
+    "Senior Product Manager",
+    "Group Product Manager"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "product-prioritization-tradeoffs",
+    "name": "Product Prioritization and Trade-Offs",
+    "family": "Judgment and Strategy",
+    "definition": "Chooses what to build, delay, reduce, or stop by making customer, business, technical, and execution trade-offs explicit.",
+    "whyItMatters": "PMs are judged by the product bets they choose and the opportunity costs they make visible, not by the length of the roadmap."
+  },
+  "prompt": {
+    "primary": "Describe a time you had to choose between two important product opportunities.",
+    "variants": [
+      "Tell me about a time you chose not to build something customers wanted.",
+      "Describe a time you had to balance user experience, technical feasibility, and business goals.",
+      "Tell me about a time you changed prioritization because the business context changed.",
+      "Describe a time you stopped or shrank a roadmap item that already had stakeholder momentum.",
+      "Tell me about a time you prioritized across several product areas, not only one team backlog."
+    ],
+    "interviewerIntent": [
+      "Can the candidate explain prioritization criteria beyond stakeholder volume?",
+      "Do they name the opportunity cost and residual risk?",
+      "Can they distinguish a one-off request from a repeated segment signal?",
+      "Can they explain what evidence would make them reverse or rebalance the decision?",
+      "Can they create a decision mechanism that keeps the same debate from reopening every week?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A PM chooses between improving activation for self-serve users and building an enterprise admin feature requested by Sales, then documents the rationale, the lost upside, and the trigger for revisiting the decision.",
+    "context": [
+      "Both opportunities have credible customer evidence.",
+      "Engineering can only commit to one meaningful bet this quarter.",
+      "Sales, customer success, design, and engineering value different outcomes.",
+      "At least one stakeholder has a legitimate reason to dislike the decision.",
+      "Some work may already have launch, sales, or executive momentum, so stopping it creates a visible sunk cost.",
+      "One option may be commercially urgent while another protects long-term product quality or strategy."
+    ],
+    "constraints": [
+      "The PM must not hide the valuable work that is being delayed, reduced, or stopped.",
+      "The decision needs to include technical feasibility and support cost.",
+      "The PM must show how confidence, not only impact, affected the decision.",
+      "The PM must distinguish a reversible delay from a real stop, shrink, or kill decision.",
+      "A roadmap mechanism must prevent the same debate from reopening weekly.",
+      "If new evidence weakens the decision, the PM must explain how the priority changed."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "The team faced multiple valuable product opportunities with insufficient capacity to pursue them all.",
+    "task": "Make a defensible prioritization decision, communicate the trade-off, and leave a clear way to revisit the choice when evidence changes.",
+    "action": [
+      "Defined decision criteria such as customer segment, expected impact, confidence, effort, technical risk, strategic fit, and time sensitivity.",
+      "Compared opportunities using evidence rather than stakeholder volume.",
+      "Named what would be delayed, reduced, or explicitly not built.",
+      "Separated reversible delays from stop or shrink decisions where sunk cost, launch messaging, or stakeholder credibility had to be owned.",
+      "Separated repeated segment needs from isolated customer or executive requests.",
+      "Worked with engineering and design to expose feasibility, quality, and user-experience trade-offs.",
+      "Communicated the decision with the rationale, residual risk, disappointed stakeholders, and a revisit trigger.",
+      "Adjusted the decision when confidence changed or early evidence showed the original bet was incomplete."
+    ],
+    "result": [
+      "The chosen product bet improved a target metric or reduced a clear customer/business risk.",
+      "Stakeholders understood the cost of the decision even if they disagreed.",
+      "The deferred bet had an owner, mitigation, and trigger instead of disappearing into a vague backlog.",
+      "When the original priority was partly wrong, the team changed the criteria or capacity allocation without hiding the cost.",
+      "Future prioritization improved through clearer criteria, capacity allocation, or review cadence."
+    ],
+    "reflection": "The PM learned that prioritization is not just ranking work; it is making product and business trade-offs visible enough for others to understand and challenge.",
+    "systemChange": [
+      "Opportunity scorecard with customer evidence, expected impact, confidence, effort, and risk.",
+      "Stop-doing section in roadmap reviews.",
+      "Revisit triggers for deferred opportunities.",
+      "Joint product-engineering feasibility review before roadmap commitments.",
+      "Segment-fit review for account-driven or executive-driven requests.",
+      "Portfolio review that allocates capacity across growth, customer commitments, platform quality, and discovery.",
+      "Circuit-breaker checklist for stopping momentum-backed work when guardrail metrics, reliability, trust, or support cost make the original bet unsafe."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "activation-vs-enterprise-admin",
+      "title": "Activation Versus Enterprise Admin",
+      "level": "Product Manager",
+      "promptVariant": "Describe a time you had to choose between two important product opportunities.",
+      "situation": "The PM had to choose between a self-serve activation improvement and an enterprise admin workflow requested by three large accounts. The team had capacity for one meaningful bet, and both Sales and Growth had credible arguments. Sales was right that one renewal could become risky if the admin work disappeared without mitigation.",
+      "strongAnswerSketch": [
+        "Compare opportunities using target segment, expected revenue impact, activation drop-off, customer commitments, effort, and technical risk.",
+        "Choose activation because the drop-off affected 42 percent of trials and blocked the company's self-serve strategy.",
+        "Defer the admin workflow but create a manual customer-success playbook and a revisit trigger tied to renewal risk.",
+        "Publish the decision with the lost enterprise upside, the renewal-risk owner, and the activation metric target.",
+        "After one account escalates, keep the activation bet but add a narrow admin-export spike to test whether the deferred risk is growing."
+      ],
+      "whyItWorks": [
+        "Shows clear opportunity cost instead of pretending both paths fit.",
+        "Connects prioritization to company strategy and measurable product behavior.",
+        "Handles deferred stakeholders with a bounded mitigation.",
+        "Makes the story messier by showing a residual cost and a revisit decision instead of a frictionless win."
+      ],
+      "weakVersion": "I used a prioritization framework, scored both options, and got the team aligned on the higher-impact activation work.",
+      "followUpAngles": [
+        "What did you not build?",
+        "What was Sales right about?",
+        "What metric justified the choice?",
+        "When would you revisit the enterprise workflow?"
+      ],
+      "aiVisual": "assets/generated/example-stories/activation-vs-enterprise-admin.jpg"
+    },
+    {
+      "id": "mobile-redesign-vs-performance",
+      "title": "Mobile Redesign Versus Performance",
+      "level": "Senior Product Manager",
+      "promptVariant": "Describe a time you had to balance user experience, technical feasibility, and business goals.",
+      "situation": "A mobile redesign promised a cleaner onboarding experience and had executive design momentum, but engineering showed that app startup performance was a larger driver of abandonment in emerging markets. Marketing still wanted redesigned screens for an upcoming launch campaign.",
+      "strongAnswerSketch": [
+        "Use funnel data, device segmentation, customer interviews, and engineering performance traces to compare the two opportunities.",
+        "De-scope visual redesign to the highest-friction screens and fund startup performance work first.",
+        "Define success as raising low-memory-device activation from 31 to 38 percent and crash-free sessions from 96.8 to 99.2 percent, not design approval.",
+        "Tell Marketing the launch story will be less visually dramatic, then keep only the two redesign screens that remove onboarding confusion.",
+        "Create a product-engineering review that includes performance budgets for future mobile roadmap decisions."
+      ],
+      "whyItWorks": [
+        "Balances UX aspiration, technical feasibility, and business outcome.",
+        "Shows the PM changing prioritization because technical evidence changed product judgment.",
+        "Names the stakeholder cost of the priority change instead of calling every scope cut alignment.",
+        "Creates a durable decision rule for performance-sensitive product work."
+      ],
+      "weakVersion": "I worked with design and engineering to find a compromise between the redesign and performance improvements so everyone could support the plan.",
+      "followUpAngles": [
+        "Which user segment changed the decision?",
+        "How did engineering evidence affect product priority?",
+        "What design work did you cut?",
+        "What mechanism prevented the same issue later?"
+      ],
+      "aiVisual": "assets/generated/example-stories/mobile-redesign-vs-performance.jpg"
+    },
+    {
+      "id": "promotion-builder-vs-checkout-reliability",
+      "title": "Promotion Builder Versus Checkout Reliability",
+      "level": "Product Manager",
+      "promptVariant": "Describe a time you stopped or shrank a roadmap item that already had stakeholder momentum.",
+      "situation": "A Product Manager had a promotion-builder feature in design review for a holiday campaign. Growth and Sales expected launch screenshots, but recent checkout data showed tax-calculation errors and refund tickets rising for the same merchant segment the campaign targeted. Engineering could not harden checkout and finish the full promotion builder before the campaign window.",
+      "strongAnswerSketch": [
+        "Compare projected promotion-driven revenue with checkout conversion loss, refund volume, support cost, merchant trust risk, engineering capacity, and holiday timing.",
+        "Stop the full promotion-builder build, keep only a narrow coupon import needed by two committed merchants, and move the team to checkout tax and receipt reliability.",
+        "Tell Growth and Sales the campaign loses the configurable-builder story, and publish the expected revenue upside being deferred instead of hiding the trade-off under reliability language.",
+        "Define success as payment completion, refund-ticket reduction, and merchant support contacts before reopening promotional tooling.",
+        "Add a launch gate requiring transaction-health guardrails before new monetization features can consume the checkout team's capacity."
+      ],
+      "whyItWorks": [
+        "Rewards restraint: the PM stops a visible roadmap item instead of making prioritization look like adding a higher-ranked feature.",
+        "Makes the opportunity cost specific by naming the campaign story and projected upside that lost.",
+        "Uses business and technical evidence together; reliability is not used as a vague trump card.",
+        "Creates a guardrail that prevents future growth work from being planned on top of unhealthy transaction flows."
+      ],
+      "weakVersion": "Checkout reliability was more important than promotions, so I aligned stakeholders to delay the promotion builder and focus on quality first.",
+      "followUpAngles": [
+        "What had already been promised or designed?",
+        "How did you decide this was a stop or shrink decision, not just a delay?",
+        "What revenue or campaign cost did you own?",
+        "What guardrail changed future roadmap planning?"
+      ],
+      "aiVisual": "assets/generated/example-stories/promotion-builder-vs-checkout-reliability.jpg"
+    },
+    {
+      "id": "sso-segment-signal-vs-collaboration-feed",
+      "title": "SSO Segment Signal Versus Collaboration Feed",
+      "level": "Senior Product Manager",
+      "promptVariant": "Tell me about a time you changed prioritization because the business context changed.",
+      "situation": "A Senior PM had planned a collaboration-feed iteration to improve existing team engagement. Sales pushed for SSO group mapping after two healthcare prospects blocked late-stage deals, and the PM initially treated it as account pressure until win-loss notes, security questionnaires, and implementation calls showed it was a repeated blocker for the regulated segment the company had chosen to enter.",
+      "strongAnswerSketch": [
+        "Test whether the request is a one-off escalation or a segment signal using pipeline analysis, lost-deal notes, security review patterns, and customer interviews.",
+        "Accept the SSO group-mapping bet because it unlocks the regulated-segment strategy, but reject a custom entitlement shortcut that Engineering says would fork permissions.",
+        "Pause the collaboration-feed iteration and publish the cost: the engagement goal will slip, and existing power-user requests will wait a quarter.",
+        "Define success as security-questionnaire pass rate, admin activation in regulated accounts, and time-to-first-team setup.",
+        "Add a segment-fit gate so future Sales-driven requests need repeated evidence, platform-cost review, and explicit opportunity cost before roadmap commitment."
+      ],
+      "whyItWorks": [
+        "Balances the spec by showing that a stakeholder request can be right for product reasons.",
+        "Shows technical and commercial trade-offs without letting either one dominate the decision.",
+        "Names the product bet that lost and the mechanism that prevents every account request from becoming urgent."
+      ],
+      "weakVersion": "Sales showed the SSO work was important for enterprise customers, so I moved it up the roadmap and aligned Engineering on the safest implementation.",
+      "followUpAngles": [
+        "What evidence changed your mind?",
+        "How did you know this was not just one account's request?",
+        "What product work did you pause?",
+        "What rule changed for future Sales-driven asks?"
+      ],
+      "aiVisual": "assets/generated/example-stories/sso-segment-signal-vs-collaboration-feed.jpg"
+    },
+    {
+      "id": "reporting-suite-portfolio-rebalance",
+      "title": "Reporting Suite Portfolio Rebalance",
+      "level": "Group Product Manager",
+      "promptVariant": "Tell me about a time you prioritized across several product areas, not only one team backlog.",
+      "situation": "A Group PM set a quarterly portfolio across three product teams: enterprise reporting, self-serve activation, and support tooling. The initial plan put two teams on reporting because the expansion pipeline looked strong, but early beta usage showed customers could not share reports safely without permission cleanup. At the same time, support tickets rose because activation work had been paused.",
+      "strongAnswerSketch": [
+        "Reopen the portfolio decision with beta behavior, expansion revenue, support volume, engineering dependency risk, and customer interviews instead of defending the original scorecard.",
+        "Admit the first call overestimated revenue confidence and underweighted permission-model risk.",
+        "Stop building additional chart types, move one team to permission cleanup, keep one team on two core reports, and leave support tooling paused with a manual triage runbook.",
+        "Publish the residual cost: two expansion deals slip, the activation target moves out by one month, and Support owns a temporary queue until the next checkpoint.",
+        "Create a portfolio review that separates high-confidence delivery bets, discovery bets, customer commitments, and platform-risk capacity before teams are assigned."
+      ],
+      "whyItWorks": [
+        "Shows Group PM-level prioritization across teams and product areas rather than a single backlog.",
+        "Makes the story realistic by including a partial miss and a public rebalancing decision.",
+        "Turns the failure mode into a capacity-allocation mechanism instead of only updating a spreadsheet score."
+      ],
+      "weakVersion": "After beta feedback, I rebalanced resources across teams so we could address permissions and still deliver the highest-value reporting work.",
+      "followUpAngles": [
+        "Which assumption in the original prioritization was wrong?",
+        "Which team or stakeholder paid the cost of the rebalance?",
+        "What work did you stop rather than merely delay?",
+        "How did the portfolio review change after this?"
+      ],
+      "aiVisual": "assets/generated/example-stories/reporting-suite-portfolio-rebalance.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer makes the chosen bet, rejected alternatives, decision criteria, residual risk, and revisit mechanism explicit.",
+    "moves": [
+      "Compares real opportunities, not a strong option versus a straw man.",
+      "Uses customer, business, technical, and execution evidence.",
+      "Explains confidence and uncertainty instead of treating every estimate as equally reliable.",
+      "Names what was stopped, delayed, or reduced.",
+      "Treats stopping momentum-backed work as a real product decision with sunk cost, owners, and communication obligations.",
+      "Explains how stakeholders with different incentives were heard.",
+      "Distinguishes repeated segment needs from isolated customer or executive pressure.",
+      "Measures the chosen bet and defines when to revisit the deferred one.",
+      "Shows how the priority changed when early evidence invalidated part of the original bet.",
+      "Connects team-level choices to portfolio capacity when the role scope requires it.",
+      "Improves the prioritization process afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer hides opportunity cost behind framework language, vague alignment, or a tidy story where no one loses anything valuable.",
+    "redFlags": [
+      "Mentions a scoring framework without explaining the judgment behind the scores.",
+      "Does not name what was deprioritized.",
+      "Treats engineering feasibility as a late implementation detail.",
+      "Optimizes for the loudest stakeholder or largest account without segment reasoning.",
+      "Treats account-driven requests as automatically bad or automatically decisive.",
+      "Cannot say who was disappointed, what residual cost remained, or what evidence would change the call.",
+      "Relabels a stop, shrink, or kill decision as a harmless delay to avoid naming sunk cost or disappointed owners.",
+      "Has no revisit trigger for the deferred opportunity."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "criteria",
+      "question": "What criteria actually decided the priority?",
+      "tests": [
+        "decision quality",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The deciding criteria were affected segment size, strategic fit with self-serve, confidence from funnel data, engineering effort, and renewal risk mitigation for deferred enterprise customers.",
+          "Low-memory device abandonment changed the decision because it affected activation in the market we were trying to grow."
+        ],
+        "weak": [
+          "We used impact, confidence, and effort.",
+          "We chose the highest business value work."
+        ]
+      }
+    },
+    {
+      "id": "opportunity-cost",
+      "question": "What did you explicitly choose not to do?",
+      "tests": [
+        "trade-off reasoning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We did not build the full enterprise admin workflow that quarter; we offered a manual success playbook and set renewal-risk thresholds for revisiting it.",
+          "We cut the broad visual redesign and kept only two screens tied to onboarding confusion."
+        ],
+        "weak": [
+          "We postponed lower-priority work.",
+          "We put the other items in the backlog."
+        ]
+      }
+    },
+    {
+      "id": "engineering-tradeoff",
+      "question": "How did engineering input change the product decision?",
+      "tests": [
+        "technical judgment",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Engineering traces showed startup time explained more abandonment than the redesigned flow, so the product priority changed from polish to performance on low-memory devices.",
+          "Engineering showed the admin workflow required permission-model changes, so we split customer mitigation from platform investment."
+        ],
+        "weak": [
+          "Engineering helped us estimate effort.",
+          "We adjusted scope based on what engineering could deliver."
+        ]
+      }
+    },
+    {
+      "id": "stakeholder-pushback",
+      "question": "Who disagreed with your priority, and what were they right about?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Sales was right that an enterprise renewal had real risk; I did not dismiss that, but I bounded the mitigation and set a renewal-risk trigger before funding the full admin workflow.",
+          "Marketing was right that the smaller mobile redesign weakened the launch story, so I narrowed the launch promise and kept only the screens tied to onboarding confusion.",
+          "Sales was right that SSO group mapping had become a regulated-segment blocker; the decision changed because the evidence repeated across deals, not because one account was loud."
+        ],
+        "weak": [
+          "Some stakeholders disagreed, but I got them aligned.",
+          "Sales wanted their feature, but we had to prioritize the roadmap."
+        ]
+      }
+    },
+    {
+      "id": "reversal-evidence",
+      "question": "What evidence would have made you reverse or rebalance the decision?",
+      "tests": [
+        "learning",
+        "measurement"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "If renewal risk crossed the agreed threshold or the manual success playbook failed for two target accounts, I would reopen the admin workflow before the next quarterly plan.",
+          "When reporting beta usage showed permission sharing blocked value, I stopped chart expansion and moved one team to permission cleanup instead of defending the original portfolio score."
+        ],
+        "weak": [
+          "We would revisit it if stakeholders still felt strongly.",
+          "I would change course if the metrics did not look good."
+        ]
+      }
+    },
+    {
+      "id": "portfolio-impact",
+      "question": "How did this priority affect other teams, bets, or capacity?",
+      "tests": [
+        "trade-off reasoning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The SSO decision paused the collaboration-feed iteration and moved design and engineering capacity toward a standard permission capability for the regulated segment.",
+          "At portfolio level, I moved one team from reporting features to permission cleanup, kept one team on core reports, and left support tooling covered by a temporary triage runbook."
+        ],
+        "weak": [
+          "Other teams adjusted their plans around the new priority.",
+          "We made sure the roadmap still reflected the highest business value."
+        ]
+      }
+    },
+    {
+      "id": "sunk-cost-stop",
+      "question": "What made this a stop or shrink decision rather than a normal delay?",
+      "tests": [
+        "trade-off reasoning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The promotion builder already had campaign collateral and design work, but checkout tax errors were hurting the same merchant segment; I stopped the full build, kept a narrow coupon import, and owned the campaign-story cost.",
+          "After reporting beta usage showed permissions blocked value, I stopped new chart types and moved a team to permission cleanup, which meant two expansion deals slipped instead of pretending the original plan still held."
+        ],
+        "weak": [
+          "We delayed a feature that had momentum because reliability became more important.",
+          "We stopped lower-impact work and everyone understood why."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "decision-criteria",
+        "name": "Decision Criteria",
+        "strong": "Uses explicit customer, business, technical, risk, and confidence criteria to explain why this bet should happen now.",
+        "weak": "Relies on framework labels, executive preference, or stakeholder volume.",
+        "strongAiVisual": "assets/generated/signals/decision-criteria-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/decision-criteria-weak.jpg"
+      },
+      {
+        "id": "opportunity-cost",
+        "name": "Opportunity Cost",
+        "strong": "Names the valuable work not chosen and explains how the remaining risk was handled.",
+        "weak": "Presents prioritization as if no meaningful cost existed.",
+        "strongAiVisual": "assets/generated/signals/opportunity-cost-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/opportunity-cost-weak.jpg"
+      },
+      {
+        "id": "revisit-discipline",
+        "name": "Revisit Discipline",
+        "strong": "Defines metrics, triggers, or cadence for revisiting deferred bets when evidence changes.",
+        "weak": "Leaves deferred work in a vague backlog.",
+        "strongAiVisual": "assets/generated/signals/revisit-discipline-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/revisit-discipline-weak.jpg"
+      },
+      {
+        "id": "residual-risk-ownership",
+        "name": "Residual Risk Ownership",
+        "strong": "Names who loses, what risk remains, and how new evidence would change the priority.",
+        "weak": "Treats prioritization as a tidy one-time choice with no disappointed stakeholder or residual cost.",
+        "strongAiVisual": "assets/generated/signals/residual-risk-ownership-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/residual-risk-ownership-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Product Manager",
+        "expected": "Compares opportunities with concrete evidence, names trade-offs, communicates a focused product choice, and sets a bounded mitigation for deferred work."
+      },
+      {
+        "level": "Senior Product Manager",
+        "expected": "Balances customer, business, UX, and engineering constraints across a larger scope, distinguishes segment signals from one-off requests, and creates a repeatable mechanism for future priority calls."
+      },
+      {
+        "level": "Group Product Manager",
+        "expected": "Manages portfolio-level opportunity cost across PMs or product areas, rebalances capacity when evidence invalidates a bet, and creates clear stop-doing decisions and revisit rules."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "decision-criteria",
+      "opportunity-cost",
+      "revisit-discipline",
+      "residual-risk-ownership"
+    ],
+    "followUpTree": [
+      "criteria",
+      "opportunity-cost",
+      "engineering-tradeoff",
+      "stakeholder-pushback",
+      "reversal-evidence",
+      "portfolio-impact",
+      "sunk-cost-stop"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "Which valuable opportunities were competing?"
+      },
+      {
+        "field": "task",
+        "label": "What prioritization decision were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "What criteria, evidence, confidence level, stakeholder input, and trade-offs drove the decision?"
+      },
+      {
+        "field": "result",
+        "label": "What changed because of the chosen bet, and what cost or risk remained?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about prioritization?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What scorecard, capacity review, or revisit mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A PM chooses between growth work and an enterprise request.",
+    "Engineering feasibility changes the product priority.",
+    "A user-experience improvement competes with performance or reliability work.",
+    "A deferred opportunity needs a clear revisit trigger.",
+    "A stakeholder request turns out to represent a strategic segment need.",
+    "A portfolio bet has to be rebalanced after early evidence invalidates assumptions.",
+    "A team stops a popular or momentum-backed roadmap item.",
+    "A launch gate kills or shrinks a monetization feature after guardrail metrics deteriorate."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "intercom-rice-prioritization",
+        "group": "Prioritization Frameworks and Evidence",
+        "groupDescription": "Resources for using scoring frameworks as decision aids while keeping evidence quality, confidence, and judgment visible.",
+        "title": "RICE: Simple prioritization for product managers",
+        "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
+        "source": "Intercom",
+        "type": "Article",
+        "year": "2018",
+        "why": "Gives PMs a concrete reach, impact, confidence, and effort scorecard while still requiring judgment behind the numbers."
+      },
+      {
+        "id": "itamar-struggling-to-prioritize",
+        "group": "Prioritization Frameworks and Evidence",
+        "groupDescription": "Resources for using scoring frameworks as decision aids while keeping evidence quality, confidence, and judgment visible.",
+        "title": "Why You're Struggling to Prioritize",
+        "url": "https://itamargilad.com/prioritization/",
+        "source": "Itamar Gilad",
+        "type": "Article",
+        "why": "Directly addresses the trap of made-up ICE/RICE numbers and reframes prioritization as evidence-backed evaluation plus validation."
+      },
+      {
+        "id": "producttalk-opportunity-solution-trees",
+        "group": "Opportunity Discovery and Customer Evidence",
+        "groupDescription": "Resources for translating requests, support tickets, sales input, and behavioral data into comparable customer opportunities before committing roadmap capacity.",
+        "title": "Opportunity Solution Trees: Visualize Your Discovery to Stay Aligned and Drive Outcomes",
+        "url": "https://www.producttalk.org/opportunity-solution-trees/",
+        "source": "Product Talk",
+        "type": "Article",
+        "year": "2023",
+        "why": "Shows how to compare opportunities against a desired outcome, separate opportunities from solutions, and avoid overreacting to one loud request."
+      },
+      {
+        "id": "intercom-sales-roadmap-input",
+        "group": "Opportunity Discovery and Customer Evidence",
+        "groupDescription": "Resources for translating requests, support tickets, sales input, and behavioral data into comparable customer opportunities before committing roadmap capacity.",
+        "title": "How Sales Teams Add Value to a Product Roadmap",
+        "url": "https://www.intercom.com/blog/how-sales-adds-value-to-a-product-roadmap/",
+        "source": "Intercom",
+        "type": "Article",
+        "year": "2017",
+        "why": "Balances the interview by showing when Sales input should influence priorities and how to test whether a request represents a larger trend."
+      },
+      {
+        "id": "shape-up-bets-not-backlogs",
+        "group": "Bets, Appetite, and Stop-Doing Discipline",
+        "groupDescription": "Resources for treating product work as bounded bets with explicit appetite, scope, and stop rules.",
+        "title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
+        "url": "https://basecamp.com/shapeup",
+        "source": "Basecamp",
+        "type": "Book",
+        "why": "Frames roadmap choices as bets with appetite, bounded scope, circuit breakers, and a clean slate instead of an ever-growing backlog."
+      },
+      {
+        "id": "svpg-team-objectives-empowerment",
+        "group": "Product Judgment and Trade-Offs",
+        "groupDescription": "Resources for connecting roadmap choices to outcomes, empowered teams, strategic context, and measurable product decisions.",
+        "title": "Team Objectives - Empowerment",
+        "url": "https://www.svpg.com/team-objectives-empowerment/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2020",
+        "why": "Contrasts prioritized feature roadmaps with assigning outcome problems and measures of success, useful for probing PM judgment beyond backlog order."
+      },
+      {
+        "id": "reforge-product-strategy-stack",
+        "group": "Product Judgment and Trade-Offs",
+        "groupDescription": "Resources for connecting roadmap choices to outcomes, empowered teams, strategic context, and measurable product decisions.",
+        "title": "The Product Strategy Stack",
+        "url": "https://www.reforge.com/blog/the-product-strategy-stack",
+        "source": "Reforge",
+        "type": "Article",
+        "year": "2021",
+        "why": "Explains why prioritization often fails when mission, company strategy, product strategy, roadmap, and goals are disconnected."
+      },
+      {
+        "id": "oreilly-escaping-build-trap",
+        "group": "Product Judgment and Trade-Offs",
+        "groupDescription": "Resources for connecting roadmap choices to outcomes, empowered teams, strategic context, and measurable product decisions.",
+        "title": "Escaping the Build Trap",
+        "url": "https://www.oreilly.com/library/view/escaping-the-build/9781491973783/",
+        "source": "O'Reilly",
+        "type": "Book",
+        "year": "2018",
+        "why": "Grounds trade-off stories in outcome-based product management instead of treating shipped features or roadmap volume as proof of value."
+      },
+      {
+        "id": "intercom-product-decision-framework",
+        "group": "Decision Mechanisms and Trade-Off Reviews",
+        "groupDescription": "Resources for making decision rights, feedback handling, rejected alternatives, revisit triggers, and accountability explicit.",
+        "title": "Decision Time: Our New Product Decision-Making Framework",
+        "url": "https://www.intercom.com/blog/product-decision-framework/",
+        "source": "Intercom",
+        "type": "Article",
+        "year": "2021",
+        "why": "Gives a scaled-product example of making autonomy, feedback, strategic alignment, and ownership of results visible in product decisions."
+      },
+      {
+        "id": "atlassian-trade-off-analysis",
+        "group": "Decision Mechanisms and Trade-Off Reviews",
+        "groupDescription": "Resources for making decision rights, feedback handling, rejected alternatives, revisit triggers, and accountability explicit.",
+        "title": "Project Trade-Off Analysis",
+        "url": "https://www.atlassian.com/team-playbook/plays/trade-offs",
+        "source": "Atlassian Team Playbook",
+        "type": "Playbook",
+        "why": "Provides a concrete facilitation mechanism for making scope, quality, time, cost, and risk trade-offs explicit before teams commit."
+      },
+      {
+        "id": "product-operations-book",
+        "group": "Portfolio and Operating Cadence",
+        "groupDescription": "Resources for scaling prioritization through shared evidence, portfolio review, roadmap hygiene, and product operating mechanisms.",
+        "title": "Product Operations",
+        "url": "https://www.productoperations.com/",
+        "source": "Product Operations",
+        "type": "Book page",
+        "year": "2023",
+        "why": "Useful for Group PM-level probes on data-driven portfolio decisions, shared product inputs, and operating infrastructure for prioritization at scale."
+      },
+      {
+        "id": "oreilly-product-roadmaps-relaunched",
+        "group": "Portfolio and Operating Cadence",
+        "groupDescription": "Resources for scaling prioritization through shared evidence, portfolio review, roadmap hygiene, and product operating mechanisms.",
+        "title": "Product Roadmaps Relaunched",
+        "url": "https://www.oreilly.com/library/view/product-roadmaps-relaunched/9781491971710/",
+        "source": "O'Reilly",
+        "type": "Book",
+        "year": "2017",
+        "why": "Connects roadmap communication to strategic context, customer value, learning, confidence, and avoiding promises the team cannot deliver."
+      },
+      {
+        "id": "sre-embracing-risk",
+        "group": "Technical and Reliability Trade-Offs",
+        "groupDescription": "Resources for weighing feature velocity, reliability, platform risk, and guardrail metrics when product priorities depend on technical health.",
+        "title": "Embracing Risk",
+        "url": "https://sre.google/sre-book/embracing-risk/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Gives PMs and interviewers a rigorous way to discuss opportunity cost, reliability targets, and when reliability work should constrain feature bets."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

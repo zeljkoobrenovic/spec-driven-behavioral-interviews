@@ -1,0 +1,610 @@
+{
+  "id": "pm-influence-engineering",
+  "title": "Influencing Engineering and Stakeholders",
+  "description": "Testing whether PMs can align engineering, design, sales, support, and leadership around product direction through evidence, trade-off clarity, and explicit commitment boundaries rather than authority or vague alignment claims.",
+  "roleFocus": [
+    "Product Manager",
+    "Senior Product Manager",
+    "Group Product Manager"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "pm-influence-engineering-stakeholders",
+    "name": "Influencing Engineering and Stakeholders",
+    "family": "Influence and Communication",
+    "definition": "Builds commitment to product direction across functions through evidence, empathy, trade-off clarity, and shared decision mechanisms.",
+    "whyItMatters": "PMs rarely control the teams needed to build, sell, support, and launch the product; influence without authority is core to the role."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you convinced engineering, design, or leadership to support your product direction.",
+    "variants": [
+      "Describe a time when sales, engineering, design, or leadership disagreed with your roadmap.",
+      "Tell me about a time you had to negotiate scope, timeline, or technical debt with engineering.",
+      "Describe a time you changed stakeholder disagreement into a product decision.",
+      "Tell me about a time influence was not enough and you had to escalate, delay, or refuse a product commitment.",
+      "Describe a time you accepted a costly stakeholder request because evidence showed it was the right product bet."
+    ],
+    "interviewerIntent": [
+      "Can the candidate represent other functions' concerns fairly?",
+      "Do they use product evidence and trade-offs instead of charisma or premature escalation?",
+      "Can they distinguish negotiable disagreement from customer trust, compliance, or platform risk that needs accountable escalation?",
+      "Can they change their mind when Sales, Engineering, Design, or leadership has better evidence than the PM's starting position?",
+      "Can they leave behind a decision mechanism that reduces repeated alignment churn?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A PM aligns Engineering and Sales around a narrower launch by showing customer evidence, technical risk, revenue timing, and an explicit phased commitment.",
+    "context": [
+      "Sales wants a committed feature date for a strategic account.",
+      "Engineering believes the requested scope will create avoidable platform debt.",
+      "Design worries that a partial feature will confuse users.",
+      "Support or Legal may need a clearer customer commitment before the launch can be safely communicated.",
+      "The PM owns the product recommendation, customer-facing commitment boundary, and launch promise even when Sales, Engineering, Design, Support, or Legal own parts of delivery.",
+      "Sometimes a stakeholder request exposes a real strategic segment need rather than a one-off distraction."
+    ],
+    "constraints": [
+      "The PM cannot simply overrule Engineering or Sales.",
+      "The account has real revenue importance.",
+      "The product decision must be clear enough for customer-facing communication.",
+      "The PM must not outsource the customer promise to Sales or reduce the product decision to Engineering feasibility alone.",
+      "The PM must not treat consensus as success when a risky commitment needs an explicit decision owner.",
+      "The PM must not reflexively reject account-driven asks before testing whether they represent broader product strategy."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A product decision was blocked by cross-functional disagreement, often between customer urgency, engineering feasibility, UX quality, and business pressure.",
+    "task": "Turn disagreement into a product, customer commitment, or launch decision that respected each function's constraints and protected the product outcome.",
+    "action": [
+      "Clarified what each function was optimizing for and what risk they were trying to avoid.",
+      "Brought customer evidence, business impact, technical feasibility, UX risk, and delivery confidence into a single decision view.",
+      "Separated non-negotiable product outcomes from negotiable scope, sequence, or timing.",
+      "Proposed options with trade-offs rather than asking stakeholders to trust a preference.",
+      "Changed the product recommendation when stakeholder evidence showed the original PM position was too narrow.",
+      "Escalated, delayed, or refused a commitment only after making options, residual risk, and decision rights explicit.",
+      "Created a shared commitment mechanism, such as launch criteria, scope boundary, exception process, or decision log."
+    ],
+    "result": [
+      "The cross-functional team committed to a direction and could explain what was in and out of scope.",
+      "Customer, business, or delivery risk was reduced without hiding the cost.",
+      "When the stakeholder was right, the team accepted a meaningful cost and made the opportunity cost explicit.",
+      "When the outcome was not a clean win, the PM named the disappointed stakeholder, residual revenue or timing cost, and revisit trigger.",
+      "Future disagreement became easier to resolve because the decision criteria were explicit."
+    ],
+    "reflection": "The PM learned that influence comes from making every function's legitimate risk visible, then turning disagreement into a product decision instead of endless alignment.",
+    "systemChange": [
+      "Decision log with customer evidence, trade-offs, owner, and revisit date.",
+      "Product-engineering scope negotiation template.",
+      "Launch criteria shared across Product, Engineering, Design, Sales, and Support.",
+      "Customer commitment review for account-specific requests.",
+      "Segment-fit test for deciding when account-specific demand justifies roadmap or platform investment.",
+      "Escalation rule for commitments with unresolved security, compliance, trust, or platform-risk concerns."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "strategic-account-scope",
+      "title": "Strategic Account Scope Negotiation",
+      "level": "Product Manager",
+      "promptVariant": "Tell me about a time you had to negotiate scope, timeline, or technical debt with engineering.",
+      "situation": "Sales wanted a custom workflow for a strategic account before a renewal. Engineering warned that the requested workflow would fork the permissions model, while customer calls showed only two parts of the request were tied to renewal risk.",
+      "strongAnswerSketch": [
+        "Separate account-specific asks from the product problem shared by the target segment.",
+        "Bring Sales, Engineering, and Customer Success into a decision review with renewal risk, customer evidence, platform cost, and delivery confidence.",
+        "Negotiate a standard permission enhancement plus an implementation guide, rejecting the bespoke workflow.",
+        "Name the residual cost: Sales lost a bespoke promise for that renewal, and the PM owned the customer messaging and implementation guidance.",
+        "Create a customer commitment review so future strategic asks require product fit and platform-cost evidence."
+      ],
+      "whyItWorks": [
+        "Shows empathy for Sales without surrendering product judgment.",
+        "Represents engineering platform risk concretely.",
+        "Avoids pretending the story was a clean win by naming the commercial disappointment and mitigation.",
+        "Converts conflict into a reusable customer-commitment mechanism."
+      ],
+      "weakVersion": "I aligned Sales and Engineering on a smaller version of the feature that met the customer need without overcomplicating the platform.",
+      "followUpAngles": [
+        "What was Sales right about?",
+        "What technical risk did you refuse to accept?",
+        "What did you offer instead of the custom workflow?",
+        "How did future account requests change?"
+      ],
+      "aiVisual": "assets/generated/example-stories/strategic-account-scope.jpg"
+    },
+    {
+      "id": "design-vs-speed-launch",
+      "title": "Design Quality Versus Launch Speed",
+      "level": "Senior Product Manager",
+      "promptVariant": "Describe a time when sales, engineering, design, or leadership disagreed with your roadmap.",
+      "situation": "Leadership wanted to launch a new dashboard at a conference. Design argued the navigation was not ready, and Engineering said the data model would support only three of the five promised metrics.",
+      "strongAnswerSketch": [
+        "Frame the decision around launch promise, user trust, data correctness, and conference learning goals.",
+        "Reject both a polished but misleading dashboard and a full delay until the complete design is ready.",
+        "Launch a beta to existing customers with three verified metrics, clear beta labeling, and interview follow-ups.",
+        "Tell leadership the conference story would be narrower than planned, then use beta feedback to decide which of the two missing metrics deserved investment.",
+        "Set a launch-readiness checklist requiring metric correctness, support messaging, and design acceptance criteria."
+      ],
+      "whyItWorks": [
+        "Balances leadership timing pressure, design quality, engineering constraints, and user trust.",
+        "Shows a concrete alternative rather than a vague compromise.",
+        "Makes the residual cost visible instead of presenting the beta as an effortless compromise.",
+        "Leaves behind a launch-readiness mechanism."
+      ],
+      "weakVersion": "I got Design, Engineering, and leadership aligned on a beta launch so we could learn without overpromising.",
+      "followUpAngles": [
+        "Which stakeholder was hardest to convince?",
+        "What did you not launch?",
+        "How did you protect user trust?",
+        "What changed in launch readiness?"
+      ],
+      "aiVisual": "assets/generated/example-stories/design-vs-speed-launch.jpg"
+    },
+    {
+      "id": "portfolio-api-launch-phasing",
+      "title": "Portfolio API Launch Phasing",
+      "level": "Group Product Manager",
+      "promptVariant": "Describe a time you changed stakeholder disagreement into a product decision.",
+      "situation": "A Group PM coordinated three product areas preparing a partner API launch tied to quarterly revenue. Sales wanted all seven launch partners committed, while Engineering warned that rate limits, onboarding tooling, and support runbooks could safely handle only a narrower first wave.",
+      "strongAnswerSketch": [
+        "Compare partner value, contract timing, API usage risk, onboarding effort, support load, and engineering readiness across all seven partners.",
+        "Put three options in front of Sales, Engineering, Support, and leadership: commit to all partners with reliability risk, delay all partners, or phase the launch by readiness and revenue exposure.",
+        "Choose five lower-risk partners for the first wave, defer two customization-heavy partners, and publish the revenue risk and customer owner for each deferral.",
+        "Create a partner-launch gate covering load test results, support runbook, onboarding checklist, exception owner, and weekly readiness review."
+      ],
+      "whyItWorks": [
+        "Shows Group PM-level influence across PMs, Engineering, Sales, Support, and leadership rather than one feature team.",
+        "Names the real cost: two partners were disappointed and the forecast changed.",
+        "Turns cross-functional friction into portfolio-level launch governance."
+      ],
+      "weakVersion": "I aligned Sales and Engineering on a phased API launch so we could move quickly without taking too much risk.",
+      "followUpAngles": [
+        "Which launch partner did you choose to disappoint first?",
+        "What evidence made Engineering's risk credible?",
+        "How did you change the revenue forecast or customer communication?",
+        "What launch gate changed after this decision?"
+      ],
+      "aiVisual": "assets/generated/example-stories/portfolio-api-launch-phasing.jpg"
+    },
+    {
+      "id": "regulated-data-commitment-refusal",
+      "title": "Regulated Data Commitment Refusal",
+      "level": "Senior Product Manager",
+      "promptVariant": "Tell me about a time influence was not enough and you had to escalate, delay, or refuse a product commitment.",
+      "situation": "Sales asked the PM to commit to a real-time HR data integration before a renewal. Engineering said audit logging and deletion behavior were not ready, Legal would not approve a side letter for regulated EU employee data, and the account team worried the renewal would slip without a firm date.",
+      "strongAnswerSketch": [
+        "Separate the customer job from the unsafe commitment by mapping required data flows, audit obligations, renewal timing, and available manual workarounds.",
+        "Offer options: no commitment, a limited pilot with synthetic or non-regulated data, a manual export workflow, or a delayed contractual commitment after audit and deletion controls are complete.",
+        "Escalate with a decision memo to Product, Engineering, Legal, and Sales because the remaining risk exceeded the PM's decision rights, then recommend refusing the contractual date.",
+        "Own the cost by helping Sales message the delay, preserving the renewal with a manual workflow, and adding a security-and-legal gate for future customer commitments."
+      ],
+      "whyItWorks": [
+        "Balances influence with principled refusal when persuasion cannot make the commitment safe.",
+        "Distinguishes healthy escalation from appealing upward to win an argument.",
+        "Shows customer empathy, revenue ownership, and trust protection in the same story."
+      ],
+      "weakVersion": "Engineering and Legal said the integration was too risky, so I escalated and got Sales to stop promising it.",
+      "followUpAngles": [
+        "What made the commitment unsafe rather than merely difficult?",
+        "What alternatives did you offer the customer and Sales?",
+        "Who had to own the final decision?",
+        "What changed in customer commitment governance?"
+      ],
+      "aiVisual": "assets/generated/example-stories/regulated-data-commitment-refusal.jpg"
+    },
+    {
+      "id": "strategic-sso-commitment-accepted",
+      "title": "Strategic SSO Commitment Accepted",
+      "level": "Product Manager",
+      "promptVariant": "Describe a time you accepted a costly stakeholder request because evidence showed it was the right product bet.",
+      "situation": "Sales pushed for SSO group mapping before a healthcare-segment renewal. The PM initially saw it as an account-specific ask, but win-loss notes, security questionnaires, and five late-stage deals showed the capability was table stakes for the regulated segment the company had already chosen to enter.",
+      "strongAnswerSketch": [
+        "Test whether the request is a one-off concession or a repeated segment blocker using lost-deal notes, pipeline analysis, security reviews, and customer interviews.",
+        "Work with Engineering to reject a custom entitlement hack and size a standard group-mapping capability with audit logging, admin controls, and migration limits.",
+        "Accept the platform investment, pause a lower-confidence dashboard iteration, and tell leadership the decision trades near-term discovery speed for regulated-segment credibility.",
+        "Create a segment-fit review so future Sales asks are assessed by target segment, repeated evidence, platform cost, and opportunity cost before they become commitments."
+      ],
+      "whyItWorks": [
+        "Shows that strong PM influence is not always saying no or shrinking scope.",
+        "Shows Sales was right for product reasons, not only revenue pressure.",
+        "Still protects Engineering by choosing a standard capability and naming the work that was paused."
+      ],
+      "weakVersion": "Sales convinced me the SSO feature was important for enterprise customers, so I moved it up the roadmap and worked with Engineering to deliver it.",
+      "followUpAngles": [
+        "What evidence changed your mind?",
+        "How did you know this was not just one account's demand?",
+        "What roadmap item did you pause?",
+        "What rule changed for future Sales-driven requests?"
+      ],
+      "aiVisual": "assets/generated/example-stories/strategic-sso-commitment-accepted.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer shows cross-functional empathy, evidence-based framing, explicit trade-offs, and a durable decision mechanism.",
+    "moves": [
+      "Explains each stakeholder's legitimate concern.",
+      "Uses customer, business, technical, and UX evidence in a single decision view.",
+      "Separates non-negotiable outcomes from negotiable scope or timing.",
+      "Offers a product alternative rather than only saying no.",
+      "Owns the customer-facing promise and launch boundary instead of leaving Sales or Engineering to imply one.",
+      "Concedes when stakeholder evidence reveals a strategic product bet worth the cost.",
+      "Distinguishes negotiable disagreement from risk that requires escalation, delay, or refusal.",
+      "Communicates the decision and residual cost clearly.",
+      "Creates a mechanism that reduces repeated alignment churn."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer uses alignment language without showing the disagreement, evidence, decision, or follow-on mechanism.",
+    "redFlags": [
+      "Describes stakeholders as blockers instead of explaining their incentives.",
+      "Cannot state the technical, UX, business, or customer risk in concrete terms.",
+      "Treats account-driven asks as automatically bad or automatically urgent instead of testing segment fit and opportunity cost.",
+      "Outsources the customer promise to Sales or reduces the product decision to Engineering feasibility instead of owning the product recommendation.",
+      "Uses escalation to win a debate, or avoids escalation when trust, compliance, or platform risk needs an accountable decision.",
+      "Calls a vague middle ground a compromise without naming what changed.",
+      "Has no mechanism for future account requests, scope debates, or launch readiness."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "stakeholder-empathy",
+      "question": "What was the opposing stakeholder right about?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Sales was right that renewal risk was real, but only two requested capabilities were tied to that risk across customer evidence.",
+          "Design was right that a general launch would damage trust because navigation and metric explanation were not ready.",
+          "Sales was right that the regulated-data renewal needed a credible path; Legal and Engineering were right that a side letter could not make missing audit and deletion controls safe.",
+          "Sales was right about SSO group mapping because the request appeared across regulated-segment deals, security questionnaires, and win-loss notes."
+        ],
+        "weak": [
+          "They had valid concerns, but we needed to move forward.",
+          "Engineering was worried about complexity.",
+          "Legal was being conservative.",
+          "Sales wanted a big customer feature."
+        ]
+      }
+    },
+    {
+      "id": "decision-options",
+      "question": "What options did you put on the table?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "For the account request, options were full custom workflow, no commitment, or standard permission enhancement plus implementation guide; I recommended the third because it handled renewal risk without forking permissions.",
+          "For the dashboard, we considered full conference launch, delay, or beta with three verified metrics and explicit labeling.",
+          "For the regulated-data integration, options were no commitment, synthetic-data pilot, manual export, or delayed contractual commitment after audit and deletion controls were ready.",
+          "For SSO group mapping, options were custom entitlement logic, no commitment, or standard platform support funded by pausing a lower-confidence dashboard iteration."
+        ],
+        "weak": [
+          "We compromised on a smaller launch.",
+          "I gave stakeholders a few options and got agreement."
+        ]
+      }
+    },
+    {
+      "id": "mechanism",
+      "question": "What changed so this kind of disagreement would be easier next time?",
+      "tests": [
+        "learning",
+        "execution"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Account-specific requests now need product-fit evidence, platform-cost review, customer commitment owner, and exception expiration.",
+          "Launch readiness now includes metric correctness, beta labeling rules, support messaging, and design acceptance criteria.",
+          "Partner API launches now require load-test evidence, support runbooks, onboarding owners, and an exception owner before Sales can commit dates.",
+          "Sales-driven requests now go through a segment-fit review with repeated evidence, platform cost, opportunity cost, owner, and revisit trigger."
+        ],
+        "weak": [
+          "We communicated earlier next time.",
+          "We agreed to involve all functions sooner."
+        ]
+      }
+    },
+    {
+      "id": "escalation-boundary",
+      "question": "How did you know whether to keep influencing, escalate, or refuse the commitment?",
+      "tests": [
+        "risk judgment",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I kept influencing while the trade-off was scope and timing, but escalated once the remaining option depended on accepting regulated-data risk without audit and deletion controls.",
+          "For the API launch, I did not escalate to override Engineering; I used leadership review to choose which partners we would disappoint and who owned the revenue risk."
+        ],
+        "weak": [
+          "I escalated because the teams could not agree.",
+          "I kept pushing until everyone accepted the launch date."
+        ]
+      }
+    },
+    {
+      "id": "concede-when-right",
+      "question": "When did the stakeholder's pushback change your decision?",
+      "tests": [
+        "judgment",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Sales changed my view when the request showed up in three lost deals, five late-stage security reviews, and the segment strategy we had already approved.",
+          "Engineering changed the API launch plan by showing load-test evidence and support gaps that made the all-partner launch materially unsafe."
+        ],
+        "weak": [
+          "They had a good point, so I compromised.",
+          "Leadership wanted it, so I adjusted the roadmap."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "cross-functional-empathy",
+        "name": "Cross-Functional Empathy",
+        "strong": "Represents stakeholder incentives and risks fairly before making the product decision.",
+        "weak": "Frames other functions as blockers or treats alignment as getting people to agree.",
+        "strongAiVisual": "assets/generated/signals/cross-functional-empathy-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/cross-functional-empathy-weak.jpg"
+      },
+      {
+        "id": "tradeoff-framing",
+        "name": "Trade-Off Framing",
+        "strong": "Shows customer, business, technical, UX, and timing trade-offs in decision-ready form.",
+        "weak": "Uses vague compromise language without concrete consequences.",
+        "strongAiVisual": "assets/generated/signals/tradeoff-framing-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/tradeoff-framing-weak.jpg"
+      },
+      {
+        "id": "decision-mechanism",
+        "name": "Decision Mechanism",
+        "strong": "Creates criteria, logs, reviews, or launch gates that make future decisions less ad hoc.",
+        "weak": "Ends at one-time alignment.",
+        "strongAiVisual": "assets/generated/signals/decision-mechanism-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/decision-mechanism-weak.jpg"
+      },
+      {
+        "id": "boundary-escalation",
+        "name": "Boundary and Escalation Judgment",
+        "strong": "Escalates, delays, or refuses only after clarifying options, residual risk, decision rights, and customer impact.",
+        "weak": "Uses escalation as persuasion, or avoids escalation when an unsafe commitment needs an accountable decision.",
+        "strongAiVisual": "assets/generated/signals/boundary-escalation-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/boundary-escalation-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Product Manager",
+        "expected": "Aligns stakeholders around a scoped product decision with clear evidence, trade-offs, and residual cost."
+      },
+      {
+        "level": "Senior Product Manager",
+        "expected": "Navigates multi-function disagreement, protects product trust, and knows when escalation or refusal is the accountable path."
+      },
+      {
+        "level": "Group Product Manager",
+        "expected": "Coaches PMs and stakeholders to compare account, launch, and platform commitments across product areas, then sets decision rights, customer-commitment norms, and exception rules."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "cross-functional-empathy",
+      "tradeoff-framing",
+      "decision-mechanism",
+      "boundary-escalation"
+    ],
+    "followUpTree": [
+      "stakeholder-empathy",
+      "decision-options",
+      "mechanism",
+      "escalation-boundary",
+      "concede-when-right"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "Who disagreed, and what product outcome was at risk?"
+      },
+      {
+        "field": "task",
+        "label": "What decision or alignment outcome were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "How did you represent concerns, frame options, and create commitment?"
+      },
+      {
+        "field": "result",
+        "label": "What product, customer, business, or delivery outcome changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about influence without authority?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What decision, launch, or commitment mechanism changed afterward?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "svpg-stakeholder-management",
+        "group": "Product Influence and Stakeholders",
+        "title": "Stakeholder Management",
+        "url": "https://www.svpg.com/stakeholder-management/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2013",
+        "why": "Explains the PM's responsibility to understand sales, legal, compliance, finance, marketing, and engineering constraints before asking for trust.",
+        "groupDescription": "Resources for PM influence, stakeholder trust, and cross-functional decision framing."
+      },
+      {
+        "id": "cialdini-influence-new-expanded",
+        "group": "Product Influence and Stakeholders",
+        "title": "Influence, New and Expanded",
+        "url": "https://www.harperacademic.com/book/9780062937650/influence-new-and-expanded",
+        "source": "Robert B. Cialdini / Harper Business",
+        "type": "Book",
+        "year": "2021",
+        "why": "Gives a research-backed vocabulary for ethical persuasion that helps interviewers distinguish influence from charisma or pressure.",
+        "groupDescription": "Resources for PM influence, stakeholder trust, and cross-functional decision framing."
+      },
+      {
+        "id": "svpg-product-management-introduction",
+        "group": "Product Engineering and Risk",
+        "title": "Product Management: An Introduction",
+        "url": "https://www.svpg.com/product-management-an-introduction/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2023",
+        "why": "Clarifies PM ownership for value and viability while working with design and engineering on usability and feasibility.",
+        "groupDescription": "Resources for product-engineering collaboration, feasibility, viability, and risk ownership."
+      },
+      {
+        "id": "svpg-four-big-risks",
+        "group": "Product Engineering and Risk",
+        "title": "The Four Big Risks",
+        "url": "https://www.svpg.com/four-big-risks/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "why": "Maps product disagreement into value, usability, feasibility, and business-viability risks, matching the interview's evidence-based framing.",
+        "groupDescription": "Resources for product-engineering collaboration, feasibility, viability, and risk ownership."
+      },
+      {
+        "id": "gitlab-product-development-flow",
+        "group": "Product Engineering and Risk",
+        "title": "Product Development Flow",
+        "url": "https://handbook.gitlab.com/handbook/product-development/how-we-work/product-development-flow/",
+        "source": "The GitLab Handbook",
+        "type": "Handbook",
+        "why": "Shows a public validation-to-build operating model where PM, UX, and Engineering coordinate customer evidence, KPIs, MVC scope, and risk before delivery.",
+        "groupDescription": "Resources for product-engineering collaboration, feasibility, viability, and risk ownership."
+      },
+      {
+        "id": "gitlab-product-development-roles",
+        "group": "Product Engineering and Risk",
+        "title": "Product Development Roles and Responsibilities",
+        "url": "https://handbook.gitlab.com/handbook/product-development/how-we-work/roles-and-responsibilities/",
+        "source": "The GitLab Handbook",
+        "type": "Handbook",
+        "why": "Clarifies how Product and Engineering share responsibility for customer impact while keeping role boundaries and decision ownership visible.",
+        "groupDescription": "Resources for product-engineering collaboration, feasibility, viability, and risk ownership."
+      },
+      {
+        "id": "intercom-product-decision-framework",
+        "group": "Decision Mechanisms",
+        "title": "Intercom's Product Decision-Making Framework",
+        "url": "https://www.intercom.com/blog/product-decision-framework/",
+        "source": "Intercom",
+        "type": "Article",
+        "why": "Shows how a scaled product organization made decision rights, feedback handling, autonomy, and accountability explicit.",
+        "groupDescription": "Resources for decision rights, decision logs, launch gates, and reusable operating mechanisms."
+      },
+      {
+        "id": "google-cloud-architecture-decision-records",
+        "group": "Decision Mechanisms",
+        "title": "Architecture Decision Records Overview",
+        "url": "https://docs.cloud.google.com/architecture/architecture-decision-records",
+        "source": "Google Cloud",
+        "type": "Documentation",
+        "year": "2024",
+        "why": "Provides a concrete decision-record model PMs can adapt for product-engineering trade-offs, rejected alternatives, and revisit context.",
+        "groupDescription": "Resources for decision rights, decision logs, launch gates, and reusable operating mechanisms."
+      },
+      {
+        "id": "atlassian-trade-off-analysis",
+        "group": "Decision Mechanisms",
+        "title": "Project Trade-Off Analysis",
+        "url": "https://www.atlassian.com/team-playbook/plays/trade-offs",
+        "source": "Atlassian Team Playbook",
+        "type": "Playbook",
+        "why": "Gives interviewers a concrete mechanism for probing whether the PM made scope, quality, time, cost, and risk trade-offs explicit before asking for commitment.",
+        "groupDescription": "Resources for decision rights, decision logs, launch gates, and reusable operating mechanisms."
+      },
+      {
+        "id": "intercom-feature-request-response",
+        "group": "Customer Commitments and Roadmaps",
+        "title": "The Right Way to Respond to Feature Requests",
+        "url": "https://www.intercom.com/blog/the-right-way-to-respond-to-feature-requests/",
+        "source": "Intercom",
+        "type": "Article",
+        "why": "Useful for probing how PMs say no, offer workarounds, and explain roadmap fit without making empty customer promises.",
+        "groupDescription": "Resources for customer requests, sales input, roadmap promises, and account-specific trade-offs."
+      },
+      {
+        "id": "intercom-sales-roadmap-input",
+        "group": "Customer Commitments and Roadmaps",
+        "title": "How Sales Teams Add Value to a Product Roadmap",
+        "url": "https://www.intercom.com/blog/how-sales-adds-value-to-a-product-roadmap/",
+        "source": "Intercom",
+        "type": "Article",
+        "why": "Balances the interview by showing when Sales evidence should influence product direction instead of being dismissed as pressure.",
+        "groupDescription": "Resources for customer requests, sales input, roadmap promises, and account-specific trade-offs."
+      },
+      {
+        "id": "oreilly-product-roadmaps-relaunched",
+        "group": "Customer Commitments and Roadmaps",
+        "title": "Product Roadmaps Relaunched",
+        "url": "https://www.oreilly.com/library/view/product-roadmaps-relaunched/9781491971710/",
+        "source": "O'Reilly",
+        "type": "Book",
+        "year": "2017",
+        "why": "Connects stakeholder alignment to roadmaps that communicate direction, uncertainty, priorities, and promises the team can actually support.",
+        "groupDescription": "Resources for customer requests, sales input, roadmap promises, and account-specific trade-offs."
+      },
+      {
+        "id": "atlassian-product-roadmap-guide",
+        "group": "Customer Commitments and Roadmaps",
+        "title": "Product Roadmap Guide: What It Is and How to Create One",
+        "url": "https://www.atlassian.com/agile/product-management/product-roadmaps",
+        "source": "Atlassian",
+        "type": "Guide",
+        "why": "Reinforces that roadmaps should align Product, Engineering, Design, Marketing, and stakeholders around strategy, feasibility, and communication rather than unsupported dates.",
+        "groupDescription": "Resources for customer requests, sales input, roadmap promises, and account-specific trade-offs."
+      },
+      {
+        "id": "google-sre-production-launch-planning",
+        "group": "Launch Readiness and GTM Commitments",
+        "title": "Practices for Launching a New Product",
+        "url": "https://sre.google/resources/practices-and-processes/production-launch-planning/",
+        "source": "Google SRE",
+        "type": "Report",
+        "why": "Gives PMs and engineering partners a concrete launch-planning model for scaling readiness to product risk and team complexity.",
+        "groupDescription": "Resources for launch readiness, rollout safety, customer communication, and go/no-go discipline."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "Sales requests a customer-specific feature that creates platform risk.",
+    "Design quality and leadership launch timing conflict.",
+    "Engineering pushes back on product scope because of technical debt.",
+    "Support needs clearer customer messaging before a risky launch.",
+    "Legal or Security refuses an unsafe customer commitment that Sales wants to close.",
+    "A PM must decide what Sales can promise publicly when scope, launch readiness, and customer trust are in conflict.",
+    "A Group PM must phase a launch across product areas because all partner commitments cannot be delivered safely."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

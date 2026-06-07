@@ -1,6 +1,31 @@
 {
   "levels": [
     {
+      "id": "software-engineer",
+      "name": "Software Engineer",
+      "description": "Owns assigned engineering work, collaborates effectively, learns from feedback, and follows through on quality and reliability."
+    },
+    {
+      "id": "senior-software-engineer",
+      "name": "Senior Software Engineer",
+      "description": "Owns ambiguous technical problems, raises team quality, mentors peers, and influences delivery beyond assigned tasks."
+    },
+    {
+      "id": "tech-lead",
+      "name": "Tech Lead",
+      "description": "Guides technical direction across a team or project, coordinates peers without formal authority, and makes pragmatic trade-offs visible."
+    },
+    {
+      "id": "engineering-manager",
+      "name": "Engineering Manager",
+      "description": "Builds a healthy team, coaches engineers, manages delivery, resolves team conflict, and communicates with stakeholders."
+    },
+    {
+      "id": "senior-engineering-manager",
+      "name": "Senior Engineering Manager",
+      "description": "Manages managers or multiple teams, scales execution systems, calibrates leadership, and handles cross-team trade-offs."
+    },
+    {
       "id": "senior-manager",
       "name": "Senior Manager",
       "description": "Owns outcomes across one or more teams and develops managers or senior ICs."
@@ -19,6 +44,31 @@
       "id": "cto",
       "name": "CTO",
       "description": "Owns company-level technology strategy, trust, risk, executive communication, and long-term leverage."
+    },
+    {
+      "id": "product-manager",
+      "name": "Product Manager",
+      "description": "Owns customer problems, product discovery, prioritization, execution trade-offs, and stakeholder alignment for a product area."
+    },
+    {
+      "id": "senior-product-manager",
+      "name": "Senior Product Manager",
+      "description": "Owns ambiguous product opportunities, cross-functional influence, product judgment, and measurable product outcomes across a larger scope."
+    },
+    {
+      "id": "group-product-manager",
+      "name": "Group Product Manager",
+      "description": "Leads product direction across multiple PMs or product areas, balancing portfolio choices, customer insight, and cross-functional execution."
+    },
+    {
+      "id": "director-of-product",
+      "name": "Director of Product",
+      "description": "Owns product strategy, team-of-teams alignment, portfolio prioritization, and business/customer outcomes across a product domain."
+    },
+    {
+      "id": "vp-product",
+      "name": "VP Product",
+      "description": "Owns product portfolio strategy, company-level product trade-offs, executive alignment, market positioning, and durable product operating mechanisms."
     }
   ]
 }

@@ -1,0 +1,640 @@
+{
+  "id": "product-data-decisions",
+  "title": "Data-Informed Product Decisions",
+  "description": "Testing whether product leaders revise decisions, handle conflicting signals, and tie metrics back to customer behavior and business reality.",
+  "roleFocus": [
+    "Senior Product Manager",
+    "Group Product Manager",
+    "Director of Product"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "data-informed-product-decisions",
+    "name": "Data-Informed Product Decisions",
+    "family": "Judgment and Strategy",
+    "definition": "Uses quantitative and qualitative evidence to make, reverse, refine, or defend product decisions while understanding metric limitations.",
+    "whyItMatters": "Strong product leaders are data-informed, not metric-obedient; they know when evidence should change direction and when it is incomplete, biased, or measuring the wrong behavior."
+  },
+  "prompt": {
+    "primary": "Describe a time when data changed your mind.",
+    "variants": [
+      "Tell me about a time product data contradicted customer feedback.",
+      "Describe a time you had to make a decision with incomplete or conflicting data.",
+      "Tell me about a time a product metric improved but the customer experience got worse.",
+      "Tell me about a time data helped you hold a product decision despite noisy objections.",
+      "Tell me about a time you found product data was invalid, biased, or misread after a decision had already been made."
+    ],
+    "interviewerIntent": [
+      "Can the candidate explain what data was trustworthy and what was not?",
+      "Do they connect metrics to customer behavior and business outcomes?",
+      "Can they reverse, refine, or defend a product decision without hiding the trade-off or cost?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A senior PM pauses a feature rollout after engagement rises, but support tickets, cohort behavior, and customer sessions show users are being nudged into repeated low-value actions.",
+    "context": [
+      "A new feature improves a top-line engagement metric.",
+      "Instrumentation, sampling, seasonality, or segment mix may make the first readout look cleaner than reality.",
+      "Customer feedback is mixed and support tickets increase.",
+      "Leadership wants to continue rollout because the dashboard looks positive.",
+      "Sales or Growth partners may have already built plans around the early win.",
+      "A small number of loud complaints may also conflict with clean cohort or experiment evidence."
+    ],
+    "constraints": [
+      "The PM must challenge a favorable metric without sounding anti-data.",
+      "The team needs a decision before the next rollout stage.",
+      "Any reversal will disappoint stakeholders who celebrated the early win.",
+      "The better decision may make a short-term metric, forecast, or launch commitment look worse.",
+      "The PM must distinguish invalid or biased data from data that is valid but inconvenient to the preferred roadmap.",
+      "The PM must avoid overcorrecting when feedback is valid for one segment but not representative of the rollout target."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A product decision depended on data that was incomplete, conflicting, or misleading when compared with observed customer behavior.",
+    "task": "Judge evidence quality, decide whether to continue, narrow, or change direction, and improve how the product team measures success.",
+    "action": [
+      "Separated leading indicators, guardrails, cohort behavior, customer feedback, and business outcomes.",
+      "Checked whether the metric measured real value, repeated confusion, selection bias, or short-term novelty.",
+      "Audited event definitions, denominators, sample balance, segment mix, and logging gaps before using the readout for a rollout or planning decision.",
+      "Put conflicting evidence in front of decision makers instead of selecting only roadmap-friendly data.",
+      "Compared options such as continuing rollout, narrowing to one segment, changing the success metric, or stopping the bet, then named the rejected alternatives.",
+      "Tested whether negative feedback was representative, segment-specific, or an edge case before reversing a working decision.",
+      "Changed, paused, or narrowed the product direction when the evidence showed risk.",
+      "Defended a product direction when the evidence showed real customer value and the objections were not representative.",
+      "Corrected an already-shared commitment, forecast, or launch recommendation when later evidence showed the original readout was not trustworthy.",
+      "Updated the metric definition, dashboard, experiment design, or decision rule afterward."
+    ],
+    "result": [
+      "The product decision better matched customer value because the team understood the behavior behind the metric.",
+      "A misleading rollout, experiment, or investment was corrected before scaling damage, even when the correction carried a visible short-term cost.",
+      "A valid product decision was protected from overreacting to anecdotal pressure when the strongest evidence still supported it.",
+      "The team gained better guardrails, cohort views, or experiment-readiness rules."
+    ],
+    "reflection": "The product leader learned to treat metrics as evidence about behavior, not as automatic proof of customer value.",
+    "systemChange": [
+      "Metric review template that includes target behavior, possible failure modes, and guardrails.",
+      "Cohort dashboard separating new-user novelty from retained value.",
+      "Experiment readout template with customer evidence and support signals.",
+      "Rollout pause rule that defines when guardrails require slowing or stopping expansion.",
+      "Segment guardrail that names the target cohort, excluded cohort, and escalation threshold before interpreting a rollout signal.",
+      "Pre-registered segment and retention checks before treating a top-line metric as enough for launch.",
+      "Experiment-quality checklist for event ownership, sample-ratio checks, instrumentation gaps, and guardrail logging before a readout can trigger rollout."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "engagement-metric-trap",
+      "title": "Engagement Metric Trap",
+      "level": "Senior Product Manager",
+      "promptVariant": "Describe a time when data changed your mind.",
+      "situation": "A recommendations feature increased weekly active use by 11 percent. The PM initially planned to expand it, but cohort analysis showed users were repeatedly opening recommendations because they were not finding the right next action.",
+      "strongAnswerSketch": [
+        "Compare top-line engagement with task completion, repeated opens, support tickets, and customer sessions.",
+        "Pause rollout despite the positive dashboard and a Growth commitment because the metric rewarded confusion.",
+        "Redesign success around completed next action and reduced time-to-decision.",
+        "Accept a one-quarter delay, then add a guardrail for repeated low-value engagement before future recommendation experiments."
+      ],
+      "whyItWorks": [
+        "Shows willingness to question a favorable metric without dismissing data.",
+        "Connects data to customer behavior and product quality.",
+        "Changes the measurement system, not only the feature."
+      ],
+      "weakVersion": "The engagement data was up, but qualitative feedback suggested improvements were needed, so we iterated on the feature.",
+      "followUpAngles": [
+        "What made the original metric misleading?",
+        "Who resisted pausing the rollout?",
+        "What customer behavior mattered more?",
+        "What changed in future experiment readouts?"
+      ],
+      "aiVisual": "assets/generated/example-stories/engagement-metric-trap.jpg"
+    },
+    {
+      "id": "trial-conversion-quality-drop",
+      "title": "Trial Conversion Quality Drop",
+      "level": "Group Product Manager",
+      "promptVariant": "Tell me about a time a product metric improved but the customer experience got worse.",
+      "situation": "A simplified trial-to-paid flow lifted conversion by 9 percent and two PMs wanted to roll it out across onboarding. Segment analysis later showed the lift came mostly from low-fit teams that churned quickly, generated more refund tickets, and never activated the collaborative workflow the product was built around.",
+      "strongAnswerSketch": [
+        "Break down the conversion lift by segment, activation depth, refund requests, 30-day retention, and customer-support themes.",
+        "Reject the easy answer of shipping the winning variant everywhere because it optimized payment before product fit.",
+        "Keep the shorter flow for high-intent segments, restore qualification steps for ambiguous trials, and add product-fit education before checkout.",
+        "Coach the PM group to require segment retention and refund guardrails in experiment readouts before declaring conversion wins."
+      ],
+      "whyItWorks": [
+        "Shows Group Product Manager judgment across multiple PM-owned funnels.",
+        "Names the rejected alternative and the cost of giving up a clean conversion win.",
+        "Improves the experiment system rather than treating the insight as a one-off anomaly."
+      ],
+      "weakVersion": "The conversion test won, but retention was mixed, so we added downstream metrics and refined onboarding.",
+      "followUpAngles": [
+        "Which segment made the experiment look better than it was?",
+        "What did you decide not to ship?",
+        "How did you coach the PMs whose metric looked successful?",
+        "Which guardrail became mandatory?"
+      ],
+      "aiVisual": "assets/generated/example-stories/trial-conversion-quality-drop.jpg"
+    },
+    {
+      "id": "invalid-experiment-win",
+      "title": "Invalid Experiment Win",
+      "level": "Senior Product Manager",
+      "promptVariant": "Tell me about a time you found product data was invalid, biased, or misread after a decision had already been made.",
+      "situation": "A checkout simplification experiment appeared to lift trial starts by 7 percent, and the PM had already recommended broad rollout in the quarterly plan. A deeper audit showed Safari error events were under-logged, duplicate trial starts were counted as wins, and refund tickets rose in the affected cohort.",
+      "strongAnswerSketch": [
+        "Reopen the decision instead of defending the announced recommendation, separating true trial starts from duplicate starts, browser logging gaps, refunds, and support themes.",
+        "Partner with Analytics and Engineering to validate event ownership, denominator logic, sample balance, and payment-system reconciliation before accepting the lift.",
+        "Withdraw the rollout recommendation, keep only the low-risk copy changes, and absorb a two-week plan slip while the team rebuilt the checkout validation flow.",
+        "Add an experiment-quality gate requiring instrumentation review, sample-ratio checks, refund guardrails, and data-quality owner sign-off before experiment wins can enter quarterly planning."
+      ],
+      "whyItWorks": [
+        "Shows the candidate can correct their own data-backed recommendation after new evidence weakens it.",
+        "Distinguishes invalid data from inconvenient data by naming the concrete measurement defects.",
+        "Includes reputation cost and a durable quality gate rather than a private lesson."
+      ],
+      "weakVersion": "The first readout was wrong because the tracking had issues, so we fixed analytics and waited for cleaner data before rolling out.",
+      "followUpAngles": [
+        "What made the original readout invalid rather than merely noisy?",
+        "How did you communicate that your recommendation changed?",
+        "What part of the original variant, if any, still shipped?",
+        "What quality gate prevented similar experiment wins from entering planning?"
+      ],
+      "aiVisual": "assets/generated/example-stories/invalid-experiment-win.jpg"
+    },
+    {
+      "id": "enterprise-churn-model-conflict",
+      "title": "Enterprise Churn Model Conflict",
+      "level": "Director of Product",
+      "promptVariant": "Describe a time you had to make a decision with incomplete or conflicting data.",
+      "situation": "A churn-risk model flagged low dashboard usage as a renewal risk, but customer interviews showed some enterprise admins used exports and APIs instead of the dashboard. The risk was that product investment would chase dashboard activity while ignoring the workflows enterprise admins actually relied on.",
+      "strongAnswerSketch": [
+        "Segment customers by job, integration path, account maturity, and renewal history instead of treating dashboard usage as universal value.",
+        "Keep dashboard work for self-serve customers but redirect enterprise investment toward API reliability and admin auditability.",
+        "Explain the decision to Sales with account examples, renewal-risk evidence, and the self-serve dashboard trade-off.",
+        "Change health scoring so product usage metrics differ by customer job and segment."
+      ],
+      "whyItWorks": [
+        "Shows Director-level portfolio judgment across segments.",
+        "Avoids overfitting product strategy to one metric.",
+        "Creates a better customer-health measurement mechanism."
+      ],
+      "weakVersion": "We realized dashboard usage was not the whole story, so we added qualitative customer context to our churn analysis.",
+      "followUpAngles": [
+        "Which metric was over-weighted?",
+        "How did you segment the data?",
+        "What investment moved?",
+        "How did customer health scoring change?"
+      ],
+      "aiVisual": "assets/generated/example-stories/enterprise-churn-model-conflict.jpg"
+    },
+    {
+      "id": "retention-save-rate-false-positive",
+      "title": "Retention Save Rate False Positive",
+      "level": "Director of Product",
+      "promptVariant": "Tell me about a time product data contradicted customer feedback.",
+      "situation": "A cancellation-flow experiment improved monthly save rate by 6 percent, and Finance wanted it expanded before a board update. Customer calls, complaint tags, and 90-day cohorts showed many saved accounts left after the discount period, had lower gross margin, and described the flow as confusing rather than valuable.",
+      "strongAnswerSketch": [
+        "Distinguish short-term save rate from durable retention, gross margin, complaint rate, and customer trust.",
+        "Stop the discount-heavy variant despite a retention forecast benefit and replace it with transparent downgrade, pause, and customer-success handoff options.",
+        "Tell Finance and executives that near-term churn would look worse for one quarter because the old metric counted delayed churn as retained value.",
+        "Change the retention dashboard to use 90-day retained gross margin, reason-coded cancellations, and complaint guardrails before expansion decisions."
+      ],
+      "whyItWorks": [
+        "Shows Director-level courage to reverse a favorable metric under executive pressure.",
+        "Connects product data to customer trust and business quality, not only usage movement.",
+        "Includes residual cost and a durable measurement-governance change."
+      ],
+      "weakVersion": "The save-rate data looked good, but customers did not like the experience, so we made the cancellation flow more transparent.",
+      "followUpAngles": [
+        "What made the save-rate metric a false positive?",
+        "Who wanted the favorable result preserved?",
+        "What short-term number got worse after your decision?",
+        "What changed in retention reporting?"
+      ],
+      "aiVisual": "assets/generated/example-stories/retention-save-rate-false-positive.jpg"
+    },
+    {
+      "id": "noisy-feedback-held-decision",
+      "title": "Noisy Feedback, Correct Metric",
+      "level": "Group Product Manager",
+      "promptVariant": "Tell me about a time data helped you hold a product decision despite noisy objections.",
+      "situation": "A self-serve onboarding change reduced time-to-first-value by 14 percent and improved 60-day retention for small teams, but several enterprise account managers pushed to roll it back after three large customers complained about losing a guided setup step.",
+      "strongAnswerSketch": [
+        "Separate the complaint segment from the target segment, comparing activation, support severity, expansion risk, and retention by company size.",
+        "Reject the reflexive rollback because the experiment was doing what it was designed to do for the self-serve segment.",
+        "Keep the new flow for self-serve customers, restore guided setup for enterprise accounts, and add an account-size routing rule before rollout.",
+        "Change experiment readouts so segment intent, exclusion criteria, and high-value-account guardrails are named before launch decisions."
+      ],
+      "whyItWorks": [
+        "Shows the candidate can trust valid evidence rather than treating every objection as proof the metric is wrong.",
+        "Balances customer feedback by segment instead of dismissing it.",
+        "Adds a durable decision rule that prevents both metric obedience and anecdote obedience."
+      ],
+      "weakVersion": "Enterprise customers complained, so we rolled back the onboarding change even though the experiment looked good for most users.",
+      "followUpAngles": [
+        "Which feedback was valid but not representative?",
+        "What would have been damaged by a full rollback?",
+        "How did you protect the enterprise segment without losing the self-serve win?",
+        "What changed in segment guardrails before the next rollout?"
+      ],
+      "aiVisual": "assets/generated/example-stories/noisy-feedback-held-decision.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer traces the path from original belief to evidence quality, customer behavior, decision, trade-off, and measurement improvement.",
+    "moves": [
+      "Names the original product belief and the data that challenged it.",
+      "Explains what the metric did and did not measure.",
+      "Combines quantitative, qualitative, support, and business evidence.",
+      "Names the segment, denominator, cohort, or time horizon that changed the interpretation.",
+      "Checks instrumentation, sampling, and event definitions when the readout is too clean, too convenient, or contradicted by operational signals.",
+      "Makes a decision despite stakeholder pressure or ambiguity.",
+      "Corrects their own recommendation when the data no longer supports it.",
+      "Names the cost of changing direction, narrowing the rollout, or holding the line.",
+      "Improves dashboards, experiment readouts, guardrails, or health scoring afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer uses data as decoration or treats one dashboard metric as the answer.",
+    "redFlags": [
+      "Says data changed the plan but cannot explain the mechanism.",
+      "Treats engagement, usage, or conversion as inherently good.",
+      "Calls a metric invalid without naming the instrumentation, denominator, sample, or segment problem.",
+      "Ignores segmentation and cohort differences.",
+      "Uses qualitative feedback only when it supports the preferred direction.",
+      "Treats loud anecdotal objections as automatically more important than clean segment evidence.",
+      "Cannot name the trade-off when the team changed course or held the line.",
+      "Has no change to metric definitions or decision process."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "metric-quality",
+      "question": "What made the data trustworthy, misleading, or invalid?",
+      "tests": [
+        "measurement",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Weekly active use was real but misleading because repeated opens increased while task completion and customer confidence fell.",
+          "Dashboard usage was a weak enterprise health signal because many mature customers consumed value through exports and APIs.",
+          "The trial-start lift was not trustworthy because duplicate starts were counted as conversions while Safari checkout errors and refund tickets were underrepresented."
+        ],
+        "weak": [
+          "The data was directionally useful.",
+          "The dashboard showed a clear trend, so we trusted it."
+        ]
+      }
+    },
+    {
+      "id": "changed-decision",
+      "question": "What decision did you change, narrow, or hold because of the data?",
+      "tests": [
+        "decision quality",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I paused rollout and changed the success metric from recommendation opens to completed next action and time-to-decision.",
+          "I moved enterprise investment from dashboard features to API reliability and admin auditability after segmenting the renewal evidence.",
+          "I kept the self-serve onboarding change but added enterprise routing because the complaints were valid for one segment, not the target cohort.",
+          "I withdrew a rollout recommendation from the quarterly plan, shipped only the low-risk copy changes, and rebuilt checkout validation before retesting."
+        ],
+        "weak": [
+          "We decided to keep iterating.",
+          "We adjusted the roadmap based on what the data showed."
+        ]
+      }
+    },
+    {
+      "id": "tradeoff-pressure",
+      "question": "What stakeholder pressure or short-term cost made the decision hard to own?",
+      "tests": [
+        "trade-off reasoning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Growth had already planned the engagement lift into the rollout target, so pausing meant missing the quarter's adoption commitment.",
+          "Finance wanted to preserve the apparent retention win, and I had to explain why one-quarter churn would rise when we stopped counting delayed churn as retained value.",
+          "Enterprise account managers wanted a full rollback, and I had to protect their accounts without throwing away a real self-serve retention gain.",
+          "I had to tell executives that the experiment win I had endorsed was not reliable enough for planning, which cost two weeks and removed a forecasted trial-start lift from the plan."
+        ],
+        "weak": [
+          "Some stakeholders preferred the original plan.",
+          "It was hard because the data was mixed and stakeholders disagreed."
+        ]
+      }
+    },
+    {
+      "id": "measurement-system",
+      "question": "What changed in how the team now measures product success?",
+      "tests": [
+        "learning",
+        "execution"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Experiment readouts now include target behavior, guardrails, support signals, and cohort retention, not only top-line engagement.",
+          "Customer health scoring now uses different product signals for self-serve admins, API-heavy enterprise accounts, and early-stage trials.",
+          "Rollout reviews now require segment intent, exclusion criteria, and high-value-account guardrails before interpreting complaints or wins.",
+          "Experiment wins now need event-owner sign-off, sample-ratio checks, browser and device coverage, and refund guardrails before they can affect planning."
+        ],
+        "weak": [
+          "We added more metrics.",
+          "We look at qualitative and quantitative data together now."
+        ]
+      }
+    },
+    {
+      "id": "confirmed-decision",
+      "question": "When did the data confirm the original direction instead of overturning it?",
+      "tests": [
+        "judgment",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The experiment confirmed the self-serve onboarding change for small teams because activation and 60-day retention improved in the intended cohort while enterprise complaints came from an excluded segment.",
+          "I held the pricing education change after cohort analysis showed the negative feedback was concentrated among low-fit trials that previously converted but refunded quickly."
+        ],
+        "weak": [
+          "The data supported our plan, so we kept going.",
+          "There were complaints, but the metrics looked good."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "metric-literacy",
+        "name": "Metric Literacy",
+        "strong": "Explains what a metric measures, where it fails, and how it relates to customer value.",
+        "weak": "Treats a dashboard movement as self-evident truth or dismisses it as flawed without evidence.",
+        "strongAiVisual": "assets/generated/signals/metric-literacy-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/metric-literacy-weak.jpg"
+      },
+      {
+        "id": "evidence-integration",
+        "name": "Evidence Integration",
+        "strong": "Combines data, customer feedback, support signals, cohorts, and business context.",
+        "weak": "Cherry-picks the evidence that supports the preferred roadmap.",
+        "strongAiVisual": "assets/generated/signals/evidence-integration-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/evidence-integration-weak.jpg"
+      },
+      {
+        "id": "measurement-discipline",
+        "name": "Measurement Discipline",
+        "strong": "Improves experiment, dashboard, guardrail, or health-scoring mechanisms.",
+        "weak": "Learns a one-off lesson without changing the measurement system.",
+        "strongAiVisual": "assets/generated/signals/measurement-discipline-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/measurement-discipline-weak.jpg"
+      },
+      {
+        "id": "reversal-discipline",
+        "name": "Decision Discipline",
+        "strong": "Names the stakeholder pressure, rejected alternative, and short-term cost of changing direction or holding the line.",
+        "weak": "Presents the decision as obvious after the fact or hides the cost.",
+        "strongAiVisual": "assets/generated/signals/reversal-discipline-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/reversal-discipline-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Senior Product Manager",
+        "expected": "Uses data to change, refine, or defend a product decision, validates evidence quality, explains metric limits, and defines better success measures."
+      },
+      {
+        "level": "Group Product Manager",
+        "expected": "Improves how multiple product areas interpret evidence, check instrumentation quality, set guardrails, and review experiment readouts."
+      },
+      {
+        "level": "Director of Product",
+        "expected": "Connects product metrics to customer segments, business outcomes, portfolio investment decisions, and durable measurement governance."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "metric-literacy",
+      "evidence-integration",
+      "measurement-discipline",
+      "reversal-discipline"
+    ],
+    "followUpTree": [
+      "metric-quality",
+      "changed-decision",
+      "tradeoff-pressure",
+      "measurement-system",
+      "confirmed-decision"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "Which product decision depended on ambiguous or conflicting data?"
+      },
+      {
+        "field": "task",
+        "label": "What decision were you personally accountable for, and what pressure made it hard?"
+      },
+      {
+        "field": "action",
+        "label": "How did you test data quality, integrate evidence, compare alternatives, and change, narrow, or defend direction?"
+      },
+      {
+        "field": "result",
+        "label": "What customer, product, or business outcome changed? What short-term cost remained?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about when to trust, challenge, or hold a metric?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What dashboard, experiment, guardrail, or health-scoring mechanism changed?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "trustworthy-online-controlled-experiments",
+        "group": "Experimentation and Guardrails",
+        "title": "Trustworthy Online Controlled Experiments",
+        "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59",
+        "source": "Cambridge University Press",
+        "type": "Book page",
+        "year": "2020",
+        "why": "Canonical reference for experiment trustworthiness, metric definition, novelty effects, and pitfalls that can make product data misleading.",
+        "groupDescription": "Resources for interpreting experiments, protecting guardrail metrics, and deciding when a product signal is trustworthy enough to act on."
+      },
+      {
+        "id": "airbnb-experimentation-guardrails",
+        "group": "Experimentation and Guardrails",
+        "title": "Designing Experimentation Guardrails",
+        "url": "https://medium.com/airbnb-engineering/designing-experimentation-guardrails-ed6a976ec669",
+        "source": "The Airbnb Tech Blog",
+        "type": "Article",
+        "year": "2021",
+        "why": "Shows how a large product organization uses guardrails and escalation to avoid shipping local metric wins that damage broader outcomes.",
+        "groupDescription": "Resources for interpreting experiments, protecting guardrail metrics, and deciding when a product signal is trustworthy enough to act on."
+      },
+      {
+        "id": "spotify-guardrail-metrics",
+        "group": "Experimentation and Guardrails",
+        "title": "Better Product Decisions with Guardrail Metrics",
+        "url": "https://confidence.spotify.com/blog/better-decisions-with-guardrails",
+        "source": "Spotify Confidence",
+        "type": "Article",
+        "year": "2024",
+        "why": "Explains how guardrail metrics and non-inferiority thinking force teams to specify acceptable trade-offs before deciding to ship.",
+        "groupDescription": "Resources for interpreting experiments, protecting guardrail metrics, and deciding when a product signal is trustworthy enough to act on."
+      },
+      {
+        "id": "booking-democratizing-experiments",
+        "group": "Experimentation and Guardrails",
+        "title": "Democratizing Online Controlled Experiments at Booking.com",
+        "url": "https://arxiv.org/abs/1710.08217",
+        "source": "arXiv",
+        "type": "Paper",
+        "year": "2017",
+        "why": "Useful for Director-level probes about making experimentation trustworthy through infrastructure, safeguards, and shared learning mechanisms.",
+        "groupDescription": "Resources for interpreting experiments, protecting guardrail metrics, and deciding when a product signal is trustworthy enough to act on."
+      },
+      {
+        "id": "microsoft-sample-ratio-mismatch",
+        "group": "Experiment Data Quality",
+        "title": "Diagnosing Sample Ratio Mismatch in Online Controlled Experiments",
+        "url": "https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/",
+        "source": "Microsoft Research",
+        "type": "Paper",
+        "year": "2019",
+        "why": "Gives concrete diagnostics for experiment assignment, sampling, and instrumentation problems that can turn an apparent product win into bad evidence.",
+        "groupDescription": "Resources for detecting instrumentation, sampling, telemetry, and assignment problems before experiment results drive a rollout."
+      },
+      {
+        "id": "microsoft-telemetry-loss",
+        "group": "Experiment Data Quality",
+        "title": "Trustworthy Experimentation Under Telemetry Loss",
+        "url": "https://www.microsoft.com/en-us/research/publication/trustworthy-experimentation-under-telemetry-loss/",
+        "source": "Microsoft Research",
+        "type": "Paper",
+        "year": "2018",
+        "why": "Deepens probes about browser gaps, upload loss, and missing events by showing how telemetry loss can bias experiment decisions at scale.",
+        "groupDescription": "Resources for detecting instrumentation, sampling, telemetry, and assignment problems before experiment results drive a rollout."
+      },
+      {
+        "id": "hbr-surprising-power-online-experiments",
+        "group": "Data-Informed Product Judgment",
+        "title": "The Surprising Power of Online Experiments",
+        "url": "https://hbr.org/2017/09/the-surprising-power-of-online-experiments",
+        "source": "Harvard Business Review",
+        "type": "Article",
+        "year": "2017",
+        "why": "Counterbalances reversal stories by showing how controlled experiments can defend undervalued ideas against expert opinion or roadmap inertia.",
+        "groupDescription": "Resources for distinguishing data-informed judgment from metric obedience, anecdote obedience, or hindsight storytelling."
+      },
+      {
+        "id": "svpg-outcomes-are-hard",
+        "group": "Data-Informed Product Judgment",
+        "title": "Outcomes Are Hard",
+        "url": "https://www.svpg.com/outcomes-are-hard/",
+        "source": "Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2025",
+        "why": "Connects product metrics to real customer and business outcomes, including the risk of measuring existing KPIs instead of the problem being solved.",
+        "groupDescription": "Resources for distinguishing data-informed judgment from metric obedience, anecdote obedience, or hindsight storytelling."
+      },
+      {
+        "id": "nng-ux-research-methods",
+        "group": "Customer Evidence and Discovery",
+        "title": "When to Use Which User-Experience Research Methods",
+        "url": "https://www.nngroup.com/articles/which-ux-research-methods/",
+        "source": "Nielsen Norman Group",
+        "type": "Article",
+        "year": "2022",
+        "why": "Helps calibrate whether a PM used the right evidence for the decision by separating behavior from attitude, qualitative from quantitative, and discovery from launch assessment.",
+        "groupDescription": "Resources for combining behavioral analytics with qualitative evidence so product decisions explain customer behavior, not only metric movement."
+      },
+      {
+        "id": "continuous-discovery-habits",
+        "group": "Customer Evidence and Discovery",
+        "title": "Continuous Discovery Habits (the Book) is Finally Here!",
+        "url": "https://www.producttalk.org/continuous-discovery-habits/",
+        "source": "Product Talk",
+        "type": "Book page",
+        "year": "2021",
+        "why": "Adds a practical cadence for customer touchpoints, outcome framing, and assumption tests when dashboards and feedback conflict.",
+        "groupDescription": "Resources for combining behavioral analytics with qualitative evidence so product decisions explain customer behavior, not only metric movement."
+      },
+      {
+        "id": "reforge-north-star-metric-deceive",
+        "group": "Metric Quality and Product Outcomes",
+        "title": "Don't Let Your North Star Metric Deceive You",
+        "url": "https://www.reforge.com/blog/north-star-metric-growth",
+        "source": "Reforge",
+        "type": "Article",
+        "year": "2018",
+        "why": "Shows why one metric can hide retention, engagement, and monetization trade-offs unless teams inspect the broader product system.",
+        "groupDescription": "Resources for choosing metrics that reflect customer value, business quality, and segment reality rather than dashboard movement alone."
+      },
+      {
+        "id": "mixpanel-vanity-metrics",
+        "group": "Metric Quality and Product Outcomes",
+        "title": "What Are Vanity Metrics? Insights from the Mixpanel Team",
+        "url": "https://mixpanel.com/blog/vanity-metrics/",
+        "source": "Mixpanel",
+        "type": "Article",
+        "year": "2025",
+        "why": "Provides practical tests for whether a metric drives decisions, connects to user value, and maps to business outcomes.",
+        "groupDescription": "Resources for choosing metrics that reflect customer value, business quality, and segment reality rather than dashboard movement alone."
+      },
+      {
+        "id": "amplitude-product-metrics",
+        "group": "Metric Quality and Product Outcomes",
+        "title": "The Amplitude Guide to Product Metrics",
+        "url": "https://amplitude.com/product-metrics",
+        "source": "Amplitude",
+        "type": "Guide",
+        "why": "Useful baseline for activation, engagement, retention, and monetization metrics, and for choosing combinations that avoid low-impact measurement.",
+        "groupDescription": "Resources for choosing metrics that reflect customer value, business quality, and segment reality rather than dashboard movement alone."
+      },
+      {
+        "id": "andrew-chen-consumer-product-metrics",
+        "group": "Metric Quality and Product Outcomes",
+        "title": "Why Consumer Product Metrics Are All Terrible",
+        "url": "https://andrewchen.com/why-consumer-product-metrics-are-all-terrible/",
+        "source": "Andrew Chen",
+        "type": "Essay",
+        "why": "Adds realism about retention and engagement baselines so candidates can explain when a superficially weak metric is normal, meaningful, or fixable.",
+        "groupDescription": "Resources for choosing metrics that reflect customer value, business quality, and segment reality rather than dashboard movement alone."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A top-line metric improves while customer value gets worse.",
+    "Customer interviews contradict a churn or adoption model.",
+    "A PM must decide despite incomplete or biased data.",
+    "A conversion or retention experiment wins but harms downstream quality.",
+    "A product team changes its experiment readout after a misleading result.",
+    "A product leader holds a decision after evidence shows objections are valid for one segment but not representative of the target cohort.",
+    "A PM reverses a recommendation after discovering an experiment win depended on faulty instrumentation or biased sampling."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

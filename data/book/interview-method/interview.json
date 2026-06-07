@@ -1,103 +1,192 @@
 {
   "id": "interview-method",
-  "title": "The Senior Behavioral Interview Method",
-  "description": "A reusable method for structuring senior technology leadership stories with clear ownership, hard trade-offs, **measurable outcomes**, reflection, and system change.",
+  "title": "The Behavioral Interview Method",
+  "description": "A reusable method for turning real work into behavioral interview stories across engineering, product, management, and executive technology roles, with clear ownership, trade-offs, **measurable outcomes**, reflection, and right-sized system change.",
   "roleFocus": [
+    "Software Engineer",
+    "Senior Software Engineer",
+    "Tech Lead",
+    "Engineering Manager",
+    "Senior Engineering Manager",
     "Senior Manager",
     "Director",
     "VP Engineering",
-    "CTO"
+    "CTO",
+    "Product Manager",
+    "Senior Product Manager",
+    "Group Product Manager",
+    "Director of Product",
+    "VP Product"
   ],
   "difficulty": "foundational",
   "competency": {
     "id": "structured-storytelling",
-    "name": "Structured Leadership Storytelling",
+    "name": "Structured Behavioral Storytelling",
     "family": "Interview Method",
-    "definition": "Turns real leadership situations into concise, **evidence-based** stories that reveal judgment, ownership, and operating impact.",
-    "whyItMatters": "Senior interviews test how a leader thinks under pressure, not how well they can recite a polished anecdote."
+    "definition": "Turns real work situations into concise, **evidence-based** stories that make judgment, ownership, collaboration, and level-appropriate impact visible.",
+    "whyItMatters": "Behavioral interviews test how candidates think and act under real constraints, not how well they can recite a prepared anecdote."
   },
   "prompt": {
-    "primary": "Walk me through a senior leadership story using Situation, Task, Action, Result, Reflection, and **System Change**.",
+    "primary": "Walk me through a behavioral interview story using Situation, Task, Action, Result, Reflection, and **System Change**.",
     "variants": [
-      "How do you choose the right behavioral story for a broad prompt?",
-      "How do you keep a senior answer concise without flattening the important judgment?"
+      "How do you choose the strongest behavioral story for a broad prompt?",
+      "How do you calibrate the same story for an IC, manager, product, or executive role?",
+      "How do you keep an answer concise without flattening the important judgment?"
     ],
     "interviewerIntent": [
-      "Can the candidate separate necessary context from personal action?",
-      "Do they show judgment, trade-offs, and **measurable outcomes**?",
-      "Do they connect learning to **durable operating change**?"
+      "Can the candidate separate necessary context from their own actions?",
+      "Do they show judgment, trade-offs, and **measurable outcomes** at the right role scope?",
+      "Do they connect learning to a **right-sized system change**?"
     ]
   },
   "scenario": {
-    "signatureExample": "A candidate builds a leadership story bank, then selects and frames one story around competencies, signals, and follow-up risks.",
+    "signatureExample": "A candidate builds a small story bank, then selects and frames one story around competencies, level expectations, signals, and follow-up risks.",
     "context": [
-      "Senior behavioral prompts are often broad, so story selection matters.",
-      "The same event can demonstrate different signals depending on the opening frame.",
-      "Interviewers will probe for details that expose real ownership, trade-offs, and evidence."
+      "Behavioral prompts are broad by design, so story selection is part of the assessment.",
+      "The same event can demonstrate different signals depending on the opening frame and the details the candidate chooses to include.",
+      "Interviewers will probe for details that expose real ownership, trade-offs, and evidence.",
+      "The worked examples are **samples**, not scripts; they show one method across customer-facing defects, product discovery, platform influence, team delivery, cross-functional conflict, portfolio strategy, and company direction.",
+      "Candidates should map their own role to the nearest level and scope rather than expecting a dedicated story for every rubric row."
     ],
     "constraints": [
-      "Answers usually need to land in three to five minutes before follow-ups.",
-      "The candidate must sound prepared without sounding scripted or generic.",
-      "The story must expose **trade-offs**, not just successful execution."
+      "Answers usually need to fit into three to five minutes before follow-ups.",
+      "The candidate must sound prepared, not memorized or generic.",
+      "The story must expose a constraint, trade-off, disagreement, or learning moment, not just successful execution."
     ]
   },
   "storyAnatomy": {
-    "situation": "Give the interviewer the business, organizational, or technical context they need in one or two sentences.",
-    "task": "State your personal accountability, the decision pressure, and what success required.",
+    "situation": "Give only the customer, business, organizational, product, or technical context the interviewer needs in one or two sentences.",
+    "task": "State your personal accountability, the decision pressure, and what success required at your role scope.",
     "action": [
-      "Describe the decisions, mechanisms, or conversations you drove.",
-      "Name the stakeholders who had different incentives.",
+      "Describe the decisions, mechanisms, and conversations you drove.",
+      "Name the stakeholders or functions that had different incentives.",
       "Explain **trade-offs** and alternatives without getting lost in chronology."
     ],
     "result": [
       "Quantify the outcome when possible.",
-      "Describe customer, business, team, or reliability impact in concrete terms.",
+      "If metrics are unavailable, describe customer, business, team, product, or reliability impact in observable terms.",
       "Name mixed or partial outcomes explicitly."
     ],
-    "reflection": "State what you learned, what you would now do differently, and what judgment changed.",
+    "reflection": "State what you learned, what you would now do differently, and how your judgment changed.",
     "systemChange": [
-      "Show the **operating mechanism** that changed after the event.",
-      "Connect the change to how the organization became more capable.",
-      "Right-size the mechanism to the scope: team ritual, cross-team governance, portfolio investment rule, or company policy."
+      "Name the **operating mechanism** that changed after the event.",
+      "Scale the mechanism to the role: personal practice, team ritual, cross-team governance, product decision rule, portfolio investment rule, or company policy.",
+      "Connect the change to how customers, the team, the product, or the organization became more capable."
     ]
   },
   "exampleStories": [
     {
-      "id": "outage-story-selection",
-      "title": "Choosing the Right Outage Story",
-      "level": "Director",
-      "promptVariant": "Tell me about a major failure you were responsible for.",
-      "situation": "The candidate has three outage stories available and chooses the one where they owned **executive communication**, recovery trade-offs, and post-incident operating changes.",
+      "id": "engineer-defect-ownership",
+      "title": "Turning a Defect Fix into an Ownership Story",
+      "level": "Software Engineer",
+      "promptVariant": "Tell me about a time you took ownership of a problem.",
+      "situation": "A checkout latency regression hit production after a small API change. The candidate chooses the story because it shows personal diagnosis, recovery judgment, and a team guardrail, not just a bug fix.",
       "strongAnswerSketch": [
-        "Open with why the outage mattered to customers and the business, not with the full technical timeline.",
-        "State personal accountability for incident structure, executive updates, and recovery criteria.",
-        "Name the **trade-off** between fast rollback and data consistency risk.",
-        "Close with the **durable mechanism**: rollout readiness gates and a post-incident action tracker."
+        "Open with customer impact and the rollback constraint, not the full code path.",
+        "State personal accountability for isolating the regression, coordinating the rollback decision, and explaining the residual risk.",
+        "Name the **trade-off** between reverting quickly and preserving a data migration that was already partially complete.",
+        "Finish with the measurable recovery and the lasting mechanism: a performance budget check, alert threshold, and code-review checklist for similar endpoints."
       ],
       "whyItWorks": [
-        "Shows story selection discipline instead of reciting the most dramatic incident.",
-        "Separates personal leadership action from team troubleshooting.",
-        "Ends with reflection and **system change**, which is the senior-level signal."
+        "Shows ownership at IC scope without pretending to own the whole incident program.",
+        "Separates the candidate's decisions from the broader team's operational response.",
+        "Ends with a team-level mechanism that is credible for an engineer to introduce."
       ],
-      "weakVersion": "I would walk through the outage chronologically, say the team worked hard, and end by saying we learned to test more.",
+      "weakVersion": "I would explain the bug, say I fixed it quickly, mention extra tests, and call it a team win.",
       "followUpAngles": [
-        "What did you personally miss before the outage?",
-        "What alternatives did you consider during recovery?",
-        "What changed in rollout governance after the incident?"
+        "What did you personally decide during the rollback discussion?",
+        "What signal did you miss before the change reached production?",
+        "Which guardrail changed after the incident?"
       ],
-      "aiVisual": "assets/generated/example-stories/outage-story-selection.jpg"
+      "aiVisual": "assets/generated/example-stories/engineer-defect-ownership.jpg"
     },
     {
-      "id": "compressing-complex-conflict",
-      "title": "Compressing a Complex Conflict Story",
-      "level": "VP Engineering",
-      "promptVariant": "Tell me about a time you strongly disagreed with an executive peer.",
-      "situation": "A conflict involving Sales, Product, and Finance could become a ten-minute org-history tour unless the candidate frames it around one decision and one operating change.",
+      "id": "pm-discovery-direction",
+      "title": "Framing a Product Discovery Trade-Off",
+      "level": "Product Manager",
+      "promptVariant": "Tell me about a time customer evidence changed your product direction.",
+      "situation": "A product manager was asked to prioritize an analytics dashboard, but activation data, interviews, and support tickets pointed to onboarding confusion as the larger retention risk.",
       "strongAnswerSketch": [
-        "Name the decision: whether to commit engineering capacity to a bespoke enterprise feature.",
+        "Name the business problem: paid trials were starting but not reaching the first successful workflow.",
+        "State personal accountability for synthesizing evidence and recommending a narrower onboarding bet instead of the requested dashboard.",
+        "Explain the **trade-off** between satisfying a vocal sales request and fixing a measurable adoption bottleneck.",
+        "Finish with the outcome and the repeatable mechanism: a discovery brief template that tied customer quotes, funnel data, and launch criteria to each prioritization decision."
+      ],
+      "whyItWorks": [
+        "Shows product judgment through evidence quality, not generic customer empathy.",
+        "Makes the rejected option credible instead of caricaturing stakeholders.",
+        "Connects the story to a repeatable decision mechanism."
+      ],
+      "weakVersion": "I would say I talked to customers, got stakeholder alignment, and helped the team choose what users needed most.",
+      "followUpAngles": [
+        "What evidence changed your mind?",
+        "What did Sales lose when you delayed the dashboard?",
+        "How did your product decision process change afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/pm-discovery-direction.jpg"
+    },
+    {
+      "id": "tech-lead-platform-migration",
+      "title": "Framing a Platform Migration as a Tech Lead Story",
+      "level": "Tech Lead",
+      "promptVariant": "Tell me about a time you influenced peers without authority.",
+      "situation": "A tech lead needed three product teams to adopt a shared event-contract library. Without it, reconciliation defects and duplicated adapter work were becoming a recurring platform drag. The candidate chooses the story because it shows technical framing, peer influence, and right-sized system change without claiming formal people-management authority.",
+      "strongAnswerSketch": [
+        "Open with the customer and operational cost: duplicate reconciliation defects, slower partner onboarding, and support load from incompatible event payloads.",
+        "State personal accountability for the migration contract, pilot scope, compatibility layer, and adoption forum, not for each team's roadmap.",
+        "Name the **trade-off** among a forced big-bang migration, continued fragmentation, and a sequenced pilot where the platform team absorbed adapter work.",
+        "Acknowledge that one product team had a legitimate reason to resist: a prior platform migration had consumed roadmap capacity without clear payoff.",
+        "Finish with the measurable outcome and repeatable mechanism: fewer reconciliation tickets, faster partner onboarding, a version deprecation rule, and a migration checklist used in later platform changes."
+      ],
+      "whyItWorks": [
+        "Shows Tech Lead scope through technical direction and peer influence rather than authority.",
+        "Keeps a platform story tied to customer, support, and delivery consequences instead of architecture preference.",
+        "Ends with a migration mechanism credible for a tech lead to introduce and maintain."
+      ],
+      "weakVersion": "I would describe the new architecture, say I convinced the teams to migrate, and conclude that the platform became more scalable.",
+      "followUpAngles": [
+        "Which team had the best reason to resist adoption?",
+        "What technical compromise did you accept to make the migration credible?",
+        "What migration rule or interface contract changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/tech-lead-platform-migration.jpg"
+    },
+    {
+      "id": "manager-delivery-coaching",
+      "title": "Turning a Team Delivery Problem into a Manager Story",
+      "level": "Engineering Manager",
+      "promptVariant": "Tell me about a time your team repeatedly missed commitments.",
+      "situation": "A team missed three sprint commitments because support interruptions, unclear ownership, and uneven senior-engineer coaching were hidden until the end of each cycle.",
+      "strongAnswerSketch": [
+        "Open with the recurring delivery cost and its effect on a partner team's launch date.",
+        "State personal accountability for capacity rules, interruption triage, and coaching expectations.",
+        "Name the **trade-off** between protecting all planned work and reserving explicit capacity for production support.",
+        "Finish with measurable predictability improvement and the team mechanism: intake thresholds, named owners, and a coaching review in one-on-ones."
+      ],
+      "whyItWorks": [
+        "Shows manager-level ownership without blaming individual engineers.",
+        "Ties delivery mechanics to people development and capacity judgment.",
+        "Makes the system change visible through rules, owners, and inspection cadence."
+      ],
+      "weakVersion": "I would say the team improved communication, estimated better, and became more accountable after I set clearer expectations.",
+      "followUpAngles": [
+        "Which commitment rule did you personally change?",
+        "Who disagreed with reserving support capacity?",
+        "How did you know coaching behavior changed?"
+      ],
+      "aiVisual": "assets/generated/example-stories/manager-delivery-coaching.jpg"
+    },
+    {
+      "id": "director-cross-team-decision",
+      "title": "Compressing a Cross-Team Conflict Story",
+      "level": "Director",
+      "promptVariant": "Tell me about a time you strongly disagreed with a peer or stakeholder.",
+      "situation": "A conflict involving Sales, Product, and Engineering could become a ten-minute organizational history tour unless the candidate frames it around one enterprise-commitment decision and one operating change.",
+      "strongAnswerSketch": [
+        "Name the enterprise-commitment decision: whether to commit engineering capacity to a bespoke customer feature.",
         "Explain each function's competing incentive in one sentence.",
         "Describe the mechanism introduced: an enterprise commitment review with productized alternatives.",
-        "Report the outcome and what changed in later deal reviews."
+        "Report the customer or revenue outcome, the relationship cost, and what changed in later deal reviews."
       ],
       "whyItWorks": [
         "Avoids drowning the interviewer in organizational history.",
@@ -110,76 +199,78 @@
         "What did you offer instead of saying no?",
         "How did the relationship change afterward?"
       ],
-      "aiVisual": "assets/generated/example-stories/compressing-complex-conflict.jpg"
+      "aiVisual": "assets/generated/example-stories/director-cross-team-decision.jpg"
     },
     {
-      "id": "planning-cadence-story",
-      "title": "Turning a Planning Cadence Change into a Story",
-      "level": "Senior Manager",
-      "promptVariant": "Tell me about a time you improved execution across multiple teams.",
-      "situation": "There was no outage, executive blow-up, or single dramatic incident: four teams repeatedly missed cross-team commitments because dependencies surfaced only after scope and dates were promised.",
+      "id": "product-leader-portfolio-tradeoff",
+      "title": "Compressing a Product Portfolio Trade-Off",
+      "level": "Director of Product",
+      "promptVariant": "Tell me about a time you changed product strategy across teams.",
+      "situation": "A Director of Product had three teams optimizing a consumer app's engagement surface, but cohort analysis, user research, and support tickets showed new users were abandoning setup because privacy controls and first-run guidance were confusing.",
       "strongAnswerSketch": [
-        "Open with the recurring business cost: three enterprise commitments slipped, and dependency surprises appeared after customer dates were promised.",
-        "State personal accountability for the planning mechanism, dependency owner rules, and escalation path, not for every team's roadmap.",
-        "Name the **trade-off** among a heavyweight quarterly planning freeze, a lightweight weekly status sync, and a narrower dependency review.",
-        "Show the durable mechanism: planning entry criteria, dependency owner review, and a two-cycle confidence dashboard; also name the residual cost that two exploratory projects slowed down."
+        "Open with the product and business signal: activation flattened while short-term engagement experiments still looked locally promising.",
+        "State personal accountability for reframing the portfolio decision, setting target metrics, and deciding which team lost investment.",
+        "Name the **trade-off** among continuing committed engagement experiments, funding a platform cleanup, and redirecting capacity toward onboarding trust and activation.",
+        "Finish with the measurable outcome, the paused work that still hurt, and the portfolio mechanism: a product review rule requiring a target cohort, guardrail metric, evidence quality, and explicit opportunity cost before funding new bets."
       ],
       "whyItWorks": [
-        "Demonstrates that senior stories do not need an outage or confrontation to reveal judgment.",
-        "Makes a quiet operating-system change concrete through decision rights, measurement, rejected alternatives, and residual cost.",
-        "Shows ownership across teams without overstating authority over each roadmap."
+        "Shows product-leadership scope through portfolio choices across teams, not backlog management.",
+        "Balances the enterprise examples with a consumer product and trust context.",
+        "Compresses a broad strategy story into one decision, one rejected path, one residual cost, and one repeatable funding mechanism."
       ],
-      "weakVersion": "I would say we improved communication, added a weekly planning sync, and got better at surfacing dependencies.",
+      "weakVersion": "I would say we got the PMs aligned around a clearer roadmap, listened to customers, and shifted focus to the highest-impact opportunity.",
       "followUpAngles": [
-        "Which dependency rules or owners did you personally change?",
-        "What process did you reject because it was too heavy?",
-        "What residual cost remained after the planning change?"
-      ]
+        "Which team lost investment, and why was that acceptable?",
+        "What evidence mattered more than stakeholder preference?",
+        "What product review rule changed after the decision?"
+      ],
+      "aiVisual": "assets/generated/example-stories/product-leader-portfolio-tradeoff.jpg"
     },
     {
-      "id": "strategy-story-framing",
+      "id": "executive-strategy-framing",
       "title": "Framing a Company-Level Strategy Story",
       "level": "CTO",
-      "promptVariant": "Tell me about a time you changed the company's technical direction.",
-      "situation": "A candidate could describe an entire multi-year platform strategy, but instead chooses the board-level decision where they rejected an all-in rewrite and funded a staged modernization path.",
+      "promptVariant": "Tell me about a time you changed the company's technical or product direction.",
+      "situation": "A candidate could describe an entire multi-year platform or product strategy, but instead chooses the executive decision where they rejected a full rewrite and funded a staged modernization path.",
       "strongAnswerSketch": [
         "Name the business trigger: enterprise churn risk, slow integrations, and rising platform cost.",
-        "Frame the decision: rewrite, incremental modernization, or tolerate the constraint for another year.",
+        "Frame the decision among full rewrite, incremental modernization, and tolerating the constraint for another year.",
         "Explain the stakeholder conflict across Product, Finance, Sales, and Engineering without turning it into a roadmap tour.",
-        "Close with measurable outcomes, the cost of the slower path, and the governance mechanism that changed future investment decisions."
+        "Finish with measurable outcomes, the cost of the slower path, and the governance mechanism that changed future investment decisions."
       ],
       "whyItWorks": [
-        "Shows how to compress a company-level story into one decision and one durable mechanism.",
+        "Shows how to turn a company-level story into one decision and one durable mechanism.",
         "Credits the rejected attractive option instead of presenting the chosen strategy as obvious.",
         "Keeps the answer executive-level by tying architecture, revenue risk, investment, and trust together."
       ],
-      "weakVersion": "I would explain the full strategy, describe the architecture vision, and say the executive team aligned on the roadmap.",
+      "weakVersion": "I would explain the full strategy, describe the architecture vision, and say the executive team aligned behind the roadmap.",
       "followUpAngles": [
-        "Which CTO-level risk did you personally own?",
+        "Which executive-level risk did you personally own?",
         "What did you stop funding?",
         "What remained worse after the first year?"
-      ]
+      ],
+      "aiVisual": "assets/generated/example-stories/executive-strategy-framing.jpg"
     }
   ],
   "strongAnswerPattern": {
-    "summary": "A strong senior answer is compact, specific, owned, trade-off-aware, measurable, reflective, and connected to durable **system change**.",
+    "summary": "A strong answer is compact, specific about ownership, trade-off-aware, measurable, reflective, and connected to **right-sized system change**.",
     "moves": [
-      "Chooses a story with real stakes and ambiguity, not just the most dramatic event.",
-      "Frames the answer around personal leadership decisions and mechanisms.",
-      "Uses metrics and consequences instead of adjectives.",
+      "Chooses a story with real stakes, ambiguity, and scope appropriate to the target role, not just the most dramatic event.",
+      "Frames the answer around personal decisions, actions, influence, and mechanisms at the candidate's actual scope.",
+      "Uses metrics, observable consequences, and named stakeholders instead of adjectives.",
       "Anticipates follow-ups by naming rejected alternatives, disagreements, and residual costs.",
-      "Ends with reflection and a mechanism scaled to the leader's scope."
+      "Ends with reflection and a mechanism scaled to the role: personal practice, team habit, cross-team governance, product decision rule, portfolio rule, or policy."
     ],
     "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
   },
   "weakAnswerPattern": {
-    "summary": "A **weak answer** sounds polished but generic: it over-describes context, hides behind the team, avoids trade-offs, and ends at the immediate result.",
+    "summary": "A **weak answer** sounds polished but generic: it over-describes context, hides behind the team, avoids trade-offs, overclaims scope, or ends at the immediate result.",
     "redFlags": [
-      "The candidate uses we more than I when describing critical decisions.",
+      "The candidate uses \"we\" more than \"I\" when describing critical decisions.",
       "The answer has no measurable result, or it relies on vanity metrics.",
       "The story has no disagreement, constraint, or hard choice.",
       "The reflection is a slogan rather than a concrete learning.",
-      "No **operating mechanism** changed after the event."
+      "No **operating mechanism** changed after the event, or the proposed mechanism is too broad for the candidate's role."
     ],
     "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
   },
@@ -193,11 +284,13 @@
       ],
       "exampleAnswers": {
         "strong": [
-          "I chose the dependency story because I changed the planning entry criteria, assigned dependency owners, and owned the escalation rule for unresolved trade-offs.",
-          "In the executive conflict story, the team supplied the analysis, but I made the recommendation to reject bespoke delivery and accepted the revenue and relationship consequences."
+          "In the defect story, I owned the rollback recommendation, wrote the repro case, and added the latency check that would have caught this class of change earlier.",
+          "In the discovery story, I synthesized the evidence and recommended delaying the dashboard even though Sales had a real customer commitment attached to it.",
+          "In the platform migration story, I owned the event-contract proposal, pilot scope, compatibility-layer decision, and deprecation rule while each product team still owned its roadmap.",
+          "In the product portfolio story, I owned the recommendation to pause one engagement team's roadmap and redirect capacity toward onboarding trust because activation evidence outweighed local experiment wins."
         ],
         "weak": [
-          "We improved the process together, and I helped everyone communicate more clearly.",
+          "I helped everyone communicate more clearly and improve the process.",
           "The team made the right call after a lot of discussion, and I supported the decision."
         ]
       }
@@ -211,7 +304,9 @@
       ],
       "exampleAnswers": {
         "strong": [
-          "I rejected a weekly status meeting because the failure mode was unowned dependencies, not missing updates; I also rejected freezing all roadmap work because only two commitments carried high customer risk.",
+          "I rejected adding a broad regression suite because the failure mode was latency on one endpoint class; the cheaper guardrail was a performance budget on the affected path plus an alert tied to checkout success.",
+          "I rejected continuing all committed engagement experiments because they optimized already-activated users; I also rejected a broad platform cleanup because it did not directly address the setup abandonment signal.",
+          "I rejected a big-bang migration because the product teams had real roadmap commitments; sequencing one high-volume workflow first proved the contract while keeping a rollback path open.",
           "I rejected the all-in rewrite because it would have delayed enterprise commitments for a year; I chose staged modernization with explicit exit criteria and a plan to stop funding low-leverage custom work."
         ],
         "weak": [
@@ -229,12 +324,14 @@
       ],
       "exampleAnswers": {
         "strong": [
-          "I compared two planning cycles: dependency age dropped, late scope changes surfaced earlier, and cross-team commitments moved from 62% to 84% delivered within the agreed window.",
+          "For the onboarding story, I tracked activation to first successful workflow, support tickets about setup confusion, and whether the delayed dashboard request actually affected qualified pipeline.",
+          "For the platform migration story, I tracked reconciliation ticket volume, partner onboarding time, adoption by workflow, and whether new event versions followed the deprecation rule.",
+          "For the product portfolio story, I tracked new-user activation, privacy-related support contacts, retention guardrails, and whether the paused engagement work created a measurable revenue or usage gap.",
           "For the platform strategy story, I tracked integration lead time, percentage of custom work, gross-margin impact, and whether renewal-risk accounts stopped escalating architecture blockers."
         ],
         "weak": [
-          "People felt planning was smoother, and the leadership team seemed more comfortable.",
-          "The strategy worked because the executive team aligned and the roadmap looked more coherent."
+          "People felt the product direction was clearer, and the team seemed more comfortable with it.",
+          "The strategy worked because leadership aligned and the roadmap looked more coherent."
         ]
       }
     },
@@ -247,11 +344,13 @@
       ],
       "exampleAnswers": {
         "strong": [
-          "I would name the residual cost earlier: planning became more predictable, but two exploratory projects slowed, so now I include both the gain and the trade-off when I describe the result.",
+          "I would name the residual cost earlier: reserving support capacity improved predictability, but it delayed one planned feature, so now I make that trade-off explicit before the cycle starts.",
+          "I would invite the most skeptical product team into the pilot design earlier because their prior migration experience exposed adoption risks my platform team had underestimated.",
+          "I would involve Design and Support earlier in the product portfolio story because they had the clearest evidence that the trust problem was not just funnel friction.",
           "I would involve Finance and Customer Success earlier in the platform strategy because they had clearer evidence of margin pressure and customer-trust risk than Engineering did."
         ],
         "weak": [
-          "I would communicate earlier and more often so people understood the plan.",
+          "I would communicate sooner and more often so people understood the plan.",
           "Nothing major; the story worked out, and the remaining issues were normal execution details."
         ]
       }
@@ -262,15 +361,15 @@
       {
         "id": "ownership",
         "name": "Ownership",
-        "strong": "Names personal decisions, mechanisms, and consequences.",
-        "weak": "Hides behind the team or vague facilitation.",
+        "strong": "Names personal decisions, concrete mechanisms, and consequences.",
+        "weak": "Hides behind the team or vague facilitation language.",
         "strongAiVisual": "assets/generated/signals/ownership-strong.jpg",
         "weakAiVisual": "assets/generated/signals/ownership-weak.jpg"
       },
       {
         "id": "trade-offs",
         "name": "Trade-off Reasoning",
-        "strong": "Explains options, rejected paths, and why the chosen path fit the constraints.",
+        "strong": "Explains credible options, rejected paths, and why the chosen path fit the constraints.",
         "weak": "Treats the final decision as obvious.",
         "strongAiVisual": "assets/generated/signals/trade-offs-strong.jpg",
         "weakAiVisual": "assets/generated/signals/trade-offs-weak.jpg"
@@ -278,7 +377,7 @@
       {
         "id": "learning-loop",
         "name": "Learning Loop",
-        "strong": "Connects reflection to a right-sized **operating mechanism**: team ritual, org governance, portfolio rule, or company policy.",
+        "strong": "Connects reflection to a right-sized **operating mechanism**: personal practice, team ritual, product decision rule, org governance, portfolio rule, or company policy.",
         "weak": "Offers a generic lesson, or proposes an oversized process disconnected from the story's scope.",
         "strongAiVisual": "assets/generated/signals/learning-loop-strong.jpg",
         "weakAiVisual": "assets/generated/signals/learning-loop-weak.jpg"
@@ -286,20 +385,60 @@
     ],
     "rubric": [
       {
+        "level": "Software Engineer",
+        "expected": "Shows ownership of a bounded problem, clear personal action, technical or collaboration trade-offs, observable impact, and a durable improvement such as a test, monitor, checklist, runbook, or working habit."
+      },
+      {
+        "level": "Senior Software Engineer",
+        "expected": "Shows ownership of an ambiguous technical problem, credible trade-off reasoning, influence beyond one assigned task, measurable delivery or reliability impact, and a mechanism that raises future team quality."
+      },
+      {
+        "level": "Tech Lead",
+        "expected": "Shows technical direction across people or a project, peer influence without relying on authority, visible trade-offs, measurable execution or reliability impact, and a mechanism that improves future design, review, or operations."
+      },
+      {
+        "level": "Engineering Manager",
+        "expected": "Shows team accountability, people and delivery judgment, explicit capacity or coaching trade-offs, measurable team impact, and a team operating mechanism that can keep working without the manager personally pushing every detail."
+      },
+      {
+        "level": "Senior Engineering Manager",
+        "expected": "Shows ownership across multiple teams or managers, manager coaching and calibration, cross-team delivery trade-offs, measurable organizational impact, and a mechanism that improves planning, escalation, or manager effectiveness."
+      },
+      {
         "level": "Senior Manager",
-        "expected": "Shows ownership across teams with clear action, measurable delivery or people impact, and a team-level mechanism that can keep working without them."
+        "expected": "Shows cross-team ownership, stakeholder and decision-rights judgment, measurable delivery, people, or business impact, and changes how multiple teams plan, decide, inspect, or escalate work."
       },
       {
         "level": "Director",
-        "expected": "Shows cross-functional **trade-offs** and changes how multiple teams plan, decide, inspect, or escalate work."
+        "expected": "Shows functional ownership across teams, cross-functional trade-offs, measurable product, delivery, people, or business impact, and changes the operating mechanism for repeated decisions or escalations."
       },
       {
         "level": "VP Engineering",
-        "expected": "Shows executive judgment, portfolio-level consequences, and governance that improves repeated leadership decisions."
+        "expected": "Shows executive judgment across engineering execution, portfolio trade-offs, leadership systems, business risk, and executive alignment, then turns the learning into governance, investment rules, or operating principles."
       },
       {
         "level": "CTO",
-        "expected": "Shows company-level judgment across technology, **business risk**, culture, and external trust, then turns the learning into policy, investment rules, or operating principles."
+        "expected": "Shows executive judgment across technology, product, business risk, culture, and external trust, then turns the learning into portfolio governance, investment rules, policy, or operating principles."
+      },
+      {
+        "level": "Product Manager",
+        "expected": "Shows customer and business problem framing, evidence quality, prioritization trade-offs, outcome measurement, and a discovery, launch, or decision mechanism that improves future product choices."
+      },
+      {
+        "level": "Senior Product Manager",
+        "expected": "Shows ownership of an ambiguous product opportunity, cross-functional influence, evidence-based product judgment, measurable customer or business impact, and a mechanism that improves future product decisions."
+      },
+      {
+        "level": "Group Product Manager",
+        "expected": "Shows product direction across multiple PMs or product areas, portfolio trade-offs, customer and business judgment, measurable cross-team impact, and a mechanism that improves prioritization or product review quality."
+      },
+      {
+        "level": "Director of Product",
+        "expected": "Shows product strategy ownership across a domain, team-of-teams alignment, portfolio prioritization, measurable customer or business outcomes, and a product operating mechanism that improves future funding or review decisions."
+      },
+      {
+        "level": "VP Product",
+        "expected": "Shows executive product judgment across portfolio strategy, market positioning, customer trust, business trade-offs, and executive alignment, then turns the learning into investment rules, governance, or product operating principles."
       }
     ]
   },
@@ -344,19 +483,19 @@
       },
       {
         "field": "reflection",
-        "label": "What did you learn or revise in your leadership model?"
+        "label": "What did you learn or revise in your judgment model?"
       },
       {
         "field": "systemChange",
-        "label": "What changed beyond the immediate story, and was the mechanism right-sized for your responsibility level?"
+        "label": "What changed beyond the immediate story, and was the mechanism right-sized for your role scope?"
       }
     ]
   },
   "relatedScenarios": [
-    "Choosing the right story for a broad leadership-principle prompt.",
-    "Condensing a complex executive story into a concise interview answer.",
+    "Choosing the right story for a broad behavioral prompt.",
+    "Condensing a complex work story into a concise interview answer.",
     "Preparing for follow-ups that test whether ownership, trade-offs, and measurement were real.",
-    "Turning an operating cadence, talent, or strategy change into a concrete story."
+    "Turning a defect fix, discovery decision, platform migration, coaching intervention, operating cadence, or strategy change into a concrete story."
   ],
   "toProbeFurther": {
     "links": [
@@ -382,6 +521,17 @@
         "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
       },
       {
+        "id": "google-rework-structured-interviewing",
+        "group": "Interviewing and Calibration",
+        "title": "A guide to structured interviewing for better hiring practices",
+        "url": "https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices",
+        "source": "Google re:Work",
+        "type": "Guide",
+        "year": "2026",
+        "why": "Shows how consistent questions, detailed feedback, standardized rubrics, and interviewer calibration make behavioral stories comparable.",
+        "groupDescription": "Resources for structured behavioral interviewing, evidence gathering, and fair calibration."
+      },
+      {
         "id": "ddi-star-method",
         "group": "Behavioral Storytelling",
         "title": "STAR Method",
@@ -389,7 +539,7 @@
         "source": "DDI",
         "type": "Guide",
         "why": "Shows the Situation/Task, Action, Result frame and the STAR/AR learning extension used to connect missed outcomes to better future action.",
-        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
+        "groupDescription": "Resources for constructing concise, evidence-based work stories."
       },
       {
         "id": "mit-star-method",
@@ -399,7 +549,7 @@
         "source": "MIT Career Advising & Professional Development",
         "type": "Guide / Worksheet",
         "why": "Candidate-facing guidance for preparing adaptable stories with personal ownership, specific actions, and quantifiable outcomes.",
-        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
+        "groupDescription": "Resources for constructing concise, evidence-based work stories."
       },
       {
         "id": "amazon-star-interview-tips",
@@ -409,7 +559,7 @@
         "source": "Amazon",
         "type": "Article",
         "why": "Concrete company example of behavioral questions, STAR structure, data points, and first-person ownership.",
-        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
+        "groupDescription": "Resources for constructing concise, evidence-based work stories."
       },
       {
         "id": "hbs-stories-statistics-memory",
@@ -420,7 +570,18 @@
         "type": "Research summary",
         "year": "2023",
         "why": "Explains why concrete stories are memorable, while warning that senior leaders should pair anecdotes with representative evidence and measured results.",
-        "groupDescription": "Resources for constructing concise, evidence-based leadership stories."
+        "groupDescription": "Resources for constructing concise, evidence-based work stories."
+      },
+      {
+        "id": "jvns-brag-documents",
+        "group": "Behavioral Storytelling",
+        "title": "Get your work recognized: write a brag document",
+        "url": "https://jvns.ca/blog/brag-documents/",
+        "source": "Julia Evans",
+        "type": "Article / Template",
+        "year": "2019",
+        "why": "Helps candidates maintain a concrete story bank with accomplishments, impact, fuzzy work, and evidence before interview preparation starts.",
+        "groupDescription": "Resources for constructing concise, evidence-based work stories."
       },
       {
         "id": "mcclelland-behavioral-event-interviews",
@@ -456,25 +617,57 @@
         "groupDescription": "Research behind behavioral event interviewing, competency evidence, and structured selection."
       },
       {
+        "id": "sre-postmortem-culture",
+        "group": "Reflection and System Change",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "why": "Shows how to convert incidents into documented learning, follow-up actions, and repeatable prevention rather than stopping at the immediate fix.",
+        "groupDescription": "Resources for connecting reflection to durable mechanisms, operating changes, and learning loops."
+      },
+      {
         "id": "engineering-executives-interviewing",
-        "group": "Senior Leadership Interview Prep",
+        "group": "Level Calibration and Technical Leadership Prep",
         "title": "Interviewing Engineering Executives",
         "url": "https://www.oreilly.com/library/view/the-engineering-executives/9781098149475/app02.html",
         "source": "Will Larson / O'Reilly",
         "type": "Book appendix",
         "year": "2024",
         "why": "Provides VP and CTO-level calibration for executive skills, company-specific fit, engineering functional expertise, and historical behavior.",
-        "groupDescription": "Resources for calibrating senior technology leadership stories by scope, level, historical behavior, and executive impact."
+        "groupDescription": "Resources for calibrating technical and executive stories by scope, level, historical behavior, and impact."
       },
       {
         "id": "staff-plus-interview-processes",
-        "group": "Senior Leadership Interview Prep",
+        "group": "Level Calibration and Technical Leadership Prep",
         "title": "Staff-plus interview processes",
         "url": "https://staffeng.com/guides/staff-plus-interview-process/",
         "source": "Will Larson / StaffEng",
         "type": "Guide",
-        "why": "Helps distinguish senior-level impact signals from generic communication polish or speed, which improves story selection for technical leadership interviews.",
-        "groupDescription": "Resources for calibrating senior technology leadership stories by scope, level, historical behavior, and executive impact."
+        "why": "Helps distinguish level-specific impact signals from generic communication polish or speed, which improves story selection for technical leadership interviews.",
+        "groupDescription": "Resources for calibrating technical and executive stories by scope, level, historical behavior, and impact."
+      },
+      {
+        "id": "managers-path",
+        "group": "Level Calibration and Technical Leadership Prep",
+        "title": "The Manager's Path",
+        "url": "https://www.oreilly.com/library/view/the-managers-path/9781491973882/",
+        "source": "Camille Fournier / O'Reilly",
+        "type": "Book",
+        "year": "2017",
+        "why": "Gives engineering-management role scope from mentoring through managing managers, useful for choosing examples that match the candidate's actual level.",
+        "groupDescription": "Resources for calibrating technical and executive stories by scope, level, historical behavior, and impact."
+      },
+      {
+        "id": "svpg-product-discovery",
+        "group": "Product and Outcome Stories",
+        "title": "Product Discovery",
+        "url": "https://www.svpg.com/product-discovery/",
+        "source": "Marty Cagan / Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2007",
+        "why": "Useful for product and executive stories where the hard part is showing evidence, uncertainty, rejected options, and outcome-based learning before delivery.",
+        "groupDescription": "Resources for product, customer, and business-outcome stories that need evidence quality and trade-off framing."
       }
     ]
   },

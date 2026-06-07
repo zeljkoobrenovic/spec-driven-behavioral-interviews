@@ -1,0 +1,610 @@
+{
+  "id": "engineering-manager-delivery",
+  "title": "Team Execution and Delivery",
+  "description": "Tests whether engineering managers make realistic commitments, manage scope and risk, communicate resets clearly, and learn when teams miss, reset, or narrowly save delivery dates.",
+  "roleFocus": [
+    "Engineering Manager",
+    "Senior Engineering Manager",
+    "Director"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "team-execution-delivery",
+    "name": "Team Execution and Delivery",
+    "family": "Execution and Accountability",
+    "definition": "Builds a team's ability to make realistic commitments, surface risk early, manage scope, and learn from delivery misses.",
+    "whyItMatters": "Engineering managers are accountable for predictable outcomes, not just team effort or optimistic plans."
+  },
+  "prompt": {
+    "primary": "Tell me about a time your team missed, reset, or narrowly saved an important deadline.",
+    "variants": [
+      "Describe a time your team committed to too much. What did you do once you saw the risk?",
+      "Tell me about a time you chose to narrow or miss a date rather than hide risk or rely on heroics.",
+      "Tell me about a time priorities changed and you had to re-plan committed work.",
+      "Tell me about a time you escalated a delivery risk early enough to protect trust.",
+      "Describe a time you improved your team's delivery process."
+    ],
+    "interviewerIntent": [
+      "Does the candidate own the quality of the plan and the stakeholder communication around it?",
+      "Can they separate scope, date, quality, and capacity trade-offs without hiding behind the team?",
+      "Do they make residual customer, team, or quality costs visible instead of presenting every reset as a clean win?",
+      "Can they tell when a team-local delivery issue needs escalation or a stakeholder decision?",
+      "Do delivery problems become better estimation, risk review, and decision habits?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "An engineering manager resets a slipping customer launch before it becomes a surprise failure by making scope, dependencies, quality risk, stakeholder choices, and residual cost visible.",
+    "context": [
+      "The team is building a feature with product, design, and platform dependencies.",
+      "Early signs of risk were visible, but status updates still read green.",
+      "Sales and Support have already communicated a target date to customers.",
+      "A plausible shortcut exists, but it would move quality risk, customer trust risk, or team load into the next cycle."
+    ],
+    "constraints": [
+      "The manager must protect trust without pretending the original commitment remains realistic.",
+      "Scope reduction may disappoint stakeholders, but a quality shortcut could create production risk.",
+      "The team needs a better planning mechanism, not only a harder push.",
+      "Escalation must be timely and decision-oriented while stakeholders still have real options.",
+      "The fix must preserve useful urgency without making emergency work the normal delivery model."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A team commitment became unrealistic because scope, dependency, uncertainty, quality, or capacity risk was not surfaced early enough.",
+    "task": "Own the miss or reset, make trade-offs and residual costs explicit, protect stakeholders from surprise, and improve the team's delivery system.",
+    "action": [
+      "Rebuilt the plan using actual remaining work, dependency status, quality risk, and available capacity.",
+      "Named the manager's own miss in planning, risk review, or stakeholder updates.",
+      "Created options such as moving the date, reducing scope, phasing the release, adding short-term capacity, or accepting explicit quality risk.",
+      "Named the rejected alternative, such as hiding risk, asking for unsustainable overtime, or shipping without rollback criteria.",
+      "Communicated early and directly to product, design, sales, support, or leadership with a recommendation.",
+      "Defined the escalation threshold, decision owner, and next checkpoint instead of relying on informal hope that the risk would clear.",
+      "Protected the team from blame while making accountability and operating changes explicit.",
+      "Changed planning rituals, risk signals, estimation approach, dependency ownership, or readiness criteria."
+    ],
+    "result": [
+      "Stakeholders got a clear decision before the original deadline failed by surprise.",
+      "The team shipped a smaller safe release, moved the date with credibility, or reset priorities with explicit cost.",
+      "Residual customer, team, or roadmap cost was visible rather than hidden in follow-up work.",
+      "Escalations became decision points with owners, options, and dates rather than vague yellow status.",
+      "Future planning improved through earlier risk surfacing, dependency ownership, sustainable capacity planning, or scope decision rules."
+    ],
+    "reflection": "The manager learned that delivery trust comes from timely truth, sustainable urgency, and operating discipline, not optimistic status reporting or heroic recovery.",
+    "systemChange": [
+      "Weekly risk review that separates green status from unvalidated assumptions.",
+      "Definition of ready for cross-team dependencies and design completeness.",
+      "Scope trade-off menu required before customer dates are committed.",
+      "Escalation threshold tied to delivery confidence, customer commitment, dependency uncertainty, and quality risk.",
+      "Capacity confidence review that treats repeated overtime or manual cleanup as delivery risk.",
+      "Post-delivery review focused on planning signals, delivery-health metrics, and learning rather than blame."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "customer-launch-reset",
+      "title": "Customer Launch Reset",
+      "level": "Engineering Manager",
+      "promptVariant": "Tell me about a time your team missed a deadline.",
+      "situation": "A team promised a customer-facing reporting feature by the end of quarter. Three weeks before launch, the manager realized data-quality validation and design edge cases were still open, even though status had been reported as green and Sales was preparing final customer messaging.",
+      "strongAnswerSketch": [
+        "Own the planning miss: validation work was treated as a final step instead of core scope.",
+        "Create three options with Product: ship a narrower report safely, move the full launch by four weeks, or keep the date while accepting unacceptable data-quality risk.",
+        "Recommend the narrower release, communicate affected customer workflows, and get support ready for the limitation.",
+        "Name the residual cost: seven pilot customers would wait for export workflows and Support needed a temporary response playbook.",
+        "Afterward, add data-validation tasks to readiness criteria and require scope options before external dates."
+      ],
+      "whyItWorks": [
+        "Shows accountability for manager-level planning, not blame on engineers.",
+        "Makes trade-offs explicit before the deadline fails silently.",
+        "Keeps the customer and support cost visible instead of polishing the reset into a full success.",
+        "Creates a concrete planning mechanism afterward."
+      ],
+      "weakVersion": "The team underestimated the work, so I helped them focus, communicated the delay, and we improved estimation afterward.",
+      "followUpAngles": [
+        "What did you personally miss?",
+        "What options did stakeholders have?",
+        "Why not push the team harder?",
+        "What changed before the next customer date?"
+      ],
+      "aiVisual": "assets/generated/example-stories/customer-launch-reset.jpg"
+    },
+    {
+      "id": "heroic-save-backfire",
+      "title": "Heroic Save That Exposed Unsustainable Planning",
+      "level": "Engineering Manager",
+      "promptVariant": "Describe a time your team committed to too much. What happened?",
+      "situation": "A payments team accepted a six-week compliance integration because the date was tied to a partner launch. The team technically hit the beta date, but only because two senior engineers worked nights, deferred test automation, and left manual reconciliation work for support.",
+      "strongAnswerSketch": [
+        "Acknowledge the initial mistake: the manager accepted the date before confirming certification, test automation, and support readiness work.",
+        "Reject the tempting narrative that hitting beta proved the plan was fine; show the hidden cost in engineer recovery time, support tickets, and delayed hardening.",
+        "For the public launch, recommend removing one low-volume payment method, delaying broad rollout by two weeks, and reserving capacity to finish the deferred automation before expansion.",
+        "Create a commitment rule: no partner date above medium risk is accepted without certification owner, support load estimate, rollback path, and capacity confidence."
+      ],
+      "whyItWorks": [
+        "Breaks the clean-win pattern by treating a deadline hit with hidden cost as a delivery miss.",
+        "Shows manager accountability for sustainable capacity and quality risk.",
+        "Turns a local overcommitment into a concrete commitment gate for future partner work."
+      ],
+      "weakVersion": "The team rallied and made the date. It was hard, but everyone stepped up, and afterward we improved planning so it would be smoother next time.",
+      "followUpAngles": [
+        "What made the beta date look successful but unhealthy?",
+        "What hidden cost did you measure?",
+        "What did you stop or delay before the public launch?",
+        "How did you prevent heroic recovery from becoming expected?"
+      ],
+      "aiVisual": "assets/generated/example-stories/heroic-save-backfire.jpg"
+    },
+    {
+      "id": "priority-replan",
+      "title": "Priority Replan After Strategy Change",
+      "level": "Senior Engineering Manager",
+      "promptVariant": "Tell me about a time you had to re-plan work because priorities changed.",
+      "situation": "Two teams were halfway through roadmap commitments when the business shifted focus to retention. Product wanted to add churn-risk work without changing dates or explicitly stopping existing projects.",
+      "strongAnswerSketch": [
+        "Translate the strategy shift into customer retention outcomes, capacity needs, and work that must stop or slow.",
+        "Ask each team to produce a stop-start-continue plan with risk, customer impact, and dependency consequences.",
+        "Reject adding churn-risk work on top of the existing roadmap, and recommend pausing a low-adoption admin feature instead.",
+        "Make the residual cost explicit: one internal operations team lost an automation they expected that quarter, so Product and Support agreed on a manual workaround.",
+        "Set a two-cycle review of retention metrics, delivery confidence, and team load."
+      ],
+      "whyItWorks": [
+        "Shows Senior Engineering Manager scope across multiple teams.",
+        "Forces an explicit stop-doing decision instead of hidden overcommitment.",
+        "Uses metrics, residual-cost ownership, and review cadence to keep the replan honest."
+      ],
+      "weakVersion": "I worked with Product to reprioritize the roadmap and made sure teams understood the new company focus.",
+      "followUpAngles": [
+        "What did you stop?",
+        "How did you handle Product's request to add work?",
+        "What customer or business metric guided the replan?",
+        "How did you watch team load?"
+      ],
+      "aiVisual": "assets/generated/example-stories/priority-replan.jpg"
+    },
+    {
+      "id": "cross-team-dependency-miss",
+      "title": "Cross-Team Dependency Miss",
+      "level": "Director",
+      "promptVariant": "Describe a time you improved your team's delivery process.",
+      "situation": "Three teams repeatedly slipped features that depended on a shared platform team because dependency owners were named after customer dates and launch plans were already committed.",
+      "strongAnswerSketch": [
+        "Analyze the last two misses and show that dependencies were discovered after scope approval in five of seven projects.",
+        "Introduce a dependency readiness review before quarterly commitments, with named owner, date, risk, and escalation path.",
+        "Name the residual cost of the new mechanism: the first commitment cycle takes longer and one feature misses a marketing window while unresolved dependencies are made explicit.",
+        "Avoid creating a heavy planning bureaucracy by applying the review only to cross-team commitments above a defined risk threshold.",
+        "Track whether the new review slows low-risk work, then remove it from small same-team changes after the first cycle.",
+        "Measure improvement through late dependency discoveries, commitment confidence, flow interruptions, and slipped customer dates."
+      ],
+      "whyItWorks": [
+        "Shows Director-level operating-system improvement.",
+        "Uses evidence from multiple teams rather than a generic process preference.",
+        "Includes the adoption cost instead of pretending the process change was free.",
+        "Right-sizes process to risk and removes process where it does not earn its cost."
+      ],
+      "weakVersion": "I improved planning by adding a dependency review meeting so teams could align earlier.",
+      "followUpAngles": [
+        "What evidence showed dependencies were the root problem?",
+        "How did you avoid adding too much process?",
+        "Who owned escalation?",
+        "What metric changed?"
+      ],
+      "aiVisual": "assets/generated/example-stories/cross-team-dependency-miss.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong delivery answer shows planning ownership, early truth-telling, explicit trade-offs, sustainable execution judgment, stakeholder management, and a changed delivery mechanism.",
+    "moves": [
+      "Names the commitment, miss, or reset in concrete terms.",
+      "Owns the manager's role in planning quality and risk visibility.",
+      "Uses actual remaining work, capacity, dependencies, and quality risk to reforecast the commitment.",
+      "Names rejected alternatives and the residual cost of the chosen path.",
+      "Presents options and consequences rather than asking for a vague delay.",
+      "Communicates early enough that stakeholders can make a decision.",
+      "Escalates with a decision owner, threshold, recommendation, and next checkpoint.",
+      "Protects the team from repeated emergency execution while preserving real urgency.",
+      "Changes planning, dependency, risk, capacity, or scope mechanisms afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer blames estimation, priority changes, or the team without showing manager-level operating accountability, or celebrates a heroic save without naming hidden cost.",
+    "redFlags": [
+      "The candidate says the team underestimated without explaining their own planning role.",
+      "They communicate late or only after the miss is unavoidable.",
+      "They frame the trade-off only as work harder versus delay.",
+      "They hide quality or dependency risk to preserve a date.",
+      "They treat overtime, manual cleanup, or deferred hardening as normal delivery rather than a capacity signal.",
+      "They wait for consensus or perfect certainty instead of escalating while stakeholders still have real options.",
+      "They add a meeting afterward without changing decision rights, entry criteria, or metrics."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "manager-accountability",
+      "question": "What part of the delivery problem was yours as the manager?",
+      "tests": [
+        "accountability",
+        "reflection"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I treated data validation as a final hardening task instead of core scope, so the team's green status hid the real launch risk.",
+          "I let teams accept new retention work before we named the stop-doing decision, which created hidden overcommitment.",
+          "I accepted the partner beta date before certification, test automation, and support readiness were sized, so the team made the date by borrowing from the next cycle."
+        ],
+        "weak": [
+          "The team underestimated the work.",
+          "The priorities changed, so the plan had to change."
+        ]
+      }
+    },
+    {
+      "id": "options",
+      "question": "What options did you present, and what did each option cost?",
+      "tests": [
+        "decision quality",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We could ship the narrower report, move the full launch four weeks, or keep the date with unacceptable data-quality risk; I recommended the narrower release because customer workflows still got the core value safely.",
+          "For the replan, we paused a low-adoption admin feature, delayed one integration, and protected churn-risk work that tied directly to renewal conversations.",
+          "For the partner launch, we could keep the full date through overtime, drop one low-volume payment method, or delay all customers; I recommended a narrower beta plus two-week public delay to finish automation."
+        ],
+        "weak": [
+          "We either had to delay or work harder.",
+          "We reprioritized based on business needs.",
+          "The team stepped up, so there was no real trade-off."
+        ]
+      }
+    },
+    {
+      "id": "stakeholders",
+      "question": "How did you communicate the miss, reset, or narrowed release to stakeholders?",
+      "tests": [
+        "stakeholder alignment",
+        "influence"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I showed the remaining validation work, affected customer workflows, the three options, and my recommendation before Sales sent final launch messaging.",
+          "I told Product that adding churn-risk work without stopping anything would lower confidence below 50 percent, then brought a stop-start-continue proposal.",
+          "I told the partner team that beta could proceed only with reduced payment-method scope, named support coverage, and a public-launch date that included automation completion."
+        ],
+        "weak": [
+          "I explained that engineering needed more time.",
+          "I kept stakeholders informed as the situation changed."
+        ]
+      }
+    },
+    {
+      "id": "escalation-threshold",
+      "question": "When did this stop being a team-local delivery issue and require escalation or a stakeholder decision?",
+      "tests": [
+        "decision quality",
+        "stakeholder alignment",
+        "risk judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "When launch confidence dropped below 60 percent and Sales had not sent final messaging, I escalated with scope/date options and my recommendation instead of another green status update.",
+          "When two teams entered quarterly commitment review with unresolved platform dependencies, I moved it to the dependency readiness forum with named owners, dates, and an escalation path.",
+          "When the partner beta required deferred automation and support reconciliation, I made public-launch expansion conditional on hardening work rather than letting the beta success hide the risk."
+        ],
+        "weak": [
+          "I escalated once the team told me we were definitely late.",
+          "I kept everyone updated in the regular status meeting.",
+          "I waited until Product agreed that engineering needed more time."
+        ]
+      }
+    },
+    {
+      "id": "residual-cost",
+      "question": "What did the reset or recovery still cost, and how did you account for it?",
+      "tests": [
+        "measurement",
+        "accountability",
+        "trade-off reasoning"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The narrower report preserved the launch, but seven pilot customers waited on export workflows and Support carried a temporary playbook; I named that cost in the launch decision.",
+          "The beta date was met, but it cost two engineers recovery time, deferred automation, and 18 support tickets in the first week, so I treated it as a planning miss."
+        ],
+        "weak": [
+          "It worked out because we shipped most of the important scope.",
+          "The team was tired, but that happens around important launches."
+        ]
+      }
+    },
+    {
+      "id": "process-change",
+      "question": "What changed in how the team plans, tracks, or escalates delivery risk now?",
+      "tests": [
+        "learning",
+        "execution"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "External dates now require a scope trade-off menu and validation plan before commitment.",
+          "Cross-team commitments above a risk threshold need a dependency owner, date, escalation path, and confidence review before quarterly approval.",
+          "Partner dates above medium risk now need certification owner, rollback path, support load estimate, and capacity confidence before we agree externally."
+        ],
+        "weak": [
+          "We estimate more carefully now.",
+          "We added a planning sync to improve alignment.",
+          "We remind people to raise risks earlier."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "planning-accountability",
+        "name": "Planning Accountability",
+        "strong": "Owns planning quality, risk visibility, and the manager's role in the miss or reset.",
+        "weak": "Blames estimation, engineers, or shifting priorities without manager-level ownership.",
+        "strongAiVisual": "assets/generated/signals/planning-accountability-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/planning-accountability-weak.jpg"
+      },
+      {
+        "id": "tradeoff-communication",
+        "name": "Trade-Off Communication",
+        "strong": "Presents options, consequences, recommendation, and timing clearly enough for stakeholders to decide.",
+        "weak": "Communicates a vague delay or asks stakeholders to accept hidden quality or scope risk.",
+        "strongAiVisual": "assets/generated/signals/tradeoff-communication-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/tradeoff-communication-weak.jpg"
+      },
+      {
+        "id": "capacity-cost-judgment",
+        "name": "Capacity and Residual Cost Judgment",
+        "strong": "Names hidden customer, quality, support, or team capacity cost and uses it to change the plan.",
+        "weak": "Treats overtime, manual cleanup, or partial customer impact as acceptable background noise.",
+        "weakAiVisual": "assets/generated/signals/capacity-cost-judgment-weak.jpg"
+      },
+      {
+        "id": "delivery-system-change",
+        "name": "Delivery System Change",
+        "strong": "Changes planning entry criteria, risk review, dependency ownership, capacity checks, or scope mechanisms.",
+        "weak": "Adds process language without changing how commitments are made or managed.",
+        "strongAiVisual": "assets/generated/signals/delivery-system-change-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/delivery-system-change-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Engineering Manager",
+        "expected": "Owns team planning misses, communicates resets clearly, manages scope, quality, and capacity trade-offs, and improves team delivery habits."
+      },
+      {
+        "level": "Senior Engineering Manager",
+        "expected": "Replans across teams, makes stop-doing decisions and residual costs visible, protects team load, and connects delivery changes to business outcomes."
+      },
+      {
+        "level": "Director",
+        "expected": "Improves cross-team planning systems, dependency governance, sustainable capacity signals, and commitment confidence across multiple teams."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "planning-accountability",
+      "tradeoff-communication",
+      "capacity-cost-judgment",
+      "delivery-system-change"
+    ],
+    "followUpTree": [
+      "manager-accountability",
+      "options",
+      "stakeholders",
+      "escalation-threshold",
+      "residual-cost",
+      "process-change"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What commitment, deadline, or priority reset created delivery pressure?"
+      },
+      {
+        "field": "task",
+        "label": "What were you accountable for as the manager?"
+      },
+      {
+        "field": "action",
+        "label": "How did you reforecast, communicate options, escalate decisions, manage scope, reject shortcuts, and improve the delivery process?"
+      },
+      {
+        "field": "result",
+        "label": "What happened to the delivery outcome, stakeholder trust, and residual customer or team cost?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about planning or delivery management?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What planning, dependency, risk, or scope mechanism changed afterward?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A team misses a customer launch because validation work was underestimated.",
+    "A team hits a beta date through unsustainable heroics and deferred hardening.",
+    "A business priority shift requires explicit stop-doing decisions.",
+    "Cross-team dependencies surface after customer dates are committed.",
+    "A manager escalates a slipping external date before status stays falsely green.",
+    "A manager improves delivery confidence without creating heavy process.",
+    "A reset protects quality but leaves a visible customer or support cost."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "dora-delivery-metrics",
+        "group": "Delivery Measurement and Flow",
+        "groupDescription": "Resources for measuring delivery health, flow, predictability, and the cost of unstable execution.",
+        "title": "DORA's software delivery performance metrics",
+        "url": "https://dora.dev/guides/dora-metrics/",
+        "source": "DORA",
+        "type": "Guide",
+        "year": "2026",
+        "why": "Gives interviewers concrete delivery-health measures that balance throughput, instability, recovery, and rework instead of relying on deadline anecdotes alone."
+      },
+      {
+        "id": "dora-value-stream-management",
+        "group": "Delivery Measurement and Flow",
+        "groupDescription": "Resources for measuring delivery health, flow, predictability, and the cost of unstable execution.",
+        "title": "Value stream mapping for software delivery",
+        "url": "https://dora.dev/guides/value-stream-management/",
+        "source": "DORA",
+        "type": "Guide",
+        "why": "Helps candidates explain where work waits, where handoffs break, and which delivery bottlenecks the manager made visible after a miss."
+      },
+      {
+        "id": "accelerate",
+        "group": "Delivery Measurement and Flow",
+        "groupDescription": "Resources for measuring delivery health, flow, predictability, and the cost of unstable execution.",
+        "title": "Accelerate",
+        "url": "https://itrevolution.com/product/accelerate/",
+        "source": "Nicole Forsgren, Jez Humble, Gene Kim / IT Revolution",
+        "type": "Book",
+        "year": "2018",
+        "why": "Research foundation for connecting software delivery performance to management practices, technical capability, team health, and business outcomes."
+      },
+      {
+        "id": "devops-handbook",
+        "group": "Delivery Systems and Continuous Learning",
+        "groupDescription": "Resources for turning delivery misses into better operating systems, feedback loops, and safer releases.",
+        "title": "The DevOps Handbook, Second Edition",
+        "url": "https://itrevolution.com/product/the-devops-handbook-second-edition/",
+        "source": "Gene Kim, Jez Humble, Patrick Debois, John Willis, Nicole Forsgren / IT Revolution",
+        "type": "Book",
+        "year": "2021",
+        "why": "Useful background for stories that improve flow, feedback, quality, and learning instead of treating delivery misses as isolated estimation failures."
+      },
+      {
+        "id": "kanban-guide",
+        "group": "Delivery Measurement and Flow",
+        "groupDescription": "Resources for measuring delivery health, flow, predictability, and the cost of unstable execution.",
+        "title": "The Kanban Guide",
+        "url": "https://www.prokanban.org/the-kanban-guide",
+        "source": "ProKanban.org",
+        "type": "Guide",
+        "year": "2020",
+        "why": "Provides a compact model for visualizing workflow, actively managing flow, improving predictability, and discussing WIP without turning delivery into busyness."
+      },
+      {
+        "id": "making-work-visible",
+        "group": "Delivery Measurement and Flow",
+        "groupDescription": "Resources for measuring delivery health, flow, predictability, and the cost of unstable execution.",
+        "title": "Making Work Visible, Second Edition",
+        "url": "https://itrevolution.com/product/making-work-visible/",
+        "source": "Dominica DeGrandis / IT Revolution",
+        "type": "Book",
+        "year": "2022",
+        "why": "Helps interviewers probe hidden WIP, conflicting priorities, dependencies, and unplanned work that make a delivery plan look healthier than it is."
+      },
+      {
+        "id": "when-will-it-be-done",
+        "group": "Delivery Measurement and Flow",
+        "groupDescription": "Resources for measuring delivery health, flow, predictability, and the cost of unstable execution.",
+        "title": "When Will It Be Done?",
+        "url": "https://actionableagile.com/books/wwibd/",
+        "source": "Daniel S. Vacanti / ActionableAgile",
+        "type": "Book",
+        "why": "Adds a practical forecasting lens for discussing commitment confidence, probability, and customer-facing dates without pretending estimates are certainties."
+      },
+      {
+        "id": "shape-up",
+        "group": "Scope and Commitment Management",
+        "groupDescription": "Resources for shaping work, setting boundaries, making trade-offs, and committing with uncertainty still visible.",
+        "title": "Shape Up: Stop Running in Circles and Ship Work that Matters",
+        "url": "https://basecamp.com/shapeup",
+        "source": "Ryan Singer / Basecamp",
+        "type": "Book",
+        "why": "Gives concrete language for bounded scope, appetite, risk shaping, and fixed-time variable-scope trade-offs that map well to delivery-reset stories."
+      },
+      {
+        "id": "product-development-flow",
+        "group": "Scope and Commitment Management",
+        "groupDescription": "Resources for shaping work, setting boundaries, making trade-offs, and committing with uncertainty still visible.",
+        "title": "The Principles of Product Development Flow",
+        "url": "https://www.leanproductflow.com/",
+        "source": "Donald G. Reinertsen / Reinertsen & Associates",
+        "type": "Book",
+        "year": "2009",
+        "why": "Deepens delivery discussions with cost of delay, queues, batch size, WIP constraints, variability, and decentralized control rather than effort alone."
+      },
+      {
+        "id": "how-big-things-get-done",
+        "group": "Scope and Commitment Management",
+        "groupDescription": "Resources for shaping work, setting boundaries, making trade-offs, and committing with uncertainty still visible.",
+        "title": "How Big Things Get Done",
+        "url": "https://sites.prh.com/how-big-things-get-done-book",
+        "source": "Bent Flyvbjerg, Dan Gardner / Penguin Random House",
+        "type": "Book",
+        "year": "2023",
+        "why": "Adds project-forecasting discipline, optimism-bias awareness, and reference-class thinking that help interviewers probe how realistic a commitment was."
+      },
+      {
+        "id": "mythical-man-month",
+        "group": "Scope and Commitment Management",
+        "groupDescription": "Resources for shaping work, setting boundaries, making trade-offs, and committing with uncertainty still visible.",
+        "title": "The Mythical Man-Month: Essays on Software Engineering, Anniversary Edition",
+        "url": "https://www.pearson.com/en-us/subject-catalog/p/mythical-man-month-the-essays-on-software-engineering-anniversary-edition/P200000000149/9780201835953",
+        "source": "Frederick P. Brooks / Addison-Wesley Professional",
+        "type": "Book",
+        "year": "1995",
+        "why": "Gives interviewers a classic way to challenge late-project rescue plans that rely on added people, compressed communication paths, or wishful capacity math."
+      },
+      {
+        "id": "team-topologies",
+        "group": "Dependencies and Team Design",
+        "groupDescription": "Resources for reducing delivery risk caused by team boundaries, cognitive load, dependencies, and unclear interaction modes.",
+        "title": "Team Topologies: Organizing Business and Technology Teams for Fast Flow",
+        "url": "https://teamtopologies.com/books",
+        "source": "Matthew Skelton, Manuel Pais / Team Topologies",
+        "type": "Book",
+        "year": "2025",
+        "why": "Helps calibrate Director-level answers about dependency ownership, team boundaries, interaction modes, and reducing cross-team delivery friction."
+      },
+      {
+        "id": "sre-postmortem-culture",
+        "group": "Delivery Systems and Continuous Learning",
+        "groupDescription": "Resources for turning delivery misses into better operating systems, feedback loops, and safer releases.",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Shows how to turn a miss or painful recovery into a blameless learning mechanism with impact, contributing factors, and tracked prevention work."
+      },
+      {
+        "id": "google-cloud-delivery-resilience",
+        "group": "Delivery Systems and Continuous Learning",
+        "groupDescription": "Resources for turning delivery misses into better operating systems, feedback loops, and safer releases.",
+        "title": "Success Through Culture: Why Embracing Failure Encourages Better Software Delivery",
+        "url": "https://cloud.google.com/blog/products/devops-sre/how-resilience-contributes-to-software-delivery-success",
+        "source": "Google Cloud",
+        "type": "Article",
+        "year": "2023",
+        "why": "Connects delivery performance to resilient culture, psychological safety, small batches, feedback, and blameless learning when plans or releases do not go as expected."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

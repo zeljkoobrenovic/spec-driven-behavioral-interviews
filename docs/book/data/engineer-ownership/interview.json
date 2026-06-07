@@ -1,0 +1,634 @@
+{
+  "id": "engineer-ownership",
+  "title": "Ownership for Software Engineers",
+  "description": "Testing whether engineers take responsibility for outcomes beyond assigned tasks, with clear follow-through, escalation, and learning.",
+  "roleFocus": [
+    "Software Engineer",
+    "Senior Software Engineer",
+    "Tech Lead"
+  ],
+  "difficulty": "intermediate",
+  "competency": {
+    "id": "ownership",
+    "name": "Ownership",
+    "family": "Execution and Accountability",
+    "definition": "Takes responsibility for a customer, team, or system outcome even when ownership is not explicit.",
+    "whyItMatters": "Strong engineers notice gaps, clarify scope, escalate responsibly, and close the loop instead of waiting for someone else to define the boundary."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you took ownership of a problem outside your assigned work.",
+    "variants": [
+      "Describe a time when you found a bug, risk, or issue that others had missed.",
+      "Describe a time you protected a project outcome when ownership boundaries were unclear.",
+      "Describe a time when you followed through on something difficult after the first fix was not enough.",
+      "Describe a time when a recurring gap kept hurting the team because everyone assumed someone else owned it.",
+      "Tell me about a time your first ownership attempt was incomplete and you had to correct it."
+    ],
+    "interviewerIntent": [
+      "Does the candidate notice outcome risk without needing explicit assignment?",
+      "Can they clarify ownership, communicate impact, and avoid creating hidden work?",
+      "Do they close the loop with evidence and a prevention mechanism?",
+      "Can they explain rejected alternatives, residual cost, and what they deliberately did not take over?",
+      "Can they own a partial miss or wrong first move without turning the story into self-defense?"
+    ]
+  },
+  "scenario": {
+    "signatureExample": "An engineer notices that a nightly billing export intermittently drops records, then owns investigation, escalation, correction, and prevention even though the export belongs to another team.",
+    "context": [
+      "The issue is intermittent and affects a small but high-risk set of customers.",
+      "The owning team is busy with a launch and initially believes the export job is healthy.",
+      "Support has workarounds, but customer trust and revenue reconciliation are at risk.",
+      "Delivery pressure makes some people reluctant to invest time in a problem without a clear owner.",
+      "The first mitigation may stop the technical symptom while leaving customer corrections, communication, or cleanup unfinished."
+    ],
+    "constraints": [
+      "The engineer cannot silently take over another team's backlog.",
+      "The incident needs timely customer and support communication.",
+      "The fix must include a durable ownership path, not just a one-off patch.",
+      "The engineer must expose residual risk and trade-offs instead of presenting ownership as free heroics.",
+      "The engineer must be willing to say no, escalate, or hand ownership back clearly when taking more work would hide a larger ownership gap."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A customer-facing or operational problem was visible, but ownership was unclear or fragmented.",
+    "task": "Protect the outcome by clarifying impact, engaging the right owners, and driving the problem to closure without bypassing the team responsible for the system.",
+    "action": [
+      "Verified the symptom with logs, customer examples, reproduction steps, or data checks before raising alarm.",
+      "Acknowledged and corrected any wrong first assumption or incomplete first fix instead of packaging the story as a clean rescue.",
+      "Named the customer or business impact and asked for explicit ownership instead of dropping a vague message in a channel.",
+      "Proposed a bounded path: immediate mitigation, owner for root cause, communication owner, and follow-up date.",
+      "Named options they deliberately would not take, such as disabling a useful check, rewriting a system under deadline, or absorbing another team's backlog.",
+      "Escalated when the risk remained unowned, while keeping the tone factual and collaborative.",
+      "Helped implement or review the fix and added a monitor, test, runbook, or ownership rule so the gap would surface earlier next time."
+    ],
+    "result": [
+      "The affected customers or operations team got a clear update and a correction plan within the same business day.",
+      "The root cause was fixed or mitigated, and the team could explain exactly which records, requests, or users were affected.",
+      "Any partial result, manual cleanup, or customer correction left after the technical fix was made visible with an owner and date.",
+      "A temporary cost, accepted risk, or delayed item was made visible instead of being hidden inside the engineer's effort.",
+      "A monitor, alert, test, or ownership entry caught the same class of issue before customers reported it again."
+    ],
+    "reflection": "The lesson was that ownership is neither doing everyone else's work nor treating a handoff as done before evidence, owners, trade-offs, and closure are clear.",
+    "systemChange": [
+      "Incident-lite checklist for customer-impacting bugs that do not yet meet full incident severity.",
+      "Service ownership map with escalation contacts and expected response windows.",
+      "Regression test or data-quality check tied to the affected workflow.",
+      "Post-fix verification checklist that confirms customer-visible correction, not only code deployment.",
+      "Follow-up review for ambiguous ownership issues found during normal feature work.",
+      "Ownership-health review for recurring reliability, data, or tooling gaps that repeatedly interrupt delivery."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "billing-export-gap",
+      "title": "Billing Export Gap",
+      "level": "Software Engineer",
+      "promptVariant": "Tell me about a time you took ownership of a problem outside your assigned work.",
+      "situation": "While adding a small admin feature due the next day, the engineer noticed that a nightly billing export had skipped records for three customers. The export was owned by another team, but support tickets showed customers were already asking about mismatched invoices.",
+      "strongAnswerSketch": [
+        "Confirm the pattern with sample records, job logs, and the latest successful export before escalating.",
+        "Open a focused issue that names affected customers, suspected time window, severity, and the owning service.",
+        "Ask the owning team for a root-cause owner, then help build a one-time reconciliation query because the engineer already has the data context.",
+        "Defer a broader export rewrite and accept delaying the admin feature by half a day so the customer correction plan is not invisible work.",
+        "Stay on the issue through customer correction, add a missing integration test, and update the ownership page for the export."
+      ],
+      "whyItWorks": [
+        "Shows initiative without pretending to own a system alone.",
+        "Uses evidence and customer impact rather than a vague concern.",
+        "Names the cost of ownership and a rejected over-scoped solution.",
+        "Balances immediate correction with a durable test and ownership update."
+      ],
+      "weakVersion": "I noticed the export looked wrong, told the owning team in Slack, and moved back to my feature because it was not my area.",
+      "followUpAngles": [
+        "How did you know customers were affected?",
+        "What did you do when the owning team was busy?",
+        "Which part did you personally follow through on?",
+        "What work did you pause, reject, or defer?",
+        "What changed so this would be caught earlier?"
+      ],
+      "aiVisual": "assets/generated/example-stories/billing-export-gap.jpg"
+    },
+    {
+      "id": "migration-edge-case",
+      "title": "Migration Edge Case",
+      "level": "Senior Software Engineer",
+      "promptVariant": "Describe a time when you found a bug, risk, or issue that others had missed.",
+      "situation": "During a permissions migration, a senior engineer found that customers with both legacy roles and custom exceptions could lose read access after cutover. The migration plan had passed normal test cases because most accounts did not use that combination, and the release manager was reluctant to reopen scope two days before launch.",
+      "strongAnswerSketch": [
+        "Quantify the edge case with production-safe queries and identify 47 affected accounts before challenging the migration date.",
+        "Push for a cutover gate that includes exception-heavy accounts, not only standard test tenants.",
+        "Reject a full migration redesign as too slow, but build a dry-run diff report, pair with support on customer-specific validation, and recommend delaying the migration by two days.",
+        "Accept the residual cost of manually validating the highest-risk accounts before cutover instead of claiming the gate removed all risk.",
+        "After launch, add migration-readiness criteria for legacy exceptions and document how to sample high-risk accounts."
+      ],
+      "whyItWorks": [
+        "Demonstrates ownership of risk beyond assigned implementation tasks.",
+        "Makes the trade-off explicit: a short delay avoided customer access loss.",
+        "Shows a rejected alternative and a residual manual-control cost.",
+        "Leaves behind a readiness mechanism that helps future migrations."
+      ],
+      "weakVersion": "I warned the team there might be edge cases and suggested we add more tests before the migration.",
+      "followUpAngles": [
+        "What evidence changed the plan?",
+        "How did you argue for the delay?",
+        "Which customers or workflows were most at risk?",
+        "What risk still remained after your mitigation?",
+        "What migration rule changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/migration-edge-case.jpg"
+    },
+    {
+      "id": "stale-support-tool",
+      "title": "Stale Support Tool",
+      "level": "Software Engineer",
+      "promptVariant": "Tell me about a time you had to make sure a project succeeded despite obstacles.",
+      "situation": "A launch depended on support agents using a small internal tool, but the tool still showed cached account state for up to twenty minutes. The feature team considered it a support problem, support assumed engineering would fix it before launch, and a broad tool rewrite was already on a distant roadmap.",
+      "strongAnswerSketch": [
+        "Reproduce the stale-state issue with support using an actual launch workflow rather than arguing from assumptions.",
+        "Clarify the launch risk and get agreement on a small pre-launch fix plus a manual fallback.",
+        "Reject pulling the full tool rewrite into launch scope, implement cache invalidation for the affected path, add a support-facing timestamp, and verify the workflow with two agents.",
+        "Keep the manual fallback for the first launch week, with a named owner to remove it after monitoring confirms the fix.",
+        "Add a launch checklist item requiring support-tool validation for customer-impacting workflows."
+      ],
+      "whyItWorks": [
+        "Treats internal tooling as part of the customer outcome.",
+        "Shows practical scope control: a small fix and fallback instead of a broad tool rewrite.",
+        "Makes temporary operational load explicit instead of hiding it in support effort.",
+        "Changes the launch checklist so the same gap is not rediscovered."
+      ],
+      "weakVersion": "I let the launch team know support might have problems and asked them to create a ticket for the tool team.",
+      "followUpAngles": [
+        "Why was this your problem?",
+        "How did you avoid expanding the scope too much?",
+        "What did you verify with support?",
+        "What changed in future launch readiness?"
+      ],
+      "aiVisual": "assets/generated/example-stories/stale-support-tool.jpg"
+    },
+    {
+      "id": "account-status-backfill-miss",
+      "title": "Account Status Backfill Miss",
+      "level": "Senior Software Engineer",
+      "promptVariant": "Tell me about a time your first ownership attempt was incomplete and you had to correct it.",
+      "situation": "A senior engineer fixed a bug that stopped account-status updates from drifting between billing and the product database. They initially treated the deploy as closure, but support tickets the next morning showed 312 accounts were still stale, including 29 customers whose renewals showed the wrong plan.",
+      "strongAnswerSketch": [
+        "Acknowledge that the first fix stopped new drift but did not repair existing customer state, then reopen the issue with the residual customer impact clearly named.",
+        "Use audit logs, billing snapshots, and support tickets to produce a reviewed account list instead of asking support to correct records manually from scattered reports.",
+        "Reject both a risky full resync and a vague support handoff; pair with the billing owner on a dry-run correction script, sample high-value accounts, and get sign-off before writing data.",
+        "Delay a dependent reporting cleanup by one day and make the trade-off visible because silent stale data would create more customer confusion.",
+        "Track customer correction and support messaging through closure, then add a post-deploy backfill checklist with dry-run diff, sampled validation, and an explicit data owner."
+      ],
+      "whyItWorks": [
+        "Shows ownership of an incomplete first outcome rather than only the successful code fix.",
+        "Uses evidence to separate stopped drift from remaining customer harm.",
+        "Rejects unsafe overcorrection and passive handoff.",
+        "Creates a durable verification rule for future data fixes."
+      ],
+      "weakVersion": "After I fixed the bug, I told support there might still be stale accounts and asked the billing team to help if more tickets came in.",
+      "followUpAngles": [
+        "What did your first fix fail to close?",
+        "How did you find the full affected set?",
+        "Who approved the correction script?",
+        "What work did you delay or refuse to take on?",
+        "How did you know customer-visible correction was complete?"
+      ],
+      "aiVisual": "assets/generated/example-stories/account-status-backfill-miss.jpg"
+    },
+    {
+      "id": "flaky-release-gate",
+      "title": "Flaky Release Gate",
+      "level": "Tech Lead",
+      "promptVariant": "Describe a time when a recurring gap kept hurting the team because everyone assumed someone else owned it.",
+      "situation": "A shared end-to-end test suite blocked releases several times a week. Each failure looked like a test issue, product teams reran jobs until green, platform thought feature teams owned fixes, and a release manager wanted to disable the suite before a deadline.",
+      "strongAnswerSketch": [
+        "Quantify release delay, rerun rate, false failures, and two escaped regressions the suite had actually caught.",
+        "Reject both blanket disabling of the suite and a month-long rewrite because neither matched the launch risk or deadline.",
+        "Create a two-week stabilization plan: quarantine three flaky tests with expiry dates, assign owners by product area, keep a smaller smoke gate, and publish daily status.",
+        "Accept a temporary manual verification step for one high-risk path and make that cost visible to product and QA.",
+        "After the deadline, add test ownership metadata, a flake budget, and a weekly CI health review owned by the rotating release captain."
+      ],
+      "whyItWorks": [
+        "Shows Tech Lead ownership by improving how teams share a recurring responsibility.",
+        "Avoids both passive complaint and heroic takeover.",
+        "Makes the residual manual check and deadline trade-off visible.",
+        "Creates ownership metadata and a review cadence so the suite does not depend on one person's rescue."
+      ],
+      "weakVersion": "I took over the flaky tests, fixed the worst failures, and told teams to maintain their tests going forward.",
+      "followUpAngles": [
+        "How did you prove the suite was both costly and still useful?",
+        "Why not disable it until after the launch?",
+        "Who owned each quarantined test?",
+        "What temporary risk did you accept?",
+        "What mechanism stopped this from becoming your permanent job?"
+      ],
+      "aiVisual": "assets/generated/example-stories/flaky-release-gate.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer shows initiative without heroics: it uses evidence, clarifies boundaries, communicates impact, closes the loop, and treats partial outcomes honestly.",
+    "moves": [
+      "Names the concrete customer, operational, delivery, or reliability risk.",
+      "Verifies the problem with evidence before broad escalation.",
+      "Clarifies owner, impact, next step, and follow-up date.",
+      "Explains rejected alternatives and residual cost instead of making ownership sound free or unlimited.",
+      "Admits when the first mitigation or handoff was incomplete and reopens the loop with evidence.",
+      "Helps enough to protect the outcome without hiding ownership from the responsible team.",
+      "Makes capacity trade-offs visible when the interruption affects assigned work.",
+      "Closes the loop with users, support, teammates, or stakeholders.",
+      "Leaves behind a test, monitor, checklist, runbook, or ownership rule."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer confuses ownership with either heroic takeover or passive notification.",
+    "redFlags": [
+      "The candidate says they raised awareness but cannot show closure.",
+      "They blame another team for unclear ownership without saying what they did next.",
+      "They silently take over work and create a new dependency on themselves.",
+      "They cannot name affected users, impact, timeline, or evidence.",
+      "They describe a heroic rescue but cannot name what they chose not to do or what cost remained.",
+      "They present a clean win and cannot say what they got wrong, missed, or had to correct after the first fix.",
+      "The story ends with the immediate fix and no prevention mechanism."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "ownership-boundary",
+      "question": "How did you decide what was yours to own and what needed another owner?",
+      "tests": [
+        "ownership",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I owned proving the impact, getting the right owner engaged, helping with the reconciliation query, and tracking closure; the export team owned the service fix and future alerting.",
+          "I did not take over the whole tool. I owned the launch-critical path, named the fallback, and got the support-tools owner to accept the longer-term backlog item."
+        ],
+        "weak": [
+          "I just jumped in because someone had to do it.",
+          "It was not really my team's area, so I mostly made sure people knew about it."
+        ]
+      }
+    },
+    {
+      "id": "escalation",
+      "question": "When did you escalate, and how did you keep the escalation constructive?",
+      "tests": [
+        "judgment",
+        "influence"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I escalated after we had customer examples, no root-cause owner, and a billing deadline two days away; the escalation asked for an owner and decision, not blame.",
+          "I framed the migration delay around affected-account count and rollback risk, then offered the dry-run report as the way to unblock the decision."
+        ],
+        "weak": [
+          "I escalated because people were not responding fast enough.",
+          "I told my manager another team was blocking us."
+        ]
+      }
+    },
+    {
+      "id": "evidence",
+      "question": "What evidence showed the problem was real and worth interrupting other work?",
+      "tests": [
+        "measurement",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "Three customers had mismatched invoices, the failed exports shared the same retry path, and the billing deadline meant support would need a correction plan that day.",
+          "The dry-run showed 47 accounts would lose read access; five were enterprise customers with active reporting workflows."
+        ],
+        "weak": [
+          "It looked risky based on my reading of the code.",
+          "Support was worried, so I thought we should fix it."
+        ]
+      }
+    },
+    {
+      "id": "tradeoff-residual-cost",
+      "question": "What did you choose not to do, and what cost or risk remained?",
+      "tests": [
+        "trade-off reasoning",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I chose not to rewrite the export pipeline during the billing window; we delayed my admin feature by half a day and added a reconciliation check while the owning team fixed root cause.",
+          "We chose not to disable the full release gate; three flaky tests were quarantined with owners and expiry dates, and one high-risk path kept a temporary manual check.",
+          "I did not pull the whole support-tool rewrite into launch scope; we carried a named fallback for the first week and removed it after monitoring showed the timestamp and cache fix worked."
+        ],
+        "weak": [
+          "I just did what needed to be done because ownership mattered.",
+          "There was not really a trade-off; we fixed the issue and moved on.",
+          "I avoided scope creep by telling the other team to handle the rest."
+        ]
+      }
+    },
+    {
+      "id": "learning",
+      "question": "What changed after the story so the same class of problem would surface sooner?",
+      "tests": [
+        "learning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added a data-quality check on export counts by customer, linked the alert to the owning team, and added reconciliation steps to the support runbook.",
+          "Migration readiness now includes exception-heavy accounts, a dry-run diff, and a named owner for customer validation.",
+          "Backfills now require a dry-run diff, sampled support validation, and a named data owner before the issue can be closed.",
+          "The release gate now has test ownership metadata, a flake budget, and a weekly CI health review with a rotating release captain."
+        ],
+        "weak": [
+          "I learned to look more carefully at edge cases.",
+          "We agreed to communicate earlier next time."
+        ]
+      }
+    },
+    {
+      "id": "partial-outcome",
+      "question": "What did you get wrong or fail to close the first time?",
+      "tests": [
+        "reflection",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I initially treated the deploy as closure, but support tickets showed stale account records remained; I reopened the issue with 312 affected accounts and tracked corrections through support confirmation.",
+          "The first release-gate plan still relied on one manual check for a high-risk path, so I kept that residual risk visible and used it to prioritize ownership metadata the following week."
+        ],
+        "weak": [
+          "Nothing really went wrong after I got involved.",
+          "The issue was fixed once people listened to my recommendation."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "outcome-ownership",
+        "name": "Outcome Ownership",
+        "strong": "Takes responsibility for an outcome, clarifies scope, and drives closure even when assignment is ambiguous.",
+        "weak": "Stops at notification, waits for perfect assignment, or over-owns without creating shared clarity.",
+        "strongAiVisual": "assets/generated/signals/outcome-ownership-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/outcome-ownership-weak.jpg"
+      },
+      {
+        "id": "boundary-and-trade-off-judgment",
+        "name": "Boundary and Trade-Off Judgment",
+        "strong": "Shows what they owned, what they did not take over, which alternatives were rejected, and what residual cost was accepted.",
+        "weak": "Treats ownership as unlimited heroics or as a clean handoff without capacity, authority, or residual-risk clarity.",
+        "strongAiVisual": "assets/generated/signals/boundary-and-trade-off-judgment-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/boundary-and-trade-off-judgment-weak.jpg"
+      },
+      {
+        "id": "evidence-and-escalation",
+        "name": "Evidence and Escalation",
+        "strong": "Uses concrete evidence, impact, and decision asks to escalate constructively.",
+        "weak": "Escalates vague concerns, complains about another team, or avoids escalation until damage grows.",
+        "strongAiVisual": "assets/generated/signals/evidence-and-escalation-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/evidence-and-escalation-weak.jpg"
+      },
+      {
+        "id": "follow-through-learning",
+        "name": "Follow-Through and Learning",
+        "strong": "Tracks the issue through correction, communication, remaining customer impact, and a prevention mechanism.",
+        "weak": "Presents the immediate fix as the end of the story with no durable change.",
+        "strongAiVisual": "assets/generated/signals/follow-through-learning-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/follow-through-learning-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Software Engineer",
+        "expected": "Shows initiative on a concrete issue, verifies impact, communicates with the right people, and follows through on the fix or handoff."
+      },
+      {
+        "level": "Senior Software Engineer",
+        "expected": "Owns ambiguous risk across boundaries, influences prioritization with evidence, and improves the team's ownership or readiness mechanism so future work has a clearer owner."
+      },
+      {
+        "level": "Tech Lead",
+        "expected": "Creates shared mechanisms for ownership across teams, makes capacity trade-offs visible, and prevents recurring ambiguous gaps from depending on personal rescue."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "outcome-ownership",
+      "boundary-and-trade-off-judgment",
+      "evidence-and-escalation",
+      "follow-through-learning"
+    ],
+    "followUpTree": [
+      "ownership-boundary",
+      "escalation",
+      "evidence",
+      "tradeoff-residual-cost",
+      "learning",
+      "partial-outcome"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What outcome was at risk, and why was ownership unclear?"
+      },
+      {
+        "field": "task",
+        "label": "What did you personally decide to own?"
+      },
+      {
+        "field": "action",
+        "label": "How did you verify impact, engage owners, communicate trade-offs, and follow through?"
+      },
+      {
+        "field": "result",
+        "label": "What changed for customers, the team, or the system, and what risk or work remained?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about useful ownership boundaries, residual cost, or an incomplete first fix?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What test, monitor, checklist, or ownership rule changed afterward?"
+      }
+    ]
+  },
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "amazon-leadership-principles",
+        "group": "Ownership and Decision Rights",
+        "groupDescription": "Resources for clarifying ownership, decision rights, escalation, and follow-through in engineering work.",
+        "title": "Amazon Leadership Principles",
+        "url": "https://www.aboutamazon.com/about-us/leadership-principles",
+        "source": "Amazon",
+        "type": "Framework",
+        "why": "Gives a concise public definition of ownership as long-term, customer-centered responsibility beyond a narrow team boundary."
+      },
+      {
+        "id": "gitlab-directly-responsible-individuals",
+        "group": "Ownership and Decision Rights",
+        "groupDescription": "Resources for clarifying ownership, decision rights, escalation, and follow-through in engineering work.",
+        "title": "Directly Responsible Individuals (DRI)",
+        "url": "https://handbook.gitlab.com/handbook/people-group/directly-responsible-individuals/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "why": "Defines a concrete ownership role for clarifying accountability and decision-making authority when work spans people or teams."
+      },
+      {
+        "id": "gitlab-engineering-dri",
+        "group": "Ownership and Decision Rights",
+        "groupDescription": "Resources for clarifying ownership, decision rights, escalation, and follow-through in engineering work.",
+        "title": "Engineering DRI for Large-Scale Initiatives",
+        "url": "https://handbook.gitlab.com/handbook/engineering/development/growth/engineering_dri/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "why": "Shows how an engineering DRI coordinates progress, blockers, prioritization, and regular updates without silently absorbing all work."
+      },
+      {
+        "id": "atlassian-daci-method",
+        "group": "Ownership and Decision Rights",
+        "groupDescription": "Resources for clarifying ownership, decision rights, escalation, and follow-through in engineering work.",
+        "title": "The DACI Method: How to Make Better Decisions During Projects",
+        "url": "https://www.atlassian.com/blog/project-management/daci-method-for-better-project-decisions",
+        "source": "Atlassian",
+        "type": "Article",
+        "year": "2020",
+        "why": "Useful for interview stories where ownership means separating driver, approver, contributors, and informed stakeholders."
+      },
+      {
+        "id": "aws-run-what-you-build",
+        "group": "Operational Ownership and Reliability",
+        "groupDescription": "Resources for owning software through production, support, reliability, and customer-visible outcomes.",
+        "title": "Enterprise DevOps: Why You Should Run What You Build",
+        "url": "https://aws.amazon.com/blogs/enterprise-strategy/enterprise-devops-why-you-should-run-what-you-build/",
+        "source": "AWS Executive in Residence Blog",
+        "type": "Article",
+        "year": "2015",
+        "why": "Connects engineer ownership to production feedback, monitoring, automation, and customer impact instead of code handoff."
+      },
+      {
+        "id": "pagerduty-full-service-ownership",
+        "group": "Operational Ownership and Reliability",
+        "groupDescription": "Resources for owning software through production, support, reliability, and customer-visible outcomes.",
+        "title": "Full-Service Ownership",
+        "url": "https://ownership.pagerduty.com/",
+        "source": "PagerDuty",
+        "type": "Guide",
+        "why": "Explains service ownership across the lifecycle, including service boundaries, runbooks, operations, escalation policies, and on-call shifts."
+      },
+      {
+        "id": "atlassian-engineering-handbook",
+        "group": "Operational Ownership and Reliability",
+        "groupDescription": "Resources for owning software through production, support, reliability, and customer-visible outcomes.",
+        "title": "Atlassian Engineering's Handbook: A Guide for Autonomous Teams",
+        "url": "https://www.atlassian.com/blog/atlassian-engineering/handbook",
+        "source": "Atlassian Engineering",
+        "type": "Handbook",
+        "year": "2021",
+        "why": "Shows how autonomous engineering teams combine ownership, trust, common language, OKRs, SLOs, and delivery practices."
+      },
+      {
+        "id": "google-sre-managing-incidents",
+        "group": "Incident Response and Customer Communication",
+        "groupDescription": "Resources for assigning roles, coordinating response, communicating impact, and avoiding unowned incident work.",
+        "title": "Managing Incidents",
+        "url": "https://sre.google/sre-book/managing-incidents/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Clarifies why enthusiastic individual action needs explicit incident command, operational ownership, communication, planning, and live state tracking."
+      },
+      {
+        "id": "gitlab-incident-management",
+        "group": "Incident Response and Customer Communication",
+        "groupDescription": "Resources for assigning roles, coordinating response, communicating impact, and avoiding unowned incident work.",
+        "title": "Incident Management",
+        "url": "https://handbook.gitlab.com/handbook/engineering/infrastructure-platforms/incident-management/",
+        "source": "GitLab Handbook",
+        "type": "Handbook",
+        "why": "Provides a concrete public model for deliberately assigning an incident owner, delegating response roles, and tracking corrective actions."
+      },
+      {
+        "id": "pagerduty-external-communication-guidelines",
+        "group": "Incident Response and Customer Communication",
+        "groupDescription": "Resources for assigning roles, coordinating response, communicating impact, and avoiding unowned incident work.",
+        "title": "External Communication Guidelines",
+        "url": "https://response.pagerduty.com/during/external_communication_guidelines/",
+        "source": "PagerDuty Incident Response Documentation",
+        "type": "Guide",
+        "why": "Gives concrete criteria and cadence for customer communication when scope, impact, and recovery are still being clarified."
+      },
+      {
+        "id": "google-sre-postmortem-culture",
+        "group": "Follow-Through and Learning",
+        "groupDescription": "Resources for turning production issues, customer-impacting bugs, and ambiguous ownership gaps into durable follow-through.",
+        "title": "Postmortem Culture: Learning from Failure",
+        "url": "https://sre.google/sre-book/postmortem-culture/",
+        "source": "Google SRE",
+        "type": "Book chapter",
+        "year": "2016",
+        "why": "Connects ownership after incidents to blameless learning, action items, review, sharing, and system changes instead of stopping at the immediate fix."
+      },
+      {
+        "id": "atlassian-postmortems",
+        "group": "Follow-Through and Learning",
+        "groupDescription": "Resources for turning production issues, customer-impacting bugs, and ambiguous ownership gaps into durable follow-through.",
+        "title": "Postmortems: Enhance Incident Management Processes",
+        "url": "https://www.atlassian.com/incident-management/handbook/postmortems",
+        "source": "Atlassian",
+        "type": "Guide",
+        "why": "Gives a practical pattern for converting follow-up actions into work items with clear owners instead of letting lessons fade after recovery."
+      },
+      {
+        "id": "aws-correction-of-error",
+        "group": "Follow-Through and Learning",
+        "groupDescription": "Resources for turning production issues, customer-impacting bugs, and ambiguous ownership gaps into durable follow-through.",
+        "title": "Why You Should Develop a Correction of Error (COE)",
+        "url": "https://aws.amazon.com/blogs/mt/why-you-should-develop-a-correction-of-error-coe/",
+        "source": "AWS Cloud Operations Blog",
+        "type": "Article",
+        "year": "2022",
+        "why": "Adds a concrete post-incident mechanism for impact analysis, customer evidence, metrics, root-cause questioning, and tracked prevention actions."
+      },
+      {
+        "id": "etsy-blameless-postmortems",
+        "group": "Follow-Through and Learning",
+        "groupDescription": "Resources for turning production issues, customer-impacting bugs, and ambiguous ownership gaps into durable follow-through.",
+        "title": "Blameless PostMortems and a Just Culture",
+        "url": "https://www.etsy.com/codeascraft/blameless-postmortems",
+        "source": "Etsy Code as Craft",
+        "type": "Article",
+        "year": "2012",
+        "why": "Explains how accountability can mean owning the detailed story and remediation work without reducing failure analysis to personal blame."
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A customer-impacting bug sits between two services and no team immediately claims it.",
+    "A migration edge case affects a small but high-risk customer segment.",
+    "An internal tool gap threatens launch support readiness.",
+    "A first mitigation stops data drift but leaves stale customer records requiring correction and communication.",
+    "A flaky test or job is tolerated because each failure seems isolated.",
+    "A shared CI, data, or tooling gap repeatedly slows releases because no team has explicit maintenance ownership."
+  ],
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

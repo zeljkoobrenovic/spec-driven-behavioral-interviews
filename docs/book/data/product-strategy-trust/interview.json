@@ -1,0 +1,488 @@
+{
+  "id": "product-strategy-trust",
+  "title": "Product Strategy, Ethics, and Trust",
+  "description": "Testing whether product leaders can slow, reshape, or stop product bets to protect user trust while managing real business pressure.",
+  "roleFocus": [
+    "Group Product Manager",
+    "Director of Product",
+    "VP Product"
+  ],
+  "difficulty": "advanced",
+  "competency": {
+    "id": "product-strategy-ethics-trust",
+    "name": "Product Strategy, Ethics, and Trust",
+    "family": "Risk, Ethics, and Innovation",
+    "definition": "Shapes product strategy while protecting customer trust, responsible use, and long-term product integrity under business pressure.",
+    "whyItMatters": "Senior product leaders must show judgment when growth, market pressure, or executive urgency conflicts with user trust, responsible use, and long-term product integrity."
+  },
+  "prompt": {
+    "primary": "Tell me about a time you decided not to ship something because it was wrong for users.",
+    "variants": [
+      "Describe a time you changed product strategy to protect customer trust.",
+      "Tell me about a time you balanced business growth with user trust or safety.",
+      "Describe a time you had to push back on a product idea that looked commercially attractive.",
+      "Tell me about a time you changed a ranking, recommendation, or targeting strategy because of fairness or safety concerns."
+    ],
+    "interviewerIntent": [
+      "Can the candidate articulate product strategy beyond a feature roadmap?",
+      "Do they protect user trust when incentives favor shipping?",
+      "Can they separate legal permission, customer expectations, and long-term trust?",
+      "Can they offer responsible alternatives rather than only saying no?",
+      "Different story choices reveal different evidence: data-sharing tests trust-risk clarity, ranking tests responsible strategy, and portfolio shifts test governance change."
+    ]
+  },
+  "scenario": {
+    "signatureExample": "A product leader rejects an aggressive data-sharing growth feature, then creates a consent-based partnership strategy that grows more slowly but preserves customer trust and regulatory posture.",
+    "context": [
+      "A proposed feature could increase revenue or growth quickly.",
+      "Customer trust, consent, fairness, privacy, safety, or long-term brand risk is unclear.",
+      "Executives want momentum and competitors appear to be moving faster."
+    ],
+    "constraints": [
+      "The product leader must make the risk concrete, not hide behind vague ethics language.",
+      "The business still needs an alternative path, not just an objection.",
+      "The decision may slow short-term growth or disappoint a powerful stakeholder."
+    ]
+  },
+  "storyAnatomy": {
+    "situation": "A commercially attractive product direction created customer trust, fairness, privacy, safety, or long-term strategy risk.",
+    "task": "Make the risk decision-ready, push for a responsible strategy, and align stakeholders around an alternative path.",
+    "action": [
+      "Named who could be harmed, how the product behavior created risk, which business incentive was pushing the idea forward, and what remained uncertain.",
+      "Gathered customer evidence, legal or policy input, data analysis, competitive context, and product alternatives.",
+      "Separated unacceptable risk from negotiable design, rollout, consent, targeting, ranking, disclosure, or measurement choices.",
+      "Pushed back on the risky option while offering a responsible alternative with metrics and trade-offs.",
+      "Changed product strategy, review mechanisms, or launch guardrails so similar decisions were handled earlier."
+    ],
+    "result": [
+      "The team avoided or reduced a trust, privacy, fairness, safety, or long-term strategy risk.",
+      "A responsible product alternative preserved meaningful customer value, business learning, or revenue potential.",
+      "The organization gained a clearer strategy or review mechanism for high-trust product decisions."
+    ],
+    "reflection": "The product leader learned that responsible strategy needs a concrete alternative, not just a principled objection.",
+    "systemChange": [
+      "Trust-risk review for high-impact product changes.",
+      "Consent, explainability, fairness, safety, or customer-control criteria in launch readiness.",
+      "Fairness, safety, and abuse guardrails for ranking, recommendation, and targeting changes.",
+      "Product strategy memo that names non-goals and trust boundaries.",
+      "Escalation rule for growth ideas with unclear customer harm or policy risk."
+    ]
+  },
+  "exampleStories": [
+    {
+      "id": "data-sharing-growth-feature",
+      "title": "Rejecting A Data-Sharing Growth Feature",
+      "level": "Director of Product",
+      "promptVariant": "Tell me about a time you decided not to ship something because it was wrong for users.",
+      "situation": "A partnership feature would share user activity signals with third-party partners to improve conversion and co-marketing revenue. The forecast looked strong, but consent language was vague and enterprise customers expected stricter data boundaries.",
+      "strongAnswerSketch": [
+        "Quantify the growth upside, affected customer segments, consent ambiguity, contractual risk, and trust impact.",
+        "Reject default sharing because it violated customer expectations even if legal review found a narrow path.",
+        "Propose a consent-based partner program with admin controls, audit logs, and slower rollout to opted-in customers.",
+        "Add trust-risk review and customer-control criteria for future data-sharing products."
+      ],
+      "whyItWorks": [
+        "Shows moral courage with concrete product, customer, and business reasoning.",
+        "Offers a responsible alternative instead of only blocking the idea.",
+        "Changes product governance for future trust-sensitive work.",
+        "Best probes Trust Risk Clarity because the candidate must distinguish legal permission from customer expectations, consent, and contractual trust."
+      ],
+      "weakVersion": "I pushed back because the feature felt risky for privacy, asked Legal to review it, and convinced leadership to take a more user-friendly approach.",
+      "followUpAngles": [
+        "What was the business upside you gave up?",
+        "What made the risk unacceptable?",
+        "What alternative did you offer?",
+        "What governance changed?"
+      ],
+      "aiVisual": "assets/generated/example-stories/data-sharing-growth-feature.jpg"
+    },
+    {
+      "id": "ranking-safety-guardrail",
+      "title": "Delaying An Engagement Ranking Change",
+      "level": "Group Product Manager",
+      "promptVariant": "Tell me about a time you changed a ranking, recommendation, or targeting strategy because of fairness or safety concerns.",
+      "situation": "A recommender change for a creator marketplace was forecast to lift session depth by 8 percent before a launch window tied to an investor update. Offline review showed the model over-promoted sensational financial advice to new users and cut discovery for smaller verified creators, while Growth argued the initial complaints were edge cases.",
+      "strongAnswerSketch": [
+        "Make the trade-off decision-ready: quantify session-depth upside, complaint risk, affected cohorts, creator exposure imbalance, and policy uncertainty.",
+        "Reject the broad launch and the easier disclaimer-only option because the harm concentrated on new users least able to judge advice quality.",
+        "Propose a narrower rollout with quality demotions, source credibility labels, creator exposure guardrails, user controls, and support-monitoring thresholds.",
+        "Accept the missed investor-update lift, then add fairness and safety guardrails to ranking-readiness reviews before future recommender launches."
+      ],
+      "whyItWorks": [
+        "Broadens the story beyond privacy into fairness, safety, ranking incentives, and new-user risk.",
+        "Shows a rejected alternative and a real short-term business cost.",
+        "Turns a one-off launch delay into a product-strategy mechanism for future ranking bets.",
+        "Best probes Responsible Strategy because the candidate must preserve learning with a narrower launch instead of reflexively blocking growth."
+      ],
+      "weakVersion": "I delayed the recommender launch because some users might see low-quality content, then asked the team to improve the model and add better moderation.",
+      "followUpAngles": [
+        "Which users or creators were harmed?",
+        "What launch option did you reject?",
+        "How did you make the delay credible to Growth and executives?",
+        "What ranking guardrail changed afterward?"
+      ],
+      "aiVisual": "assets/generated/example-stories/ranking-safety-guardrail.jpg"
+    },
+    {
+      "id": "strategy-shift-from-growth-to-retention",
+      "title": "Strategy Shift From Growth To Retention",
+      "level": "VP Product",
+      "promptVariant": "Describe a time you developed or changed a product strategy.",
+      "situation": "The company chased new logos with many lightweight features, but retention fell in regulated segments because auditability, admin controls, and predictable workflows lagged behind sales promises.",
+      "strongAnswerSketch": [
+        "Use cohort retention, win-loss notes, support escalations, and customer interviews to show that the growth strategy was creating trust debt.",
+        "Shift product strategy from broad acquisition features to regulated-segment retention and trust capabilities.",
+        "Stop three low-adoption growth experiments and fund auditability, admin controls, and implementation quality.",
+        "Set portfolio guardrails: segment strategy, trust metrics, sales promise review, and quarterly retention learning."
+      ],
+      "whyItWorks": [
+        "Shows VP-level product strategy rather than feature prioritization.",
+        "Names the stop-doing decisions and business cost.",
+        "Connects trust, retention, customer segment, and portfolio governance.",
+        "Best probes Governance Change because the candidate must show portfolio criteria that changed future Sales promises and investment reviews."
+      ],
+      "weakVersion": "I changed the strategy from growth to retention after seeing churn data and aligned the company around more enterprise-ready features.",
+      "followUpAngles": [
+        "What did you stop funding?",
+        "How did you make the strategy credible to Sales?",
+        "Which trust metrics mattered?",
+        "What became different in portfolio reviews?"
+      ],
+      "aiVisual": "assets/generated/example-stories/strategy-shift-from-growth-to-retention.jpg"
+    }
+  ],
+  "strongAnswerPattern": {
+    "summary": "A strong answer makes trust risk, product strategy, business trade-offs, responsible alternatives, and governance changes explicit.",
+    "moves": [
+      "Names the specific customer harm or trust risk.",
+      "Shows the commercial upside and why the decision was hard.",
+      "Uses evidence from customers, data, legal, policy, support, and market context.",
+      "Offers a responsible alternative with metrics and constraints.",
+      "Names what slowed, stopped, or became more expensive.",
+      "Separates legal permission from customer expectations, policy risk, and trust boundaries.",
+      "Explains how the decision became credible to commercial or executive stakeholders.",
+      "Changes product strategy or review mechanisms afterward."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+  },
+  "weakAnswerPattern": {
+    "summary": "A weak answer uses ethics or strategy language without concrete risk, trade-off, alternative, or governance.",
+    "redFlags": [
+      "Says the idea felt wrong without naming user harm or trust risk.",
+      "Ignores the legitimate business pressure behind the proposal.",
+      "Only says no and does not offer a responsible alternative path.",
+      "Treats legal approval as the only trust bar.",
+      "Cannot explain how they made the decision credible to the stakeholder who wanted to ship.",
+      "Claims a strategy shift but cannot name what stopped, what became more constrained, or how portfolio decisions changed."
+    ],
+    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+  },
+  "followUps": [
+    {
+      "id": "trust-risk",
+      "question": "What exactly made the product direction risky for users or customers?",
+      "tests": [
+        "risk judgment",
+        "judgment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "The risk was not a generic privacy concern; enterprise admins had contractual expectations that user activity would not be shared with partners without explicit control and auditability.",
+          "The recommender over-promoted high-risk advice to new users who had the least context to judge quality, while reducing discovery for smaller verified creators.",
+          "The growth strategy was creating trust debt because regulated customers bought workflows we could not yet support predictably."
+        ],
+        "weak": [
+          "It did not feel user-friendly.",
+          "There were possible privacy concerns."
+        ]
+      }
+    },
+    {
+      "id": "business-tradeoff",
+      "question": "What business upside or momentum did you give up?",
+      "tests": [
+        "trade-off reasoning",
+        "accountability"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We gave up the forecast from default partner sharing and accepted a slower opt-in rollout to preserve enterprise trust.",
+          "We missed the investor-update lift from the broad ranking launch, but kept learning through a narrower rollout with safety guardrails.",
+          "We stopped three acquisition experiments that Sales liked, which lowered near-term lead volume but funded retention-critical capabilities."
+        ],
+        "weak": [
+          "We chose long-term trust over short-term growth.",
+          "The business accepted that user trust mattered more."
+        ]
+      }
+    },
+    {
+      "id": "alternative",
+      "question": "What responsible alternative did you propose?",
+      "tests": [
+        "decision quality",
+        "influence"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I proposed opt-in partner sharing with admin controls, audit logs, and customer-facing explanations, then measured adoption, revenue, and support risk by segment.",
+          "I narrowed the ranking launch to cohorts where quality guardrails held, added source labels and exposure thresholds, and delayed broad rollout until complaint and creator-distribution guardrails stayed healthy.",
+          "I reframed strategy around regulated-segment retention with auditability, admin controls, and a sales-promise review."
+        ],
+        "weak": [
+          "We redesigned the feature to be safer.",
+          "We shifted toward a more customer-centric strategy."
+        ]
+      }
+    },
+    {
+      "id": "stakeholder-credibility",
+      "question": "How did you make the decision credible to the powerful stakeholder who wanted to ship?",
+      "tests": [
+        "influence",
+        "stakeholder alignment"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "I showed Sales the renewal-risk evidence and the opt-in revenue forecast, then gave them customer-facing language and a date for expanding if admin-control adoption hit the threshold.",
+          "I told Growth exactly what lift we were giving up, showed the cohort-level safety evidence, and proposed a narrower launch that preserved learning without exposing new users to the risky ranking."
+        ],
+        "weak": [
+          "I explained that trust had to come first and eventually they agreed.",
+          "I escalated the concern to leadership because Growth was pushing too hard."
+        ]
+      }
+    },
+    {
+      "id": "governance-afterward",
+      "question": "What changed in product strategy or launch governance after this decision?",
+      "tests": [
+        "learning",
+        "decision quality"
+      ],
+      "exampleAnswers": {
+        "strong": [
+          "We added a trust-risk review before high-impact data-sharing launches, with explicit consent, admin-control, and auditability criteria.",
+          "We changed portfolio reviews so regulated-segment retention, sales-promise risk, and trust metrics were reviewed before funding broad acquisition bets."
+        ],
+        "weak": [
+          "We reminded teams to think about ethics earlier.",
+          "We documented the lesson and said we would be more careful next time."
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "signals": [
+      {
+        "id": "trust-risk-clarity",
+        "name": "Trust Risk Clarity",
+        "strong": "Defines the specific customer harm, consent, fairness, privacy, safety, or trust risk.",
+        "weak": "Uses vague ethical concern without operational detail.",
+        "strongAiVisual": "assets/generated/signals/trust-risk-clarity-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/trust-risk-clarity-weak.jpg"
+      },
+      {
+        "id": "responsible-strategy",
+        "name": "Responsible Strategy",
+        "strong": "Offers a viable product or portfolio alternative that protects users while preserving business value where possible.",
+        "weak": "Only blocks the risky path or treats legal approval as sufficient.",
+        "strongAiVisual": "assets/generated/signals/responsible-strategy-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/responsible-strategy-weak.jpg"
+      },
+      {
+        "id": "governance-change",
+        "name": "Governance Change",
+        "strong": "Changes product strategy, trust review, launch guardrails, escalation rules, or portfolio criteria.",
+        "weak": "Leaves the story as a one-time principled stand.",
+        "strongAiVisual": "assets/generated/signals/governance-change-strong.jpg",
+        "weakAiVisual": "assets/generated/signals/governance-change-weak.jpg"
+      }
+    ],
+    "rubric": [
+      {
+        "level": "Group Product Manager",
+        "expected": "Identifies trust-sensitive risk in a product area, influences Product, Engineering, Legal, Growth, or Sales partners, and creates a safer product alternative."
+      },
+      {
+        "level": "Director of Product",
+        "expected": "Balances customer trust, business pressure, and product governance across a product domain, including explicit decision criteria and stop-doing choices."
+      },
+      {
+        "level": "VP Product",
+        "expected": "Shapes portfolio strategy, commercial narrative, and governance around customer trust, market position, responsible growth, and durable decision mechanisms."
+      }
+    ]
+  },
+  "visualizations": {
+    "timeline": [
+      "situation",
+      "task",
+      "action",
+      "result",
+      "reflection",
+      "systemChange"
+    ],
+    "signalMap": [
+      "trust-risk-clarity",
+      "responsible-strategy",
+      "governance-change"
+    ],
+    "followUpTree": [
+      "trust-risk",
+      "business-tradeoff",
+      "alternative",
+      "stakeholder-credibility",
+      "governance-afterward"
+    ]
+  },
+  "practiceTemplate": {
+    "prompts": [
+      {
+        "field": "situation",
+        "label": "What product strategy or feature created trust, safety, privacy, or fairness risk?"
+      },
+      {
+        "field": "task",
+        "label": "What decision were you accountable for?"
+      },
+      {
+        "field": "action",
+        "label": "How did you make risk concrete, push back, offer alternatives, and align stakeholders?"
+      },
+      {
+        "field": "result",
+        "label": "What customer trust, business, or strategy outcome changed?"
+      },
+      {
+        "field": "reflection",
+        "label": "What did you learn about responsible product strategy?"
+      },
+      {
+        "field": "systemChange",
+        "label": "What trust review, strategy, launch, or portfolio mechanism changed?"
+      }
+    ]
+  },
+  "relatedScenarios": [
+    "A growth feature creates consent or customer-trust risk.",
+    "A ranking or recommendation change improves engagement while creating fairness or safety risk for a vulnerable segment.",
+    "A product leader shifts strategy from acquisition to retention because trust debt is rising.",
+    "Legal approval exists but customer expectations make a feature risky.",
+    "A product portfolio needs explicit trust guardrails before scaling.",
+    "A commercial stakeholder needs a credible responsible-growth alternative after a risky launch is delayed."
+  ],
+  "toProbeFurther": {
+    "links": [
+      {
+        "id": "svpg-product-strategy-overview",
+        "group": "Product Strategy and Choices",
+        "title": "Product Strategy - Overview",
+        "url": "https://www.svpg.com/product-strategy-overview/",
+        "source": "Marty Cagan / Silicon Valley Product Group",
+        "type": "Article",
+        "year": "2020",
+        "why": "Helps interviewers distinguish real product strategy from feature-roadmap activity by looking for focus, insight, coherent action, and active management.",
+        "groupDescription": "Resources for probing whether a product leader made explicit strategic choices rather than relabeling roadmap changes as strategy."
+      },
+      {
+        "id": "inspired-product-management",
+        "group": "Product Strategy and Choices",
+        "title": "INSPIRED: How to Create Tech Products Customers Love - 2nd Edition",
+        "url": "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/",
+        "source": "Marty Cagan / Silicon Valley Product Group",
+        "type": "Book page",
+        "why": "Connects product leadership to discovering valuable products that customers love and that still work for the business, matching the interview's responsible-alternative bar.",
+        "groupDescription": "Resources for probing whether a product leader made explicit strategic choices rather than relabeling roadmap changes as strategy."
+      },
+      {
+        "id": "first-round-product-strategy-stack",
+        "group": "Product Strategy and Choices",
+        "title": "Set \"Non-Goals\" and Build a Product Strategy Stack - Lessons For Product Leaders",
+        "url": "https://review.firstround.com/set-non-goals-and-build-a-product-strategy-stack-lessons-for-product-leaders/",
+        "source": "First Round Review / Ravi Mehta",
+        "type": "Article",
+        "why": "Gives interviewers a product-specific way to probe strategy stacks, non-goals, cross-functional strategy work, and choices that protect users from unfocused product complexity.",
+        "groupDescription": "Resources for probing whether a product leader made explicit strategic choices rather than relabeling roadmap changes as strategy."
+      },
+      {
+        "id": "ftc-bringing-dark-patterns-light",
+        "group": "Trust and Responsible Growth",
+        "title": "Bringing Dark Patterns to Light",
+        "url": "https://www.ftc.gov/reports/bringing-dark-patterns-light",
+        "source": "Federal Trade Commission",
+        "type": "Report",
+        "year": "2022",
+        "why": "Gives concrete examples of growth-oriented product design that can impair user choice, privacy, and trust even when the business case looks attractive.",
+        "groupDescription": "Resources for product trust, user choice, safety, and responsible-growth trade-offs that go beyond privacy or legal approval alone."
+      },
+      {
+        "id": "tspa-industry-overview",
+        "group": "Trust and Responsible Growth",
+        "title": "Industry Overview",
+        "url": "https://www.tspa.org/curriculum/ts-fundamentals/industry-overview/",
+        "source": "Trust & Safety Professional Association",
+        "type": "Curriculum chapter",
+        "why": "Shows why trust-and-safety work should move upstream into product design, which supports probes about ranking, recommendations, policy, and safety-by-design guardrails.",
+        "groupDescription": "Resources for product trust, user choice, safety, and responsible-growth trade-offs that go beyond privacy or legal approval alone."
+      },
+      {
+        "id": "ico-privacy-product-design-lifecycle",
+        "group": "Trust and Responsible Growth",
+        "title": "Privacy in the Product Design Lifecycle",
+        "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/designing-products-that-protect-privacy/privacy-in-the-product-design-lifecycle/",
+        "source": "Information Commissioner's Office",
+        "type": "Guidance",
+        "why": "Makes privacy, consent, and data-protection-by-design concrete across product kickoff, research, design, launch, and post-launch decisions.",
+        "groupDescription": "Resources for product trust, user choice, safety, and responsible-growth trade-offs that go beyond privacy or legal approval alone."
+      },
+      {
+        "id": "ethical-explorer-pack",
+        "group": "Ethics and Product Decision-Making",
+        "title": "Introducing the Ethical Explorer Pack",
+        "url": "https://omidyar.com/update/introducing-the-ethical-explorer-pack/",
+        "source": "Omidyar Network",
+        "type": "Toolkit article",
+        "year": "2020",
+        "why": "Gives product teams a practical way to surface ethical risk zones, early warning signs, and internal support before a risky product decision hardens.",
+        "groupDescription": "Resources for turning product ethics from abstract principles into team conversations, decision prompts, and responsible alternatives."
+      },
+      {
+        "id": "microsoft-harms-modeling",
+        "group": "Responsible Technology and AI",
+        "title": "Foundations of Assessing Harm",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/responsible-innovation/harms-modeling/",
+        "source": "Microsoft Learn",
+        "type": "Guidance",
+        "why": "Provides a threat-model-like method for naming who could be harmed, how the harm could happen, and which product gaps need mitigation.",
+        "groupDescription": "Resources for governing AI, algorithmic, ranking, recommendation, targeting, and automation risks through concrete product-review mechanisms."
+      },
+      {
+        "id": "nist-ai-risk-management-framework",
+        "group": "Responsible Technology and AI",
+        "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+        "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+        "source": "NIST",
+        "type": "Framework",
+        "year": "2023",
+        "why": "Gives a practical risk-governance frame for AI systems when product strategy involves ranking, recommendation, targeting, or automation under business pressure.",
+        "groupDescription": "Resources for governing AI, algorithmic, ranking, recommendation, targeting, and automation risks through concrete product-review mechanisms."
+      },
+      {
+        "id": "google-pair-guidebook",
+        "group": "Responsible Technology and AI",
+        "title": "People + AI Guidebook",
+        "url": "https://pair.withgoogle.com/guidebook-v2/",
+        "source": "Google PAIR",
+        "type": "Guidebook",
+        "year": "2019",
+        "why": "Adds product-design patterns for calibrated trust, user control, explanations, dataset responsibility, and failure support in AI-enabled experiences.",
+        "groupDescription": "Resources for governing AI, algorithmic, ranking, recommendation, targeting, and automation risks through concrete product-review mechanisms."
+      }
+    ]
+  },
+  "assets": {
+    "icon": "icon.png"
+  },
+  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+}

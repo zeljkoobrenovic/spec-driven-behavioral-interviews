@@ -109,8 +109,7 @@
         "What would have made microservices the right answer?",
         "Who disagreed and why?",
         "How did you know modularization was working?"
-      ],
-      "aiVisual": "assets/generated/example-stories/modular-monolith-first.jpg"
+      ]
     },
     {
       "id": "reversing-premature-service-extraction",
@@ -159,8 +158,7 @@
         "What vendor lock-in risk did you accept?",
         "What did you keep in-house?",
         "How did you make the decision reversible?"
-      ],
-      "aiVisual": "assets/generated/example-stories/build-vs-buy-platform.jpg"
+      ]
     }
   ],
   "strongAnswerPattern": {
@@ -172,8 +170,7 @@
       "Explains reversibility, sequencing, and operational readiness.",
       "Names the evidence that would trigger a reversal and owns course changes without blame.",
       "Leaves behind decision mechanisms, not just a chosen architecture."
-    ],
-    "aiVisual": "assets/generated/answer-patterns/strong-answer-pattern.jpg"
+    ]
   },
   "weakAnswerPattern": {
     "summary": "The candidate either defers completely to specialists or asserts authority without explaining technical **trade-offs**.",
@@ -183,8 +180,7 @@
       "Frames disagreement with senior engineers as politics rather than signal.",
       "Treats reversing a decision as embarrassment instead of learning.",
       "Ignores operational burden, ownership, migration risk, or the cost of delay."
-    ],
-    "aiVisual": "assets/generated/answer-patterns/weak-answer-pattern.jpg"
+    ]
   },
   "followUps": [
     {
@@ -266,25 +262,19 @@
         "id": "technical-depth",
         "name": "Technical Depth",
         "strong": "Uses concrete architecture, operational, and team constraints to explain the decision.",
-        "weak": "Relies on fashion, authority, or vague platform language instead of evidence.",
-        "strongAiVisual": "assets/generated/signals/technical-depth-strong.jpg",
-        "weakAiVisual": "assets/generated/signals/technical-depth-weak.jpg"
+        "weak": "Relies on fashion, authority, or vague platform language instead of evidence."
       },
       {
         "id": "expert-collaboration",
         "name": "Expert Collaboration",
         "strong": "Engages senior engineers as partners while owning the criteria and decision process.",
-        "weak": "Either overrules experts casually or hides behind their recommendation.",
-        "strongAiVisual": "assets/generated/signals/expert-collaboration-strong.jpg",
-        "weakAiVisual": "assets/generated/signals/expert-collaboration-weak.jpg"
+        "weak": "Either overrules experts casually or hides behind their recommendation."
       },
       {
         "id": "pragmatic-sequencing",
         "name": "Pragmatic Sequencing",
         "strong": "Chooses a path that fits current capability, reduces near-term risk, and creates options.",
-        "weak": "Jumps directly to an idealized target state without sequencing the migration.",
-        "strongAiVisual": "assets/generated/signals/pragmatic-sequencing-strong.jpg",
-        "weakAiVisual": "assets/generated/signals/pragmatic-sequencing-weak.jpg"
+        "weak": "Jumps directly to an idealized target state without sequencing the migration."
       },
       {
         "id": "reversal-discipline",
@@ -536,6 +526,5 @@
   },
   "assets": {
     "icon": "icon.png"
-  },
-  "explainerComic": "assets/generated/comic/interview-comic.jpg"
+  }
 }
