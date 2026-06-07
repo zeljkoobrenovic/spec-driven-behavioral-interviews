@@ -580,7 +580,7 @@ blockquote {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbfb 100%);
 }
 
-.timeline-step > span,
+.timeline-step-head > span,
 .move-list article > span {
   display: inline-flex;
   align-items: center;
@@ -597,6 +597,33 @@ blockquote {
 .timeline-step p,
 .timeline-step ul {
   margin: 0;
+}
+
+.timeline-step-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-step-head h3 {
+  flex: 1 1 auto;
+}
+
+.timeline-step-head > span {
+  flex: 0 0 auto;
+}
+
+.scenario-grid h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .move-list,
@@ -633,7 +660,7 @@ blockquote {
 
 .example-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 

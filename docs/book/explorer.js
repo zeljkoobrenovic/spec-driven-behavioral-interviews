@@ -10,6 +10,14 @@
     ["systemChange", "System Change"]
   ];
   const STORY_LABELS = new Map(STORY_FIELDS);
+  const STORY_ICONS = new Map([
+    ["situation", "icons/situation.png"],
+    ["task", "icons/task.png"],
+    ["action", "icons/action.png"],
+    ["result", "icons/result.png"],
+    ["reflection", "icons/reflection.png"],
+    ["systemChange", "icons/change.png"]
+  ]);
 
   const els = {
     title: document.getElementById("pageTitle"),
@@ -31,8 +39,8 @@
 
   const sections = [
     { id: "brief", label: "Competency Brief", render: renderBrief },
-    { id: "visual-summary", label: "Visual Summary", render: renderVisualSummary },
     { id: "story", label: "Story Anatomy", render: renderStory },
+    { id: "visual-summary", label: "Visual Summary", render: renderVisualSummary },
     { id: "examples", label: "Concrete Examples", render: renderExampleStories },
     { id: "answer-contrast", label: "Answer Contrast", render: renderAnswerContrast },
     { id: "follow-ups", label: "Follow-Up Probes", render: renderFollowUps },
@@ -420,13 +428,22 @@
   function renderStory(spec) {
     const story = spec.storyAnatomy || {};
     const scenario = spec.scenario || {};
-    const timeline = getStoryFields(spec).map(([field, label], index) => `
+    const timeline = getStoryFields(spec).map(([field, label], index) => {
+      const icon = STORY_ICONS.get(field);
+      const iconHtml = icon
+        ? `<img class="timeline-icon" src="${escapeHtml(icon)}" alt="" aria-hidden="true">`
+        : "";
+      return `
       <article class="timeline-step">
-        <span>${index + 1}</span>
-        <h3>${escapeHtml(label)}</h3>
+        <header class="timeline-step-head">
+          ${iconHtml}
+          <h3>${escapeHtml(label)}</h3>
+          <span>${index + 1}</span>
+        </header>
         ${storyValueHtml(story[field])}
       </article>
-    `).join("");
+    `;
+    }).join("");
 
     return `
       <section class="content-section">
@@ -434,11 +451,11 @@
         <p class="lead">${inlineHtml(scenario.signatureExample || "")}</p>
         <div class="scenario-grid">
           <div>
-            <h3>Context</h3>
+            <h3><img class="timeline-icon" src="icons/context.png" alt="" aria-hidden="true">Context</h3>
             ${renderList(scenario.context)}
           </div>
           <div>
-            <h3>Constraints</h3>
+            <h3><img class="timeline-icon" src="icons/constraints.png" alt="" aria-hidden="true">Constraints</h3>
             ${renderList(scenario.constraints)}
           </div>
         </div>
