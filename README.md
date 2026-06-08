@@ -6,6 +6,8 @@ templates turn those specs into interactive walkthroughs, visual timelines,
 concrete story examples, follow-up probes, rubrics, practice worksheets, and
 curated external resources for deeper learning.
 
+See generated site: [zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/](https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/)
+
 ## Repository Layout
 
 | Path | Purpose |
