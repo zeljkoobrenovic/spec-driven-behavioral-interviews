@@ -557,7 +557,7 @@
     "A cross-team technical decision needs an RFC, owner map, and adoption metric."
   ],
   "assets": {
-    "icon": "icon.jpg"
+    "icon": "icon.png"
   },
   "explainerComic": "assets/generated/comic/interview-comic.jpg"
 }
