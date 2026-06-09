@@ -1,34 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Behavioral Interview Explorer</title>
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body class="explorer-page">
-    <header class="topbar compact">
-      <div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129891352-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129891352-1');
+    </script>
+</head>
+<body class="explorer-page">
+<header class="topbar compact">
+    <div>
         <a class="overview-link" href="index.html" aria-label="Back to all interviews">← All interviews</a>
         <div class="explorer-title-row">
-          <img id="pageIcon" class="explorer-title-icon" alt="" hidden>
-          <h1 id="pageTitle">Loading...</h1>
+            <img id="pageIcon" class="explorer-title-icon" alt="" hidden>
+            <h1 id="pageTitle">Loading...</h1>
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main class="explorer-shell">
-      <aside class="sidebar" aria-label="Explorer sections">
+<main class="explorer-shell">
+    <aside class="sidebar" aria-label="Explorer sections">
         <div id="datasetMeta" class="dataset-meta"></div>
         <nav id="sectionNav" class="section-nav"></nav>
-      </aside>
+    </aside>
 
-      <section class="content-shell">
+    <section class="content-shell">
         <div id="explorerStatus" class="status" aria-live="polite">Loading interview...</div>
         <article id="content" class="content"></article>
-      </section>
-    </main>
+    </section>
+</main>
 
-    <script src="explorer.js"></script>
-  </body>
+<script src="explorer.js"></script>
+</body>
 </html>
