@@ -265,6 +265,10 @@ textarea {
   text-transform: uppercase;
 }
 
+h3 {
+  font-size: 20px;
+}
+
 .case-card h3 {
   margin: 0;
   font-size: 1.3rem;
@@ -279,7 +283,9 @@ textarea {
 
 blockquote {
   border-left: 4px solid var(--teal);
-  padding-left: 14px;
+  padding-left: 10px;
+  margin-left: 4px;
+  background-color: lightyellow;
 }
 
 .large-quote {
@@ -561,6 +567,18 @@ blockquote {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fbfaf7;
+}
+
+.evaluation-signal-grid {
+  grid-template-columns: 1fr;
+}
+
+.evaluation-signal-card {
+  width: 100%;
+}
+
+.evaluation-signal-card .signal-evidence-pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .timeline {
@@ -991,6 +1009,7 @@ blockquote {
   }
 
   .contrast-grid,
+  .evaluation-signal-card .signal-evidence-pair,
   .rubric-table > div,
   .rubric-matrix > div {
     grid-template-columns: 1fr;

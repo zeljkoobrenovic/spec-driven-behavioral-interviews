@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinkedIn Interview Promoter"
+  short_description: "Draft interview posts with context"
+  default_prompt: "Use $linkedin-interview-promoter to draft a LinkedIn post with project context from this interview.json link."

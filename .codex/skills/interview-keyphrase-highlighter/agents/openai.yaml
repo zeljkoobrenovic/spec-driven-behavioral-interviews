@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Keyphrase Highlighter"
+  short_description: "Bold interview key phrases"
+  default_prompt: "Use $interview-keyphrase-highlighter to add concise bold key phrases to the competency brief, prompt block, and other important interview text."

@@ -625,9 +625,9 @@
       <section class="content-section">
         <h2>Evaluation Rubric</h2>
         <h3>Strong vs. Weak Signals</h3>
-        <div class="signal-grid">
+        <div class="signal-grid evaluation-signal-grid">
           ${normalizeList(evaluation.signals).map((signal) => `
-            <article>
+            <article class="evaluation-signal-card">
               <h3>${escapeHtml(signal.name)}</h3>
               ${renderSignalEvidencePair(signal)}
             </article>
