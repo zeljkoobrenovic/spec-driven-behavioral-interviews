@@ -1,6 +1,6 @@
 # Agent Guide
 
-This repository is a static, spec-driven explorer for senior technology
+This repository is an explorer for senior technology
 leadership behavioral interviews. Keep the source data, templates, scripts, and
 generated output clearly separated.
 

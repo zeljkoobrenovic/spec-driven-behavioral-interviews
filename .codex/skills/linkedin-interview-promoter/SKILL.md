@@ -20,13 +20,13 @@ Draft a LinkedIn post that promotes one interview from this project using a supp
 Use this catalog URL exactly:
 
 ```text
-https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/book/index.html
+https://zeljkoobrenovic.github.io/behavioral-interviews/book/index.html
 ```
 
 Build the concrete interview URL by appending `#<interview-id>`:
 
 ```text
-https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/book/index.html#engineer-ownership
+https://zeljkoobrenovic.github.io/behavioral-interviews/book/index.html#engineer-ownership
 ```
 
 ## Workflow
@@ -46,7 +46,7 @@ Use these ideas in compact plain language; do not paste them as a block when a n
 - A behavioral interview asks candidates to describe real past situations: what happened, what they personally did, what changed, what they learned, and what system changed afterward.
 - For education, these interviews help leaders study concrete senior leadership situations, compare strong and weak answer patterns, practice structured stories, and learn what evidence matters.
 - For interviewing, they help interviewers ask consistent prompts and follow-ups, reduce gut-feel evaluation, compare candidates fairly, and calibrate seniority using observable signals.
-- This project is a static, spec-driven explorer for senior technology leadership behavioral interviews. Each interview is authored as structured JSON and rendered as prompts, scenarios, strong and weak examples, follow-up probes, evaluation rubrics, visual timelines, practice worksheets, and curated resources.
+- This project is an interactive explorer for senior technology leadership behavioral interviews. Each interview is authored as structured JSON and rendered as prompts, scenarios, strong and weak examples, follow-up probes, evaluation rubrics, visual timelines, practice worksheets, and curated resources.
 
 ## Post Style
 
@@ -69,10 +69,10 @@ End the post with both links in this order:
 
 ```text
 Interview:
-https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/book/index.html#<id>
+https://zeljkoobrenovic.github.io/behavioral-interviews/book/index.html#<id>
 
 All interviews:
-https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/book/index.html
+https://zeljkoobrenovic.github.io/behavioral-interviews/book/index.html
 ```
 
 ## Storage

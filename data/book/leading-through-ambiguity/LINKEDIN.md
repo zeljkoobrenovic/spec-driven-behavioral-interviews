@@ -1,6 +1,6 @@
 Behavioral Interview of the Day: Leading Through Ambiguity
 
-A behavioral interview asks candidates to describe real situations: context, personal actions, outcomes, reflection, and system change. This project turns those interviews into spec-driven walkthroughs for senior technology leadership: prompts, scenarios, strong and weak answer patterns, follow-ups, rubrics, practice templates, and curated resources.
+A behavioral interview asks candidates to describe real situations: context, personal actions, outcomes, reflection, and system change. This project turns those interviews into interactive walkthroughs for senior technology leadership: prompts, scenarios, strong and weak answer patterns, follow-ups, rubrics, practice templates, and curated resources.
 
 For education, it helps leaders study concrete situations and learn what evidence matters. For interviewing, it helps teams ask consistent questions, reduce gut-feel evaluation, compare candidates more fairly, and calibrate seniority using observable signals.
 
@@ -16,7 +16,7 @@ Strong answers show:
 The examples cover platform reliability, unclear AI strategy, delivery predictability, and shared API ownership. Useful for learning, interview design, and calibration across Senior Manager, Director, VP Engineering, and CTO roles.
 
 Interview:
-https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/book/index.html#leading-through-ambiguity
+https://zeljkoobrenovic.github.io/behavioral-interviews/book/index.html#leading-through-ambiguity
 
 All interviews:
-https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/book/index.html
+https://zeljkoobrenovic.github.io/behavioral-interviews/book/index.html

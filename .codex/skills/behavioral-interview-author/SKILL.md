@@ -1,6 +1,6 @@
 ---
 name: behavioral-interview-author
-description: "Create new behavioral interview specs for the spec-driven-behavioral-interviews repository. Use when adding a new interview dataset, choosing category placement, scaffolding data/book or data/examples entries, filling the JSON schema, or preparing a new interview for the static explorer."
+description: "Create new behavioral interview specs for the behavioral-interviews repository. Use when adding a new interview dataset, choosing category placement, scaffolding data/book or data/examples entries, filling the JSON schema, or preparing a new interview for the static explorer."
 ---
 
 # Behavioral Interview Author

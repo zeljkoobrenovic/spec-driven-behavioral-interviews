@@ -1,4 +1,4 @@
-# Spec-Driven Behavioral Interview Explorer
+# Behavioral Interview Explorer
 
 A static, framework-free explorer for senior technology leadership behavioral
 interviews. Interview content is authored as structured JSON specs; shared
@@ -6,7 +6,7 @@ templates turn those specs into interactive walkthroughs, visual timelines,
 concrete story examples, follow-up probes, rubrics, practice worksheets, and
 curated external resources for deeper learning.
 
-See generated site: [zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/](https://zeljkoobrenovic.github.io/spec-driven-behavioral-interviews/)
+See generated site: [zeljkoobrenovic.github.io/behavioral-interviews/](https://zeljkoobrenovic.github.io/behavioral-interviews/)
 
 ## Repository Layout
 

@@ -1,8 +1,8 @@
-# Spec-Driven Behavioral Interview Explorer
+# Behavioral Interview Explorer
 
 Plan for turning `IDEA.md` into an interactive, educational static explorer for
 senior technology leadership behavioral interviews. The implementation should
-reuse the rough shape of `../spec-driven-system-design-interviews`: structured
+reuse the rough shape of `../system-design-interviews`: structured
 data as the source of truth, shared templates as the rendering shell, small
 scripts for build and validation, and generated `docs/` output for publishing.
 
